@@ -11,6 +11,7 @@ import {
   applyPresetRestrictions,
   createOrbmentStateFromPreset,
   createInitialOrbmentState,
+  type OrbmentState,
   setEquippedQuartz,
   setLineDirection,
   setLineStart,
@@ -35,6 +36,12 @@ function App() {
   const [selectedSavedSetupId, setSelectedSavedSetupId] = useState('')
   const [setupName, setSetupName] = useState('My setup')
   const [setupNotice, setSetupNotice] = useState('')
+  const [draftBeforeSavedLoad, setDraftBeforeSavedLoad] = useState<{
+    baseId: string
+    templateId: string
+    setupName: string
+    orbmentState: OrbmentState
+  } | null>(null)
 
   const base = useMemo(() => getBaseById(selectedBaseId), [selectedBaseId])
 
@@ -66,7 +73,8 @@ function App() {
   }
 
   function saveAsSetup(): void {
-    const nextName = setupName.trim() || 'Untitled setup'
+    const requestedName = setupName.trim() || 'Untitled setup'
+    const nextName = getUniqueSetupName(requestedName, savedSetups)
     const created = createSavedQuartzSetup({
       baseGame: selectedBaseId,
       name: nextName,
@@ -80,7 +88,7 @@ function App() {
 
   function saveCurrentSetup(): void {
     if (!selectedSavedSetupId) {
-      setSetupNotice('Select a setup first or use Save As.')
+      saveAsSetup()
       return
     }
 
@@ -137,13 +145,42 @@ function App() {
     deleteSavedQuartzSetup(selectedSavedSetupId)
     refreshSavedSetups()
     setSelectedSavedSetupId('')
+    setDraftBeforeSavedLoad(null)
     setSetupNotice('Deleted saved setup.')
+  }
+
+  function onSavedSetupSelectionChange(setupId: string): void {
+    if (!setupId) {
+      setSelectedSavedSetupId('')
+      if (draftBeforeSavedLoad) {
+        setSelectedBaseId(draftBeforeSavedLoad.baseId)
+        setSelectedTemplateId(draftBeforeSavedLoad.templateId)
+        setOrbmentState(cloneOrbmentState(draftBeforeSavedLoad.orbmentState))
+        setSetupName(draftBeforeSavedLoad.setupName)
+        setSetupNotice('Exited saved setup and restored your previous unsaved setup.')
+        setDraftBeforeSavedLoad(null)
+        return
+      }
+      setSetupNotice('No saved setup selected.')
+      return
+    }
+
+    if (!selectedSavedSetupId && !draftBeforeSavedLoad) {
+      setDraftBeforeSavedLoad({
+        baseId: selectedBaseId,
+        templateId: selectedTemplateId,
+        setupName,
+        orbmentState: cloneOrbmentState(orbmentState),
+      })
+    }
+
+    loadSavedSetup(setupId)
   }
 
   return (
     <main className="appShell">
       <header className="panel">
-        <h1>Orbment Arts Calculator</h1>
+        <h1>Trails Series Orbment Arts Setup</h1>
         <div className="fieldRow">
           <label>
             Base
@@ -155,6 +192,7 @@ function App() {
                 setSelectedTemplateId('')
                 setOrbmentState(createInitialOrbmentState())
                 setSelectedSavedSetupId('')
+                setDraftBeforeSavedLoad(null)
                 setSetupNotice('')
               }}
             >
@@ -173,6 +211,7 @@ function App() {
                 const templateId = event.target.value
                 setSelectedTemplateId(templateId)
                 setSelectedSavedSetupId('')
+                setDraftBeforeSavedLoad(null)
                 setSetupNotice('')
                 if (!templateId) {
                   setOrbmentState(createInitialOrbmentState())
@@ -197,38 +236,32 @@ function App() {
               ))}
             </select>
           </label>
-        </div>
-        <div className="fieldRow">
-          <label>
-            Saved setup
-            <select
-              value={selectedSavedSetupId}
-              onChange={(event) => {
-                const setupId = event.target.value
-                setSelectedSavedSetupId(setupId)
-                if (!setupId) {
-                  return
-                }
-                loadSavedSetup(setupId)
-              }}
-            >
-              <option value="">Select saved setup</option>
-              {savedSetups.map((setup) => {
-                const setupBase = getBaseById(setup.baseGame)
-                return (
-                  <option key={setup.id} value={setup.id}>
-                    {setup.name} ({setupBase.label})
-                  </option>
-                )
-              })}
-            </select>
-          </label>
-          <label>
-            Setup name
-            <input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
-          </label>
-          <div className="inlineActions">
-            <button type="button" onClick={saveCurrentSetup} disabled={!selectedSavedSetupId}>
+          <div className="fieldRow rowRightControls">
+            <label>
+              Saved setup
+              <select
+                value={selectedSavedSetupId}
+                onChange={(event) => {
+                  onSavedSetupSelectionChange(event.target.value)
+                }}
+              >
+                <option value="">Select saved setup</option>
+                {savedSetups.map((setup) => {
+                  const setupBase = getBaseById(setup.baseGame)
+                  return (
+                    <option key={setup.id} value={setup.id}>
+                      {setup.name} ({setupBase.label})
+                    </option>
+                  )
+                })}
+              </select>
+            </label>
+            <label>
+              Setup name
+              <input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
+            </label>
+            <div className="inlineActions">
+            <button type="button" onClick={saveCurrentSetup}>
               Save
             </button>
             <button type="button" onClick={saveAsSetup}>
@@ -237,6 +270,7 @@ function App() {
             <button type="button" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
               Delete
             </button>
+            </div>
           </div>
         </div>
         {setupNotice ? <p className="hintText">{setupNotice}</p> : null}
@@ -280,3 +314,30 @@ function App() {
 }
 
 export default App
+
+function getUniqueSetupName(requestedName: string, savedSetups: Array<{ id: string; name: string }>): string {
+  const names = new Set(savedSetups.map((setup) => setup.name.toLocaleLowerCase()))
+  if (!names.has(requestedName.toLocaleLowerCase())) {
+    return requestedName
+  }
+
+  let suffix = 1
+  while (true) {
+    const candidate = `${requestedName} (${suffix})`
+    if (!names.has(candidate.toLocaleLowerCase())) {
+      return candidate
+    }
+    suffix += 1
+  }
+}
+
+function cloneOrbmentState(state: OrbmentState): OrbmentState {
+  return {
+    ...state,
+    arcLengths: [...state.arcLengths],
+    lineStarts: [...state.lineStarts],
+    lineDirections: [...state.lineDirections],
+    slotRestrictions: { ...state.slotRestrictions },
+    equippedQuartz: { ...state.equippedQuartz },
+  }
+}
