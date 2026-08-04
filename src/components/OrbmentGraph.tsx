@@ -10,6 +10,8 @@ type OrbmentGraphProps = {
   quartzById: Map<number, Quartz>
 }
 
+const NODE_RADIUS = 24
+
 // Slot numbering: 1 = center, 2 = bottom-left, then clockwise on the hex (bottom vertex empty).
 const SLOT_POINTS: Record<SlotId, Point> = {
   1: { x: 170, y: 170 },
@@ -38,13 +40,14 @@ export function OrbmentGraph({ lines, slotRestrictions, equippedQuartz, quartzBy
         {edges.map((edge, index) => {
           const from = SLOT_POINTS[edge.from]
           const to = SLOT_POINTS[edge.to]
+          const { start, end } = trimEdgeToNodeBoundary(from, to, NODE_RADIUS)
           return (
             <line
               key={`${edge.from}-${edge.to}-${edge.lineIndex}-${index}`}
-              x1={from.x}
-              y1={from.y}
-              x2={to.x}
-              y2={to.y}
+              x1={start.x}
+              y1={start.y}
+              x2={end.x}
+              y2={end.y}
               stroke={lineColor(edge.lineIndex)}
               strokeWidth={4}
               strokeLinecap="round"
@@ -65,15 +68,15 @@ export function OrbmentGraph({ lines, slotRestrictions, equippedQuartz, quartzBy
               <circle
                 cx={SLOT_POINTS[slotId].x}
                 cy={SLOT_POINTS[slotId].y}
-                r={24}
+                r={NODE_RADIUS}
                 fill={fill}
                 stroke={stroke}
                 strokeWidth={3}
               />
-              <text x={SLOT_POINTS[slotId].x} y={SLOT_POINTS[slotId].y - 3} className="orbmentNodeId">
+              <text x={SLOT_POINTS[slotId].x} y={SLOT_POINTS[slotId].y - 31} className="orbmentNodeId">
                 {slotId}
               </text>
-              <text x={SLOT_POINTS[slotId].x} y={SLOT_POINTS[slotId].y + 11} className="orbmentNodeText">
+              <text x={SLOT_POINTS[slotId].x} y={SLOT_POINTS[slotId].y + 1} className="orbmentNodeText">
                 {shortName(equippedQuartzName)}
               </text>
             </g>
@@ -101,6 +104,24 @@ function buildEdges(lines: OrbmentLine[]): { from: SlotId; to: SlotId; lineIndex
     }
   }
   return edges
+}
+
+function trimEdgeToNodeBoundary(from: Point, to: Point, radius: number): { start: Point; end: Point } {
+  const dx = to.x - from.x
+  const dy = to.y - from.y
+  const distance = Math.hypot(dx, dy)
+
+  if (distance === 0) {
+    return { start: from, end: to }
+  }
+
+  const ux = dx / distance
+  const uy = dy / distance
+
+  return {
+    start: { x: from.x + ux * radius, y: from.y + uy * radius },
+    end: { x: to.x - ux * radius, y: to.y - uy * radius },
+  }
 }
 
 function lineColor(lineIndex: number): string {

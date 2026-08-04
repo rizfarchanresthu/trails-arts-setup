@@ -1,3 +1,5 @@
+import type { OrbmentState } from '../state/orbmentState'
+
 export const ELEMENTS = [
   'Earth',
   'Water',
@@ -15,9 +17,9 @@ export const ELEMENT_COLORS: Record<ElementName, string> = {
   Water: '#2f7ee6',
   Fire: '#df4d3f',
   Wind: '#3cae6f',
-  Time: '#6b57cc',
-  Space: '#3aa4a4',
-  Mirage: '#b88a28',
+  Time: '#747180',
+  Space: '#E6C257',
+  Mirage: '#D6D3CE',
 }
 
 export const LINE_COLORS = ['#f25f5c', '#4d9de0', '#5abf90', '#f2c14e', '#9c89b8'] as const
@@ -72,4 +74,18 @@ export type BaseData = {
   label: string
   quartz: Quartz[]
   arts: Art[]
+}
+
+export type SavedQuartzSetup = {
+  id: string
+  baseGame: string
+  name: string
+  created_at: string
+  edited_at: string
+  orbmentState: OrbmentState
+}
+
+export type SavedQuartzSetupStorage = {
+  version: 1
+  setups: SavedQuartzSetup[]
 }

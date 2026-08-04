@@ -18,11 +18,23 @@ import {
   transferArcLength,
   updateLineCount,
 } from './state/orbmentState'
+import {
+  createSavedQuartzSetup,
+  deleteSavedQuartzSetup,
+  getSavedQuartzSetupById,
+  listSavedQuartzSetups,
+  sanitizeForBase,
+  updateSavedQuartzSetup,
+} from './state/savedQuartzSetups'
 
 function App() {
   const [selectedBaseId, setSelectedBaseId] = useState('sky-fc')
   const [selectedTemplateId, setSelectedTemplateId] = useState('')
   const [orbmentState, setOrbmentState] = useState(createInitialOrbmentState)
+  const [savedSetups, setSavedSetups] = useState(listSavedQuartzSetups)
+  const [selectedSavedSetupId, setSelectedSavedSetupId] = useState('')
+  const [setupName, setSetupName] = useState('My setup')
+  const [setupNotice, setSetupNotice] = useState('')
 
   const base = useMemo(() => getBaseById(selectedBaseId), [selectedBaseId])
 
@@ -49,6 +61,85 @@ function App() {
     return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz)
   }, [base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz])
 
+  function refreshSavedSetups(): void {
+    setSavedSetups(listSavedQuartzSetups())
+  }
+
+  function saveAsSetup(): void {
+    const nextName = setupName.trim() || 'Untitled setup'
+    const created = createSavedQuartzSetup({
+      baseGame: selectedBaseId,
+      name: nextName,
+      orbmentState,
+    })
+    refreshSavedSetups()
+    setSelectedSavedSetupId(created.id)
+    setSetupName(created.name)
+    setSetupNotice(`Saved "${created.name}" as a new setup.`)
+  }
+
+  function saveCurrentSetup(): void {
+    if (!selectedSavedSetupId) {
+      setSetupNotice('Select a setup first or use Save As.')
+      return
+    }
+
+    const nextName = setupName.trim() || 'Untitled setup'
+    const updated = updateSavedQuartzSetup(selectedSavedSetupId, {
+      baseGame: selectedBaseId,
+      name: nextName,
+      orbmentState,
+    })
+
+    if (!updated) {
+      setSetupNotice('Selected setup no longer exists. Use Save As.')
+      refreshSavedSetups()
+      setSelectedSavedSetupId('')
+      return
+    }
+
+    refreshSavedSetups()
+    setSetupName(updated.name)
+    setSetupNotice(`Updated "${updated.name}".`)
+  }
+
+  function loadSavedSetup(setupId: string): void {
+    const setup = getSavedQuartzSetupById(setupId)
+    if (!setup) {
+      setSetupNotice('Could not find that saved setup.')
+      refreshSavedSetups()
+      setSelectedSavedSetupId('')
+      return
+    }
+
+    const targetBase = BASES.find((baseOption) => baseOption.id === setup.baseGame)
+    if (!targetBase) {
+      setSetupNotice(`Saved setup base "${setup.baseGame}" is not available in this build.`)
+      return
+    }
+
+    const validQuartzIds = new Set(targetBase.quartz.map((quartz) => quartz.id))
+    const sanitizedSetup = sanitizeForBase(setup, validQuartzIds)
+
+    setSelectedBaseId(sanitizedSetup.baseGame)
+    setSelectedTemplateId('')
+    setOrbmentState(sanitizedSetup.orbmentState)
+    setSelectedSavedSetupId(sanitizedSetup.id)
+    setSetupName(sanitizedSetup.name)
+    setSetupNotice(`Loaded "${sanitizedSetup.name}" (${targetBase.label}).`)
+  }
+
+  function removeSavedSetup(): void {
+    if (!selectedSavedSetupId) {
+      setSetupNotice('Select a setup to delete.')
+      return
+    }
+    deleteSavedQuartzSetup(selectedSavedSetupId)
+    refreshSavedSetups()
+    setSelectedSavedSetupId('')
+    setSetupNotice('Deleted saved setup.')
+  }
+
   return (
     <main className="appShell">
       <header className="panel">
@@ -63,6 +154,8 @@ function App() {
                 setSelectedBaseId(nextBaseId)
                 setSelectedTemplateId('')
                 setOrbmentState(createInitialOrbmentState())
+                setSelectedSavedSetupId('')
+                setSetupNotice('')
               }}
             >
               {BASES.map((baseOption) => (
@@ -79,6 +172,8 @@ function App() {
               onChange={(event) => {
                 const templateId = event.target.value
                 setSelectedTemplateId(templateId)
+                setSelectedSavedSetupId('')
+                setSetupNotice('')
                 if (!templateId) {
                   setOrbmentState(createInitialOrbmentState())
                   return
@@ -103,6 +198,48 @@ function App() {
             </select>
           </label>
         </div>
+        <div className="fieldRow">
+          <label>
+            Saved setup
+            <select
+              value={selectedSavedSetupId}
+              onChange={(event) => {
+                const setupId = event.target.value
+                setSelectedSavedSetupId(setupId)
+                if (!setupId) {
+                  return
+                }
+                loadSavedSetup(setupId)
+              }}
+            >
+              <option value="">Select saved setup</option>
+              {savedSetups.map((setup) => {
+                const setupBase = getBaseById(setup.baseGame)
+                return (
+                  <option key={setup.id} value={setup.id}>
+                    {setup.name} ({setupBase.label})
+                  </option>
+                )
+              })}
+            </select>
+          </label>
+          <label>
+            Setup name
+            <input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
+          </label>
+          <div className="inlineActions">
+            <button type="button" onClick={saveCurrentSetup} disabled={!selectedSavedSetupId}>
+              Save
+            </button>
+            <button type="button" onClick={saveAsSetup}>
+              Save As
+            </button>
+            <button type="button" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
+              Delete
+            </button>
+          </div>
+        </div>
+        {setupNotice ? <p className="hintText">{setupNotice}</p> : null}
       </header>
 
       <section className="topSection">
