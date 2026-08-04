@@ -15,6 +15,7 @@ import {
   setEquippedQuartz,
   setLineDirection,
   setLineStart,
+  setNodeTier,
   setSlotRestriction,
   transferArcLength,
   updateLineCount,
@@ -31,7 +32,7 @@ import {
 function App() {
   const [selectedBaseId, setSelectedBaseId] = useState('sky-fc')
   const [selectedTemplateId, setSelectedTemplateId] = useState('')
-  const [orbmentState, setOrbmentState] = useState(createInitialOrbmentState)
+  const [orbmentState, setOrbmentState] = useState(() => createInitialOrbmentState(getBaseById('sky-fc').topology))
   const [savedSetups, setSavedSetups] = useState(listSavedQuartzSetups)
   const [selectedSavedSetupId, setSelectedSavedSetupId] = useState('')
   const [setupName, setSetupName] = useState('My setup')
@@ -61,8 +62,9 @@ function App() {
         start: orbmentState.lineStarts[index],
         direction: orbmentState.lineDirections[index],
       })),
+      topology: base.topology,
     })
-  }, [orbmentState.arcLengths, orbmentState.lineCount, orbmentState.lineDirections, orbmentState.lineStarts])
+  }, [base.topology, orbmentState.arcLengths, orbmentState.lineCount, orbmentState.lineDirections, orbmentState.lineStarts])
 
   const evaluation = useMemo(() => {
     return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz)
@@ -79,6 +81,7 @@ function App() {
       baseGame: selectedBaseId,
       name: nextName,
       orbmentState,
+      topology: base.topology,
     })
     refreshSavedSetups()
     setSelectedSavedSetupId(created.id)
@@ -97,6 +100,7 @@ function App() {
       baseGame: selectedBaseId,
       name: nextName,
       orbmentState,
+      topology: base.topology,
     })
 
     if (!updated) {
@@ -127,7 +131,7 @@ function App() {
     }
 
     const validQuartzIds = new Set(targetBase.quartz.map((quartz) => quartz.id))
-    const sanitizedSetup = sanitizeForBase(setup, validQuartzIds)
+    const sanitizedSetup = sanitizeForBase(setup, validQuartzIds, targetBase.topology)
 
     setSelectedBaseId(sanitizedSetup.baseGame)
     setSelectedTemplateId('')
@@ -190,7 +194,7 @@ function App() {
                 const nextBaseId = event.target.value
                 setSelectedBaseId(nextBaseId)
                 setSelectedTemplateId('')
-                setOrbmentState(createInitialOrbmentState())
+                setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
                 setSelectedSavedSetupId('')
                 setDraftBeforeSavedLoad(null)
                 setSetupNotice('')
@@ -199,39 +203,6 @@ function App() {
               {BASES.map((baseOption) => (
                 <option key={baseOption.id} value={baseOption.id}>
                   {baseOption.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Character template
-            <select
-              value={selectedTemplateId}
-              onChange={(event) => {
-                const templateId = event.target.value
-                setSelectedTemplateId(templateId)
-                setSelectedSavedSetupId('')
-                setDraftBeforeSavedLoad(null)
-                setSetupNotice('')
-                if (!templateId) {
-                  setOrbmentState(createInitialOrbmentState())
-                  return
-                }
-
-                const selectedTemplate = characterTemplates.find((template) => template.id === templateId)
-                if (!selectedTemplate) {
-                  return
-                }
-
-                const presetState = createOrbmentStateFromPreset(selectedTemplate.presetShape)
-                const withRestrictions = applyPresetRestrictions(presetState, selectedTemplate.restriction)
-                setOrbmentState(withRestrictions)
-              }}
-            >
-              <option value="">Custom</option>
-              {characterTemplates.map((template) => (
-                <option key={template.id} value={template.id}>
-                  {template.name}
                 </option>
               ))}
             </select>
@@ -283,9 +254,11 @@ function App() {
           lineWarnings={derivedLines.warnings}
           quartzList={base.quartz}
           quartzById={quartzById}
-          onLineCountChange={(lineCount) => setOrbmentState((prev) => updateLineCount(prev, lineCount))}
+          onLineCountChange={(lineCount) =>
+            setOrbmentState((prev) => updateLineCount(prev, lineCount, base.topology))
+          }
           onLineStartChange={(lineIndex, start) =>
-            setOrbmentState((prev) => setLineStart(prev, lineIndex, start))
+            setOrbmentState((prev) => setLineStart(prev, lineIndex, start, base.topology))
           }
           onLineDirectionChange={(lineIndex, direction) =>
             setOrbmentState((prev) => setLineDirection(prev, lineIndex, direction))
@@ -299,6 +272,30 @@ function App() {
           onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
             setOrbmentState((prev) => setEquippedQuartz(prev, slotId, quartzId, quartzById))
           }
+          onNodeTierChange={(slotId: SlotId, tier: number) =>
+            setOrbmentState((prev) => setNodeTier(prev, slotId, tier, quartzById))
+          }
+          topology={base.topology}
+          selectedBaseId={selectedBaseId}
+          selectedTemplateId={selectedTemplateId}
+          characterTemplates={characterTemplates}
+          onTemplateChange={(templateId) => {
+            setSelectedTemplateId(templateId)
+            setSelectedSavedSetupId('')
+            setDraftBeforeSavedLoad(null)
+            setSetupNotice('')
+            if (!templateId) {
+              setOrbmentState(createInitialOrbmentState(base.topology))
+              return
+            }
+            const selectedTemplate = characterTemplates.find((template) => template.id === templateId)
+            if (!selectedTemplate) {
+              return
+            }
+            const presetState = createOrbmentStateFromPreset(selectedTemplate.presetShape, base.topology)
+            const withRestrictions = applyPresetRestrictions(presetState, selectedTemplate.restriction)
+            setOrbmentState(withRestrictions)
+          }}
         />
       </section>
 
@@ -339,5 +336,6 @@ function cloneOrbmentState(state: OrbmentState): OrbmentState {
     lineDirections: [...state.lineDirections],
     slotRestrictions: { ...state.slotRestrictions },
     equippedQuartz: { ...state.equippedQuartz },
+    nodeTiers: { ...state.nodeTiers },
   }
 }

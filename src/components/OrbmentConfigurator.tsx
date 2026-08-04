@@ -1,7 +1,8 @@
-import { ELEMENTS, type ElementName, type Quartz, type SlotId } from '../domain/types'
+import { ELEMENTS, type ElementName, type OrbmentTopology, type Quartz, type SlotId } from '../domain/types'
 import { type OrbmentLine } from '../domain/types'
 import { type LineDirection } from '../domain/rules/skyFcRules'
 import { type OrbmentState, getAllowedQuartzForSlot, getAvailableLineStarts } from '../state/orbmentState'
+import { type CharacterTemplate } from '../domain/characterPresets'
 import { OrbmentGraph } from './OrbmentGraph'
 import { QuartzPicker } from './QuartzPicker'
 
@@ -17,6 +18,12 @@ type OrbmentConfiguratorProps = {
   onTransferArcLength: (lineIndex: number, direction: 1 | -1) => void
   onRestrictionChange: (slotId: SlotId, restriction: ElementName | null) => void
   onQuartzChange: (slotId: SlotId, quartzId: number | null) => void
+  onNodeTierChange: (slotId: SlotId, tier: number) => void
+  topology: OrbmentTopology
+  selectedBaseId: string
+  selectedTemplateId: string
+  characterTemplates: CharacterTemplate[]
+  onTemplateChange: (templateId: string) => void
 }
 
 export function OrbmentConfigurator({
@@ -31,7 +38,15 @@ export function OrbmentConfigurator({
   onTransferArcLength,
   onRestrictionChange,
   onQuartzChange,
+  onNodeTierChange,
+  topology,
+  selectedBaseId,
+  selectedTemplateId,
+  characterTemplates,
+  onTemplateChange,
 }: OrbmentConfiguratorProps) {
+  const maxTier = Math.max(1, ...quartzList.map((quartz) => quartz.tier ?? 1))
+  const showNodeTierControls = selectedBaseId !== 'sky-fc'
   return (
     <section className="panel">
       <h2>Orbment Config</h2>
@@ -39,16 +54,27 @@ export function OrbmentConfigurator({
         <div className="configColumn">
           <div className="fieldRow">
             <label>
+              Character preset
+              <select value={selectedTemplateId} onChange={(event) => onTemplateChange(event.target.value)}>
+                <option value="">Custom</option>
+                {characterTemplates.map((template) => (
+                  <option key={template.id} value={template.id}>
+                    {template.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
               Line count
               <select
                 value={state.lineCount}
                 onChange={(event) => onLineCountChange(Number(event.target.value))}
               >
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-                <option value={5}>5</option>
+                {Array.from({ length: topology.maxLines }, (_, index) => index + 1).map((lineCountValue) => (
+                  <option key={lineCountValue} value={lineCountValue}>
+                    {lineCountValue}
+                  </option>
+                ))}
               </select>
             </label>
           </div>
@@ -66,7 +92,7 @@ export function OrbmentConfigurator({
                       value={state.lineStarts[index]}
                       onChange={(event) => onLineStartChange(index, Number(event.target.value) as SlotId)}
                     >
-                      {getAvailableLineStarts(state, index).map((start) => (
+                      {getAvailableLineStarts(state, index, topology).map((start) => (
                         <option key={`line-start-${index}-${start}`} value={start}>
                           {start}
                         </option>
@@ -122,12 +148,20 @@ export function OrbmentConfigurator({
 
           <div className="linePreview">
             <h3>Adjacency Rule</h3>
-            <p>Outer links: 2-3, 3-4, 4-5, 5-6. Gap between 6 and 2.</p>
+            <p>Outer links follow this base perimeter sequence: {topology.outerDirectionSequence.join(' -> ')}.</p>
+          </div>
+
+          <div className="linePreview">
+            <h3>Character Preset Source</h3>
+            <p>
+              {selectedBaseId === 'sky-fc'
+                ? 'Sky FC templates are loaded from the Sky FC character preset database.'
+                : 'No base-specific character presets are loaded for this base yet.'}
+            </p>
           </div>
 
           <div className="slotsGrid">
-            {[1, 2, 3, 4, 5, 6].map((slotValue) => {
-              const slotId = slotValue as SlotId
+            {topology.slotIds.map((slotId) => {
               const restriction = state.slotRestrictions[slotId]
               const restrictionOnlyQuartz = restriction
                 ? quartzList.filter((quartz) => quartz.element === restriction)
@@ -138,12 +172,29 @@ export function OrbmentConfigurator({
                 state.slotRestrictions,
                 state.equippedQuartz,
                 quartzById,
+                state.nodeTiers,
               )
               const filteredByExclusivity = restrictionOnlyQuartz.length - allowedQuartz.length
 
               return (
                 <article className="slotCard" key={`slot-${slotId}`}>
                   <h4>Slot {slotId}</h4>
+                  {showNodeTierControls ? (
+                    <label>
+                      Node tier
+                      <select
+                        value={state.nodeTiers[slotId]}
+                        onChange={(event) => onNodeTierChange(slotId, Number(event.target.value))}
+                      >
+                        {Array.from({ length: maxTier }, (_, index) => index + 1).map((tierValue) => (
+                          <option key={`slot-tier-${slotId}-${tierValue}`} value={tierValue}>
+                            Tier {tierValue}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  ) : null}
+
                   <label>
                     Restriction
                     <select
@@ -184,6 +235,8 @@ export function OrbmentConfigurator({
             slotRestrictions={state.slotRestrictions}
             equippedQuartz={state.equippedQuartz}
             quartzById={quartzById}
+            topology={topology}
+            nodeTiers={state.nodeTiers}
           />
         </div>
       </div>

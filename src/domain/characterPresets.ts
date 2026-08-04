@@ -1,6 +1,7 @@
 import skyFcPresets from '../database/character-preset/sky-fc.json'
-import { OUTER_DIRECTION_SEQUENCE, type LineDirection } from './rules/skyFcRules'
-import { type ElementName, type SlotId } from './types'
+import { getBaseById } from './baseRegistry'
+import { type LineDirection } from './rules/skyFcRules'
+import { type ElementName, type OrbmentTopology, type SlotId } from './types'
 import { type OrbmentPresetShape } from '../state/orbmentState'
 
 type RawCharacterPreset = {
@@ -30,6 +31,7 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
     return []
   }
 
+  const topology = getBaseById(baseId).topology
   return (skyFcPresets as RawCharacterPreset[]).map((raw) => {
     const presetShape: OrbmentPresetShape = {
       lineCount: raw.line_count,
@@ -37,7 +39,7 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
         const outer = line.slice(1) as SlotId[]
         return {
           start: outer[0] ?? 2,
-          direction: inferLineDirection(outer),
+          direction: inferLineDirection(outer, topology),
           length: outer.length,
         }
       }),
@@ -58,13 +60,13 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
   })
 }
 
-function inferLineDirection(outerPath: SlotId[]): LineDirection {
+function inferLineDirection(outerPath: SlotId[], topology: OrbmentTopology): LineDirection {
   if (outerPath.length < 2) {
     return 'cw'
   }
 
-  const firstIndex = OUTER_DIRECTION_SEQUENCE.indexOf(outerPath[0])
-  const secondIndex = OUTER_DIRECTION_SEQUENCE.indexOf(outerPath[1])
+  const firstIndex = topology.outerDirectionSequence.indexOf(outerPath[0])
+  const secondIndex = topology.outerDirectionSequence.indexOf(outerPath[1])
   if (firstIndex < 0 || secondIndex < 0) {
     return 'cw'
   }

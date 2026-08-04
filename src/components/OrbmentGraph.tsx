@@ -1,5 +1,5 @@
-import { ELEMENT_COLORS, LINE_COLORS, type OrbmentLine, type Quartz, type SlotId } from '../domain/types'
-import { type EquippedQuartzMap, type SlotRestrictionMap } from '../state/orbmentState'
+import { ELEMENT_COLORS, LINE_COLORS, type OrbmentLine, type OrbmentTopology, type Quartz, type SlotId } from '../domain/types'
+import { type EquippedQuartzMap, type NodeTierMap, type SlotRestrictionMap } from '../state/orbmentState'
 
 type Point = { x: number; y: number }
 
@@ -8,12 +8,12 @@ type OrbmentGraphProps = {
   slotRestrictions: SlotRestrictionMap
   equippedQuartz: EquippedQuartzMap
   quartzById: Map<number, Quartz>
+  topology: OrbmentTopology
+  nodeTiers: NodeTierMap
 }
 
 const NODE_RADIUS = 24
-
-// Slot numbering: 1 = center, 2 = bottom-left, then clockwise on the hex (bottom vertex empty).
-const SLOT_POINTS: Record<SlotId, Point> = {
+const FC_SLOT_POINTS: Record<number, Point> = {
   1: { x: 170, y: 170 },
   2: { x: 68, y: 230 },
   3: { x: 68, y: 110 },
@@ -21,25 +21,45 @@ const SLOT_POINTS: Record<SlotId, Point> = {
   5: { x: 272, y: 110 },
   6: { x: 272, y: 230 },
 }
+const SC_SLOT_POINTS: Record<number, Point> = {
+  1: { x: 170, y: 170 },
+  2: { x: 68, y: 230 },
+  3: { x: 68, y: 110 },
+  4: { x: 170, y: 52 },
+  5: { x: 272, y: 110 },
+  6: { x: 272, y: 230 },
+  7: { x: 170, y: 288 },
+}
+const FC_EMPTY_HEX_VERTEX: Point = { x: 170, y: 288 }
 
-const EMPTY_HEX_VERTEX: Point = { x: 170, y: 288 }
-
-export function OrbmentGraph({ lines, slotRestrictions, equippedQuartz, quartzById }: OrbmentGraphProps) {
+export function OrbmentGraph({
+  lines,
+  slotRestrictions,
+  equippedQuartz,
+  quartzById,
+  topology,
+  nodeTiers,
+}: OrbmentGraphProps) {
+  const layout = getLayout(topology)
+  const slotPoints = layout.slotPoints
   const edges = buildEdges(lines)
+  const outerPath = layout.guideSequence
+    .map((slotId) => slotPoints[slotId])
+    .map((point) => `${point.x},${point.y}`)
+    .join(' ')
 
   return (
     <section className="orbmentPanel">
       <h3>Orbment</h3>
       <svg viewBox="0 0 340 340" className="orbmentSvg" aria-label="Orbment graph">
-        <polygon
-          points={`${SLOT_POINTS[2].x},${SLOT_POINTS[2].y} ${SLOT_POINTS[3].x},${SLOT_POINTS[3].y} ${SLOT_POINTS[4].x},${SLOT_POINTS[4].y} ${SLOT_POINTS[5].x},${SLOT_POINTS[5].y} ${SLOT_POINTS[6].x},${SLOT_POINTS[6].y}`}
-          className="orbmentHexGuide"
-        />
-        <circle cx={EMPTY_HEX_VERTEX.x} cy={EMPTY_HEX_VERTEX.y} r={6} className="orbmentGapMarker" />
+        <polygon points={outerPath} className="orbmentHexGuide" />
+        {layout.gapMarker ? (
+          <circle cx={layout.gapMarker.x} cy={layout.gapMarker.y} r={6} className="orbmentGapMarker" />
+        ) : null}
 
         {edges.map((edge, index) => {
-          const from = SLOT_POINTS[edge.from]
-          const to = SLOT_POINTS[edge.to]
+          const from = slotPoints[edge.from]
+          const to = slotPoints[edge.to]
           const { start, end } = trimEdgeToNodeBoundary(from, to, NODE_RADIUS)
           return (
             <line
@@ -56,7 +76,7 @@ export function OrbmentGraph({ lines, slotRestrictions, equippedQuartz, quartzBy
           )
         })}
 
-        {([1, 2, 3, 4, 5, 6] as SlotId[]).map((slotId) => {
+        {topology.slotIds.map((slotId) => {
           const restriction = slotRestrictions[slotId]
           const equippedQuartzId = equippedQuartz[slotId]
           const equippedQuartzName = equippedQuartzId ? quartzById.get(equippedQuartzId)?.name.en : null
@@ -66,17 +86,18 @@ export function OrbmentGraph({ lines, slotRestrictions, equippedQuartz, quartzBy
           return (
             <g key={`slot-${slotId}`}>
               <circle
-                cx={SLOT_POINTS[slotId].x}
-                cy={SLOT_POINTS[slotId].y}
+                cx={slotPoints[slotId].x}
+                cy={slotPoints[slotId].y}
                 r={NODE_RADIUS}
                 fill={fill}
                 stroke={stroke}
                 strokeWidth={3}
               />
-              <text x={SLOT_POINTS[slotId].x} y={SLOT_POINTS[slotId].y - 31} className="orbmentNodeId">
+              <text x={slotPoints[slotId].x} y={slotPoints[slotId].y - 31} className="orbmentNodeId">
                 {slotId}
+                {layout.showTier ? ` T${nodeTiers[slotId]}` : ''}
               </text>
-              <text x={SLOT_POINTS[slotId].x} y={SLOT_POINTS[slotId].y + 1} className="orbmentNodeText">
+              <text x={slotPoints[slotId].x} y={slotPoints[slotId].y + 1} className="orbmentNodeText">
                 {shortName(equippedQuartzName)}
               </text>
             </g>
@@ -141,4 +162,36 @@ function shortName(value: string | null | undefined): string {
     return '-'
   }
   return value.length > 8 ? `${value.slice(0, 8)}.` : value
+}
+
+function getLayout(topology: OrbmentTopology): {
+  slotPoints: Record<number, Point>
+  guideSequence: SlotId[]
+  gapMarker: Point | null
+  showTier: boolean
+} {
+  if (topology.slotIds.length === 6) {
+    return {
+      slotPoints: FC_SLOT_POINTS,
+      guideSequence: [2, 3, 4, 5, 6],
+      gapMarker: FC_EMPTY_HEX_VERTEX,
+      showTier: false,
+    }
+  }
+
+  if (topology.slotIds.length === 7) {
+    return {
+      slotPoints: SC_SLOT_POINTS,
+      guideSequence: [2, 3, 4, 5, 6, 7],
+      gapMarker: null,
+      showTier: true,
+    }
+  }
+
+  return {
+    slotPoints: FC_SLOT_POINTS,
+    guideSequence: topology.outerDirectionSequence,
+    gapMarker: null,
+    showTier: true,
+  }
 }

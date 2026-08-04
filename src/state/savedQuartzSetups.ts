@@ -4,23 +4,23 @@ import {
   createDefaultLineDirections,
   createDefaultLineStarts,
 } from '../domain/rules/skyFcRules'
-import { type SavedQuartzSetup, type SavedQuartzSetupStorage, type SlotId } from '../domain/types'
+import { type OrbmentTopology, type SavedQuartzSetup, type SavedQuartzSetupStorage, type SlotId } from '../domain/types'
 import { createInitialOrbmentState, type OrbmentState } from './orbmentState'
 
 const STORAGE_KEY = 'trails-arts-gallery:saved-quartz-setups'
 const STORAGE_VERSION = 1
-const SLOT_IDS: SlotId[] = [1, 2, 3, 4, 5, 6]
-
 type SaveAsInput = {
   baseGame: string
   name: string
   orbmentState: OrbmentState
+  topology: OrbmentTopology
 }
 
 type SaveInput = {
   baseGame: string
   name: string
   orbmentState: OrbmentState
+  topology: OrbmentTopology
 }
 
 export function listSavedQuartzSetups(): SavedQuartzSetup[] {
@@ -39,7 +39,7 @@ export function createSavedQuartzSetup(input: SaveAsInput): SavedQuartzSetup {
     name: input.name.trim(),
     created_at: now,
     edited_at: now,
-    orbmentState: sanitizeOrbmentState(input.orbmentState),
+    orbmentState: sanitizeOrbmentState(input.orbmentState, input.topology),
   }
 
   const storage = readStorage()
@@ -63,7 +63,7 @@ export function updateSavedQuartzSetup(id: string, input: SaveInput): SavedQuart
     baseGame: input.baseGame,
     name: input.name.trim(),
     edited_at: new Date().toISOString(),
-    orbmentState: sanitizeOrbmentState(input.orbmentState),
+    orbmentState: sanitizeOrbmentState(input.orbmentState, input.topology),
   }
 
   const updated: SavedQuartzSetupStorage = {
@@ -83,9 +83,13 @@ export function deleteSavedQuartzSetup(id: string): void {
   writeStorage(updated)
 }
 
-export function sanitizeForBase(setup: SavedQuartzSetup, validQuartzIds: Set<number>): SavedQuartzSetup {
+export function sanitizeForBase(
+  setup: SavedQuartzSetup,
+  validQuartzIds: Set<number>,
+  topology: OrbmentTopology,
+): SavedQuartzSetup {
   const equippedQuartz: OrbmentState['equippedQuartz'] = { ...setup.orbmentState.equippedQuartz }
-  for (const slotId of SLOT_IDS) {
+  for (const slotId of topology.slotIds) {
     const quartzId = equippedQuartz[slotId]
     if (quartzId !== null && !validQuartzIds.has(quartzId)) {
       equippedQuartz[slotId] = null
@@ -196,26 +200,30 @@ function normalizeOrbmentState(value: unknown): OrbmentState | null {
     return null
   }
 
-  const defaultState = createInitialOrbmentState()
+  const slotIds = getSlotIdsFromMaps(value)
+  const topology = createFallbackTopology(slotIds)
+  const safeLineCount = clampLineCount(lineCount, topology.maxLines)
+  const defaultState = createInitialOrbmentState(topology)
   return {
     ...defaultState,
-    lineCount,
+    lineCount: safeLineCount,
     lineStarts,
     lineDirections,
     arcLengths,
-    slotRestrictions: normalizeRestrictionMap(value.slotRestrictions),
-    equippedQuartz: normalizeEquippedMap(value.equippedQuartz),
+    slotRestrictions: normalizeRestrictionMap(value.slotRestrictions, topology.slotIds),
+    equippedQuartz: normalizeEquippedMap(value.equippedQuartz, topology.slotIds),
+    nodeTiers: normalizeNodeTiersMap(value.nodeTiers, topology.slotIds, defaultState.nodeTiers),
   }
 }
 
-function sanitizeOrbmentState(state: OrbmentState): OrbmentState {
-  const safeLineCount = clampLineCount(Math.floor(state.lineCount))
-  const lineStarts = createDefaultLineStarts(safeLineCount)
-  const lineDirections = createDefaultLineDirections(safeLineCount)
-  const arcLengths = createDefaultArcLengths(safeLineCount)
+function sanitizeOrbmentState(state: OrbmentState, topology: OrbmentTopology): OrbmentState {
+  const safeLineCount = clampLineCount(Math.floor(state.lineCount), topology.maxLines)
+  const lineStarts = createDefaultLineStarts(safeLineCount, topology)
+  const lineDirections = createDefaultLineDirections(safeLineCount, topology.maxLines)
+  const arcLengths = createDefaultArcLengths(safeLineCount, topology)
 
   for (let index = 0; index < safeLineCount; index += 1) {
-    if (state.lineStarts[index] && SLOT_IDS.includes(state.lineStarts[index])) {
+    if (state.lineStarts[index] && topology.outerSlots.includes(state.lineStarts[index])) {
       lineStarts[index] = state.lineStarts[index]
     }
     if (state.lineDirections[index] === 'cw' || state.lineDirections[index] === 'ccw') {
@@ -232,26 +240,20 @@ function sanitizeOrbmentState(state: OrbmentState): OrbmentState {
     lineStarts,
     lineDirections,
     arcLengths,
-    slotRestrictions: normalizeRestrictionMap(state.slotRestrictions),
-    equippedQuartz: normalizeEquippedMap(state.equippedQuartz),
+    slotRestrictions: normalizeRestrictionMap(state.slotRestrictions, topology.slotIds),
+    equippedQuartz: normalizeEquippedMap(state.equippedQuartz, topology.slotIds),
+    nodeTiers: normalizeNodeTiersMap(state.nodeTiers, topology.slotIds, topology.nodeTierDefaults),
   }
 }
 
-function normalizeRestrictionMap(value: unknown): OrbmentState['slotRestrictions'] {
-  const normalized: OrbmentState['slotRestrictions'] = {
-    1: null,
-    2: null,
-    3: null,
-    4: null,
-    5: null,
-    6: null,
-  }
+function normalizeRestrictionMap(value: unknown, slotIds: SlotId[]): OrbmentState['slotRestrictions'] {
+  const normalized = Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as OrbmentState['slotRestrictions']
 
   if (!isRecord(value)) {
     return normalized
   }
 
-  for (const slotId of SLOT_IDS) {
+  for (const slotId of slotIds) {
     const raw = value[String(slotId)]
     if (typeof raw === 'string') {
       normalized[slotId] = raw as OrbmentState['slotRestrictions'][SlotId]
@@ -261,21 +263,14 @@ function normalizeRestrictionMap(value: unknown): OrbmentState['slotRestrictions
   return normalized
 }
 
-function normalizeEquippedMap(value: unknown): OrbmentState['equippedQuartz'] {
-  const normalized: OrbmentState['equippedQuartz'] = {
-    1: null,
-    2: null,
-    3: null,
-    4: null,
-    5: null,
-    6: null,
-  }
+function normalizeEquippedMap(value: unknown, slotIds: SlotId[]): OrbmentState['equippedQuartz'] {
+  const normalized = Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as OrbmentState['equippedQuartz']
 
   if (!isRecord(value)) {
     return normalized
   }
 
-  for (const slotId of SLOT_IDS) {
+  for (const slotId of slotIds) {
     const raw = value[String(slotId)]
     if (raw === null) {
       normalized[slotId] = null
@@ -295,7 +290,7 @@ function toSlotIdArray(value: unknown): SlotId[] {
   }
   const output: SlotId[] = []
   for (const entry of value) {
-    if (!SLOT_IDS.includes(entry as SlotId)) {
+    if (typeof entry !== 'number' || !Number.isInteger(entry) || entry < 1) {
       return []
     }
     output.push(entry as SlotId)
@@ -333,4 +328,70 @@ function toNumberArray(value: unknown): number[] {
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null
+}
+
+function normalizeNodeTiersMap(
+  value: unknown,
+  slotIds: SlotId[],
+  fallbackMap: Record<number, number>,
+): OrbmentState['nodeTiers'] {
+  const normalized = Object.fromEntries(
+    slotIds.map((slotId) => [slotId, fallbackMap[slotId] ?? 1]),
+  ) as OrbmentState['nodeTiers']
+  if (!isRecord(value)) {
+    return normalized
+  }
+  for (const slotId of slotIds) {
+    const raw = value[String(slotId)]
+    if (typeof raw === 'number' && Number.isInteger(raw) && raw >= 1) {
+      normalized[slotId] = raw
+    }
+  }
+  return normalized
+}
+
+function getSlotIdsFromMaps(value: Record<string, unknown>): SlotId[] {
+  const slotIds = new Set<number>()
+  for (const key of ['slotRestrictions', 'equippedQuartz', 'nodeTiers']) {
+    const mapValue = value[key]
+    if (!isRecord(mapValue)) {
+      continue
+    }
+    for (const rawKey of Object.keys(mapValue)) {
+      const parsed = Number(rawKey)
+      if (Number.isInteger(parsed) && parsed >= 1) {
+        slotIds.add(parsed)
+      }
+    }
+  }
+  const sorted = Array.from(slotIds).sort((left, right) => left - right)
+  return sorted.length > 0 ? (sorted as SlotId[]) : ([1, 2, 3, 4, 5, 6] as SlotId[])
+}
+
+function createFallbackTopology(slotIds: SlotId[]): OrbmentTopology {
+  const centerSlot = slotIds[0] ?? 1
+  const outerSlots = slotIds.filter((slotId) => slotId !== centerSlot)
+  const adjacency: Record<number, SlotId[]> = {
+    [centerSlot]: outerSlots,
+  }
+  for (let index = 0; index < outerSlots.length; index += 1) {
+    const current = outerSlots[index]
+    const neighbors: SlotId[] = [centerSlot]
+    if (outerSlots[index - 1]) {
+      neighbors.push(outerSlots[index - 1])
+    }
+    if (outerSlots[index + 1]) {
+      neighbors.push(outerSlots[index + 1])
+    }
+    adjacency[current] = neighbors
+  }
+  return {
+    slotIds,
+    centerSlot,
+    outerSlots,
+    outerDirectionSequence: outerSlots,
+    outerAdjacency: adjacency,
+    maxLines: Math.max(1, outerSlots.length),
+    nodeTierDefaults: Object.fromEntries(slotIds.map((slotId) => [slotId, 1])),
+  }
 }

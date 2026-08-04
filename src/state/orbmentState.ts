@@ -1,15 +1,15 @@
-import { type ElementName, type Quartz, type SlotId } from '../domain/types'
+import { type ElementName, type OrbmentTopology, type Quartz, type SlotId } from '../domain/types'
 import {
   clampLineCount,
   createDefaultArcLengths,
   createDefaultLineDirections,
   createDefaultLineStarts,
   type LineDirection,
-  OUTER_SLOTS,
 } from '../domain/rules/skyFcRules'
 
 export type SlotRestrictionMap = Record<SlotId, ElementName | null>
 export type EquippedQuartzMap = Record<SlotId, number | null>
+export type NodeTierMap = Record<SlotId, number>
 
 export type OrbmentState = {
   lineCount: number
@@ -18,6 +18,7 @@ export type OrbmentState = {
   lineDirections: LineDirection[]
   slotRestrictions: SlotRestrictionMap
   equippedQuartz: EquippedQuartzMap
+  nodeTiers: NodeTierMap
 }
 
 export type OrbmentPresetShape = {
@@ -34,48 +35,36 @@ export type SlotElementRestrictionShape = {
   element: ElementName
 } | null
 
-export function createInitialOrbmentState(): OrbmentState {
+export function createInitialOrbmentState(topology: OrbmentTopology): OrbmentState {
+  const lineCount = 2
   return {
-    lineCount: 2,
-    arcLengths: createDefaultArcLengths(2),
-    lineStarts: createDefaultLineStarts(2),
-    lineDirections: createDefaultLineDirections(2),
-    slotRestrictions: {
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null,
-      6: null,
-    },
-    equippedQuartz: {
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null,
-      6: null,
-    },
+    lineCount,
+    arcLengths: createDefaultArcLengths(lineCount, topology),
+    lineStarts: createDefaultLineStarts(lineCount, topology),
+    lineDirections: createDefaultLineDirections(lineCount, topology.maxLines),
+    slotRestrictions: createSlotRestrictionMap(topology),
+    equippedQuartz: createEquippedQuartzMap(topology),
+    nodeTiers: createNodeTierMap(topology),
   }
 }
 
-export function updateLineCount(state: OrbmentState, lineCount: number): OrbmentState {
-  const safeLineCount = clampLineCount(lineCount)
+export function updateLineCount(state: OrbmentState, lineCount: number, topology: OrbmentTopology): OrbmentState {
+  const safeLineCount = clampLineCount(lineCount, topology.maxLines)
   return {
     ...state,
     lineCount: safeLineCount,
-    arcLengths: createDefaultArcLengths(safeLineCount),
-    lineStarts: createDefaultLineStarts(safeLineCount),
-    lineDirections: createDefaultLineDirections(safeLineCount),
+    arcLengths: createDefaultArcLengths(safeLineCount, topology),
+    lineStarts: createDefaultLineStarts(safeLineCount, topology),
+    lineDirections: createDefaultLineDirections(safeLineCount, topology.maxLines),
   }
 }
 
-export function createOrbmentStateFromPreset(preset: OrbmentPresetShape): OrbmentState {
-  const safeLineCount = clampLineCount(preset.lineCount)
-  const defaultState = createInitialOrbmentState()
-  const starts = createDefaultLineStarts(safeLineCount)
-  const directions = createDefaultLineDirections(safeLineCount)
-  const lengths = createDefaultArcLengths(safeLineCount)
+export function createOrbmentStateFromPreset(preset: OrbmentPresetShape, topology: OrbmentTopology): OrbmentState {
+  const safeLineCount = clampLineCount(preset.lineCount, topology.maxLines)
+  const defaultState = createInitialOrbmentState(topology)
+  const starts = createDefaultLineStarts(safeLineCount, topology)
+  const directions = createDefaultLineDirections(safeLineCount, topology.maxLines)
+  const lengths = createDefaultArcLengths(safeLineCount, topology)
 
   for (let index = 0; index < safeLineCount; index += 1) {
     const source = preset.lines[index]
@@ -100,14 +89,8 @@ export function applyPresetRestrictions(
   state: OrbmentState,
   restriction: SlotElementRestrictionShape,
 ): OrbmentState {
-  const slotRestrictions: SlotRestrictionMap = {
-    1: null,
-    2: null,
-    3: null,
-    4: null,
-    5: null,
-    6: null,
-  }
+  const slotIds = Object.keys(state.slotRestrictions).map(Number)
+  const slotRestrictions = Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as SlotRestrictionMap
 
   if (restriction) {
     for (const slotId of restriction.slots) {
@@ -118,14 +101,7 @@ export function applyPresetRestrictions(
   return {
     ...state,
     slotRestrictions,
-    equippedQuartz: {
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null,
-      6: null,
-    },
+    equippedQuartz: Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as EquippedQuartzMap,
   }
 }
 
@@ -153,8 +129,13 @@ export function transferArcLength(state: OrbmentState, lineIndex: number, direct
   }
 }
 
-export function setLineStart(state: OrbmentState, lineIndex: number, start: SlotId): OrbmentState {
-  if (!OUTER_SLOTS.includes(start)) {
+export function setLineStart(
+  state: OrbmentState,
+  lineIndex: number,
+  start: SlotId,
+  topology: OrbmentTopology,
+): OrbmentState {
+  if (!topology.outerSlots.includes(start)) {
     return state
   }
   if (lineIndex < 0 || lineIndex >= state.lineStarts.length) {
@@ -253,6 +234,10 @@ export function setEquippedQuartz(
   if (restriction && quartz.element !== restriction) {
     return state
   }
+  const nodeTier = state.nodeTiers[slotId]
+  if (quartz.tier && quartz.tier > nodeTier) {
+    return state
+  }
 
   if (quartz.exclusive_group) {
     for (const [otherSlotKey, otherQuartzId] of Object.entries(state.equippedQuartz)) {
@@ -282,6 +267,7 @@ export function getAllowedQuartzForSlot(
   restrictions: SlotRestrictionMap,
   equippedQuartz: EquippedQuartzMap,
   quartzById: Map<number, Quartz>,
+  nodeTiers: NodeTierMap,
 ): Quartz[] {
   const restriction = restrictions[slotId]
   const currentQuartzId = equippedQuartz[slotId]
@@ -289,6 +275,10 @@ export function getAllowedQuartzForSlot(
 
   return quartzList.filter((quartz) => {
     if (restriction && quartz.element !== restriction) {
+      return false
+    }
+    const nodeTier = nodeTiers[slotId]
+    if (quartz.tier && quartz.tier > nodeTier) {
       return false
     }
 
@@ -304,15 +294,51 @@ export function getAllowedQuartzForSlot(
   })
 }
 
-export function getAvailableLineStarts(state: OrbmentState, lineIndex: number): SlotId[] {
+export function getAvailableLineStarts(
+  state: OrbmentState,
+  lineIndex: number,
+  topology: OrbmentTopology,
+): SlotId[] {
   const usedByOthers = new Set(
     state.lineStarts
       .map((lineStart, index) => (index === lineIndex ? null : lineStart))
       .filter((lineStart): lineStart is SlotId => lineStart !== null),
   )
-  return OUTER_SLOTS.filter(
+  return topology.outerSlots.filter(
     (slotId) => slotId === state.lineStarts[lineIndex] || !usedByOthers.has(slotId),
   )
+}
+
+export function setNodeTier(
+  state: OrbmentState,
+  slotId: SlotId,
+  tier: number,
+  quartzById: Map<number, Quartz>,
+): OrbmentState {
+  if (!Number.isInteger(tier) || tier < 1) {
+    return state
+  }
+
+  const next = {
+    ...state,
+    nodeTiers: {
+      ...state.nodeTiers,
+      [slotId]: tier,
+    },
+  }
+  const equippedId = next.equippedQuartz[slotId]
+  const equippedQuartz = equippedId ? quartzById.get(equippedId) : null
+  if (!equippedQuartz || !equippedQuartz.tier || equippedQuartz.tier <= tier) {
+    return next
+  }
+
+  return {
+    ...next,
+    equippedQuartz: {
+      ...next.equippedQuartz,
+      [slotId]: null,
+    },
+  }
 }
 
 export function getUsedExclusiveGroups(
@@ -332,4 +358,18 @@ export function getUsedExclusiveGroups(
     }
   }
   return groups
+}
+
+function createSlotRestrictionMap(topology: OrbmentTopology): SlotRestrictionMap {
+  return Object.fromEntries(topology.slotIds.map((slotId) => [slotId, null])) as SlotRestrictionMap
+}
+
+function createEquippedQuartzMap(topology: OrbmentTopology): EquippedQuartzMap {
+  return Object.fromEntries(topology.slotIds.map((slotId) => [slotId, null])) as EquippedQuartzMap
+}
+
+function createNodeTierMap(topology: OrbmentTopology): NodeTierMap {
+  return Object.fromEntries(
+    topology.slotIds.map((slotId) => [slotId, topology.nodeTierDefaults[slotId] ?? 1]),
+  ) as NodeTierMap
 }

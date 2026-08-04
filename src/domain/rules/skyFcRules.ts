@@ -1,16 +1,11 @@
-import { ELEMENTS, type ElementName, type ElementRequirement, type OrbmentLine, type SlotId } from '../types'
+import { ELEMENTS, type ElementName, type ElementRequirement, type OrbmentLine, type OrbmentTopology, type SlotId } from '../types'
 
-// Hex perimeter order starting bottom-left, clockwise, with the bottom vertex empty.
-// Slots 6 (bottom-right) and 2 (bottom-left) are not outer-adjacent (gap).
-export const OUTER_SLOTS: SlotId[] = [2, 3, 4, 5, 6]
-export const CENTER_SLOT: SlotId = 1
 export const MIN_LINES = 1
-export const MAX_LINES = 5
 export const OUTER_DIRECTION_SEQUENCE: SlotId[] = [2, 3, 4, 5, 6]
 
 export type LineDirection = 'cw' | 'ccw'
 
-export const OUTER_ADJACENCY: Record<SlotId, SlotId[]> = {
+export const OUTER_ADJACENCY: Record<number, SlotId[]> = {
   1: [2, 3, 4, 5, 6],
   2: [1, 3],
   3: [1, 2, 4],
@@ -28,6 +23,7 @@ export type OrbmentLineConfig = {
 export type OrbmentTopologyConfig = {
   lineCount: number
   lineConfigs: OrbmentLineConfig[]
+  topology: OrbmentTopology
 }
 
 export type DeriveLinesResult = {
@@ -45,10 +41,10 @@ export function createEmptyTotals(): Record<ElementName, number> {
   )
 }
 
-export function createDefaultArcLengths(lineCount: number): number[] {
-  const safeLineCount = clampLineCount(lineCount)
+export function createDefaultArcLengths(lineCount: number, topology: OrbmentTopology): number[] {
+  const safeLineCount = clampLineCount(lineCount, topology.maxLines)
   const arcLengths = new Array<number>(safeLineCount).fill(1)
-  let remaining = OUTER_SLOTS.length - safeLineCount
+  let remaining = topology.outerSlots.length - safeLineCount
   let index = 0
 
   while (remaining > 0) {
@@ -60,20 +56,20 @@ export function createDefaultArcLengths(lineCount: number): number[] {
   return arcLengths
 }
 
-export function createDefaultLineDirections(lineCount: number): LineDirection[] {
-  return new Array<LineDirection>(clampLineCount(lineCount)).fill('cw')
+export function createDefaultLineDirections(lineCount: number, maxLines: number): LineDirection[] {
+  return new Array<LineDirection>(clampLineCount(lineCount, maxLines)).fill('cw')
 }
 
-export function createDefaultLineStarts(lineCount: number): SlotId[] {
-  const safeLineCount = clampLineCount(lineCount)
-  return OUTER_DIRECTION_SEQUENCE.slice(0, safeLineCount)
+export function createDefaultLineStarts(lineCount: number, topology: OrbmentTopology): SlotId[] {
+  const safeLineCount = clampLineCount(lineCount, topology.maxLines)
+  return topology.outerDirectionSequence.slice(0, safeLineCount)
 }
 
-export function clampLineCount(lineCount: number): number {
-  return Math.max(MIN_LINES, Math.min(MAX_LINES, lineCount))
+export function clampLineCount(lineCount: number, maxLines: number): number {
+  return Math.max(MIN_LINES, Math.min(maxLines, lineCount))
 }
 
-export function isValidArcLengths(arcLengths: number[], lineCount: number): boolean {
+export function isValidArcLengths(arcLengths: number[], lineCount: number, outerSlotsCount: number): boolean {
   if (arcLengths.length !== lineCount) {
     return false
   }
@@ -82,26 +78,28 @@ export function isValidArcLengths(arcLengths: number[], lineCount: number): bool
     return false
   }
 
-  return arcLengths.reduce((sum, length) => sum + length, 0) === OUTER_SLOTS.length
+  return arcLengths.reduce((sum, length) => sum + length, 0) === outerSlotsCount
 }
 
 export function deriveLinesFromConfig(config: OrbmentTopologyConfig): DeriveLinesResult {
   const warnings: string[] = []
-  const lineCount = clampLineCount(config.lineCount)
+  const lineCount = clampLineCount(config.lineCount, config.topology.maxLines)
   const baseArcLengths = config.lineConfigs.map((lineConfig) => lineConfig.length)
-  const arcLengths = isValidArcLengths(baseArcLengths, lineCount)
+  const arcLengths = isValidArcLengths(baseArcLengths, lineCount, config.topology.outerSlots.length)
     ? baseArcLengths
-    : createDefaultArcLengths(lineCount)
+    : createDefaultArcLengths(lineCount, config.topology)
   const starts = sanitizeLineStarts(
     config.lineConfigs.map((lineConfig) => lineConfig.start),
     lineCount,
+    config.topology,
   )
   const directions = sanitizeLineDirections(
     config.lineConfigs.map((lineConfig) => lineConfig.direction),
     lineCount,
+    config.topology.maxLines,
   )
 
-  if (!isValidArcLengths(baseArcLengths, lineCount)) {
+  if (!isValidArcLengths(baseArcLengths, lineCount, config.topology.outerSlots.length)) {
     warnings.push('Invalid line lengths were reset to defaults.')
   }
   if (!areUnique(starts)) {
@@ -112,15 +110,15 @@ export function deriveLinesFromConfig(config: OrbmentTopologyConfig): DeriveLine
   const claimed = new Set<SlotId>()
 
   for (let index = 0; index < lineCount; index += 1) {
-    const built = buildLineWalk(starts[index], directions[index], arcLengths[index], claimed)
-    lines.push([CENTER_SLOT, ...built.path])
+    const built = buildLineWalk(starts[index], directions[index], arcLengths[index], claimed, config.topology)
+    lines.push([config.topology.centerSlot, ...built.path])
     for (const slotId of built.path) {
       claimed.add(slotId)
     }
     warnings.push(...built.warnings)
   }
 
-  if (claimed.size !== OUTER_SLOTS.length) {
+  if (claimed.size !== config.topology.outerSlots.length) {
     warnings.push('Some slots could not be assigned without violating adjacency/overlap constraints.')
   }
 
@@ -132,13 +130,14 @@ function buildLineWalk(
   direction: LineDirection,
   targetLength: number,
   claimed: Set<SlotId>,
+  topology: OrbmentTopology,
 ): { path: SlotId[]; warnings: string[] } {
   const warnings: string[] = []
   const path: SlotId[] = []
   let current = start
 
   if (claimed.has(start)) {
-    const fallbackStart = OUTER_DIRECTION_SEQUENCE.find((slotId) => !claimed.has(slotId))
+    const fallbackStart = topology.outerDirectionSequence.find((slotId) => !claimed.has(slotId))
     if (!fallbackStart) {
       return { path, warnings: ['Line start conflict could not be resolved.'] }
     }
@@ -151,10 +150,10 @@ function buildLineWalk(
       break
     }
     path.push(current)
-    const next = nextOuterByDirection(current, direction)
-    if (!next || !OUTER_ADJACENCY[current].includes(next) || claimed.has(next) || path.includes(next)) {
-      const alternative = OUTER_ADJACENCY[current].find(
-        (slotId) => slotId !== CENTER_SLOT && !claimed.has(slotId) && !path.includes(slotId),
+    const next = nextOuterByDirection(current, direction, topology.outerDirectionSequence)
+    if (!next || !topology.outerAdjacency[current].includes(next) || claimed.has(next) || path.includes(next)) {
+      const alternative = topology.outerAdjacency[current].find(
+        (slotId) => slotId !== topology.centerSlot && !claimed.has(slotId) && !path.includes(slotId),
       )
       if (!alternative) {
         break
@@ -169,33 +168,41 @@ function buildLineWalk(
   return { path, warnings }
 }
 
-function nextOuterByDirection(current: SlotId, direction: LineDirection): SlotId | null {
-  const index = OUTER_DIRECTION_SEQUENCE.indexOf(current)
+function nextOuterByDirection(
+  current: SlotId,
+  direction: LineDirection,
+  directionSequence: SlotId[],
+): SlotId | null {
+  const index = directionSequence.indexOf(current)
   if (index < 0) {
     return null
   }
 
   const delta = direction === 'cw' ? 1 : -1
   const nextIndex = index + delta
-  if (nextIndex < 0 || nextIndex >= OUTER_DIRECTION_SEQUENCE.length) {
+  if (nextIndex < 0 || nextIndex >= directionSequence.length) {
     return null
   }
-  return OUTER_DIRECTION_SEQUENCE[nextIndex]
+  return directionSequence[nextIndex]
 }
 
-function sanitizeLineStarts(starts: SlotId[], lineCount: number): SlotId[] {
-  const fallbacks = createDefaultLineStarts(lineCount)
+function sanitizeLineStarts(starts: SlotId[], lineCount: number, topology: OrbmentTopology): SlotId[] {
+  const fallbacks = createDefaultLineStarts(lineCount, topology)
   const normalized = [...starts]
   for (let index = 0; index < lineCount; index += 1) {
-    if (!OUTER_SLOTS.includes(normalized[index])) {
+    if (!topology.outerSlots.includes(normalized[index])) {
       normalized[index] = fallbacks[index]
     }
   }
   return normalized
 }
 
-function sanitizeLineDirections(directions: LineDirection[], lineCount: number): LineDirection[] {
-  const fallbacks = createDefaultLineDirections(lineCount)
+function sanitizeLineDirections(
+  directions: LineDirection[],
+  lineCount: number,
+  maxLines: number,
+): LineDirection[] {
+  const fallbacks = createDefaultLineDirections(lineCount, maxLines)
   const normalized = [...directions]
   for (let index = 0; index < lineCount; index += 1) {
     if (normalized[index] !== 'cw' && normalized[index] !== 'ccw') {

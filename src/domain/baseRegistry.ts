@@ -1,15 +1,61 @@
 import artsSkyFc from '../database/arts/sky-fc.json'
+import artsSkySc from '../database/arts/sky-sc.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
-import { ELEMENTS, type Art, type BaseData, type ElementName, type ElementRequirement, type Quartz } from './types'
+import quartzSkySc from '../database/quartz/sky-sc.json'
+import { ELEMENTS, type Art, type BaseData, type ElementName, type ElementRequirement, type Quartz, type SlotId } from './types'
+
+const SKY_FC_TOPOLOGY: BaseData['topology'] = {
+  slotIds: [1, 2, 3, 4, 5, 6],
+  centerSlot: 1,
+  outerSlots: [2, 3, 4, 5, 6],
+  outerDirectionSequence: [2, 3, 4, 5, 6],
+  outerAdjacency: {
+    1: [2, 3, 4, 5, 6],
+    2: [1, 3],
+    3: [1, 2, 4],
+    4: [1, 3, 5],
+    5: [1, 4, 6],
+    6: [1, 5],
+  },
+  maxLines: 5,
+  nodeTierDefaults: createNodeTierDefaults([1, 2, 3, 4, 5, 6], 99),
+}
+
+const SKY_SC_TOPOLOGY: BaseData['topology'] = {
+  slotIds: [1, 2, 3, 4, 5, 6, 7],
+  centerSlot: 1,
+  outerSlots: [2, 3, 4, 5, 6, 7],
+  outerDirectionSequence: [2, 3, 4, 5, 6, 7],
+  outerAdjacency: {
+    1: [2, 3, 4, 5, 6, 7],
+    2: [1, 3],
+    3: [1, 2, 4],
+    4: [1, 3, 5],
+    5: [1, 4, 6],
+    6: [1, 5, 7],
+    7: [1, 6],
+  },
+  maxLines: 6,
+  nodeTierDefaults: createNodeTierDefaults([1, 2, 3, 4, 5, 6, 7], 1),
+}
 
 const SKY_FC_BASE: BaseData = {
   id: 'sky-fc',
   label: 'Sky FC',
   quartz: quartzSkyFc.map((entry) => normalizeQuartz(entry)),
   arts: artsSkyFc.map((entry) => normalizeArt(entry)),
+  topology: SKY_FC_TOPOLOGY,
 }
 
-export const BASES: BaseData[] = [SKY_FC_BASE]
+const SKY_SC_BASE: BaseData = {
+  id: 'sky-sc',
+  label: 'Sky SC',
+  quartz: quartzSkySc.map((entry) => normalizeQuartz(entry)),
+  arts: artsSkySc.map((entry) => normalizeArt(entry)),
+  topology: SKY_SC_TOPOLOGY,
+}
+
+export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE]
 
 export function getBaseById(baseId: string): BaseData {
   const matched = BASES.find((base) => base.id === baseId)
@@ -23,6 +69,7 @@ function normalizeQuartz(input: unknown): Quartz {
     name: record.name as Quartz['name'],
     effect: String(record.effect),
     element: toElementName(record.element),
+    tier: normalizeTier(record.tier),
     exclusive_group:
       typeof record.exclusive_group === 'string' && record.exclusive_group.length > 0
         ? record.exclusive_group
@@ -97,4 +144,15 @@ function toElementName(value: unknown): ElementName {
     throw new Error(`Unexpected element value: ${String(value)}`)
   }
   return matched
+}
+
+function normalizeTier(value: unknown): number | undefined {
+  if (typeof value !== 'number' || !Number.isInteger(value) || value < 1) {
+    return undefined
+  }
+  return value
+}
+
+function createNodeTierDefaults(slotIds: SlotId[], tier: number): Record<number, number> {
+  return Object.fromEntries(slotIds.map((slotId) => [slotId, tier]))
 }

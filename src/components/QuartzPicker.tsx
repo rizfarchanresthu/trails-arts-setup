@@ -15,7 +15,8 @@ export function QuartzPicker({ quartzList, value, onChange }: QuartzPickerProps)
       <option value="">Empty slot</option>
       {quartzList.map((quartz) => (
         <option key={quartz.id} value={quartz.id}>
-          {quartz.name.en} ({quartz.element})
+          {quartz.name.en} ({quartz.element}
+          {quartz.tier ? `, T${quartz.tier}` : ''})
         </option>
       ))}
     </select>

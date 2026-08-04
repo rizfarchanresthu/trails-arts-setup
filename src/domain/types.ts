@@ -24,7 +24,7 @@ export const ELEMENT_COLORS: Record<ElementName, string> = {
 
 export const LINE_COLORS = ['#f25f5c', '#4d9de0', '#5abf90', '#f2c14e', '#9c89b8'] as const
 
-export type SlotId = 1 | 2 | 3 | 4 | 5 | 6
+export type SlotId = number
 
 export type LocalizedName = {
   en: string
@@ -42,6 +42,7 @@ export type Quartz = {
   name: LocalizedName
   effect: string
   element: ElementName
+  tier?: number
   exclusive_group: string | null
   elemental_value: ElementRequirement[] | 'No value'
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
@@ -69,11 +70,22 @@ export type ElementTotals = Record<ElementName, number>
 
 export type OrbmentLine = SlotId[]
 
+export type OrbmentTopology = {
+  slotIds: SlotId[]
+  centerSlot: SlotId
+  outerSlots: SlotId[]
+  outerDirectionSequence: SlotId[]
+  outerAdjacency: Record<number, SlotId[]>
+  maxLines: number
+  nodeTierDefaults: Record<number, number>
+}
+
 export type BaseData = {
   id: string
   label: string
   quartz: Quartz[]
   arts: Art[]
+  topology: OrbmentTopology
 }
 
 export type SavedQuartzSetup = {
