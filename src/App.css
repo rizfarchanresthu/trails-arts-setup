@@ -1,0 +1,258 @@
+.appShell {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  background: color-mix(in oklab, var(--bg) 94%, black 6%);
+}
+
+.topSection,
+.bottomSection {
+  display: grid;
+}
+
+.configWithGraph {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.configColumn,
+.graphColumn {
+  min-width: 0;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+select,
+button {
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+button {
+  cursor: pointer;
+}
+
+.inlineActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.arcList,
+.slotsGrid,
+.artList {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.slotsGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.slotCard,
+.arcCard,
+.artCard {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.artCard {
+  grid-template-columns: 1.6fr repeat(3, auto);
+  align-items: center;
+}
+
+.artButton {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+
+.artNameCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.artIcon {
+  width: 1.1rem;
+  height: 1.1rem;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.elementBadge {
+  font-weight: 600;
+}
+
+.inlineElementGroup {
+  display: inline;
+}
+
+.linePreview {
+  margin-top: 1rem;
+}
+
+.linePreview ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.hintText {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.orbmentPanel {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.orbmentSvg {
+  width: min(100%, 430px);
+  aspect-ratio: 1;
+  background: radial-gradient(circle at center, #ffffff 0%, #f4f6fa 70%, #eceff5 100%);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.orbmentHexGuide {
+  fill: none;
+  stroke: #d8deea;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+
+.orbmentGapMarker {
+  fill: #e7ebf3;
+  stroke: #b7bfd0;
+  stroke-width: 1.5;
+}
+
+.orbmentRing {
+  fill: none;
+  stroke: #d8deea;
+  stroke-width: 1.5;
+}
+
+.orbmentEdge {
+  opacity: 0.9;
+}
+
+.orbmentNodeId {
+  text-anchor: middle;
+  font-size: 11px;
+  font-weight: 700;
+  fill: #141922;
+  dominant-baseline: middle;
+}
+
+.orbmentNodeText {
+  text-anchor: middle;
+  font-size: 9px;
+  fill: #2d3646;
+  dominant-baseline: middle;
+}
+
+.lineLegend {
+  width: 100%;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.legendSwatch {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 3px;
+  border: 1px solid color-mix(in oklab, var(--text) 18%, transparent);
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 16, 24, 0.45);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 30;
+}
+
+.modalCard {
+  width: min(720px, 100%);
+  max-height: 85vh;
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .configWithGraph {
+    grid-template-columns: 1fr;
+  }
+
+  .slotsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .artCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .slotsGrid {
+    grid-template-columns: 1fr;
+  }
+}

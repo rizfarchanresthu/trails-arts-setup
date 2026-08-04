@@ -1,0 +1,1206 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Stone Hammer",
+      "ja": "ストーンハンマー"
+    },
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 10,
+    "target": "Single target",
+    "effect": null,
+    "description": "Drops a large boulder on enemies.",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Earth Lance",
+      "ja": "アースランス"
+    },
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 50,
+    "target": "Single target",
+    "effect": null,
+    "description": "A pointed blade shoots up from the ground.",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Petrify Breath",
+      "ja": "ペトロブレス"
+    },
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 20,
+    "target": "Single target",
+    "effect": "Petrify (20% chance, ∞ AT)",
+    "description": "Blows petrifying gas on an enemy. [Petrify 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Stone Impact",
+      "ja": "ストーンインパクト"
+    },
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": 10,
+    "target": "Circle around target (3 radius)",
+    "effect": null,
+    "description": "Drops a massive boulder on enemies.",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Titanic Roar",
+      "ja": "タイタニックロア"
+    },
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 8
+      },
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 20,
+      "delay": 20
+    },
+    "power": 30,
+    "target": "All targets",
+    "effect": null,
+    "description": "Creates a powerful localized earthquake.",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Aqua Bleed",
+      "ja": "アクアブリード"
+    },
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 10,
+    "target": "Single target",
+    "effect": null,
+    "description": "Shoots a heavy stream of water at enemies.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Blue Impact",
+      "ja": "ブルーインパクト"
+    },
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 50,
+    "target": "Single target",
+    "effect": null,
+    "description": "Blasts an enemy with highly pressurized water.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Diamond Dust",
+      "ja": "ダイヤモンドダスト"
+    },
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": 20,
+    "target": "Set circle (2 radius)",
+    "effect": "Freeze (20% chance, 500 AT)",
+    "description": "Produces intense cold. [Freeze 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Fire Bolt",
+      "ja": "ファイアボルト"
+    },
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 10,
+    "target": "Single target",
+    "effect": null,
+    "description": "Shoots a flaming ball of fire.",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Flare Arrow",
+      "ja": "フレアアロー"
+    },
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 40,
+    "target": "Single target",
+    "effect": null,
+    "description": "Showers an enemy with searing flames.",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Napalm Breath",
+      "ja": "ナパームブレス"
+    },
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": 80,
+    "target": "Single target",
+    "effect": null,
+    "description": "Crimson flames that erupt from below.",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Fire Bolt EX",
+      "ja": "ファイアボルト改"
+    },
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      },
+      {
+        "elements": [
+          "Wind",
+          "Space"
+        ],
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 20,
+    "target": "Circle around target (3 radius)",
+    "effect": null,
+    "description": "Sends a wave of flaming balls of fire.",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Spiral Flare",
+      "ja": "スパイラルフレア"
+    },
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Wind",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": 50,
+    "target": "Circle around target (3 radius)",
+    "effect": null,
+    "description": "A chaotic flurry of scorching arrows.",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Volcanic Rave",
+      "ja": "ボルカニックレイブ"
+    },
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 8
+      },
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 20,
+      "delay": 20
+    },
+    "power": 90,
+    "target": "Circle around target (3 radius)",
+    "effect": null,
+    "description": "Causes an explosion of focused energy.",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Air Strike",
+      "ja": "エアストライク"
+    },
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 10,
+    "target": "Single target",
+    "effect": null,
+    "description": "Tears and shreds an enemy with compressed air.",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Aerial",
+      "ja": "エアリアル"
+    },
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 20,
+    "target": "Set circle (3 radius)",
+    "effect": null,
+    "description": "A powerful tornado with whirling bits of rubble.",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Aero Storm",
+      "ja": "エアロストーム"
+    },
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 8
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": 50,
+    "target": "Set circle (5 radius)",
+    "effect": null,
+    "description": "Creates a massive vortex of slicing aero blades.",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Lightning",
+      "ja": "ライトニング"
+    },
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 30,
+    "target": "Set line (1 width)",
+    "effect": "Seal (20% chance, 500 AT)",
+    "description": "Sends out an electrical shock. [Seal 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Plasma Wave",
+      "ja": "プラズマウェイブ"
+    },
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 8
+      },
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": 40,
+    "target": "Set line (2 width)",
+    "effect": "Seal (20% chance, 500 AT)",
+    "description": "Strikes with electrical bolts. [Seal 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Shadow Spear",
+      "ja": "シャドウスピア"
+    },
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 20,
+    "target": "Single target",
+    "effect": "Deathblow (20% chance)",
+    "description": "A blade that whittles away life. [K.O. 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Hell Gate",
+      "ja": "ヘル・ゲート"
+    },
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 50,
+    "target": "Circle around target (2 radius)",
+    "effect": "Faint (20% chance, 400 AT)",
+    "description": "Stagnates enemies' vital activities. [Faint 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "White Gehenna",
+      "ja": "ホワイトゲヘナ"
+    },
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 8
+      },
+      {
+        "element": "Space",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 20,
+      "delay": 20
+    },
+    "power": 80,
+    "target": "Set circle (3 radius)",
+    "effect": "Faint (20% chance, 500 AT)",
+    "description": "Disrupts the time-space continuum. [Faint 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Soul Blur",
+      "ja": "ソウルブラー"
+    },
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 10,
+    "target": "Single target",
+    "effect": "Faint (20% chance, 250 AT)",
+    "description": "Emits a time-space shaking pulse. [Faint 20%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Earth Guard",
+      "ja": "アースガード"
+    },
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Guard (1 atk)",
+    "description": "Forms a temporary earth shield. [Immunity]",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Earth Wall",
+      "ja": "アースウォール"
+    },
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (2 radius)",
+    "effect": "Guard (1 atk)",
+    "description": "Forms a temporary earth shield perimeter. [Immunity]",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Crest",
+      "ja": "クレスト"
+    },
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "element": "Water",
+        "value": 3
+      },
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "DEF+25% (500 AT)",
+    "description": "Temporarily grants protection from the earth. [DEF+25%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d0/Earth_%28Sora_Element%29.png"
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Tear",
+      "ja": "ティア"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 3,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "200 HP healed",
+    "description": "Heals 200HP for an ally.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Teara",
+      "ja": "ティアラ"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 4,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "1000 HP healed",
+    "description": "Heals 1000HP for an ally.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Tearal",
+      "ja": "ティアラル"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 6,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "2000 HP healed",
+    "description": "Heals 2000HP for an ally.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "La Tear",
+      "ja": "ラ・ティア"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      },
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 5,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (2 radius)",
+    "effect": "200 HP healed",
+    "description": "Heals 200HP for allies in the area.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "La Teara",
+      "ja": "ラ・ティアラ"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 7,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "1000 HP healed",
+    "description": "Heals 1000HP for allies in the area.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Thelas",
+      "ja": "セラス"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Earth",
+        "value": 2
+      },
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 5,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Cures K.O. 100 HP healed",
+    "description": "Revives and heals 100HP.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Curia",
+      "ja": "キュリア"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 5,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Cures status effects",
+    "description": "Cures all abnormal status except K.O.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "La Curia",
+      "ja": "ラ・キュリア"
+    },
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 8
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (5 radius)",
+    "effect": "Cures status effects",
+    "description": "Cures status of all allies in area except those K.O.ed.",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/Water_%28Sora_Element%29.png"
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Forte",
+      "ja": "フォルテ"
+    },
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      },
+      {
+        "element": "Wind",
+        "value": 3
+      },
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "STR+25% (500 AT)",
+    "description": "Temporarily boosts strength by fire. [STR+25%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Fire_%28Sora_Element%29.png"
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Sylphen Guard",
+      "ja": "シルフェンガード"
+    },
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "AGL+50% (500 AT)",
+    "description": "Creates a temporary wind barrier. [AGL+50%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Sylphen Wing",
+      "ja": "シルフェンウイング"
+    },
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "MOV+1 (500 AT)",
+    "description": "Temporarily borrows the power of wind. [MOV+1]",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Wind_%28Sora_Element%29.png"
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Clock Up",
+      "ja": "クロックアップ"
+    },
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "SPD+25% (500 AT)",
+    "description": "Speeds up the flow of time. [SPD+25%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Clock Up EX",
+      "ja": "クロックアップ改"
+    },
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 9
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "SPD+50% (500 AT)",
+    "description": "Greatly speeds up the flow of time. [SPD+50%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Anti-Sept",
+      "ja": "アンチセプト"
+    },
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Mute (100% chance, 500 AT)",
+    "description": "Temporarily prevents the casting of arts. [Mute]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Anti-Sept All",
+      "ja": "アンチセプトオール"
+    },
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 11
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Set circle (3 radius)",
+    "effect": "Mute (100% chance, 500 AT)",
+    "description": "Temporarily prevents the casting of arts. [Mute]",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Time_%28Sora_Element%29.png"
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Saint",
+      "ja": "セイント"
+    },
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Earth",
+          "Fire"
+        ],
+        "value": 3
+      },
+      {
+        "elements": [
+          "Water",
+          "Wind",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "STR+25% (500 AT) DEF+25% (500 AT)",
+    "description": "Temporarily increases an ally's parameters. [STR&DEF+25%]",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e9/Mirage_%28Sora_Element%29.png"
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Chaos Brand",
+      "ja": "カオスブランド"
+    },
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Confuse (100% chance, 250 AT)",
+    "description": "Muddles an enemy's cognitive abilities. [Confuse]",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e9/Mirage_%28Sora_Element%29.png"
+  }
+]

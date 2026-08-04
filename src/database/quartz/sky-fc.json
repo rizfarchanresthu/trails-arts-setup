@@ -1,0 +1,1329 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Defense 1",
+      "ja": "防御１"
+    },
+    "effect": "DEF+5%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "defense",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Defense 2",
+      "ja": "防御２"
+    },
+    "effect": "DEF+10%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "defense",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Defense 3",
+      "ja": "防御３"
+    },
+    "effect": "DEF+15%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "defense",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Poison",
+      "ja": "毒の刃"
+    },
+    "effect": "Poison enemy with 10% success.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Mute",
+      "ja": "封魔の刃"
+    },
+    "effect": "Mute enemy with 10% success.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Petrify",
+      "ja": "石化の刃"
+    },
+    "effect": "Petrify enemy with 10% success.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "HP 1",
+      "ja": "ＨＰ１"
+    },
+    "effect": "Max HP+5%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "hp",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "HP 2",
+      "ja": "ＨＰ２"
+    },
+    "effect": "Max HP+10%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "hp",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "HP 3",
+      "ja": "ＨＰ３"
+    },
+    "effect": "Max HP+15%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "hp",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Mind 1",
+      "ja": "精神１"
+    },
+    "effect": "ATS+5%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 30
+      }
+    ],
+    "exclusive_group": "mind",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Mind 2",
+      "ja": "精神２"
+    },
+    "effect": "ATS+10%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 300
+      }
+    ],
+    "exclusive_group": "mind",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Mind 3",
+      "ja": "精神３"
+    },
+    "effect": "ATS+15%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 900
+      }
+    ],
+    "exclusive_group": "mind",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Freeze",
+      "ja": "凍結の刃"
+    },
+    "effect": "Freeze enemy with 10% success.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Heal",
+      "ja": "治癒"
+    },
+    "effect": "HP slowly recovers by walking.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      },
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Attack 1",
+      "ja": "攻撃１"
+    },
+    "effect": "STR+5%/DEF-5%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "attack",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Attack 2",
+      "ja": "攻撃２"
+    },
+    "effect": "STR+10%/DEF-10%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "attack",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Attack 3",
+      "ja": "攻撃３"
+    },
+    "effect": "STR+15%/DEF-15%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "attack",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Seal",
+      "ja": "封技の刃"
+    },
+    "effect": "Seal enemy crafts with 10% success.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Confuse",
+      "ja": "混沌の刃"
+    },
+    "effect": "Confuse enemy with 10% success.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Strike",
+      "ja": "必殺の刃"
+    },
+    "effect": "Critically strike with 10% success.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Shield 1",
+      "ja": "魔防１"
+    },
+    "effect": "ADF+5",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "shield",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Shield 2",
+      "ja": "魔防２"
+    },
+    "effect": "ADF+15",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "shield",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Shield 3",
+      "ja": "魔防３"
+    },
+    "effect": "ADF+30",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "shield",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Evade 1",
+      "ja": "回避１"
+    },
+    "effect": "AGL+1",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "evade",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Evade 2",
+      "ja": "回避２"
+    },
+    "effect": "AGL+2",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "evade",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Evade 3",
+      "ja": "回避３"
+    },
+    "effect": "AGL+3",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "evade",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Impede 1",
+      "ja": "妨害１"
+    },
+    "effect": "Prevent enemy arts with 20% success.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 30
+      }
+    ],
+    "exclusive_group": "impede",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Impede 2",
+      "ja": "妨害２"
+    },
+    "effect": "Prevent enemy arts with 50% success.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 300
+      }
+    ],
+    "exclusive_group": "impede",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Impede 3",
+      "ja": "妨害３"
+    },
+    "effect": "Prevent enemy arts with 80% success.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": "impede",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Sleep",
+      "ja": "睡眠の刃"
+    },
+    "effect": "Put enemy to sleep with 10% success.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Scent",
+      "ja": "美臭"
+    },
+    "effect": "Enemies become aware of presence.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Action 1",
+      "ja": "行動力１"
+    },
+    "effect": "SPD+10%",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "action",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Action 2",
+      "ja": "行動力２"
+    },
+    "effect": "SPD+20%",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "action",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Action 3",
+      "ja": "行動力３"
+    },
+    "effect": "SPD+30%",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "action",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Blind",
+      "ja": "闇の刃"
+    },
+    "effect": "Blind enemy with 10% success.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 50
+      }
+    ],
+    "exclusive_group": "status_inflict",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Cast 1",
+      "ja": "駆動１"
+    },
+    "effect": "Time to cast arts is cut.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "cast",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Cast 2",
+      "ja": "駆動２"
+    },
+    "effect": "Time to cast arts is greatly cut.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "cast",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Deathblow 1",
+      "ja": "死の刃１"
+    },
+    "effect": "Kill enemy with 10% success.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": "deathblow",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Deathblow 2",
+      "ja": "死の刃２"
+    },
+    "effect": "100% kills enemy but quartz breaks.",
+    "element": "Time",
+    "elemental_value": "No value",
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": "deathblow",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Move 1",
+      "ja": "移動１"
+    },
+    "effect": "MOV+1",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 100
+      }
+    ],
+    "exclusive_group": "move",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Move 2",
+      "ja": "移動２"
+    },
+    "effect": "MOV+2",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "move",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Move 3",
+      "ja": "移動３"
+    },
+    "effect": "MOV+3",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1000
+      }
+    ],
+    "exclusive_group": "move",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "EP Cut 1",
+      "ja": "省ＥＰ１"
+    },
+    "effect": "Arts' EP cost -10%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 20
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 10
+      }
+    ],
+    "exclusive_group": "ep_cut",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "EP Cut 2",
+      "ja": "省ＥＰ２"
+    },
+    "effect": "Arts' EP cost -25%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 100
+      }
+    ],
+    "exclusive_group": "ep_cut",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "EP Cut 3",
+      "ja": "省ＥＰ３"
+    },
+    "effect": "Arts' EP cost -50%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1000
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 800
+      }
+    ],
+    "exclusive_group": "ep_cut",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Range 1",
+      "ja": "範囲１"
+    },
+    "effect": "Arts' effect range +1",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "Eagle Eye",
+      "ja": "鷹目"
+    },
+    "effect": "Can see enemies from a distance.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      },
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "EP 1",
+      "ja": "ＥＰ１"
+    },
+    "effect": "Max EP+5%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 30
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 10
+      }
+    ],
+    "exclusive_group": "ep",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "EP 2",
+      "ja": "ＥＰ２"
+    },
+    "effect": "Max EP+10%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 100
+      }
+    ],
+    "exclusive_group": "ep",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "EP 3",
+      "ja": "ＥＰ３"
+    },
+    "effect": "Max EP+15%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 800
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 500
+      }
+    ],
+    "exclusive_group": "ep",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Hit 1",
+      "ja": "命中１"
+    },
+    "effect": "DEX+5",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 20
+      }
+    ],
+    "exclusive_group": "hit",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "Hit 2",
+      "ja": "命中２"
+    },
+    "effect": "DEX+10",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "exclusive_group": "hit",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Hit 3",
+      "ja": "命中３"
+    },
+    "effect": "DEX+15",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 800
+      }
+    ],
+    "exclusive_group": "hit",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Information",
+      "ja": "情報"
+    },
+    "effect": "Be able to perceive enemy status.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Haze",
+      "ja": "陽炎"
+    },
+    "effect": "Enemies become unaware of presence.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      },
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "Cloak",
+      "ja": "葉隠"
+    },
+    "effect": "No encounters.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      },
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_group": null,
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+  }
+]
