@@ -41,7 +41,6 @@ label {
   font-size: 0.95rem;
 }
 
-select,
 input,
 button {
   padding: 0.45rem 0.6rem;
@@ -49,6 +48,15 @@ button {
   border: 1px solid var(--border);
   background: var(--bg);
   color: var(--text-h);
+}
+
+.appSelect {
+  min-width: 10rem;
+  width: 100%;
+}
+
+.appSelect__menu-portal {
+  z-index: 40;
 }
 
 button {
@@ -117,6 +125,21 @@ button {
 
 .elementBadge {
   font-weight: 600;
+}
+
+.quartzOptionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.quartzElementSwatch {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in oklab, var(--text) 18%, transparent);
 }
 
 .inlineElementGroup {

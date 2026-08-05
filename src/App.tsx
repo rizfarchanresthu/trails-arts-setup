@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import './App.css'
+import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
@@ -188,10 +189,16 @@ function App() {
         <div className="fieldRow">
           <label>
             Base
-            <select
+            <AppSelect
               value={selectedBaseId}
-              onChange={(event) => {
-                const nextBaseId = event.target.value
+              options={BASES.map((baseOption) => ({
+                value: baseOption.id,
+                label: baseOption.label,
+              }))}
+              onChange={(nextBaseId) => {
+                if (!nextBaseId) {
+                  return
+                }
                 setSelectedBaseId(nextBaseId)
                 setSelectedTemplateId('')
                 setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
@@ -199,33 +206,25 @@ function App() {
                 setDraftBeforeSavedLoad(null)
                 setSetupNotice('')
               }}
-            >
-              {BASES.map((baseOption) => (
-                <option key={baseOption.id} value={baseOption.id}>
-                  {baseOption.label}
-                </option>
-              ))}
-            </select>
+            />
           </label>
           <div className="fieldRow rowRightControls">
             <label>
               Saved setup
-              <select
+              <AppSelect
                 value={selectedSavedSetupId}
-                onChange={(event) => {
-                  onSavedSetupSelectionChange(event.target.value)
-                }}
-              >
-                <option value="">Select saved setup</option>
-                {savedSetups.map((setup) => {
-                  const setupBase = getBaseById(setup.baseGame)
-                  return (
-                    <option key={setup.id} value={setup.id}>
-                      {setup.name} ({setupBase.label})
-                    </option>
-                  )
-                })}
-              </select>
+                options={[
+                  { value: '', label: 'Select saved setup' },
+                  ...savedSetups.map((setup) => {
+                    const setupBase = getBaseById(setup.baseGame)
+                    return {
+                      value: setup.id,
+                      label: `${setup.name} (${setupBase.label})`,
+                    }
+                  }),
+                ]}
+                onChange={onSavedSetupSelectionChange}
+              />
             </label>
             <label>
               Setup name

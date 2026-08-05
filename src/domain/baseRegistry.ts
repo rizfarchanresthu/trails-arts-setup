@@ -40,7 +40,7 @@ const SKY_SC_TOPOLOGY: BaseData['topology'] = {
   },
   wrapsOuterRing: true,
   maxLines: 6,
-  nodeTierDefaults: createNodeTierDefaults([1, 2, 3, 4, 5, 6, 7], 1),
+  nodeTierDefaults: createNodeTierDefaults([1, 2, 3, 4, 5, 6, 7], 3),
 }
 
 const SKY_FC_BASE: BaseData = {
