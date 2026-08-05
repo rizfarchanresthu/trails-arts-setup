@@ -1,4 +1,5 @@
 import skyFcPresets from '../database/character-preset/sky-fc.json'
+import skyScPresets from '../database/character-preset/sky-sc.json'
 import { getBaseById } from './baseRegistry'
 import { type LineDirection } from './rules/skyFcRules'
 import { type ElementName, type OrbmentTopology, type SlotId } from './types'
@@ -26,13 +27,19 @@ export type CharacterTemplate = {
   } | null
 }
 
+const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
+  'sky-fc': skyFcPresets as RawCharacterPreset[],
+  'sky-sc': skyScPresets as RawCharacterPreset[],
+}
+
 export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[] {
-  if (baseId !== 'sky-fc') {
+  const presets = PRESETS_BY_BASE[baseId]
+  if (!presets) {
     return []
   }
 
   const topology = getBaseById(baseId).topology
-  return (skyFcPresets as RawCharacterPreset[]).map((raw) => {
+  return presets.map((raw) => {
     const presetShape: OrbmentPresetShape = {
       lineCount: raw.line_count,
       lines: raw.lines.map((line) => {

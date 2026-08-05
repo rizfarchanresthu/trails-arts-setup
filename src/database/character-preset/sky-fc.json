@@ -1,5 +1,41 @@
 [
   {
+    "id": "estelle-bright",
+    "name": "Estelle Bright",
+    "line_count": 2,
+    "lines": [
+      [1, 2, 3, 4],
+      [1, 6, 5]
+    ],
+    "restriction": null
+  },
+  {
+    "id": "joshua-bright",
+    "name": "Joshua Bright",
+    "line_count": 2,
+    "lines": [
+      [1, 2, 3, 4, 5],
+      [1, 6]
+    ],
+    "restriction": {
+      "slots": [1, 4],
+      "element": "Time"
+    }
+  },
+  {
+    "id": "scherazard-harvey",
+    "name": "Scherazard Harvey",
+    "line_count": 2,
+    "lines": [
+      [1, 2],
+      [1, 6, 5, 4, 3]
+    ],
+    "restriction": {
+      "slots": [1, 5],
+      "element": "Wind"
+    }
+  },
+  {
     "id": "olivier-lenheim",
     "name": "Olivier Lenheim",
     "line_count": 1,
@@ -64,42 +100,6 @@
     "restriction": {
       "slots": [1, 6],
       "element": "Earth"
-    }
-  },
-  {
-    "id": "joshua-bright",
-    "name": "Joshua Bright",
-    "line_count": 2,
-    "lines": [
-      [1, 2, 3, 4, 5],
-      [1, 6]
-    ],
-    "restriction": {
-      "slots": [1, 4],
-      "element": "Time"
-    }
-  },
-  {
-    "id": "estelle-bright",
-    "name": "Estelle Bright",
-    "line_count": 2,
-    "lines": [
-      [1, 2, 3, 4],
-      [1, 6, 5]
-    ],
-    "restriction": null
-  },
-  {
-    "id": "scherazard-harvey",
-    "name": "Scherazard Harvey",
-    "line_count": 2,
-    "lines": [
-      [1, 2],
-      [1, 6, 5, 4, 3]
-    ],
-    "restriction": {
-      "slots": [1, 5],
-      "element": "Wind"
     }
   }
 ]
