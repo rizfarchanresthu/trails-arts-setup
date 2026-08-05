@@ -266,7 +266,9 @@ export function OrbmentConfigurator({
                           ? 'Azure templates are loaded from the Azure character preset database.'
                           : selectedBaseId === 'cold-steel-i'
                             ? 'Cold Steel I templates are loaded from the Cold Steel I character preset database.'
-                            : 'No base-specific character presets are loaded for this base yet.'}
+                            : selectedBaseId === 'cold-steel-ii'
+                              ? 'Cold Steel II templates are loaded from the Cold Steel II character preset database.'
+                              : 'No base-specific character presets are loaded for this base yet.'}
               </p>
             </div>
           </div>

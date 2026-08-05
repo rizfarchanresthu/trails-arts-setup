@@ -139,19 +139,6 @@
     ]
   },
   {
-    "id": "crow-armbrust",
-    "name": "Crow Armbrust",
-    "line_count": 2,
-    "lines": [
-      ["M", 5, 6, 7, 8, 9],
-      ["M", 2, 3, 4]
-    ],
-    "restriction": [
-      { "slots": [3, 5], "element": "Time" },
-      { "slots": [9], "element": "Water" }
-    ]
-  },
-  {
     "id": "sara-valestein",
     "name": "Sara Valestein",
     "line_count": 2,
@@ -160,8 +147,73 @@
       ["M", 8, 7, 6]
     ],
     "restriction": [
-      { "slots": [7, 9], "element": "Wind" },
+      { "slots": [7,9], "element": "Wind" },
       { "slots": [3], "element": "Fire" }
+    ]
+  },
+  {
+    "id": "toval-randonneur",
+    "name": "Toval Randonneur",
+    "line_count": 2,
+    "lines": [
+      ["M", 9, 2, 3, 4, 5, 6, 7],
+      ["M", 8]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Wind" },
+      { "slots": [5], "element": "Space" }
+    ]
+  },
+  {
+    "id": "claire-rieveldt",
+    "name": "Claire Rieveldt",
+    "line_count": 3,
+    "lines": [
+      ["M", 9, 8, 7, 6, 5, 4],
+      ["M", 2],
+      ["M", 3]
+    ],
+    "restriction": [
+      { "slots": [5, 9], "element": "Water" },
+      { "slots": [3], "element": "Space" }
+    ]
+  },
+  {
+    "id": "sharon-krueger",
+    "name": "Sharon Krueger",
+    "line_count": 2,
+    "lines": [
+      ["M", 7, 6, 5, 4, 3, 2],
+      ["M", 9, 8]
+    ],
+    "restriction": [
+      { "slots": [5, 9], "element": "Time" },
+      { "slots": [3], "element": "Mirage" }
+    ]
+  },
+  {
+    "id": "elise-schwarzer",
+    "name": "Elise Schwarzer",
+    "line_count": 2,
+    "lines": [
+      ["M", 9, 8, 7, 6, 5, 4],
+      ["M", 3, 2]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Water" },
+      { "slots": [5], "element": "Time" }
+    ]
+  },
+  {
+    "id": "alfin-reise-arnor",
+    "name": "Alfin Reise Arnor",
+    "line_count": 1,
+    "lines": [
+      ["M", 9, 8, 7, 6, 5, 4, 3, 2]
+    ],
+    "restriction": [
+      { "slots": [5, 7], "element": "Fire" },
+      { "slots": [3], "element": "Mirage" }
     ]
   },
   {
@@ -176,6 +228,46 @@
     "restriction": [
       { "slots": [7, 9], "element": "Space" },
       { "slots": [3], "element": "Time" }
+    ]
+  },
+  {
+    "id": "towa-herschel",
+    "name": "Towa Herschel",
+    "line_count": 2,
+    "lines": [
+      ["M", 5, 4, 3, 2, 9, 8, 7],
+      ["M", 6]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Earth" },
+      { "slots": [9], "element": "Water" }
+    ]
+  },
+  {
+    "id": "lloyd-bannings",
+    "name": "Lloyd Bannings",
+    "line_count": 3,
+    "lines": [
+      ["M", 9, 2, 3, 4, 5],
+      ["M", 6, 7],
+      ["M", 8]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Earth" },
+      { "slots": [5], "element": "Fire" }
+    ]
+  },
+  {
+    "id": "rixia-mao",
+    "name": "Rixia Mao",
+    "line_count": 2,
+    "lines": [
+      ["M", 9, 8, 7, 6, 5],
+      ["M", 4, 3, 2]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Mirage" },
+      { "slots": [5], "element": "Wind" }
     ]
   }
 ]
