@@ -100,7 +100,7 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
                     ) : null}
                     <strong className="truncate">{art.name.en}</strong>
                   </span>
-                  <Badge variant="outline" style={{ color: ELEMENT_COLORS[art.element] }}>
+                  <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[art.element], color: 'white' }}>
                     {art.element}
                   </Badge>
                   <span className="text-muted-foreground">{art.category}</span>
@@ -124,7 +124,7 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
               <div className="grid gap-2 text-sm">
                 <p>
                   Element:{' '}
-                  <Badge variant="outline" style={{ color: ELEMENT_COLORS[selectedArt.element] }}>
+                  <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[selectedArt.element], color: 'white' }}>
                     {selectedArt.element}
                   </Badge>
                 </p>
@@ -143,7 +143,7 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
                     <span key={`req-${selectedArt.id}-${index}`}>
                       {entry.element ? (
                         <>
-                          <Badge variant="outline" style={{ color: ELEMENT_COLORS[entry.element] }}>
+                          <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[entry.element], color: 'white' }}>
                             {entry.element}
                           </Badge>{' '}
                           {entry.value}
@@ -153,7 +153,7 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
                           {(entry.elements ?? []).map((element, elementIndex) => (
                             <span key={`req-element-${selectedArt.id}-${index}-${element}`}>
                               {elementIndex > 0 ? '/' : ''}
-                              <Badge variant="outline" style={{ color: ELEMENT_COLORS[element] }}>
+                              <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[element], color: 'white' }}>
                                 {element}
                               </Badge>
                             </span>
