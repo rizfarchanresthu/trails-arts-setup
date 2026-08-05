@@ -1,10 +1,10 @@
 Lloyd Bannings: 2 Line, 1-3-2-7, 1-6-5-4;
-Elie MacDowell: 2 Line, 1-4, 1-5-6-7-2-3, 1&2 Wind;
+Elie MacDowell: 2 Line, 1-5-6-7-2-3, 1-4, 1&2 Wind;
 Tio Plato: 1 Line, 1-4-3-2-7-6-5, 1&7 Water;
 Randy Orlando: 3 Line, 1-5-4-3, 1-2-7, 1-6, 1 Fire;
-Wazy Hemisphere: 2 Line, 1-3, 1-4-5-6-7-2, 1&4 Space;
-Noel Seeker: 4 Line, 1-2, 1-7-, 1-6, 1-5-4-3, 1 Earth;
-Alex Dudley: 2 Line, 1-3-2, 1-4-5-6-7, 1 Time;
-Yin: 3 Line, 1-2, 1-7, 1-6-5-4-3, 1 Mirage;
+Wazy Hemisphere: 2 Line, 1-4-5-6-7-2, 1-3, 1&4 Space;
+Noel Seeker: 4 Line, 1-5-4-3, 1-2, 1-6, 1-7, 1 Earth;
+Alex Dudley: 2 Line, 1-4-5-6-7, 1-3-2, 1 Time;
+Yin: 3 Line, 1-6-5-4-3, 1-2, 1-7, 1 Mirage;
 Estelle Bright: 2 Line, 1-2-3-4, 1-5-6-7;
 Joshua Bright: 2 Line, 1-2-3-4-5, 1-6-7, 1&4 Time;

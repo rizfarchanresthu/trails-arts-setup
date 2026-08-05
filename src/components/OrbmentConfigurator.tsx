@@ -1,15 +1,17 @@
 import {
   ELEMENTS,
+  LINE_COLORS,
   formatSlotLabel,
   type ElementName,
   type ElementRequirement,
   type MasterQuartz,
+  type MasterQuartzLevel,
+  type OrbmentLine,
   type OrbmentTopology,
   type OrbmentVisual,
   type Quartz,
   type SlotId,
 } from '../domain/types'
-import { type OrbmentLine } from '../domain/types'
 import { type LineDirection } from '../domain/rules/skyFcRules'
 import {
   type OrbmentState,
@@ -79,6 +81,41 @@ export function OrbmentConfigurator({
     ? masterQuartzById.get(state.equippedMasterQuartzId)
     : null
   const masterLevelData = getMasterQuartzLevelData(equippedMasterQuartz, state.masterQuartzLevel)
+  const centerSlotId = topology.masterQuartzSlot ?? topology.centerSlot
+  const { lineColumns, unassignedSlotIds } = getLineColumnSlotIds(lines, topology)
+
+  const renderSlotCard = (slotId: SlotId) => {
+    if (topology.masterQuartzSlot === slotId) {
+      return (
+        <MasterSlotCard
+          key={`slot-${slotId}`}
+          equippedMasterQuartz={equippedMasterQuartz}
+          masterLevelData={masterLevelData}
+          masterQuartzList={masterQuartzList}
+          masterQuartzLevel={state.masterQuartzLevel}
+          equippedMasterQuartzId={state.equippedMasterQuartzId}
+          onMasterQuartzChange={onMasterQuartzChange}
+          onMasterQuartzLevelChange={onMasterQuartzLevelChange}
+        />
+      )
+    }
+
+    return (
+      <RegularSlotCard
+        key={`slot-${slotId}`}
+        slotId={slotId}
+        state={state}
+        topology={topology}
+        quartzList={quartzList}
+        quartzById={quartzById}
+        maxTier={maxTier}
+        showNodeTierControls={showNodeTierControls}
+        onRestrictionChange={onRestrictionChange}
+        onQuartzChange={onQuartzChange}
+        onNodeTierChange={onNodeTierChange}
+      />
+    )
+  }
 
   return (
     <section className="panel">
@@ -202,117 +239,28 @@ export function OrbmentConfigurator({
             </p>
           </div>
 
-          <div className="slotsGrid">
-            {topology.slotIds.map((slotId) => {
-              if (topology.masterQuartzSlot === slotId) {
-                return (
-                  <article className="slotCard" key={`slot-${slotId}`}>
-                    <h4>Master</h4>
-                    <label>
-                      Master quartz
-                      <MasterQuartzPicker
-                        masterQuartzList={masterQuartzList}
-                        value={state.equippedMasterQuartzId}
-                        onChange={(masterQuartzId) => onMasterQuartzChange?.(masterQuartzId)}
-                      />
-                    </label>
-                    {equippedMasterQuartz ? (
-                      <>
-                        <label>
-                          MQ level
-                          <AppSelect
-                            value={String(state.masterQuartzLevel)}
-                            options={equippedMasterQuartz.levels.map((entry) => ({
-                              value: String(entry.level),
-                              label: `Level ${entry.level}`,
-                            }))}
-                            onChange={(nextValue) => onMasterQuartzLevelChange?.(Number(nextValue))}
-                          />
-                        </label>
-                        <p className="mqDescription">{equippedMasterQuartz.description}</p>
-                        {masterLevelData ? (
-                          <>
-                            <p className="mqElementalValue">
-                              Elemental value: {formatElementRequirements(masterLevelData.elemental_value)}
-                            </p>
-                            <ul className="mqEffects">
-                              {masterLevelData.effects.map((effect, index) => (
-                                <li key={`mq-effect-${index}`}>
-                                  <strong>{effect.title}</strong>
-                                  {effect.detail ? `: ${effect.detail}` : ''}
-                                </li>
-                              ))}
-                            </ul>
-                          </>
-                        ) : null}
-                      </>
-                    ) : null}
-                  </article>
-                )
-              }
-
-              const restriction = state.slotRestrictions[slotId]
-              const restrictionOnlyQuartz = restriction
-                ? quartzList.filter((quartz) => quartz.element === restriction)
-                : quartzList
-              const allowedQuartz = getAllowedQuartzForSlot(
-                quartzList,
-                slotId,
-                state.slotRestrictions,
-                state.equippedQuartz,
-                quartzById,
-                state.nodeTiers,
-              )
-              const filteredByExclusivity = restrictionOnlyQuartz.length - allowedQuartz.length
-
-              return (
-                <article className="slotCard" key={`slot-${slotId}`}>
-                  <h4>Slot {formatSlotLabel(slotId, topology)}</h4>
-                  {showNodeTierControls ? (
-                    <label>
-                      Node tier
-                      <AppSelect
-                        value={String(state.nodeTiers[slotId])}
-                        options={Array.from({ length: maxTier }, (_, index) => index + 1).map((tierValue) => ({
-                          value: String(tierValue),
-                          label: `Tier ${tierValue}`,
-                        }))}
-                        onChange={(nextValue) => onNodeTierChange(slotId, Number(nextValue))}
-                      />
-                    </label>
-                  ) : null}
-
-                  <label>
-                    Restriction
-                    <AppSelect
-                      value={state.slotRestrictions[slotId] ?? ''}
-                      options={[
-                        { value: '', label: 'None' },
-                        ...ELEMENTS.map((element) => ({
-                          value: element,
-                          label: element,
-                        })),
-                      ]}
-                      onChange={(nextValue) =>
-                        onRestrictionChange(slotId, (nextValue as ElementName) || null)
-                      }
+          <div className="slotsByLine">
+            <div className="slotsCenterRow">{renderSlotCard(centerSlotId)}</div>
+            <div className="slotsLineColumns">
+              {lineColumns.map((column) => (
+                <div className="slotsLineColumn" key={`line-column-${column.lineIndex}`}>
+                  <h3 className="slotsLineColumnTitle">
+                    <span
+                      className="slotsLineSwatch"
+                      style={{ backgroundColor: LINE_COLORS[column.lineIndex % LINE_COLORS.length] }}
                     />
-                  </label>
-
-                  <label>
-                    Quartz
-                    <QuartzPicker
-                      quartzList={allowedQuartz}
-                      value={state.equippedQuartz[slotId]}
-                      onChange={(quartzId) => onQuartzChange(slotId, quartzId)}
-                    />
-                  </label>
-                  {filteredByExclusivity > 0 ? (
-                    <p className="hintText">Some quartz hidden by exclusive-group rules.</p>
-                  ) : null}
-                </article>
-              )
-            })}
+                    Line {column.lineIndex + 1}
+                  </h3>
+                  {column.slotIds.map((slotId) => renderSlotCard(slotId))}
+                </div>
+              ))}
+              {unassignedSlotIds.length > 0 ? (
+                <div className="slotsLineColumn" key="line-column-unassigned">
+                  <h3 className="slotsLineColumnTitle">Unassigned</h3>
+                  {unassignedSlotIds.map((slotId) => renderSlotCard(slotId))}
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
 
@@ -332,6 +280,170 @@ export function OrbmentConfigurator({
         </div>
       </div>
     </section>
+  )
+}
+
+function getLineColumnSlotIds(lines: OrbmentLine[], topology: OrbmentTopology) {
+  const assigned = new Set<SlotId>()
+  const lineColumns = lines.map((line, lineIndex) => {
+    const slotIds = line.filter((slotId) => slotId !== topology.centerSlot)
+    for (const slotId of slotIds) {
+      assigned.add(slotId)
+    }
+    return { lineIndex, slotIds }
+  })
+  const unassignedSlotIds = topology.outerSlots.filter((slotId) => !assigned.has(slotId))
+  return { lineColumns, unassignedSlotIds }
+}
+
+type MasterSlotCardProps = {
+  equippedMasterQuartz: MasterQuartz | null | undefined
+  masterLevelData: MasterQuartzLevel | null
+  masterQuartzList: MasterQuartz[]
+  masterQuartzLevel: number
+  equippedMasterQuartzId: number | null
+  onMasterQuartzChange?: (masterQuartzId: number | null) => void
+  onMasterQuartzLevelChange?: (level: number) => void
+}
+
+function MasterSlotCard({
+  equippedMasterQuartz,
+  masterLevelData,
+  masterQuartzList,
+  masterQuartzLevel,
+  equippedMasterQuartzId,
+  onMasterQuartzChange,
+  onMasterQuartzLevelChange,
+}: MasterSlotCardProps) {
+  return (
+    <article className="slotCard">
+      <h4>Master</h4>
+      <label>
+        Master quartz
+        <MasterQuartzPicker
+          masterQuartzList={masterQuartzList}
+          value={equippedMasterQuartzId}
+          onChange={(masterQuartzId) => onMasterQuartzChange?.(masterQuartzId)}
+        />
+      </label>
+      {equippedMasterQuartz ? (
+        <>
+          <label>
+            MQ level
+            <AppSelect
+              value={String(masterQuartzLevel)}
+              options={equippedMasterQuartz.levels.map((entry) => ({
+                value: String(entry.level),
+                label: `Level ${entry.level}`,
+              }))}
+              onChange={(nextValue) => onMasterQuartzLevelChange?.(Number(nextValue))}
+            />
+          </label>
+          <p className="mqDescription">{equippedMasterQuartz.description}</p>
+          {masterLevelData ? (
+            <>
+              <p className="mqElementalValue">
+                Elemental value: {formatElementRequirements(masterLevelData.elemental_value)}
+              </p>
+              <ul className="mqEffects">
+                {masterLevelData.effects.map((effect, index) => (
+                  <li key={`mq-effect-${index}`}>
+                    <strong>{effect.title}</strong>
+                    {effect.detail ? `: ${effect.detail}` : ''}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+        </>
+      ) : null}
+    </article>
+  )
+}
+
+type RegularSlotCardProps = {
+  slotId: SlotId
+  state: OrbmentState
+  topology: OrbmentTopology
+  quartzList: Quartz[]
+  quartzById: Map<number, Quartz>
+  maxTier: number
+  showNodeTierControls: boolean
+  onRestrictionChange: (slotId: SlotId, restriction: ElementName | null) => void
+  onQuartzChange: (slotId: SlotId, quartzId: number | null) => void
+  onNodeTierChange: (slotId: SlotId, tier: number) => void
+}
+
+function RegularSlotCard({
+  slotId,
+  state,
+  topology,
+  quartzList,
+  quartzById,
+  maxTier,
+  showNodeTierControls,
+  onRestrictionChange,
+  onQuartzChange,
+  onNodeTierChange,
+}: RegularSlotCardProps) {
+  const restriction = state.slotRestrictions[slotId]
+  const restrictionOnlyQuartz = restriction
+    ? quartzList.filter((quartz) => quartz.element === restriction)
+    : quartzList
+  const allowedQuartz = getAllowedQuartzForSlot(
+    quartzList,
+    slotId,
+    state.slotRestrictions,
+    state.equippedQuartz,
+    quartzById,
+    state.nodeTiers,
+  )
+  const filteredByExclusivity = restrictionOnlyQuartz.length - allowedQuartz.length
+
+  return (
+    <article className="slotCard">
+      <h4>Slot {formatSlotLabel(slotId, topology)}</h4>
+      {showNodeTierControls ? (
+        <label>
+          Node tier
+          <AppSelect
+            value={String(state.nodeTiers[slotId])}
+            options={Array.from({ length: maxTier }, (_, index) => index + 1).map((tierValue) => ({
+              value: String(tierValue),
+              label: `Tier ${tierValue}`,
+            }))}
+            onChange={(nextValue) => onNodeTierChange(slotId, Number(nextValue))}
+          />
+        </label>
+      ) : null}
+
+      <label>
+        Restriction
+        <AppSelect
+          value={state.slotRestrictions[slotId] ?? ''}
+          options={[
+            { value: '', label: 'None' },
+            ...ELEMENTS.map((element) => ({
+              value: element,
+              label: element,
+            })),
+          ]}
+          onChange={(nextValue) => onRestrictionChange(slotId, (nextValue as ElementName) || null)}
+        />
+      </label>
+
+      <label>
+        Quartz
+        <QuartzPicker
+          quartzList={allowedQuartz}
+          value={state.equippedQuartz[slotId]}
+          onChange={(quartzId) => onQuartzChange(slotId, quartzId)}
+        />
+      </label>
+      {filteredByExclusivity > 0 ? (
+        <p className="hintText">Some quartz hidden by exclusive-group rules.</p>
+      ) : null}
+    </article>
   )
 }
 

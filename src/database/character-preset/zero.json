@@ -14,8 +14,8 @@
     "name": "Elie MacDowell",
     "line_count": 2,
     "lines": [
-      [1, 4],
-      [1, 5, 6, 7, 2, 3]
+      [1, 5, 6, 7, 2, 3],
+      [1, 4]
     ],
     "restriction": {
       "slots": [1, 2],
@@ -53,8 +53,8 @@
     "name": "Wazy Hemisphere",
     "line_count": 2,
     "lines": [
-      [1, 3],
-      [1, 4, 5, 6, 7, 2]
+      [1, 4, 5, 6, 7, 2],
+      [1, 3]
     ],
     "restriction": {
       "slots": [1, 4],
@@ -66,10 +66,10 @@
     "name": "Noel Seeker",
     "line_count": 4,
     "lines": [
+      [1, 5, 4, 3],
       [1, 2],
-      [1, 7],
       [1, 6],
-      [1, 5, 4, 3]
+      [1, 7]
     ],
     "restriction": {
       "slots": [1],
@@ -81,8 +81,8 @@
     "name": "Alex Dudley",
     "line_count": 2,
     "lines": [
-      [1, 3, 2],
-      [1, 4, 5, 6, 7]
+      [1, 4, 5, 6, 7],
+      [1, 3, 2]
     ],
     "restriction": {
       "slots": [1],
@@ -94,9 +94,9 @@
     "name": "Yin",
     "line_count": 3,
     "lines": [
+      [1, 6, 5, 4, 3],
       [1, 2],
-      [1, 7],
-      [1, 6, 5, 4, 3]
+      [1, 7]
     ],
     "restriction": {
       "slots": [1],

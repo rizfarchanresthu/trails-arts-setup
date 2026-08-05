@@ -27,8 +27,8 @@
     "name": "Scherazard Harvey",
     "line_count": 2,
     "lines": [
-      [1, 2],
-      [1, 6, 5, 4, 3]
+      [1, 6, 5, 4, 3],
+      [1, 2]
     ],
     "restriction": {
       "slots": [1, 5],
@@ -64,9 +64,9 @@
     "name": "Agate Crosner",
     "line_count": 3,
     "lines": [
+      [1, 2, 3],
       [1, 6, 5],
-      [1, 4],
-      [1, 2, 3]
+      [1, 4]
     ],
     "restriction": {
       "slots": [1, 6],
@@ -78,9 +78,9 @@
     "name": "Tita Russel",
     "line_count": 3,
     "lines": [
+      [1, 5, 4, 3],
       [1, 2],
-      [1, 6],
-      [1, 5, 4, 3]
+      [1, 6]
     ],
     "restriction": {
       "slots": [1, 4],

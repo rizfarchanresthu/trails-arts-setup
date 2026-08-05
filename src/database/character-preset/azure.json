@@ -14,8 +14,8 @@
     "name": "Elie MacDowell",
     "line_count": 2,
     "lines": [
-      ["M", 4],
-      ["M", 5, 6, 7, 2, 3]
+      ["M", 5, 6, 7, 2, 3],
+      ["M", 4]
     ],
     "restriction": {
       "slots": [6],
@@ -53,10 +53,10 @@
     "name": "Noel Seeker",
     "line_count": 4,
     "lines": [
+      ["M", 5, 4, 3],
       ["M", 2],
-      ["M", 7],
       ["M", 6],
-      ["M", 5, 4, 3]
+      ["M", 7]
     ],
     "restriction": {
       "slots": [4],
@@ -68,8 +68,8 @@
     "name": "Wazy Hemisphere",
     "line_count": 2,
     "lines": [
-      ["M", 3],
-      ["M", 4, 5, 6, 7, 2]
+      ["M", 4, 5, 6, 7, 2],
+      ["M", 3]
     ],
     "restriction": {
       "slots": [5],
@@ -81,9 +81,9 @@
     "name": "Rixia Mao",
     "line_count": 3,
     "lines": [
+      ["M", 6, 5, 4, 3],
       ["M", 2],
-      ["M", 7],
-      ["M", 6, 5, 4, 3]
+      ["M", 7]
     ],
     "restriction": {
       "slots": [5],
@@ -95,8 +95,8 @@
     "name": "Alex Dudley",
     "line_count": 2,
     "lines": [
-      ["M", 3, 2],
-      ["M", 4, 5, 6, 7]
+      ["M", 4, 5, 6, 7],
+      ["M", 3, 2]
     ],
     "restriction": {
       "slots": [5],
