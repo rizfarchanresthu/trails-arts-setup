@@ -1,5 +1,7 @@
+import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
+import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
 import { ELEMENTS, type Art, type BaseData, type ElementName, type ElementRequirement, type Quartz, type SlotId } from './types'
@@ -57,7 +59,15 @@ const SKY_SC_BASE: BaseData = {
   topology: SKY_SC_TOPOLOGY,
 }
 
-export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE]
+const SKY_3RD_BASE: BaseData = {
+  id: 'sky-3rd',
+  label: 'Sky 3rd',
+  quartz: quartzSky3rd.map((entry) => normalizeQuartz(entry)),
+  arts: artsSky3rd.map((entry) => normalizeArt(entry)),
+  topology: SKY_SC_TOPOLOGY,
+}
+
+export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE]
 
 export function getBaseById(baseId: string): BaseData {
   const matched = BASES.find((base) => base.id === baseId)

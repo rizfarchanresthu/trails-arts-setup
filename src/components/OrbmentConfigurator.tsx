@@ -158,7 +158,9 @@ export function OrbmentConfigurator({
                 ? 'Sky FC templates are loaded from the Sky FC character preset database.'
                 : selectedBaseId === 'sky-sc'
                   ? 'Sky SC templates are loaded from the Sky SC character preset database.'
-                  : 'No base-specific character presets are loaded for this base yet.'}
+                  : selectedBaseId === 'sky-3rd'
+                    ? 'Sky 3rd templates are loaded from the Sky 3rd character preset database.'
+                    : 'No base-specific character presets are loaded for this base yet.'}
             </p>
           </div>
 
