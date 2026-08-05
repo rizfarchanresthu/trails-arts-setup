@@ -4,7 +4,15 @@ import {
   createDefaultLineDirections,
   createDefaultLineStarts,
 } from '../domain/rules/skyFcRules'
-import { type OrbmentTopology, type SavedQuartzSetup, type SavedQuartzSetupStorage, type SlotId } from '../domain/types'
+import {
+  EXPORTED_SETUP_KIND,
+  EXPORTED_SETUP_VERSION,
+  type ExportedQuartzSetup,
+  type OrbmentTopology,
+  type SavedQuartzSetup,
+  type SavedQuartzSetupStorage,
+  type SlotId,
+} from '../domain/types'
 import { createInitialOrbmentState, type OrbmentState } from './orbmentState'
 
 const STORAGE_KEY = 'trails-arts-gallery:saved-quartz-setups'
@@ -81,6 +89,80 @@ export function deleteSavedQuartzSetup(id: string): void {
     setups: storage.setups.filter((setup) => setup.id !== id),
   }
   writeStorage(updated)
+}
+
+export function buildExportedSetup(input: {
+  baseGame: string
+  templateId: string | null
+  name: string
+  orbmentState: OrbmentState
+}): ExportedQuartzSetup {
+  return {
+    kind: EXPORTED_SETUP_KIND,
+    version: EXPORTED_SETUP_VERSION,
+    baseGame: input.baseGame,
+    templateId: input.templateId && input.templateId.length > 0 ? input.templateId : null,
+    name: input.name.trim() || 'Untitled setup',
+    exported_at: new Date().toISOString(),
+    orbmentState: input.orbmentState,
+  }
+}
+
+export function parseExportedSetup(value: unknown): ExportedQuartzSetup | null {
+  if (!isRecord(value)) {
+    return null
+  }
+  if (value.kind !== EXPORTED_SETUP_KIND || value.version !== EXPORTED_SETUP_VERSION) {
+    return null
+  }
+  if (typeof value.baseGame !== 'string' || typeof value.name !== 'string' || typeof value.exported_at !== 'string') {
+    return null
+  }
+  if (value.templateId !== null && value.templateId !== undefined && typeof value.templateId !== 'string') {
+    return null
+  }
+
+  const state = normalizeOrbmentState(value.orbmentState)
+  if (!state) {
+    return null
+  }
+
+  return {
+    kind: EXPORTED_SETUP_KIND,
+    version: EXPORTED_SETUP_VERSION,
+    baseGame: value.baseGame,
+    templateId: typeof value.templateId === 'string' && value.templateId.length > 0 ? value.templateId : null,
+    name: value.name,
+    exported_at: value.exported_at,
+    orbmentState: state,
+  }
+}
+
+export function sanitizeExportedSetup(
+  setup: ExportedQuartzSetup,
+  validQuartzIds: Set<number>,
+  topology: OrbmentTopology,
+  validMasterQuartzIds: Set<number> = new Set(),
+): ExportedQuartzSetup {
+  const sanitizedState = sanitizeOrbmentState(setup.orbmentState, topology)
+  const sanitized = sanitizeForBase(
+    {
+      id: 'imported',
+      baseGame: setup.baseGame,
+      name: setup.name,
+      created_at: setup.exported_at,
+      edited_at: setup.exported_at,
+      orbmentState: sanitizedState,
+    },
+    validQuartzIds,
+    topology,
+    validMasterQuartzIds,
+  )
+
+  return {
+    ...setup,
+    orbmentState: sanitized.orbmentState,
+  }
 }
 
 export function sanitizeForBase(

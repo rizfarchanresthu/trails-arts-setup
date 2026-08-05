@@ -134,3 +134,16 @@ export type SavedQuartzSetupStorage = {
   version: 1
   setups: SavedQuartzSetup[]
 }
+
+export const EXPORTED_SETUP_KIND = 'trails-arts-gallery-setup'
+export const EXPORTED_SETUP_VERSION = 1
+
+export type ExportedQuartzSetup = {
+  kind: typeof EXPORTED_SETUP_KIND
+  version: typeof EXPORTED_SETUP_VERSION
+  baseGame: string
+  templateId: string | null
+  name: string
+  exported_at: string
+  orbmentState: OrbmentState
+}

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import './App.css'
 import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
@@ -30,15 +30,19 @@ import {
   updateLineCount,
 } from './state/orbmentState'
 import {
+  buildExportedSetup,
   createSavedQuartzSetup,
   deleteSavedQuartzSetup,
   getSavedQuartzSetupById,
   listSavedQuartzSetups,
+  parseExportedSetup,
+  sanitizeExportedSetup,
   sanitizeForBase,
   updateSavedQuartzSetup,
 } from './state/savedQuartzSetups'
 
 type MainTab = 'orbment' | 'arts'
+type SetupNoticeTone = 'default' | 'success' | 'error'
 
 function App() {
   const [selectedBaseId, setSelectedBaseId] = useState('sky-fc')
@@ -48,13 +52,15 @@ function App() {
   const [savedSetups, setSavedSetups] = useState(listSavedQuartzSetups)
   const [selectedSavedSetupId, setSelectedSavedSetupId] = useState('')
   const [setupName, setSetupName] = useState('My setup')
-  const [setupNotice, setSetupNotice] = useState('')
+  const [setupNotice, setSetupNoticeState] = useState('')
+  const [setupNoticeTone, setSetupNoticeTone] = useState<SetupNoticeTone>('default')
   const [draftBeforeSavedLoad, setDraftBeforeSavedLoad] = useState<{
     baseId: string
     templateId: string
     setupName: string
     orbmentState: OrbmentState
   } | null>(null)
+  const importFileInputRef = useRef<HTMLInputElement>(null)
 
   const base = useMemo(() => getBaseById(selectedBaseId), [selectedBaseId])
 
@@ -102,6 +108,11 @@ function App() {
 
   function refreshSavedSetups(): void {
     setSavedSetups(listSavedQuartzSetups())
+  }
+
+  function setSetupNotice(message: string, tone: SetupNoticeTone = 'default'): void {
+    setSetupNoticeState(message)
+    setSetupNoticeTone(message ? tone : 'default')
   }
 
   function saveAsSetup(): void {
@@ -184,6 +195,84 @@ function App() {
     setSetupNotice('Deleted saved setup.')
   }
 
+  function resetCurrentEditor(): void {
+    setSelectedTemplateId('')
+    setOrbmentState(createInitialOrbmentState(base.topology))
+    setSelectedSavedSetupId('')
+    setDraftBeforeSavedLoad(null)
+    setSetupName('My setup')
+    setSetupNotice(`Reset to default for ${base.label}.`)
+  }
+
+  function exportCurrentSetup(): void {
+    const exported = buildExportedSetup({
+      baseGame: selectedBaseId,
+      templateId: selectedTemplateId || null,
+      name: setupName.trim() || 'Untitled setup',
+      orbmentState,
+    })
+    const blob = new Blob([JSON.stringify(exported, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `${toExportFileName(exported.name)}.json`
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    URL.revokeObjectURL(url)
+    setSetupNotice(`Exported "${exported.name}".`)
+  }
+
+  async function importSetupFromFile(file: File): Promise<void> {
+    let text: string
+    try {
+      text = await file.text()
+    } catch {
+      setSetupNotice('Could not read the selected file.', 'error')
+      return
+    }
+
+    let parsed: unknown
+    try {
+      parsed = JSON.parse(text) as unknown
+    } catch {
+      setSetupNotice('Import file is not valid JSON.', 'error')
+      return
+    }
+
+    const exported = parseExportedSetup(parsed)
+    if (!exported) {
+      setSetupNotice('Import file is not a valid setup export.', 'error')
+      return
+    }
+
+    const targetBase = BASES.find((baseOption) => baseOption.id === exported.baseGame)
+    if (!targetBase) {
+      setSetupNotice(`Imported setup base "${exported.baseGame}" is not available in this build.`, 'error')
+      return
+    }
+
+    const validQuartzIds = new Set(targetBase.quartz.map((quartz) => quartz.id))
+    const validMasterQuartzIds = new Set((targetBase.masterQuartz ?? []).map((masterQuartz) => masterQuartz.id))
+    const sanitized = sanitizeExportedSetup(exported, validQuartzIds, targetBase.topology, validMasterQuartzIds)
+    const templatesForBase = getCharacterTemplatesForBase(targetBase.id)
+    const restoredTemplateId =
+      sanitized.templateId && templatesForBase.some((template) => template.id === sanitized.templateId)
+        ? sanitized.templateId
+        : ''
+    const templateLabel = restoredTemplateId
+      ? (templatesForBase.find((template) => template.id === restoredTemplateId)?.name ?? restoredTemplateId)
+      : 'Custom'
+
+    setSelectedBaseId(targetBase.id)
+    setSelectedTemplateId(restoredTemplateId)
+    setOrbmentState(sanitized.orbmentState)
+    setSelectedSavedSetupId('')
+    setDraftBeforeSavedLoad(null)
+    setSetupName(sanitized.name)
+    setSetupNotice(`Imported "${sanitized.name}" (${targetBase.label}, ${templateLabel}).`, 'success')
+  }
+
   function onSavedSetupSelectionChange(setupId: string): void {
     if (!setupId) {
       setSelectedSavedSetupId('')
@@ -241,6 +330,9 @@ function App() {
                 }}
               />
             </Label>
+            <Button type="button" variant="outline" onClick={resetCurrentEditor}>
+              Reset
+            </Button>
             <div className="ml-auto flex flex-wrap items-end gap-3">
               <Label className="grid min-w-40 gap-1.5 font-normal">
                 Saved setup
@@ -273,11 +365,35 @@ function App() {
                 <Button type="button" variant="destructive" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
                   Delete
                 </Button>
+                <Button type="button" variant="outline" onClick={exportCurrentSetup}>
+                  Export
+                </Button>
+                <Button type="button" variant="outline" onClick={() => importFileInputRef.current?.click()}>
+                  Import
+                </Button>
+                <input
+                  ref={importFileInputRef}
+                  type="file"
+                  accept=".json,application/json"
+                  className="hidden"
+                  onChange={(event) => {
+                    const file = event.target.files?.[0]
+                    event.target.value = ''
+                    if (!file) {
+                      return
+                    }
+                    void importSetupFromFile(file)
+                  }}
+                />
               </div>
             </div>
           </div>
           {setupNotice ? (
-            <Alert>
+            <Alert
+              variant={
+                setupNoticeTone === 'error' ? 'destructive' : setupNoticeTone === 'success' ? 'success' : 'default'
+              }
+            >
               <AlertDescription>{setupNotice}</AlertDescription>
             </Alert>
           ) : null}
@@ -393,6 +509,14 @@ function getUniqueSetupName(requestedName: string, savedSetups: Array<{ id: stri
     }
     suffix += 1
   }
+}
+
+function toExportFileName(name: string): string {
+  const sanitized = name
+    .trim()
+    .replace(/[^\w.-]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+  return sanitized || 'setup'
 }
 
 function cloneOrbmentState(state: OrbmentState): OrbmentState {
