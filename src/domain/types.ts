@@ -60,7 +60,7 @@ export type Art = {
     cast: number
     delay: number
   }
-  power: number | null
+  power: number | string | null
   target: string
   effect: string | null
   description: string
@@ -81,12 +81,19 @@ export type OrbmentTopology = {
   nodeTierDefaults: Record<number, number>
 }
 
+export type OrbmentVisual = {
+  title: string
+  outerEdges: 'straight' | 'circular'
+  nodeShape: 'circle' | 'rect'
+}
+
 export type BaseData = {
   id: string
   label: string
   quartz: Quartz[]
   arts: Art[]
   topology: OrbmentTopology
+  orbmentVisual?: OrbmentVisual
 }
 
 export type SavedQuartzSetup = {

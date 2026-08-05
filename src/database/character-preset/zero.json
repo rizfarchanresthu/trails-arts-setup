@@ -1,0 +1,129 @@
+[
+  {
+    "id": "lloyd-bannings",
+    "name": "Lloyd Bannings",
+    "line_count": 2,
+    "lines": [
+      [1, 3, 2, 7],
+      [1, 6, 5, 4]
+    ],
+    "restriction": null
+  },
+  {
+    "id": "elie-macdowell",
+    "name": "Elie MacDowell",
+    "line_count": 2,
+    "lines": [
+      [1, 4],
+      [1, 5, 6, 7, 2, 3]
+    ],
+    "restriction": {
+      "slots": [1, 2],
+      "element": "Wind"
+    }
+  },
+  {
+    "id": "tio-plato",
+    "name": "Tio Plato",
+    "line_count": 1,
+    "lines": [
+      [1, 4, 3, 2, 7, 6, 5]
+    ],
+    "restriction": {
+      "slots": [1, 7],
+      "element": "Water"
+    }
+  },
+  {
+    "id": "randy-orlando",
+    "name": "Randy Orlando",
+    "line_count": 3,
+    "lines": [
+      [1, 5, 4, 3],
+      [1, 2, 7],
+      [1, 6]
+    ],
+    "restriction": {
+      "slots": [1],
+      "element": "Fire"
+    }
+  },
+  {
+    "id": "wazy-hemisphere",
+    "name": "Wazy Hemisphere",
+    "line_count": 2,
+    "lines": [
+      [1, 3],
+      [1, 4, 5, 6, 7, 2]
+    ],
+    "restriction": {
+      "slots": [1, 4],
+      "element": "Space"
+    }
+  },
+  {
+    "id": "noel-seeker",
+    "name": "Noel Seeker",
+    "line_count": 4,
+    "lines": [
+      [1, 2],
+      [1, 7],
+      [1, 6],
+      [1, 5, 4, 3]
+    ],
+    "restriction": {
+      "slots": [1],
+      "element": "Earth"
+    }
+  },
+  {
+    "id": "alex-dudley",
+    "name": "Alex Dudley",
+    "line_count": 2,
+    "lines": [
+      [1, 3, 2],
+      [1, 4, 5, 6, 7]
+    ],
+    "restriction": {
+      "slots": [1],
+      "element": "Time"
+    }
+  },
+  {
+    "id": "yin",
+    "name": "Yin",
+    "line_count": 3,
+    "lines": [
+      [1, 2],
+      [1, 7],
+      [1, 6, 5, 4, 3]
+    ],
+    "restriction": {
+      "slots": [1],
+      "element": "Mirage"
+    }
+  },
+  {
+    "id": "estelle-bright",
+    "name": "Estelle Bright",
+    "line_count": 2,
+    "lines": [
+      [1, 2, 3, 4],
+      [1, 5, 6, 7]
+    ],
+    "restriction": null
+  },
+  {
+    "id": "joshua-bright",
+    "name": "Joshua Bright",
+    "line_count": 2,
+    "lines": [
+      [1, 2, 3, 4, 5],
+      [1, 6, 7]
+    ],
+    "restriction": {
+      "slots": [1, 4],
+      "element": "Time"
+    }
+  }
+]

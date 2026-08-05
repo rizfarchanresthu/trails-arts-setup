@@ -1,4 +1,11 @@
-import { ELEMENTS, type ElementName, type OrbmentTopology, type Quartz, type SlotId } from '../domain/types'
+import {
+  ELEMENTS,
+  type ElementName,
+  type OrbmentTopology,
+  type OrbmentVisual,
+  type Quartz,
+  type SlotId,
+} from '../domain/types'
 import { type OrbmentLine } from '../domain/types'
 import { type LineDirection } from '../domain/rules/skyFcRules'
 import { type OrbmentState, getAllowedQuartzForSlot, getAvailableLineStarts } from '../state/orbmentState'
@@ -25,6 +32,7 @@ type OrbmentConfiguratorProps = {
   selectedTemplateId: string
   characterTemplates: CharacterTemplate[]
   onTemplateChange: (templateId: string) => void
+  orbmentVisual?: OrbmentVisual
 }
 
 export function OrbmentConfigurator({
@@ -45,12 +53,14 @@ export function OrbmentConfigurator({
   selectedTemplateId,
   characterTemplates,
   onTemplateChange,
+  orbmentVisual,
 }: OrbmentConfiguratorProps) {
   const maxTier = Math.max(1, ...quartzList.map((quartz) => quartz.tier ?? 1))
   const showNodeTierControls = selectedBaseId !== 'sky-fc'
+  const configTitle = orbmentVisual?.title ? `${orbmentVisual.title} Config` : 'Orbment Config'
   return (
     <section className="panel">
-      <h2>Orbment Config</h2>
+      <h2>{configTitle}</h2>
       <div className="configWithGraph">
         <div className="configColumn">
           <div className="fieldRow">
@@ -159,7 +169,9 @@ export function OrbmentConfigurator({
                   ? 'Sky SC templates are loaded from the Sky SC character preset database.'
                   : selectedBaseId === 'sky-3rd'
                     ? 'Sky 3rd templates are loaded from the Sky 3rd character preset database.'
-                    : 'No base-specific character presets are loaded for this base yet.'}
+                    : selectedBaseId === 'zero'
+                      ? 'Zero templates are loaded from the Zero character preset database.'
+                      : 'No base-specific character presets are loaded for this base yet.'}
             </p>
           </div>
 
@@ -238,6 +250,7 @@ export function OrbmentConfigurator({
             quartzById={quartzById}
             topology={topology}
             nodeTiers={state.nodeTiers}
+            orbmentVisual={orbmentVisual}
           />
         </div>
       </div>

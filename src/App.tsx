@@ -185,7 +185,7 @@ function App() {
   return (
     <main className="appShell">
       <header className="panel">
-        <h1>Trails Series Orbment Arts Setup</h1>
+        <h1>Trails Series Quartz Setup</h1>
         <div className="fieldRow">
           <label>
             Base
@@ -275,6 +275,7 @@ function App() {
             setOrbmentState((prev) => setNodeTier(prev, slotId, tier, quartzById))
           }
           topology={base.topology}
+          orbmentVisual={base.orbmentVisual}
           selectedBaseId={selectedBaseId}
           selectedTemplateId={selectedTemplateId}
           characterTemplates={characterTemplates}

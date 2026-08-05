@@ -1,4 +1,12 @@
-import { ELEMENT_COLORS, LINE_COLORS, type OrbmentLine, type OrbmentTopology, type Quartz, type SlotId } from '../domain/types'
+import {
+  ELEMENT_COLORS,
+  LINE_COLORS,
+  type OrbmentLine,
+  type OrbmentTopology,
+  type OrbmentVisual,
+  type Quartz,
+  type SlotId,
+} from '../domain/types'
 import { type EquippedQuartzMap, type NodeTierMap, type SlotRestrictionMap } from '../state/orbmentState'
 
 type Point = { x: number; y: number }
@@ -10,9 +18,15 @@ type OrbmentGraphProps = {
   quartzById: Map<number, Quartz>
   topology: OrbmentTopology
   nodeTiers: NodeTierMap
+  orbmentVisual?: OrbmentVisual
 }
 
 const NODE_RADIUS = 24
+const RECT_WIDTH = 32
+const RECT_HEIGHT = 52
+const RECT_RX = 4
+const RING_CENTER: Point = { x: 170, y: 170 }
+const RING_RADIUS = 118
 const FC_SLOT_POINTS: Record<number, Point> = {
   1: { x: 170, y: 170 },
   2: { x: 68, y: 230 },
@@ -39,6 +53,7 @@ export function OrbmentGraph({
   quartzById,
   topology,
   nodeTiers,
+  orbmentVisual,
 }: OrbmentGraphProps) {
   const layout = getLayout(topology)
   const slotPoints = layout.slotPoints
@@ -47,11 +62,14 @@ export function OrbmentGraph({
     .map((slotId) => slotPoints[slotId])
     .map((point) => `${point.x},${point.y}`)
     .join(' ')
+  const title = orbmentVisual?.title ?? 'Orbment'
+  const useCircularOuter = orbmentVisual?.outerEdges === 'circular'
+  const useRectNodes = orbmentVisual?.nodeShape === 'rect'
 
   return (
     <section className="orbmentPanel">
-      <h3>Orbment</h3>
-      <svg viewBox="0 0 340 340" className="orbmentSvg" aria-label="Orbment graph">
+      <h3>{title}</h3>
+      <svg viewBox="0 0 340 340" className="orbmentSvg" aria-label={`${title} graph`}>
         <polygon points={outerPath} className="orbmentHexGuide" />
         {layout.gapMarker ? (
           <circle cx={layout.gapMarker.x} cy={layout.gapMarker.y} r={6} className="orbmentGapMarker" />
@@ -60,14 +78,37 @@ export function OrbmentGraph({
         {edges.map((edge, index) => {
           const from = slotPoints[edge.from]
           const to = slotPoints[edge.to]
-          const { start, end } = trimEdgeToNodeBoundary(from, to, NODE_RADIUS)
+          const isOuterEdge = edge.from !== topology.centerSlot && edge.to !== topology.centerSlot
+          const edgeKey = `${edge.from}-${edge.to}-${edge.lineIndex}-${index}`
+
+          if (useCircularOuter && isOuterEdge) {
+            const arcPath = buildOuterArcPath(from, to, useRectNodes)
+            if (arcPath) {
+              return (
+                <path
+                  key={edgeKey}
+                  d={arcPath}
+                  fill="none"
+                  stroke={lineColor(edge.lineIndex)}
+                  strokeWidth={4}
+                  strokeLinecap="round"
+                  className="orbmentEdge"
+                />
+              )
+            }
+          }
+
+          const trimmed = useRectNodes
+            ? trimEdgeToRectBoundary(from, to, RECT_WIDTH, RECT_HEIGHT)
+            : trimEdgeToNodeBoundary(from, to, NODE_RADIUS)
+
           return (
             <line
-              key={`${edge.from}-${edge.to}-${edge.lineIndex}-${index}`}
-              x1={start.x}
-              y1={start.y}
-              x2={end.x}
-              y2={end.y}
+              key={edgeKey}
+              x1={trimmed.start.x}
+              y1={trimmed.start.y}
+              x2={trimmed.end.x}
+              y2={trimmed.end.y}
               stroke={lineColor(edge.lineIndex)}
               strokeWidth={4}
               strokeLinecap="round"
@@ -82,22 +123,39 @@ export function OrbmentGraph({
           const equippedQuartzName = equippedQuartzId ? quartzById.get(equippedQuartzId)?.name.en : null
           const fill = restriction ? withAlpha(ELEMENT_COLORS[restriction], 0.24) : '#ffffff'
           const stroke = restriction ? ELEMENT_COLORS[restriction] : '#8f96a3'
+          const point = slotPoints[slotId]
+          const label = `${slotId}${layout.showTier ? ` T${nodeTiers[slotId]}` : ''}`
+
+          if (useRectNodes) {
+            return (
+              <g key={`slot-${slotId}`}>
+                <rect
+                  x={point.x - RECT_WIDTH / 2}
+                  y={point.y - RECT_HEIGHT / 2}
+                  width={RECT_WIDTH}
+                  height={RECT_HEIGHT}
+                  rx={RECT_RX}
+                  fill={fill}
+                  stroke={stroke}
+                  strokeWidth={3}
+                />
+                <text x={point.x} y={point.y - 8} className="orbmentNodeRectText">
+                  {label}
+                </text>
+                <text x={point.x} y={point.y + 10} className="orbmentNodeRectText">
+                  {shortName(equippedQuartzName)}
+                </text>
+              </g>
+            )
+          }
 
           return (
             <g key={`slot-${slotId}`}>
-              <circle
-                cx={slotPoints[slotId].x}
-                cy={slotPoints[slotId].y}
-                r={NODE_RADIUS}
-                fill={fill}
-                stroke={stroke}
-                strokeWidth={3}
-              />
-              <text x={slotPoints[slotId].x} y={slotPoints[slotId].y - 31} className="orbmentNodeId">
-                {slotId}
-                {layout.showTier ? ` T${nodeTiers[slotId]}` : ''}
+              <circle cx={point.x} cy={point.y} r={NODE_RADIUS} fill={fill} stroke={stroke} strokeWidth={3} />
+              <text x={point.x} y={point.y - 31} className="orbmentNodeId">
+                {label}
               </text>
-              <text x={slotPoints[slotId].x} y={slotPoints[slotId].y + 1} className="orbmentNodeText">
+              <text x={point.x} y={point.y + 1} className="orbmentNodeText">
                 {shortName(equippedQuartzName)}
               </text>
             </g>
@@ -143,6 +201,146 @@ function trimEdgeToNodeBoundary(from: Point, to: Point, radius: number): { start
     start: { x: from.x + ux * radius, y: from.y + uy * radius },
     end: { x: to.x - ux * radius, y: to.y - uy * radius },
   }
+}
+
+function trimEdgeToRectBoundary(
+  from: Point,
+  to: Point,
+  width: number,
+  height: number,
+): { start: Point; end: Point } {
+  return {
+    start: rectExitPoint(from, to, width, height),
+    end: rectExitPoint(to, from, width, height),
+  }
+}
+
+function rectExitPoint(origin: Point, target: Point, width: number, height: number): Point {
+  const dx = target.x - origin.x
+  const dy = target.y - origin.y
+  if (dx === 0 && dy === 0) {
+    return origin
+  }
+
+  const tx = dx === 0 ? Number.POSITIVE_INFINITY : width / 2 / Math.abs(dx)
+  const ty = dy === 0 ? Number.POSITIVE_INFINITY : height / 2 / Math.abs(dy)
+  const t = Math.min(tx, ty)
+
+  return {
+    x: origin.x + dx * t,
+    y: origin.y + dy * t,
+  }
+}
+
+function buildOuterArcPath(from: Point, to: Point, useRectNodes: boolean): string | null {
+  const fromAngle = Math.atan2(from.y - RING_CENTER.y, from.x - RING_CENTER.x)
+  const toAngle = Math.atan2(to.y - RING_CENTER.y, to.x - RING_CENTER.x)
+  const delta = signedAngleDelta(fromAngle, toAngle)
+  if (delta === 0) {
+    return null
+  }
+
+  const direction = Math.sign(delta)
+  const start = useRectNodes
+    ? pickArcTrimPoint(circleRectIntersections(RING_CENTER, RING_RADIUS, from, RECT_WIDTH, RECT_HEIGHT), fromAngle, direction)
+    : pointOnRing(fromAngle + direction * (NODE_RADIUS / RING_RADIUS))
+  const end = useRectNodes
+    ? pickArcTrimPoint(
+        circleRectIntersections(RING_CENTER, RING_RADIUS, to, RECT_WIDTH, RECT_HEIGHT),
+        toAngle,
+        -direction,
+      )
+    : pointOnRing(toAngle - direction * (NODE_RADIUS / RING_RADIUS))
+
+  if (!start || !end) {
+    return null
+  }
+
+  const sweep = direction > 0 ? 1 : 0
+  return `M ${start.x} ${start.y} A ${RING_RADIUS} ${RING_RADIUS} 0 0 ${sweep} ${end.x} ${end.y}`
+}
+
+function pointOnRing(angle: number): Point {
+  return {
+    x: RING_CENTER.x + Math.cos(angle) * RING_RADIUS,
+    y: RING_CENTER.y + Math.sin(angle) * RING_RADIUS,
+  }
+}
+
+function circleRectIntersections(
+  center: Point,
+  radius: number,
+  rectCenter: Point,
+  width: number,
+  height: number,
+): Point[] {
+  const left = rectCenter.x - width / 2
+  const right = rectCenter.x + width / 2
+  const top = rectCenter.y - height / 2
+  const bottom = rectCenter.y + height / 2
+  const points: Point[] = []
+
+  function addVertical(x: number): void {
+    const disc = radius * radius - (x - center.x) ** 2
+    if (disc < 0) {
+      return
+    }
+    const root = Math.sqrt(disc)
+    for (const y of [center.y + root, center.y - root]) {
+      if (y >= top - 0.5 && y <= bottom + 0.5) {
+        points.push({ x, y })
+      }
+    }
+  }
+
+  function addHorizontal(y: number): void {
+    const disc = radius * radius - (y - center.y) ** 2
+    if (disc < 0) {
+      return
+    }
+    const root = Math.sqrt(disc)
+    for (const x of [center.x + root, center.x - root]) {
+      if (x >= left - 0.5 && x <= right + 0.5) {
+        points.push({ x, y })
+      }
+    }
+  }
+
+  addVertical(left)
+  addVertical(right)
+  addHorizontal(top)
+  addHorizontal(bottom)
+  return points
+}
+
+function pickArcTrimPoint(intersections: Point[], fromAngle: number, direction: number): Point | null {
+  let best: Point | null = null
+  let bestDelta = Number.POSITIVE_INFINITY
+
+  for (const point of intersections) {
+    const angle = Math.atan2(point.y - RING_CENTER.y, point.x - RING_CENTER.x)
+    const delta = signedAngleDelta(fromAngle, angle)
+    if (delta === 0 || Math.sign(delta) !== direction) {
+      continue
+    }
+    if (Math.abs(delta) < bestDelta) {
+      bestDelta = Math.abs(delta)
+      best = point
+    }
+  }
+
+  return best
+}
+
+function signedAngleDelta(from: number, to: number): number {
+  let delta = to - from
+  while (delta <= -Math.PI) {
+    delta += Math.PI * 2
+  }
+  while (delta > Math.PI) {
+    delta -= Math.PI * 2
+  }
+  return delta
 }
 
 function lineColor(lineIndex: number): string {

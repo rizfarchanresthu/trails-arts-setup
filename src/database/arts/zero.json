@@ -1,0 +1,1613 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Stone Spike",
+      "ja": "ストーンスパイク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "100%",
+    "target": "Single target",
+    "effect": "Petrify (10% chance, ∞t)",
+    "description": "Causes a sharp rock to shoot up from the ground."
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Quake",
+      "ja": "クエイク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "140%",
+    "target": "Circle around target (3 radius)",
+    "effect": null,
+    "description": "Causes a small localized earthquake."
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Gorgon Breath",
+      "ja": "ゴルゴンブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "180%",
+    "target": "Circle around target (2 radius)",
+    "effect": "Petrify (10% chance, ∞t)",
+    "description": "Spews petrifying gas on the enemy."
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Gaea Titanis",
+      "ja": "ジアータイタニス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "80 EP",
+    "time": {
+      "cast": 30,
+      "delay": 15
+    },
+    "power": "300%",
+    "target": "Set line (4 width)",
+    "effect": null,
+    "description": "Rocks shoot up at the enemy from cracked earth."
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Yggdrasil",
+      "ja": "ユグドラシエル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 10
+      },
+      {
+        "elements": [
+          "Water",
+          "Wind"
+        ],
+        "value": 3
+      }
+    ],
+    "cost": "200 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "550%",
+    "target": "Set circle (5 radius)",
+    "effect": null,
+    "description": "The great tree's roots skewer the enemy in a wide area."
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Icicle Edge",
+      "ja": "アイシクルエッジ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "100%",
+    "target": "Single target",
+    "effect": "Freeze (10% chance, 3t)",
+    "description": "Fires a sharp icicle."
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Blue Drop",
+      "ja": "ブルードロップ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      },
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "150%",
+    "target": "Circle around target (2 radius)",
+    "effect": null,
+    "description": "Imprisons enemies in a drop of water that explodes."
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Ice Hammer",
+      "ja": "アイスハンマー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "175%",
+    "target": "Circle around target (3 radius)",
+    "effect": "Freeze (20% chance, 3t)",
+    "description": "Drops an icicle on enemies."
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Hydro Cannon",
+      "ja": "ハイドロカノン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      },
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "250%",
+    "target": "Set line (3 width)",
+    "effect": null,
+    "description": "Shoots a high pressure blast of water to wash away enemies."
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Diamond Dust",
+      "ja": "ダイアモンドダスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 8
+      },
+      {
+        "elements": [
+          "Wind",
+          "Space"
+        ],
+        "value": 1
+      }
+    ],
+    "cost": "60 EP",
+    "time": {
+      "cast": 30,
+      "delay": 15
+    },
+    "power": "300%",
+    "target": "Circle around target (2 radius)",
+    "effect": "Freeze (30% chance, 3t)",
+    "description": "Produces intense cold."
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Genesis Flood",
+      "ja": "アラウンドノア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 12
+      }
+    ],
+    "cost": "220 EP",
+    "time": {
+      "cast": 30,
+      "delay": 15
+    },
+    "power": "450%",
+    "target": "All targets",
+    "effect": null,
+    "description": "An enormous tidal wave swallows all enemies."
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Fire Bolt",
+      "ja": "ファイアボルト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "105%",
+    "target": "Single target",
+    "effect": "Burn (10% chance, 3t)",
+    "description": "Shoots a flaming ball of fire."
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Heatwave",
+      "ja": "ヒートウェイブ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      },
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "cost": "25 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "145%",
+    "target": "Circle around target (3 radius)",
+    "effect": null,
+    "description": "Covers the earth's surface with intense heat."
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Magna Blaze",
+      "ja": "マグナブレイズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      },
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "200%",
+    "target": "Single target",
+    "effect": "Burn (30% chance, 3t)",
+    "description": "Explodes compressed lava."
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Flare Butterfly",
+      "ja": "フレアバタフライ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 8
+      },
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "cost": "90 EP",
+    "time": {
+      "cast": 30,
+      "delay": 15
+    },
+    "power": "300%",
+    "target": "Circle around target (5 radius)",
+    "effect": "Burn (20% chance, 3t)",
+    "description": "Countless flame butterflies dance."
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Crimson Ray",
+      "ja": "クリムゾンレイ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 12
+      }
+    ],
+    "cost": "140 EP",
+    "time": {
+      "cast": 35,
+      "delay": 15
+    },
+    "power": "800%",
+    "target": "Single target",
+    "effect": null,
+    "description": "An extremely intense heat ray reduces enemies to ashes."
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Sparkle",
+      "ja": "スパークル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 15,
+      "delay": 15
+    },
+    "power": "95%",
+    "target": "Single target",
+    "effect": "Seal (10% chance, 5t)",
+    "description": "Calls down lightning from above."
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Aero Sickle",
+      "ja": "エアロシックル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 15,
+      "delay": 15
+    },
+    "power": "130%",
+    "target": "Set line (2 width)",
+    "effect": null,
+    "description": "Generates a whirlwind to tear apart enemies."
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Aerial",
+      "ja": "エアリアル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "175%",
+    "target": "Set circle (3 radius)",
+    "effect": null,
+    "description": "A powerful tornado with whirling bits of rubble."
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Spark Dyne",
+      "ja": "スパークダイン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "240%",
+    "target": "Circle around target (2 radius)",
+    "effect": "Seal (30% chance, 5t)",
+    "description": "Manipulates the weather to call down a blue lightning bolt."
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Thunder Cyclone",
+      "ja": "サンダーシクリオン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 10
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "cost": "180 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "500%",
+    "target": "Set circle (5 radius)",
+    "effect": "Seal (20% chance, 5t)",
+    "description": "Creates a lightning-filled tornado."
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Soul Blur",
+      "ja": "ソウルブラー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9d/Time_%28Crossbell_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 15,
+      "delay": 15
+    },
+    "power": "115%",
+    "target": "Single target",
+    "effect": "Faint (10% chance, 5t)",
+    "description": "Emits a time-space shaking pulse."
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Death Spiral",
+      "ja": "デス・スパイラル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9d/Time_%28Crossbell_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 6
+      },
+      {
+        "elements": [
+          "Space",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "cost": "60 EP",
+    "time": {
+      "cast": 20,
+      "delay": 15
+    },
+    "power": "225%",
+    "target": "Circle around target (3 radius)",
+    "effect": "Deathblow (10% chance)",
+    "description": "Demonic claws from Gehenna tear enemies apart."
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Shadow Blade",
+      "ja": "シャドーアポクリフ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9d/Time_%28Crossbell_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 10
+      },
+      {
+        "elements": [
+          "Space",
+          "Mirage"
+        ],
+        "value": 3
+      }
+    ],
+    "cost": "140 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "400%",
+    "target": "Circle around target (5 radius)",
+    "effect": "Heals for 5% of damage done",
+    "description": "A demonic blade. Absorb 5% of damage dealt as HP."
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Dark Matter",
+      "ja": "ダークマター"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c1/Space_%28Crossbell_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "cost": "60 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "200%",
+    "target": "Set circle (5 radius)",
+    "effect": "Moves targets to set point MOV-2 (3t)",
+    "description": "High pressure space attracts and crushes foes."
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Last Disaster",
+      "ja": "ラストディザスター"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c1/Space_%28Crossbell_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 12
+      },
+      {
+        "element": "Mirage",
+        "value": 8
+      }
+    ],
+    "cost": "220 EP",
+    "time": {
+      "cast": 35,
+      "delay": 15
+    },
+    "power": "700%",
+    "target": "Set line (3 width)",
+    "effect": null,
+    "description": "A glint of light mercilessly collapses space around enemies."
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Chaos Brand",
+      "ja": "カオスブランド"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Mirage_%28Crossbell_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 25,
+      "delay": 15
+    },
+    "power": "200%",
+    "target": "Single target",
+    "effect": "Confuse (10% chance, 3t)",
+    "description": "Silver swords drive enemies insane."
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Galion Tower",
+      "ja": "ガリオンタワー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Mirage_%28Crossbell_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 6
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "cost": "100 EP",
+    "time": {
+      "cast": 30,
+      "delay": 15
+    },
+    "power": "250%",
+    "target": "Circle around target (5 radius)",
+    "effect": "Blind (100% chance, 5t)",
+    "description": "Rains light arrows from a tower of illusion."
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Avalon Gate",
+      "ja": "アヴァロンゲート"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Mirage_%28Crossbell_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 12
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 4
+      }
+    ],
+    "cost": "250 EP",
+    "time": {
+      "cast": 30,
+      "delay": 15
+    },
+    "power": "500%",
+    "target": "All targets",
+    "effect": null,
+    "description": "Opens heaven's gate and brings judgment's light to evil."
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Earth Pulse",
+      "ja": "アースグロウ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      },
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "HP Regen (10% Max HP/t, 5t)",
+    "description": "Grants the power of the earth to recover strength."
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Tear",
+      "ja": "ティア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 3,
+      "delay": 20
+    },
+    "power": "500/2",
+    "target": "Single target",
+    "effect": "Cures Burn",
+    "description": "Heals a small amount for one ally using the power of water."
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Teara",
+      "ja": "ティアラ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 4,
+      "delay": 20
+    },
+    "power": "1500/2",
+    "target": "Single target",
+    "effect": "Cures Burn",
+    "description": "Heals a medium amount for one ally using the power of water."
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Tearal",
+      "ja": "ティアラル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      }
+    ],
+    "cost": "60 EP",
+    "time": {
+      "cast": 6,
+      "delay": 20
+    },
+    "power": "5000/2",
+    "target": "Single target",
+    "effect": "Cures Burn",
+    "description": "Heals a large amount for one ally using the power of water."
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Thelas",
+      "ja": "セラス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 5,
+      "delay": 20
+    },
+    "power": 500,
+    "target": "Single target",
+    "effect": "Cures K.O.",
+    "description": "Revives and heals a small amount for one ally."
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Athelas",
+      "ja": "アセラス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 8
+      }
+    ],
+    "cost": "80 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": 2000,
+    "target": "Single target",
+    "effect": "Cures K.O.",
+    "description": "Revives and heals a medium amount for one ally."
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Impassion",
+      "ja": "メルティライズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Wind",
+          "Space"
+        ],
+        "value": 1
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 15,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "CP Regen (10 CP/t, 5t)",
+    "description": "Invigorates the spirit of allies."
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Breath",
+      "ja": "ブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": "800/0",
+    "target": "Circle around target (2 radius)",
+    "effect": null,
+    "description": "A cleansing breath of life heals allies."
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Holy Breath",
+      "ja": "ホーリーブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "cost": "60 EP",
+    "time": {
+      "cast": 12,
+      "delay": 20
+    },
+    "power": "3000/0",
+    "target": "Circle around target (5 radius)",
+    "effect": null,
+    "description": "A holy breath of life heals a great amount."
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Recuria",
+      "ja": "レキュリア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 12,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (5 radius)",
+    "effect": "Cures status effects",
+    "description": "Cures ailments (except K.O.)."
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Celestial",
+      "ja": "セレスティアル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c1/Space_%28Crossbell_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 10
+      },
+      {
+        "element": "Water",
+        "value": 8
+      }
+    ],
+    "cost": "240 EP",
+    "time": {
+      "cast": 15,
+      "delay": 25
+    },
+    "power": 20000,
+    "target": "Circle around target (5 radius)",
+    "effect": "Cures K.O.",
+    "description": "Revives and heals all."
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Innocence Arc",
+      "ja": "イノセントアーク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c1/Space_%28Crossbell_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 15,
+      "delay": 25
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "Cures stat debuffs",
+    "description": "Returns lowered stats to normal for all."
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Cobalt Sphere",
+      "ja": "コバルトスフィア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      },
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "Mute (100% chance, 5t)",
+    "description": "Prevents enemies from using arts for a few turns."
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Lorelei",
+      "ja": "ローレライ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "elements": [
+          "Time",
+          "Space",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 15,
+      "delay": 20
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "Sleep (50% chance, 5t)",
+    "description": "Echoes a spirit's song that causes a deep sleep."
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Chrono Down",
+      "ja": "クロノダウン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9d/Time_%28Crossbell_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "SPD-25% (3t)",
+    "description": "Decelerates time in an area."
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Calamity Claw",
+      "ja": "カラミティクロウ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9d/Time_%28Crossbell_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 8
+      }
+    ],
+    "cost": "60 EP",
+    "time": {
+      "cast": 15,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (5 radius)",
+    "effect": "SPD-50% (3t) MOV-3 (3t)",
+    "description": "Demonic claws from Gehenna grab at the feet."
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Lunar Craze",
+      "ja": "ルナ・クレイズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Mirage_%28Crossbell_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 6
+      }
+    ],
+    "cost": "50 EP",
+    "time": {
+      "cast": 15,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (5 radius)",
+    "effect": "Confuse (100% chance, 3t, only Lower Level)",
+    "description": "Shows a lunar illusion, confusing lower level targets."
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "Crest",
+      "ja": "クレスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "DEF+25% (3t)",
+    "description": "Grants the protective power of the earth to an ally."
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "La Crest",
+      "ja": "ラ・クレスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 12,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "DEF+25% (3t)",
+    "description": "Grants the protective power of the earth to allies."
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "Adamantine Guard",
+      "ja": "アダマスガード"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Crossbell_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 8
+      },
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "cost": "80 EP",
+    "time": {
+      "cast": 15,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (2 radius)",
+    "effect": "Craft Guard (1 atk)",
+    "description": "Puts up a barrier which guards against one physical attack."
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "Aqua Mirage",
+      "ja": "アクアミラージュ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/7/79/Water_%28Crossbell_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      },
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 12,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "EVA+50% (3t)",
+    "description": "Avoids attacks with a protective wall of water."
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Forte",
+      "ja": "フォルテ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 1
+      }
+    ],
+    "cost": "10 EP",
+    "time": {
+      "cast": 10,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "STR+25% (3t)",
+    "description": "Grants the power of fire to an ally."
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "La Forte",
+      "ja": "ラ・フォルテ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Crossbell_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 12,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "STR+25% (3t)",
+    "description": "Grants the power of fire to allies."
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Sylphid",
+      "ja": "シルフィード"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Wind_%28Crossbell_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 12,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "MOV+4 (3t)",
+    "description": "Uses the power of the wind spirit to increase movement."
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Chrono Drive",
+      "ja": "クロノドライブ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9d/Time_%28Crossbell_Element%29.png",
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "cost": "20 EP",
+    "time": {
+      "cast": 10,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (3 radius)",
+    "effect": "SPD+25% (3t)",
+    "description": "Accelerates the flow of time in an area."
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Fortuna",
+      "ja": "フォルトゥナ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c1/Space_%28Crossbell_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Water",
+          "Mirage"
+        ],
+        "value": 1
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 12,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Circle around target (5 radius)",
+    "effect": "ATS+25% (3t) ADF+25% (3t)",
+    "description": "Grants a blessing to allies."
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "A-Reflex",
+      "ja": "Ａ－リフレックス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c1/Space_%28Crossbell_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 12,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Art Reflect (1 atk)",
+    "description": "Generates a barrier which reflects one orbal art."
+  },
+  {
+    "id": 57,
+    "name": {
+      "en": "Saint",
+      "ja": "セイント"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Mirage_%28Crossbell_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      },
+      {
+        "elements": [
+          "Earth",
+          "Fire"
+        ],
+        "value": 1
+      }
+    ],
+    "cost": "30 EP",
+    "time": {
+      "cast": 12,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "STR+25% (3t) DEF+25% (3t)",
+    "description": "Raises an ally's offense and defense."
+  },
+  {
+    "id": 58,
+    "name": {
+      "en": "Hollow Sphere",
+      "ja": "ホロウスフィア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Mirage_%28Crossbell_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Water",
+          "Wind"
+        ],
+        "value": 3
+      }
+    ],
+    "cost": "40 EP",
+    "time": {
+      "cast": 12,
+      "delay": 25
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Stealth (2t)",
+    "description": "Conceals self by bending light around the target."
+  }
+]

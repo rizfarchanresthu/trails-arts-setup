@@ -1,6 +1,7 @@
 import sky3rdPresets from '../database/character-preset/sky-3rd.json'
 import skyFcPresets from '../database/character-preset/sky-fc.json'
 import skyScPresets from '../database/character-preset/sky-sc.json'
+import zeroPresets from '../database/character-preset/zero.json'
 import { getBaseById } from './baseRegistry'
 import { type LineDirection } from './rules/skyFcRules'
 import { type ElementName, type OrbmentTopology, type SlotId } from './types'
@@ -32,6 +33,7 @@ const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
   'sky-fc': skyFcPresets as RawCharacterPreset[],
   'sky-sc': skyScPresets as RawCharacterPreset[],
   'sky-3rd': sky3rdPresets as RawCharacterPreset[],
+  zero: zeroPresets as RawCharacterPreset[],
 }
 
 export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[] {

@@ -250,6 +250,14 @@ button:disabled {
   font-weight: 600;
 }
 
+.orbmentNodeRectText {
+  text-anchor: middle;
+  font-size: 8px;
+  fill: #2d3646;
+  dominant-baseline: middle;
+  font-weight: 700;
+}
+
 .lineLegend {
   width: 100%;
   display: grid;

@@ -1,9 +1,11 @@
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
+import artsZero from '../database/arts/zero.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
+import quartzZero from '../database/quartz/zero.json'
 import { ELEMENTS, type Art, type BaseData, type ElementName, type ElementRequirement, type Quartz, type SlotId } from './types'
 
 const SKY_FC_TOPOLOGY: BaseData['topology'] = {
@@ -67,7 +69,39 @@ const SKY_3RD_BASE: BaseData = {
   topology: SKY_SC_TOPOLOGY,
 }
 
-export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE]
+const ZERO_TOPOLOGY: BaseData['topology'] = {
+  slotIds: [1, 2, 3, 4, 5, 6, 7],
+  centerSlot: 1,
+  outerSlots: [2, 3, 4, 5, 6, 7],
+  outerDirectionSequence: [2, 3, 4, 5, 6, 7],
+  outerAdjacency: {
+    1: [2, 3, 4, 5, 6, 7],
+    2: [1, 3, 7],
+    3: [1, 2, 4],
+    4: [1, 3, 5],
+    5: [1, 4, 6],
+    6: [1, 5, 7],
+    7: [1, 6, 2],
+  },
+  wrapsOuterRing: true,
+  maxLines: 6,
+  nodeTierDefaults: createNodeTierDefaults([1, 2, 3, 4, 5, 6, 7], 2),
+}
+
+const ZERO_BASE: BaseData = {
+  id: 'zero',
+  label: 'Zero',
+  quartz: quartzZero.map((entry) => normalizeQuartz(entry)),
+  arts: artsZero.map((entry) => normalizeArt(entry)),
+  topology: ZERO_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ENIGMA',
+    outerEdges: 'circular',
+    nodeShape: 'rect',
+  },
+}
+
+export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE, ZERO_BASE]
 
 export function getBaseById(baseId: string): BaseData {
   const matched = BASES.find((base) => base.id === baseId)
