@@ -2,7 +2,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { type CharacterTemplate } from '../domain/characterPresets'
 import { type LineDirection } from '../domain/rules/skyFcRules'
@@ -128,7 +127,7 @@ export function OrbmentConfigurator({
       <CardHeader>
         <CardTitle className="text-xl">{configTitle}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="grid gap-4">
         <div className="configWithGraph">
           <div className="configColumn grid gap-4">
             <div className="flex flex-wrap items-end gap-3">
@@ -254,32 +253,6 @@ export function OrbmentConfigurator({
                           : 'No base-specific character presets are loaded for this base yet.'}
               </p>
             </div>
-
-            <ScrollArea className="h-[min(80vh,56rem)]">
-              <div className="slotsByLine pr-3">
-                <div>{renderSlotCard(centerSlotId)}</div>
-                <div className="slotsLineColumns">
-                  {lineColumns.map((column) => (
-                    <div className="slotsLineColumn" key={`line-column-${column.lineIndex}`}>
-                      <h3 className="flex items-center gap-2 text-sm font-medium">
-                        <span
-                          className="size-3 shrink-0 rounded-sm border border-border"
-                          style={{ backgroundColor: LINE_COLORS[column.lineIndex % LINE_COLORS.length] }}
-                        />
-                        Line {column.lineIndex + 1}
-                      </h3>
-                      {column.slotIds.map((slotId) => renderSlotCard(slotId))}
-                    </div>
-                  ))}
-                  {unassignedSlotIds.length > 0 ? (
-                    <div className="slotsLineColumn" key="line-column-unassigned">
-                      <h3 className="text-sm font-medium">Unassigned</h3>
-                      {unassignedSlotIds.map((slotId) => renderSlotCard(slotId))}
-                    </div>
-                  ) : null}
-                </div>
-              </div>
-            </ScrollArea>
           </div>
 
           <div className="graphColumn">
@@ -295,6 +268,30 @@ export function OrbmentConfigurator({
               masterQuartzLevel={state.masterQuartzLevel}
               masterQuartzById={masterQuartzById}
             />
+          </div>
+        </div>
+
+        <div className="slotsByLine">
+          <div>{renderSlotCard(centerSlotId)}</div>
+          <div className="slotsLineColumns">
+            {lineColumns.map((column) => (
+              <div className="slotsLineColumn" key={`line-column-${column.lineIndex}`}>
+                <h3 className="flex items-center gap-2 text-sm font-medium">
+                  <span
+                    className="size-3 shrink-0 rounded-sm border border-border"
+                    style={{ backgroundColor: LINE_COLORS[column.lineIndex % LINE_COLORS.length] }}
+                  />
+                  Line {column.lineIndex + 1}
+                </h3>
+                {column.slotIds.map((slotId) => renderSlotCard(slotId))}
+              </div>
+            ))}
+            {unassignedSlotIds.length > 0 ? (
+              <div className="slotsLineColumn" key="line-column-unassigned">
+                <h3 className="text-sm font-medium">Unassigned</h3>
+                {unassignedSlotIds.map((slotId) => renderSlotCard(slotId))}
+              </div>
+            ) : null}
           </div>
         </div>
       </CardContent>
