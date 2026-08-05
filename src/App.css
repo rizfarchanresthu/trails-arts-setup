@@ -55,8 +55,17 @@
 button.artCard,
 [data-slot='button'].artCard {
   display: grid;
-  grid-template-columns: 1.6fr repeat(3, auto);
+  grid-template-columns: minmax(0, 1.4fr) minmax(max-content, auto) auto auto;
   align-items: center;
+  white-space: normal;
+}
+
+.artCardElements {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 0;
 }
 
 .quartzOptionLabel {

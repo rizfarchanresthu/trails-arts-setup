@@ -24,6 +24,7 @@ type OrbmentGraphProps = {
   equippedMasterQuartzId?: number | null
   masterQuartzLevel?: number
   masterQuartzById?: Map<number, MasterQuartz>
+  showTier?: boolean
 }
 
 const NODE_RADIUS = 24
@@ -63,8 +64,10 @@ export function OrbmentGraph({
   equippedMasterQuartzId = null,
   masterQuartzLevel = 1,
   masterQuartzById = new Map(),
+  showTier,
 }: OrbmentGraphProps) {
   const layout = getLayout(topology)
+  const shouldShowTier = showTier ?? layout.showTier
   const slotPoints = layout.slotPoints
   const edges = buildEdges(lines)
   const outerPath = layout.guideSequence
@@ -140,7 +143,7 @@ export function OrbmentGraph({
           const point = slotPoints[slotId]
           const label = isMasterSlot
             ? `M${equippedMasterQuartzId ? ` L${masterQuartzLevel}` : ''}`
-            : `${formatSlotLabel(slotId, topology)}${layout.showTier ? ` T${nodeTiers[slotId]}` : ''}`
+            : `${formatSlotLabel(slotId, topology)}${shouldShowTier ? ` T${nodeTiers[slotId]}` : ''}`
 
           if (useRectNodes && !isMasterSlot) {
             return (

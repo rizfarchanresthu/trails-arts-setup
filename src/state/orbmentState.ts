@@ -1,5 +1,7 @@
 import { canEquipColdSteelIQuartz } from '../domain/rules/coldSteelIRules'
 import {
+  isColdSteelRuleSet,
+  quartzFitsSlotRestriction,
   type ElementName,
   type MasterQuartz,
   type MasterQuartzLevel,
@@ -219,8 +221,7 @@ export function setSlotRestriction(
     return next
   }
 
-  const isAllowed = !restriction || restriction === equippedQuartz.element
-  if (isAllowed) {
+  if (quartzFitsSlotRestriction(equippedQuartz, restriction)) {
     return next
   }
 
@@ -267,13 +268,19 @@ export function setEquippedQuartz(
   }
 
   const restriction = state.slotRestrictions[slotId]
-  if (restriction && quartz.element !== restriction) {
+  if (!quartzFitsSlotRestriction(quartz, restriction)) {
     return state
   }
 
-  if (options.ruleSet === 'cold-steel-i') {
+  if (isColdSteelRuleSet(options.ruleSet)) {
     if (!canEquipColdSteelIQuartz(quartz, slotId, state.equippedQuartz, quartzById, options.lines ?? [])) {
       return state
+    }
+    if (options.ruleSet === 'cold-steel-ii') {
+      const nodeTier = state.nodeTiers[slotId]
+      if (quartz.tier && quartz.tier > nodeTier) {
+        return state
+      }
     }
   } else {
     const nodeTier = state.nodeTiers[slotId]
@@ -312,7 +319,7 @@ export function getAllowedQuartzForSlot(
   const usedGroups = getUsedExclusiveGroups(equippedQuartz, quartzById, slotId)
 
   return quartzList.filter((quartz) => {
-    if (restriction && quartz.element !== restriction) {
+    if (!quartzFitsSlotRestriction(quartz, restriction)) {
       return false
     }
 
@@ -320,8 +327,17 @@ export function getAllowedQuartzForSlot(
       return true
     }
 
-    if (context.ruleSet === 'cold-steel-i') {
-      return canEquipColdSteelIQuartz(quartz, slotId, equippedQuartz, quartzById, context.lines ?? [])
+    if (isColdSteelRuleSet(context.ruleSet)) {
+      if (!canEquipColdSteelIQuartz(quartz, slotId, equippedQuartz, quartzById, context.lines ?? [])) {
+        return false
+      }
+      if (context.ruleSet === 'cold-steel-ii') {
+        const nodeTier = nodeTiers[slotId]
+        if (quartz.tier && quartz.tier > nodeTier) {
+          return false
+        }
+      }
+      return true
     }
 
     const nodeTier = nodeTiers[slotId]

@@ -1,5 +1,5 @@
 import type { FilterOptionOption, GroupBase } from 'react-select'
-import { ELEMENT_COLORS, ELEMENTS, type ElementName, type Quartz } from '../domain/types'
+import { ELEMENT_COLORS, ELEMENTS, LOST_QUARTZ_COLOR, isLostQuartz, type ElementName, type Quartz } from '../domain/types'
 import { AppSelect, type SelectGroup, type SelectOption } from './AppSelect'
 
 type QuartzPickerProps = {
@@ -44,6 +44,13 @@ function filterQuartzOption(option: FilterOptionOption<SelectOption>, inputValue
 
 function formatQuartzGroupLabel(group: GroupBase<SelectOption>) {
   const element = group.label
+  if (element === 'Lost') {
+    return (
+      <span className="elementBadge" style={{ color: LOST_QUARTZ_COLOR }}>
+        Lost
+      </span>
+    )
+  }
   if (!element || !ELEMENTS.includes(element as ElementName)) {
     return group.label
   }
@@ -56,24 +63,33 @@ function formatQuartzGroupLabel(group: GroupBase<SelectOption>) {
 }
 
 function formatQuartzOptionLabel(option: SelectOption) {
-  if (!option.element) {
+  const swatchColor = option.swatchColor ?? (option.element ? ELEMENT_COLORS[option.element] : null)
+  if (!swatchColor) {
     return option.label
   }
 
   return (
     <span className="quartzOptionLabel">
-      <span className="quartzElementSwatch" style={{ backgroundColor: ELEMENT_COLORS[option.element] }} />
+      <span className="quartzElementSwatch" style={{ backgroundColor: swatchColor }} />
       {option.label}
     </span>
   )
 }
 
 export function QuartzPicker({ quartzList, value, onChange }: QuartzPickerProps) {
+  const lostOptions = quartzList.filter(isLostQuartz).map((quartz) => ({
+    value: String(quartz.id),
+    label: quartz.name.en,
+    swatchColor: LOST_QUARTZ_COLOR,
+    tier: quartz.tier ?? 1,
+    searchText: `${quartz.name.en} Lost ${quartz.element.join(' ')}`,
+  }))
+
   const groupedOptions: Array<SelectOption | SelectGroup> = [
     { value: '', label: 'Empty slot' },
     ...ELEMENTS.flatMap((element): SelectGroup[] => {
       const options = quartzList
-        .filter((quartz) => quartz.element === element)
+        .filter((quartz): quartz is Quartz & { element: ElementName } => !isLostQuartz(quartz) && quartz.element === element)
         .map((quartz) => ({
           value: String(quartz.id),
           label: quartz.name.en,
@@ -88,6 +104,7 @@ export function QuartzPicker({ quartzList, value, onChange }: QuartzPickerProps)
 
       return [{ label: element, options }]
     }),
+    ...(lostOptions.length > 0 ? [{ label: 'Lost', options: lostOptions }] : []),
   ]
 
   return (

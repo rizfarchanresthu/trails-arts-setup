@@ -1,13 +1,16 @@
 import artsAzure from '../database/arts/azure.json'
 import artsColdSteelI from '../database/arts/cold-steel-i.json'
+import artsColdSteelII from '../database/arts/cold-steel-ii.json'
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
 import artsZero from '../database/arts/zero.json'
 import masterQuartzAzure from '../database/master-quartz/azure.json'
 import masterQuartzColdSteelI from '../database/master-quartz/cold-steel-i.json'
+import masterQuartzColdSteelII from '../database/master-quartz/cold-steel-ii.json'
 import quartzAzure from '../database/quartz/azure.json'
 import quartzColdSteelI from '../database/quartz/cold-steel-i.json'
+import quartzColdSteelII from '../database/quartz/cold-steel-ii.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
@@ -176,7 +179,37 @@ const COLD_STEEL_I_BASE: BaseData = {
   ruleSet: 'cold-steel-i',
 }
 
-export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE, ZERO_BASE, AZURE_BASE, COLD_STEEL_I_BASE]
+const COLD_STEEL_II_TOPOLOGY: BaseData['topology'] = {
+  ...COLD_STEEL_I_TOPOLOGY,
+  nodeTierDefaults: createNodeTierDefaults([2, 3, 4, 5, 6, 7, 8, 9], 2),
+}
+
+const COLD_STEEL_II_QUARTZ = quartzColdSteelII.map((entry) => normalizeQuartz(entry))
+
+const COLD_STEEL_II_BASE: BaseData = {
+  id: 'cold-steel-ii',
+  label: 'Cold Steel II',
+  quartz: COLD_STEEL_II_QUARTZ,
+  arts: applyLostQuartzArtElements(COLD_STEEL_II_QUARTZ, artsColdSteelII.map((entry) => normalizeArt(entry))),
+  masterQuartz: masterQuartzColdSteelII.map((entry) => normalizeMasterQuartz(entry)),
+  topology: COLD_STEEL_II_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ARCUS',
+    outerEdges: 'straight',
+    nodeShape: 'circle',
+  },
+  ruleSet: 'cold-steel-ii',
+}
+
+export const BASES: BaseData[] = [
+  SKY_FC_BASE,
+  SKY_SC_BASE,
+  SKY_3RD_BASE,
+  ZERO_BASE,
+  AZURE_BASE,
+  COLD_STEEL_I_BASE,
+  COLD_STEEL_II_BASE,
+]
 
 export function getBaseById(baseId: string): BaseData {
   const matched = BASES.find((base) => base.id === baseId)
@@ -189,7 +222,7 @@ function normalizeQuartz(input: unknown): Quartz {
     id: Number(record.id),
     name: record.name as Quartz['name'],
     effect: String(record.effect),
-    element: toElementName(record.element),
+    element: toQuartzElement(record.element),
     tier: normalizeTier(record.tier),
     rank: normalizeRank(record.rank),
     exclusive_groups: normalizeExclusiveGroups(record.exclusive_groups ?? record.exclusive_group),
@@ -250,7 +283,7 @@ function normalizeArt(input: unknown): Art {
     id: Number(record.id),
     name: record.name as Art['name'],
     image_url: typeof record.image_url === 'string' ? record.image_url : null,
-    element: toElementName(record.element),
+    element: toQuartzElement(record.element),
     category: record.category as Art['category'],
     elemental_value: normalizeRequirementArray(record.elemental_value),
     cost: String(record.cost),
@@ -301,6 +334,36 @@ function normalizeRequirement(input: unknown): ElementRequirement {
   }
 
   return normalized
+}
+
+function applyLostQuartzArtElements(quartz: Quartz[], arts: Art[]): Art[] {
+  const elementsByArtId = new Map<number, ElementName[]>()
+  for (const entry of quartz) {
+    if (!Array.isArray(entry.element)) {
+      continue
+    }
+    for (const artId of entry.arts_learnt ?? []) {
+      elementsByArtId.set(artId, entry.element)
+    }
+  }
+  if (elementsByArtId.size === 0) {
+    return arts
+  }
+  return arts.map((art) => {
+    const elements = elementsByArtId.get(art.id)
+    return elements ? { ...art, element: elements } : art
+  })
+}
+
+function toQuartzElement(value: unknown): ElementName | ElementName[] {
+  if (Array.isArray(value)) {
+    const elements = value.map((entry) => toElementName(entry))
+    if (elements.length === 0) {
+      throw new Error('Unexpected empty element array')
+    }
+    return elements
+  }
+  return toElementName(value)
 }
 
 function toElementName(value: unknown): ElementName {

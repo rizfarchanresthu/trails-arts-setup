@@ -10,6 +10,8 @@ import {
   ELEMENTS,
   LINE_COLORS,
   formatSlotLabel,
+  isColdSteelRuleSet,
+  quartzFitsSlotRestriction,
   type Art,
   type ElementName,
   type ElementRequirement,
@@ -88,7 +90,7 @@ export function OrbmentConfigurator({
 }: OrbmentConfiguratorProps) {
   const maxTier = Math.max(1, ...quartzList.map((quartz) => quartz.tier ?? 1))
   const showNodeTierControls = selectedBaseId !== 'sky-fc' && ruleSet !== 'cold-steel-i'
-  const showGrantedArts = ruleSet === 'cold-steel-i'
+  const showGrantedArts = isColdSteelRuleSet(ruleSet)
   const configTitle = orbmentVisual?.title ? `${orbmentVisual.title} Config` : 'Orbment Config'
   const equippedMasterQuartz = state.equippedMasterQuartzId
     ? masterQuartzById.get(state.equippedMasterQuartzId)
@@ -281,6 +283,7 @@ export function OrbmentConfigurator({
               equippedMasterQuartzId={state.equippedMasterQuartzId}
               masterQuartzLevel={state.masterQuartzLevel}
               masterQuartzById={masterQuartzById}
+              showTier={showNodeTierControls}
             />
           </div>
         </div>
@@ -435,9 +438,7 @@ function RegularSlotCard({
   ruleSet,
 }: RegularSlotCardProps) {
   const restriction = state.slotRestrictions[slotId]
-  const restrictionOnlyQuartz = restriction
-    ? quartzList.filter((quartz) => quartz.element === restriction)
-    : quartzList
+  const restrictionOnlyQuartz = quartzList.filter((quartz) => quartzFitsSlotRestriction(quartz, restriction))
   const allowedQuartz = getAllowedQuartzForSlot(
     quartzList,
     slotId,

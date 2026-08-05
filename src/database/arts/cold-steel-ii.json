@@ -1,0 +1,1282 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Needle Shoot",
+      "ja": "ニードルショット"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "30 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": "150%",
+    "target": "Single target",
+    "effect": "Petrify (20% chance, ∞t)",
+    "description": "Launches a sharply pointed boulder at an enemy."
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Earth Lance",
+      "ja": "アースランス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 6,
+      "delay": 18
+    },
+    "power": "180%",
+    "target": "Set circle (4 radius)",
+    "effect": "Petrify (20% chance, ∞t)",
+    "description": "Summons lances of earth from below the ground."
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Grand Press",
+      "ja": "グランドプレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "120 EP",
+    "time": {
+      "cast": 8,
+      "delay": 18
+    },
+    "power": "210%",
+    "target": "Set circle (6 radius)",
+    "effect": "MOV-50% (5t)",
+    "description": "Creates a localized earthquake below enemies."
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Yggdrasil",
+      "ja": "ユグドラシエル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "180 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": "250%",
+    "target": "Set circle (8 radius)",
+    "effect": "Petrify (30% chance, ∞t)",
+    "description": "Summons a sentient tree to skewer enemies."
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Ancient Glyph",
+      "ja": "エインシェントグリフ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "360 EP",
+    "time": {
+      "cast": 12,
+      "delay": 22
+    },
+    "power": "350%",
+    "target": "Set circle (12 radius)",
+    "effect": "Petrify (20% chance, ∞t)",
+    "description": "Summons a megalith high above, then drops it."
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Aqua Bleed",
+      "ja": "アクアブリード"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": "150%",
+    "target": "Single target",
+    "effect": null,
+    "description": "Strikes an enemy with a heavy mass of water."
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Frost Edge",
+      "ja": "フロストエッジ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 6,
+      "delay": 18
+    },
+    "power": "180%",
+    "target": "Circle around target (6 radius)",
+    "effect": "Freeze (20% chance, 4t)",
+    "description": "Attacks enemies with blades of crystallized ice."
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Hydro Cannon",
+      "ja": "ハイドロカノン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "110 EP",
+    "time": {
+      "cast": 8,
+      "delay": 18
+    },
+    "power": "210%",
+    "target": "Set line (3 width)",
+    "effect": null,
+    "description": "Strikes with a high-pressure water current."
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Crystal Flood",
+      "ja": "クリスタルフラッド"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "180 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": "250%",
+    "target": "Set line (6 width)",
+    "effect": "Freeze (30% chance, 4t)",
+    "description": "Creates a glistening river of ice."
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Maelstrom",
+      "ja": "グランシュトローム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "350 EP",
+    "time": {
+      "cast": 12,
+      "delay": 22
+    },
+    "power": "350%",
+    "target": "All targets",
+    "effect": null,
+    "description": "Creates a powerful whirlpool."
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Fire Bolt",
+      "ja": "ファイアボルト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "30 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": "150%",
+    "target": "Single target",
+    "effect": "Burn (20% chance, 3t)",
+    "description": "Shoots a blazing orb of fire at an enemy."
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Heatwave",
+      "ja": "ヒートウェイブ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "50 EP",
+    "time": {
+      "cast": 6,
+      "delay": 18
+    },
+    "power": "180%",
+    "target": "Circle around target (4 radius)",
+    "effect": "Burn (30% chance, 3t)",
+    "description": "Covers the earth's surface with intense heat."
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Flame Tongue",
+      "ja": "フレイムタン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100 EP",
+    "time": {
+      "cast": 8,
+      "delay": 18
+    },
+    "power": "210%",
+    "target": "Circle around target (6 radius)",
+    "effect": "Burn (20% chance, 3t)",
+    "description": "Flames erupt from the ground, skewering enemies."
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Volcanic Rain",
+      "ja": "ヴォルカンレイン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "150 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": "250%",
+    "target": "Circle around target (8 radius)",
+    "effect": "Burn (30% chance, 3t)",
+    "description": "Causes incandescent volcanic bombs to rain from the sky."
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Flare Bomb",
+      "ja": "イグナプロジオン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "200 EP",
+    "time": {
+      "cast": 12,
+      "delay": 22
+    },
+    "power": "300%",
+    "target": "Circle around target (12 radius)",
+    "effect": "Burn (20% chance, 3t)",
+    "description": "Two flames collide, causing a great explosion."
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Purgatorial Flame",
+      "ja": "サウザントノヴァ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "450 EP",
+    "time": {
+      "cast": 12,
+      "delay": 24
+    },
+    "power": "450%",
+    "target": "Circle around target (4 radius)",
+    "effect": "Burn (50% chance, 3t)",
+    "description": "Summons the flames of Gehenna to reduce enemies to ash."
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Air Strike",
+      "ja": "エアストライク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 5,
+      "delay": 16
+    },
+    "power": "150%",
+    "target": "Single target",
+    "effect": null,
+    "description": "Attacks an enemy with a mass of compressed air."
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Spark Arrow",
+      "ja": "スパークアロー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 6,
+      "delay": 16
+    },
+    "power": "180%",
+    "target": "Set line (2 width)",
+    "effect": "Seal (20% chance, 4t)",
+    "description": "Unleashes a line of lightning towards enemies."
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Aerial",
+      "ja": "エアリアル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "120 EP",
+    "time": {
+      "cast": 8,
+      "delay": 16
+    },
+    "power": "210%",
+    "target": "Set circle (8 radius)",
+    "effect": null,
+    "description": "Creates a whirlwind containing pieces of rubble."
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Judgment Bolt",
+      "ja": "ジャジメントボルト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "150 EP",
+    "time": {
+      "cast": 10,
+      "delay": 18
+    },
+    "power": "250%",
+    "target": "Set line (3 width)",
+    "effect": "Seal (50% chance, 4t)",
+    "description": "Brings down judgment upon foes with lightning."
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Ragna Vortex",
+      "ja": "ラグナヴォルテクス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "360 EP",
+    "time": {
+      "cast": 12,
+      "delay": 20
+    },
+    "power": "350%",
+    "target": "All targets",
+    "effect": "Seal (30% chance, 4t)",
+    "description": "Swallows up enemies with a lightning-imbued whirlwind."
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Soul Blur",
+      "ja": "ソウルブラー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "50 EP",
+    "time": {
+      "cast": 6,
+      "delay": 16
+    },
+    "power": "165%",
+    "target": "Single target",
+    "effect": "Faint (30% chance, 3t)",
+    "description": "Emits a space-time shaking pulse."
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Demonic Scythe",
+      "ja": "デモンサイズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100 EP",
+    "time": {
+      "cast": 8,
+      "delay": 16
+    },
+    "power": "195%",
+    "target": "Circle around target (6 radius)",
+    "effect": "Deathblow (30% chance)",
+    "description": "Steals foes' souls with the Grim Reaper's scythe."
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Grim Butterfly",
+      "ja": "グリムバタフライ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "200 EP",
+    "time": {
+      "cast": 10,
+      "delay": 18
+    },
+    "power": "300%",
+    "target": "Circle around target (12 radius)",
+    "effect": "Nightmare (50% chance, 3t)",
+    "description": "A swarm of butterflies plunges enemies into despair."
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Shadow Blade",
+      "ja": "シャドーアポクリフ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "450 EP",
+    "time": {
+      "cast": 12,
+      "delay": 22
+    },
+    "power": "400%",
+    "target": "Circle around target (8 radius)",
+    "effect": "Heals for 5% of damage done",
+    "description": "A demonic blade. Absorb 5% of damage dealt as HP."
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Golden Sphere",
+      "ja": "ゴルトスフィア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "50 EP",
+    "time": {
+      "cast": 6,
+      "delay": 18
+    },
+    "power": "165%",
+    "target": "Set circle (4 radius)",
+    "effect": "Blind (30% chance, 4t)",
+    "description": "Attacks enemies with golden magic orbs."
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Dark Matter",
+      "ja": "ダークマター"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "110 EP",
+    "time": {
+      "cast": 8,
+      "delay": 18
+    },
+    "power": "195%",
+    "target": "Set circle (8 radius)",
+    "effect": "Moves targets to set point MOV-50% (5t)",
+    "description": "Draws in and compresses enemies."
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Cross Crusade",
+      "ja": "エクスクルセイド"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "210 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": "300%",
+    "target": "All targets",
+    "effect": null,
+    "description": "A cross-shaped void bathes all in a holy light."
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Altair Cannon",
+      "ja": "アルテアカノン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "450 EP",
+    "time": {
+      "cast": 12,
+      "delay": 24
+    },
+    "power": "400%",
+    "target": "All targets",
+    "effect": "ATS/ADF-25% (5t)",
+    "description": "Blasts of light fall from above."
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Luminous Ray",
+      "ja": "ルミナスレイ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "50 EP",
+    "time": {
+      "cast": 6,
+      "delay": 18
+    },
+    "power": "165%",
+    "target": "Set line (2 width)",
+    "effect": null,
+    "description": "Unleashes a beam of lunar light."
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Silver Thorn",
+      "ja": "シルバーソーン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100 EP",
+    "time": {
+      "cast": 8,
+      "delay": 18
+    },
+    "power": "195%",
+    "target": "Circle around target (6 radius)",
+    "effect": "Confuse (40% chance, 3t)",
+    "description": "Blades of condensed insanity rain from above."
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Phantom Phobia",
+      "ja": "ファントムフォビア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "210 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": "300%",
+    "target": "Circle around target (12 radius)",
+    "effect": "Random stat -25% (4t)",
+    "description": "Terrifies enemies with an illusion of death."
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Claiomh Solarion",
+      "ja": "クラウ・ソラリオン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "500 EP",
+    "time": {
+      "cast": 12,
+      "delay": 24
+    },
+    "power": "450%",
+    "target": "All targets",
+    "effect": null,
+    "description": "Annihilates all with a beam of condensed magical energy."
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Earth Pulse",
+      "ja": "アースグロウ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "HP Regen (20% Max HP/t, 5t)",
+    "description": "Stimulates healing."
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Crest",
+      "ja": "クレスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "DEF+25% (5t)",
+    "description": "Grants earth's protection to raise defense."
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "La Crest",
+      "ja": "ラ・クレスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "40 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (8 radius)",
+    "effect": "DEF+25% (5t)",
+    "description": "Grants earth's protection to raise defense."
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Adamantine Shield",
+      "ja": "アダマスシールド"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9f/Earth_%28Sen_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "300 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "Craft Guard (1 atk)",
+    "description": "A shield protects targets from one physical attack."
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Tear",
+      "ja": "ティア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 3,
+      "delay": 18
+    },
+    "power": 900,
+    "target": "Single target",
+    "effect": null,
+    "description": "Heals a small amount of HP with the power of water."
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Teara",
+      "ja": "ティアラ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 4,
+      "delay": 18
+    },
+    "power": 1800,
+    "target": "Single target",
+    "effect": null,
+    "description": "Heals a medium amount of HP with the power of water."
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Tearal",
+      "ja": "ティアラル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "120 EP",
+    "time": {
+      "cast": 5,
+      "delay": 20
+    },
+    "power": 2700,
+    "target": "Single target",
+    "effect": null,
+    "description": "Heals a large amount of HP with the power of water."
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Thelas",
+      "ja": "セラス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "50 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": 1200,
+    "target": "Single target",
+    "effect": "Cures K.O.",
+    "description": "Revives one ally, and heals a small amount of HP."
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Athelas",
+      "ja": "アセラス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "150 EP",
+    "time": {
+      "cast": 6,
+      "delay": 20
+    },
+    "power": 2400,
+    "target": "Single target",
+    "effect": "Cures K.O.",
+    "description": "Revives one ally, and heals a medium amount of HP."
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Curia",
+      "ja": "キュリア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Water_%28Sen_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 3,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Cures status effects",
+    "description": "Cleanses an ally of impurities with water."
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Impassion",
+      "ja": "メルティライズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "CP Regen (20 CP/t, 4t)",
+    "description": "Raises spirit. Restores 20CP for 4 turns."
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Heat Up",
+      "ja": "ウォリアーゲイン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (8 radius)",
+    "effect": "Cures stat debuffs 10 CP restored",
+    "description": "Cures Stat Down, and restores 10CP."
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Forte",
+      "ja": "フォルテ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "30 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "STR+25% (5t)",
+    "description": "Grants fire's blessing to raise attack."
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "La Forte",
+      "ja": "ラ･フォルテ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Fire_%28Sen_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (8 radius)",
+    "effect": "STR+25% (5t)",
+    "description": "Grants fire's blessing to raise attack."
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "Breath",
+      "ja": "ブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "40 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": 700,
+    "target": "Circle around target (6 radius)",
+    "effect": null,
+    "description": "Heals allies in an area with purifying breath."
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "Holy Breath",
+      "ja": "ホーリーブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "120 EP",
+    "time": {
+      "cast": 6,
+      "delay": 20
+    },
+    "power": 1400,
+    "target": "Circle around target (8 radius)",
+    "effect": null,
+    "description": "Heals allies in an area with purifying breath."
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "Recuria",
+      "ja": "レキュリア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Wind_%28Sen_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (12 radius)",
+    "effect": "Cures status effects",
+    "description": "Cures ailments (except K.O.)."
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Chrono Drive",
+      "ja": "クロノドライブ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "SPD+25% (5t) MOV+50% (5t)",
+    "description": "Speeds up the flow of time for targeted allies."
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "Chrono Break",
+      "ja": "クロノブレイク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "SPD-25% (5t) AT Delay (15 AT)",
+    "description": "Slows down the flow of time for targeted enemies."
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Chrono Burst",
+      "ja": "クロノバースト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Time_%28Sen_Element%29.png",
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "400 EP",
+    "time": {
+      "cast": 0,
+      "delay": 0
+    },
+    "power": null,
+    "target": "User",
+    "effect": "User's next two turns occur immediately afterwards",
+    "description": "Alters the laws of time, allowing the user to act twice more."
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Fortuna",
+      "ja": "フォルトゥナ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "40 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "ATS/ADF+25% (5t)",
+    "description": "Grants light's clarity to raise ATS/ADF."
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Shining",
+      "ja": "シャイニング"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Insight (5t)",
+    "description": "Grants an ally insight status."
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "Seraphic Ring",
+      "ja": "セラフィムリング"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Space_%28Sen_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "400 EP",
+    "time": {
+      "cast": 8,
+      "delay": 18
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "Cures K.O. All HP healed HP Regen (20% Max HP/t, 3t)",
+    "description": "Fully heals, and heals 20% HP for 3 turns."
+  },
+  {
+    "id": 57,
+    "name": {
+      "en": "Analyze",
+      "ja": "アナライズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "10 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "Analyzes target",
+    "description": "Analyzes and obtains data on an enemy."
+  },
+  {
+    "id": 58,
+    "name": {
+      "en": "Saintly Force",
+      "ja": "セイントフォース"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "80 EP",
+    "time": {
+      "cast": 5,
+      "delay": 18
+    },
+    "power": null,
+    "target": "Single target",
+    "effect": "STR/DEF/SPD+25% (5t) Cures stat debuffs",
+    "description": "Returns abilities to normal, and applies a buff."
+  },
+  {
+    "id": 59,
+    "name": {
+      "en": "Crescent Mirror",
+      "ja": "クレセントミラー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/4/42/Mirage_%28Sen_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "250 EP",
+    "time": {
+      "cast": 10,
+      "delay": 20
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "Art Reflect (1 atk) ATS+25% (5t)",
+    "description": "Surrounds allies with a lunar barrier."
+  },
+  {
+    "id": 60,
+    "name": {
+      "en": "Sol Eruption",
+      "ja": "ソル・イラプション"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e7/The_Sun_%28Lost_Arts%2C_Sen_II%29.png",
+    "element": ["Fire", "Space", "Wind"],
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100% EP",
+    "time": {
+      "cast": 30,
+      "delay": 30
+    },
+    "power": "600%",
+    "target": "All targets",
+    "effect": "DEF/SPD-50% (5t) Burn (200% chance, 3t) Removes positive effects",
+    "description": "The sun burns all. Ignores element efficacy."
+  },
+  {
+    "id": 61,
+    "name": {
+      "en": "Artemis' Tears",
+      "ja": "アルテミスティア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/The_Moon_%28Lost_Arts%2C_Sen_II%29.png",
+    "element": ["Fire", "Mirage", "Water"],
+    "category": "support",
+    "elemental_value": [],
+    "cost": "100% EP",
+    "time": {
+      "cast": 30,
+      "delay": 30
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "Overheals to twice the targets' max HP",
+    "description": "Moon Goddess' power allows recovery beyond the body's limits."
+  },
+  {
+    "id": 62,
+    "name": {
+      "en": "Grail Burst",
+      "ja": "グラールバースト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8a/The_Grail_%28Lost_Arts%2C_Sen_II%29.png",
+    "element": ["Fire", "Time", "Earth"],
+    "category": "support",
+    "elemental_value": [],
+    "cost": "100% EP",
+    "time": {
+      "cast": 0,
+      "delay": 0
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "User's next two turns occur immediately afterwards Targets' turn occurs immediately after",
+    "description": "Manipulates space-time with the grail's power."
+  },
+  {
+    "id": 63,
+    "name": {
+      "en": "Tempestuous Roar",
+      "ja": "テンペストロア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/61/The_Dragon_%28Lost_Arts%2C_Sen_II%29.png",
+    "element": ["Earth", "Water", "Wind"],
+    "category": "support",
+    "elemental_value": [],
+    "cost": "100% EP",
+    "time": {
+      "cast": 30,
+      "delay": 30
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "100 CP restored CP Regen (30 CP/t, 3t)",
+    "description": "Roaring dragons in the earth veins grant power."
+  },
+  {
+    "id": 64,
+    "name": {
+      "en": "Lost Eden",
+      "ja": "ロストオブエデン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b2/The_Holy_%28Lost_Arts%2C_Sen_II%29.png",
+    "element": ["Time", "Space", "Mirage"],
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100% EP",
+    "time": {
+      "cast": 30,
+      "delay": 30
+    },
+    "power": "600%",
+    "target": "All targets",
+    "effect": "STR/ATS-50% (5t) Confuse (200% chance, 3t) Removes positive effects",
+    "description": "Recreates gods' battle, bringing chaos. Ignores efficacy."
+  }
+]

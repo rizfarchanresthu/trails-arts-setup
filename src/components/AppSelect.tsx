@@ -12,6 +12,7 @@ export type SelectOption = {
   label: string
   searchText?: string
   element?: ElementName
+  swatchColor?: string
   tier?: number
 }
 

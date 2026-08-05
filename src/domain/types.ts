@@ -22,6 +22,8 @@ export const ELEMENT_COLORS: Record<ElementName, string> = {
   Mirage: '#D6D3CE',
 }
 
+export const LOST_QUARTZ_COLOR = '#8a4ecf'
+
 export const LINE_COLORS = [
   '#f25f5c',
   '#4d9de0',
@@ -35,7 +37,11 @@ export const LINE_COLORS = [
 
 export type QuartzRank = 'R' | 'SR'
 
-export type OrbmentRuleSetId = 'sky-crossbell' | 'cold-steel-i'
+export type OrbmentRuleSetId = 'sky-crossbell' | 'cold-steel-i' | 'cold-steel-ii'
+
+export function isColdSteelRuleSet(ruleSet?: OrbmentRuleSetId): boolean {
+  return ruleSet === 'cold-steel-i' || ruleSet === 'cold-steel-ii'
+}
 
 export type SlotId = number
 
@@ -54,7 +60,7 @@ export type Quartz = {
   id: number
   name: LocalizedName
   effect: string
-  element: ElementName
+  element: ElementName | ElementName[]
   tier?: number
   rank?: QuartzRank | null
   exclusive_groups: string[]
@@ -88,7 +94,7 @@ export type Art = {
   id: number
   name: LocalizedName
   image_url: string | null
-  element: ElementName
+  element: ElementName | ElementName[]
   category: 'offensive' | 'support'
   elemental_value: ElementRequirement[]
   cost: string
@@ -137,6 +143,21 @@ export type BaseData = {
 
 export function formatSlotLabel(slotId: SlotId, topology: OrbmentTopology): string {
   return topology.masterQuartzSlot === slotId ? 'M' : String(slotId)
+}
+
+export function isLostQuartz(quartz: Quartz): quartz is Quartz & { element: ElementName[] } {
+  return Array.isArray(quartz.element)
+}
+
+export function getArtElements(art: Pick<Art, 'element'>): ElementName[] {
+  return Array.isArray(art.element) ? art.element : [art.element]
+}
+
+export function quartzFitsSlotRestriction(quartz: Quartz, restriction: ElementName | null | undefined): boolean {
+  if (Array.isArray(quartz.element)) {
+    return restriction != null && quartz.element.includes(restriction)
+  }
+  return restriction == null || quartz.element === restriction
 }
 
 export type SavedQuartzSetup = {

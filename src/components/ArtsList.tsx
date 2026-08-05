@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
-import { ELEMENT_COLORS, type Art, type ElementName, type ElementTotals } from '../domain/types'
+import { ELEMENT_COLORS, getArtElements, type Art, type ElementTotals } from '../domain/types'
 
 type ArtsListProps = {
   arts: Art[]
@@ -30,10 +30,11 @@ export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals 
   const [selectedArt, setSelectedArt] = useState<Art | null>(null)
 
   const elementOrder = useMemo(() => {
-    const order = new Map<ElementName, number>()
+    const order = new Map<string, number>()
     for (const art of elementOrderSource) {
-      if (!order.has(art.element)) {
-        order.set(art.element, order.size)
+      const key = getArtElements(art).join('/')
+      if (!order.has(key)) {
+        order.set(key, order.size)
       }
     }
     return order
@@ -41,8 +42,8 @@ export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals 
 
   const sortedArts = useMemo(() => {
     return [...arts].sort((left, right) => {
-      const leftElementIndex = elementOrder.get(left.element) ?? Number.MAX_SAFE_INTEGER
-      const rightElementIndex = elementOrder.get(right.element) ?? Number.MAX_SAFE_INTEGER
+      const leftElementIndex = elementOrder.get(getArtElements(left).join('/')) ?? Number.MAX_SAFE_INTEGER
+      const rightElementIndex = elementOrder.get(getArtElements(right).join('/')) ?? Number.MAX_SAFE_INTEGER
 
       if (leftElementIndex !== rightElementIndex) {
         return leftElementIndex - rightElementIndex
@@ -105,9 +106,7 @@ export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals 
                     ) : null}
                     <strong className="truncate">{art.name.en}</strong>
                   </span>
-                  <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[art.element], color: 'white' }}>
-                    {art.element}
-                  </Badge>
+                  <ArtElementBadges art={art} />
                   <span className="text-muted-foreground">{art.category}</span>
                   <span className="text-muted-foreground">{art.cost}</span>
                 </Button>
@@ -129,9 +128,7 @@ export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals 
               <div className="grid gap-2 text-sm">
                 <p>
                   Element:{' '}
-                  <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[selectedArt.element], color: 'white' }}>
-                    {selectedArt.element}
-                  </Badge>
+                  <ArtElementBadges art={selectedArt} />
                 </p>
                 <p>Category: {selectedArt.category}</p>
                 <p>Cost: {selectedArt.cost}</p>
@@ -176,5 +173,17 @@ export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals 
         </DialogContent>
       </Dialog>
     </Card>
+  )
+}
+
+function ArtElementBadges({ art }: { art: Art }) {
+  return (
+    <span className="artCardElements">
+      {getArtElements(art).map((element) => (
+        <Badge key={element} variant="outline" style={{ backgroundColor: ELEMENT_COLORS[element], color: 'white' }}>
+          {element}
+        </Badge>
+      ))}
+    </span>
   )
 }

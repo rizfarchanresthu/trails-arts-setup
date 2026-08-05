@@ -14,7 +14,7 @@ import { BASES, getBaseById } from './domain/baseRegistry'
 import { getCharacterTemplatesForBase } from './domain/characterPresets'
 import { evaluateGrantedArts } from './domain/rules/coldSteelIRules'
 import { deriveLinesFromConfig } from './domain/rules/skyFcRules'
-import { type ElementName, type SlotId } from './domain/types'
+import { isColdSteelRuleSet, type ElementName, type SlotId } from './domain/types'
 import {
   applyPresetRestrictions,
   createOrbmentStateFromPreset,
@@ -100,7 +100,7 @@ function App() {
       equippedMasterQuartzId: orbmentState.equippedMasterQuartzId,
       masterQuartzLevel: orbmentState.masterQuartzLevel,
     }
-    if (base.ruleSet === 'cold-steel-i') {
+    if (isColdSteelRuleSet(base.ruleSet)) {
       return evaluateGrantedArts(base.arts, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
     }
     return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
@@ -502,7 +502,7 @@ function App() {
             arts={evaluation.availableArts}
             lineTotals={evaluation.lineTotals}
             elementOrderSource={base.arts}
-            showLineTotals={base.ruleSet !== 'cold-steel-i'}
+            showLineTotals={!isColdSteelRuleSet(base.ruleSet)}
           />
         </TabsContent>
       </Tabs>
