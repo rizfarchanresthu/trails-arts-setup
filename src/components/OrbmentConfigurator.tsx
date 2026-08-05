@@ -20,6 +20,11 @@ import {
   getMasterQuartzLevelData,
 } from '../state/orbmentState'
 import { type CharacterTemplate } from '../domain/characterPresets'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Label } from '@/components/ui/label'
+import { Separator } from '@/components/ui/separator'
 import { AppSelect } from './AppSelect'
 import { MasterQuartzPicker } from './MasterQuartzPicker'
 import { OrbmentGraph } from './OrbmentGraph'
@@ -118,12 +123,15 @@ export function OrbmentConfigurator({
   }
 
   return (
-    <section className="panel">
-      <h2>{configTitle}</h2>
+    <Card className="panel">
+      <CardHeader className="px-0 pb-0">
+        <CardTitle className="text-xl">{configTitle}</CardTitle>
+      </CardHeader>
+      <CardContent className="px-0">
       <div className="configWithGraph">
         <div className="configColumn">
           <div className="fieldRow">
-            <label>
+            <Label className="fieldLabel">
               Character preset
               <AppSelect
                 value={selectedTemplateId}
@@ -136,8 +144,8 @@ export function OrbmentConfigurator({
                 ]}
                 onChange={onTemplateChange}
               />
-            </label>
-            <label>
+            </Label>
+            <Label className="fieldLabel">
               Line count
               <AppSelect
                 value={String(state.lineCount)}
@@ -147,17 +155,17 @@ export function OrbmentConfigurator({
                 }))}
                 onChange={(nextValue) => onLineCountChange(Number(nextValue))}
               />
-            </label>
+            </Label>
           </div>
 
           <div className="arcList">
             {state.arcLengths.map((length, index) => (
-              <div className="arcCard" key={`arc-${index}`}>
+              <Card className="arcCard" key={`arc-${index}`} size="sm">
                 <p>
                   Line {index + 1}: {length} outer slot(s)
                 </p>
                 <div className="fieldRow">
-                  <label>
+                  <Label className="fieldLabel">
                     Start
                     <AppSelect
                       value={String(state.lineStarts[index])}
@@ -167,8 +175,8 @@ export function OrbmentConfigurator({
                       }))}
                       onChange={(nextValue) => onLineStartChange(index, Number(nextValue) as SlotId)}
                     />
-                  </label>
-                  <label>
+                  </Label>
+                  <Label className="fieldLabel">
                     Direction
                     <AppSelect
                       value={state.lineDirections[index]}
@@ -178,27 +186,27 @@ export function OrbmentConfigurator({
                       ]}
                       onChange={(nextValue) => onLineDirectionChange(index, nextValue as LineDirection)}
                     />
-                  </label>
+                  </Label>
                 </div>
                 {state.arcLengths.length > 1 ? (
                   <div className="inlineActions">
-                    <button type="button" onClick={() => onTransferArcLength(index, 1)}>
+                    <Button type="button" variant="outline" size="sm" onClick={() => onTransferArcLength(index, 1)}>
                       Take from next
-                    </button>
-                    <button type="button" onClick={() => onTransferArcLength(index, -1)}>
+                    </Button>
+                    <Button type="button" variant="outline" size="sm" onClick={() => onTransferArcLength(index, -1)}>
                       Give to next
-                    </button>
+                    </Button>
                   </div>
                 ) : null}
-              </div>
+              </Card>
             ))}
           </div>
           {lineWarnings.length > 0 ? (
-            <div className="linePreview">
+            <div className="linePreview grid gap-2">
               {lineWarnings.map((warning, index) => (
-                <p className="hintText" key={`line-warning-${index}`}>
-                  {warning}
-                </p>
+                <Alert key={`line-warning-${index}`} variant="destructive">
+                  <AlertDescription>{warning}</AlertDescription>
+                </Alert>
               ))}
             </div>
           ) : null}
@@ -213,6 +221,8 @@ export function OrbmentConfigurator({
               ))}
             </ul>
           </div>
+
+          <Separator />
 
           <div className="linePreview">
             <h3>Adjacency Rule</h3>
@@ -279,7 +289,8 @@ export function OrbmentConfigurator({
           />
         </div>
       </div>
-    </section>
+      </CardContent>
+    </Card>
   )
 }
 
@@ -316,19 +327,19 @@ function MasterSlotCard({
   onMasterQuartzLevelChange,
 }: MasterSlotCardProps) {
   return (
-    <article className="slotCard">
+    <Card className="slotCard" size="sm">
       <h4>Master</h4>
-      <label>
+      <Label className="fieldLabel">
         Master quartz
         <MasterQuartzPicker
           masterQuartzList={masterQuartzList}
           value={equippedMasterQuartzId}
           onChange={(masterQuartzId) => onMasterQuartzChange?.(masterQuartzId)}
         />
-      </label>
+      </Label>
       {equippedMasterQuartz ? (
         <>
-          <label>
+          <Label className="fieldLabel">
             MQ level
             <AppSelect
               value={String(masterQuartzLevel)}
@@ -338,7 +349,7 @@ function MasterSlotCard({
               }))}
               onChange={(nextValue) => onMasterQuartzLevelChange?.(Number(nextValue))}
             />
-          </label>
+          </Label>
           <p className="mqDescription">{equippedMasterQuartz.description}</p>
           {masterLevelData ? (
             <>
@@ -357,7 +368,7 @@ function MasterSlotCard({
           ) : null}
         </>
       ) : null}
-    </article>
+    </Card>
   )
 }
 
@@ -401,10 +412,10 @@ function RegularSlotCard({
   const filteredByExclusivity = restrictionOnlyQuartz.length - allowedQuartz.length
 
   return (
-    <article className="slotCard">
+    <Card className="slotCard" size="sm">
       <h4>Slot {formatSlotLabel(slotId, topology)}</h4>
       {showNodeTierControls ? (
-        <label>
+        <Label className="fieldLabel">
           Node tier
           <AppSelect
             value={String(state.nodeTiers[slotId])}
@@ -414,10 +425,10 @@ function RegularSlotCard({
             }))}
             onChange={(nextValue) => onNodeTierChange(slotId, Number(nextValue))}
           />
-        </label>
+        </Label>
       ) : null}
 
-      <label>
+      <Label className="fieldLabel">
         Restriction
         <AppSelect
           value={state.slotRestrictions[slotId] ?? ''}
@@ -430,20 +441,22 @@ function RegularSlotCard({
           ]}
           onChange={(nextValue) => onRestrictionChange(slotId, (nextValue as ElementName) || null)}
         />
-      </label>
+      </Label>
 
-      <label>
+      <Label className="fieldLabel">
         Quartz
         <QuartzPicker
           quartzList={allowedQuartz}
           value={state.equippedQuartz[slotId]}
           onChange={(quartzId) => onQuartzChange(slotId, quartzId)}
         />
-      </label>
+      </Label>
       {filteredByExclusivity > 0 ? (
-        <p className="hintText">Some quartz hidden by exclusive-group rules.</p>
+        <Alert>
+          <AlertDescription>Some quartz hidden by exclusive-group rules.</AlertDescription>
+        </Alert>
       ) : null}
-    </article>
+    </Card>
   )
 }
 

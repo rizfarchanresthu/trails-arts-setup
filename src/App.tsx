@@ -3,6 +3,11 @@ import './App.css'
 import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
@@ -209,67 +214,75 @@ function App() {
 
   return (
     <main className="appShell">
-      <header className="panel">
-        <h1>Trails Series Quartz Setup</h1>
-        <div className="fieldRow">
-          <label>
-            Base
-            <AppSelect
-              value={selectedBaseId}
-              options={BASES.map((baseOption) => ({
-                value: baseOption.id,
-                label: baseOption.label,
-              }))}
-              onChange={(nextBaseId) => {
-                if (!nextBaseId) {
-                  return
-                }
-                setSelectedBaseId(nextBaseId)
-                setSelectedTemplateId('')
-                setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
-                setSelectedSavedSetupId('')
-                setDraftBeforeSavedLoad(null)
-                setSetupNotice('')
-              }}
-            />
-          </label>
-          <div className="fieldRow rowRightControls">
-            <label>
-              Saved setup
+      <Card className="panel">
+        <CardHeader className="px-0 pb-0">
+          <CardTitle className="text-2xl">Trails Series Quartz Setup</CardTitle>
+        </CardHeader>
+        <CardContent className="grid gap-3 px-0">
+          <div className="fieldRow">
+            <Label className="fieldLabel">
+              Base
               <AppSelect
-                value={selectedSavedSetupId}
-                options={[
-                  { value: '', label: 'Select saved setup' },
-                  ...savedSetups.map((setup) => {
-                    const setupBase = getBaseById(setup.baseGame)
-                    return {
-                      value: setup.id,
-                      label: `${setup.name} (${setupBase.label})`,
-                    }
-                  }),
-                ]}
-                onChange={onSavedSetupSelectionChange}
+                value={selectedBaseId}
+                options={BASES.map((baseOption) => ({
+                  value: baseOption.id,
+                  label: baseOption.label,
+                }))}
+                onChange={(nextBaseId) => {
+                  if (!nextBaseId) {
+                    return
+                  }
+                  setSelectedBaseId(nextBaseId)
+                  setSelectedTemplateId('')
+                  setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
+                  setSelectedSavedSetupId('')
+                  setDraftBeforeSavedLoad(null)
+                  setSetupNotice('')
+                }}
               />
-            </label>
-            <label>
-              Setup name
-              <input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
-            </label>
-            <div className="inlineActions">
-            <button type="button" onClick={saveCurrentSetup}>
-              Save
-            </button>
-            <button type="button" onClick={saveAsSetup}>
-              Save As
-            </button>
-            <button type="button" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
-              Delete
-            </button>
+            </Label>
+            <div className="fieldRow rowRightControls">
+              <Label className="fieldLabel">
+                Saved setup
+                <AppSelect
+                  value={selectedSavedSetupId}
+                  options={[
+                    { value: '', label: 'Select saved setup' },
+                    ...savedSetups.map((setup) => {
+                      const setupBase = getBaseById(setup.baseGame)
+                      return {
+                        value: setup.id,
+                        label: `${setup.name} (${setupBase.label})`,
+                      }
+                    }),
+                  ]}
+                  onChange={onSavedSetupSelectionChange}
+                />
+              </Label>
+              <Label className="fieldLabel">
+                Setup name
+                <Input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
+              </Label>
+              <div className="inlineActions">
+                <Button type="button" onClick={saveCurrentSetup}>
+                  Save
+                </Button>
+                <Button type="button" variant="outline" onClick={saveAsSetup}>
+                  Save As
+                </Button>
+                <Button type="button" variant="destructive" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
+                  Delete
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-        {setupNotice ? <p className="hintText">{setupNotice}</p> : null}
-      </header>
+          {setupNotice ? (
+            <Alert>
+              <AlertDescription>{setupNotice}</AlertDescription>
+            </Alert>
+          ) : null}
+        </CardContent>
+      </Card>
 
       <Tabs
         className="mainTabs"
