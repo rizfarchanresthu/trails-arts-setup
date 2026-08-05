@@ -1,7 +1,10 @@
+import { canEquipColdSteelIQuartz } from '../domain/rules/coldSteelIRules'
 import {
   type ElementName,
   type MasterQuartz,
   type MasterQuartzLevel,
+  type OrbmentLine,
+  type OrbmentRuleSetId,
   type OrbmentTopology,
   type Quartz,
   type SlotId,
@@ -39,10 +42,12 @@ export type OrbmentPresetShape = {
   }>
 }
 
-export type SlotElementRestrictionShape = {
+export type SlotElementRestrictionGroup = {
   slots: SlotId[]
   element: ElementName
-} | null
+}
+
+export type SlotElementRestrictionShape = SlotElementRestrictionGroup | SlotElementRestrictionGroup[] | null
 
 export function createInitialOrbmentState(topology: OrbmentTopology): OrbmentState {
   const lineCount = 2
@@ -103,9 +108,10 @@ export function applyPresetRestrictions(
   const slotIds = Object.keys(state.slotRestrictions).map(Number)
   const slotRestrictions = Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as SlotRestrictionMap
 
-  if (restriction) {
-    for (const slotId of restriction.slots) {
-      slotRestrictions[slotId] = restriction.element
+  const restrictionGroups = !restriction ? [] : Array.isArray(restriction) ? restriction : [restriction]
+  for (const group of restrictionGroups) {
+    for (const slotId of group.slots) {
+      slotRestrictions[slotId] = group.element
     }
   }
 
@@ -227,14 +233,21 @@ export function setSlotRestriction(
   }
 }
 
+export type EquipQuartzContext = {
+  masterQuartzSlot?: SlotId
+  lines?: OrbmentLine[]
+  ruleSet?: OrbmentRuleSetId
+}
+
 export function setEquippedQuartz(
   state: OrbmentState,
   slotId: SlotId,
   quartzId: number | null,
   quartzById: Map<number, Quartz>,
-  masterQuartzSlot?: SlotId,
+  context: EquipQuartzContext | SlotId = {},
 ): OrbmentState {
-  if (masterQuartzSlot !== undefined && slotId === masterQuartzSlot) {
+  const options = typeof context === 'number' ? { masterQuartzSlot: context } : context
+  if (options.masterQuartzSlot !== undefined && slotId === options.masterQuartzSlot) {
     return state
   }
 
@@ -257,15 +270,22 @@ export function setEquippedQuartz(
   if (restriction && quartz.element !== restriction) {
     return state
   }
-  const nodeTier = state.nodeTiers[slotId]
-  if (quartz.tier && quartz.tier > nodeTier) {
-    return state
-  }
 
-  if (quartz.exclusive_groups.length > 0) {
-    const usedGroups = getUsedExclusiveGroups(state.equippedQuartz, quartzById, slotId)
-    if (quartz.exclusive_groups.some((group) => usedGroups.has(group))) {
+  if (options.ruleSet === 'cold-steel-i') {
+    if (!canEquipColdSteelIQuartz(quartz, slotId, state.equippedQuartz, quartzById, options.lines ?? [])) {
       return state
+    }
+  } else {
+    const nodeTier = state.nodeTiers[slotId]
+    if (quartz.tier && quartz.tier > nodeTier) {
+      return state
+    }
+
+    if (quartz.exclusive_groups.length > 0) {
+      const usedGroups = getUsedExclusiveGroups(state.equippedQuartz, quartzById, slotId)
+      if (quartz.exclusive_groups.some((group) => usedGroups.has(group))) {
+        return state
+      }
     }
   }
 
@@ -285,6 +305,7 @@ export function getAllowedQuartzForSlot(
   equippedQuartz: EquippedQuartzMap,
   quartzById: Map<number, Quartz>,
   nodeTiers: NodeTierMap,
+  context: Pick<EquipQuartzContext, 'lines' | 'ruleSet'> = {},
 ): Quartz[] {
   const restriction = restrictions[slotId]
   const currentQuartzId = equippedQuartz[slotId]
@@ -294,16 +315,21 @@ export function getAllowedQuartzForSlot(
     if (restriction && quartz.element !== restriction) {
       return false
     }
+
+    if (currentQuartzId === quartz.id) {
+      return true
+    }
+
+    if (context.ruleSet === 'cold-steel-i') {
+      return canEquipColdSteelIQuartz(quartz, slotId, equippedQuartz, quartzById, context.lines ?? [])
+    }
+
     const nodeTier = nodeTiers[slotId]
     if (quartz.tier && quartz.tier > nodeTier) {
       return false
     }
 
     if (quartz.exclusive_groups.length === 0) {
-      return true
-    }
-
-    if (currentQuartzId === quartz.id) {
       return true
     }
 

@@ -58,7 +58,7 @@ export function calculateLineTotals(
     }
 
     const quartz = quartzById.get(quartzId)
-    if (!quartz || quartz.elemental_value === 'No value') {
+    if (!quartz || quartz.elemental_value === 'No value' || quartz.elemental_value == null) {
       continue
     }
 

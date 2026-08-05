@@ -22,7 +22,20 @@ export const ELEMENT_COLORS: Record<ElementName, string> = {
   Mirage: '#D6D3CE',
 }
 
-export const LINE_COLORS = ['#f25f5c', '#4d9de0', '#5abf90', '#f2c14e', '#9c89b8'] as const
+export const LINE_COLORS = [
+  '#f25f5c',
+  '#4d9de0',
+  '#5abf90',
+  '#f2c14e',
+  '#9c89b8',
+  '#f28482',
+  '#84a59d',
+  '#f6bd60',
+] as const
+
+export type QuartzRank = 'R' | 'SR'
+
+export type OrbmentRuleSetId = 'sky-crossbell' | 'cold-steel-i'
 
 export type SlotId = number
 
@@ -43,8 +56,11 @@ export type Quartz = {
   effect: string
   element: ElementName
   tier?: number
+  rank?: QuartzRank | null
   exclusive_groups: string[]
-  elemental_value: ElementRequirement[] | 'No value'
+  line_exclusive_groups?: string[]
+  arts_learnt?: number[]
+  elemental_value: ElementRequirement[] | 'No value' | null
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
 }
 
@@ -55,7 +71,8 @@ export type MasterQuartzEffect = {
 
 export type MasterQuartzLevel = {
   level: number
-  elemental_value: ElementRequirement[]
+  elemental_value?: ElementRequirement[]
+  arts_learnt?: number[]
   effects: MasterQuartzEffect[]
 }
 
@@ -115,6 +132,7 @@ export type BaseData = {
   masterQuartz?: MasterQuartz[]
   topology: OrbmentTopology
   orbmentVisual?: OrbmentVisual
+  ruleSet?: OrbmentRuleSetId
 }
 
 export function formatSlotLabel(slotId: SlotId, topology: OrbmentTopology): string {

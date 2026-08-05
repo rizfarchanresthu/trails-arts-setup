@@ -4,16 +4,19 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
 import { type CharacterTemplate } from '../domain/characterPresets'
+import { collectCumulativeArtsLearnt } from '../domain/rules/coldSteelIRules'
 import { type LineDirection } from '../domain/rules/skyFcRules'
 import {
   ELEMENTS,
   LINE_COLORS,
   formatSlotLabel,
+  type Art,
   type ElementName,
   type ElementRequirement,
   type MasterQuartz,
   type MasterQuartzLevel,
   type OrbmentLine,
+  type OrbmentRuleSetId,
   type OrbmentTopology,
   type OrbmentVisual,
   type Quartz,
@@ -53,6 +56,8 @@ type OrbmentConfiguratorProps = {
   characterTemplates: CharacterTemplate[]
   onTemplateChange: (templateId: string) => void
   orbmentVisual?: OrbmentVisual
+  ruleSet?: OrbmentRuleSetId
+  artsById?: Map<number, Art>
 }
 
 export function OrbmentConfigurator({
@@ -78,9 +83,12 @@ export function OrbmentConfigurator({
   characterTemplates,
   onTemplateChange,
   orbmentVisual,
+  ruleSet,
+  artsById = new Map(),
 }: OrbmentConfiguratorProps) {
   const maxTier = Math.max(1, ...quartzList.map((quartz) => quartz.tier ?? 1))
-  const showNodeTierControls = selectedBaseId !== 'sky-fc'
+  const showNodeTierControls = selectedBaseId !== 'sky-fc' && ruleSet !== 'cold-steel-i'
+  const showGrantedArts = ruleSet === 'cold-steel-i'
   const configTitle = orbmentVisual?.title ? `${orbmentVisual.title} Config` : 'Orbment Config'
   const equippedMasterQuartz = state.equippedMasterQuartzId
     ? masterQuartzById.get(state.equippedMasterQuartzId)
@@ -101,6 +109,8 @@ export function OrbmentConfigurator({
           equippedMasterQuartzId={state.equippedMasterQuartzId}
           onMasterQuartzChange={onMasterQuartzChange}
           onMasterQuartzLevelChange={onMasterQuartzLevelChange}
+          showGrantedArts={showGrantedArts}
+          artsById={artsById}
         />
       )
     }
@@ -118,6 +128,8 @@ export function OrbmentConfigurator({
         onRestrictionChange={onRestrictionChange}
         onQuartzChange={onQuartzChange}
         onNodeTierChange={onNodeTierChange}
+        lines={lines}
+        ruleSet={ruleSet}
       />
     )
   }
@@ -250,7 +262,9 @@ export function OrbmentConfigurator({
                         ? 'Zero templates are loaded from the Zero character preset database.'
                         : selectedBaseId === 'azure'
                           ? 'Azure templates are loaded from the Azure character preset database.'
-                          : 'No base-specific character presets are loaded for this base yet.'}
+                          : selectedBaseId === 'cold-steel-i'
+                            ? 'Cold Steel I templates are loaded from the Cold Steel I character preset database.'
+                            : 'No base-specific character presets are loaded for this base yet.'}
               </p>
             </div>
           </div>
@@ -320,6 +334,8 @@ type MasterSlotCardProps = {
   equippedMasterQuartzId: number | null
   onMasterQuartzChange?: (masterQuartzId: number | null) => void
   onMasterQuartzLevelChange?: (level: number) => void
+  showGrantedArts?: boolean
+  artsById?: Map<number, Art>
 }
 
 function MasterSlotCard({
@@ -330,6 +346,8 @@ function MasterSlotCard({
   equippedMasterQuartzId,
   onMasterQuartzChange,
   onMasterQuartzLevelChange,
+  showGrantedArts = false,
+  artsById = new Map(),
 }: MasterSlotCardProps) {
   return (
     <Card size="sm">
@@ -361,9 +379,15 @@ function MasterSlotCard({
             <p className="text-sm text-muted-foreground">{equippedMasterQuartz.description}</p>
             {masterLevelData ? (
               <>
-                <p className="text-sm text-muted-foreground">
-                  Elemental value: {formatElementRequirements(masterLevelData.elemental_value)}
-                </p>
+                {showGrantedArts ? (
+                  <p className="text-sm text-muted-foreground">
+                    Arts learnt: {formatArtsLearnt(equippedMasterQuartz, masterQuartzLevel, artsById)}
+                  </p>
+                ) : (
+                  <p className="text-sm text-muted-foreground">
+                    Elemental value: {formatElementRequirements(masterLevelData.elemental_value ?? [])}
+                  </p>
+                )}
                 <ul className="grid list-disc gap-1 pl-5 text-sm">
                   {masterLevelData.effects.map((effect, index) => (
                     <li key={`mq-effect-${index}`}>
@@ -392,6 +416,8 @@ type RegularSlotCardProps = {
   onRestrictionChange: (slotId: SlotId, restriction: ElementName | null) => void
   onQuartzChange: (slotId: SlotId, quartzId: number | null) => void
   onNodeTierChange: (slotId: SlotId, tier: number) => void
+  lines: OrbmentLine[]
+  ruleSet?: OrbmentRuleSetId
 }
 
 function RegularSlotCard({
@@ -405,6 +431,8 @@ function RegularSlotCard({
   onRestrictionChange,
   onQuartzChange,
   onNodeTierChange,
+  lines,
+  ruleSet,
 }: RegularSlotCardProps) {
   const restriction = state.slotRestrictions[slotId]
   const restrictionOnlyQuartz = restriction
@@ -417,6 +445,7 @@ function RegularSlotCard({
     state.equippedQuartz,
     quartzById,
     state.nodeTiers,
+    { lines, ruleSet },
   )
   const filteredByExclusivity = restrictionOnlyQuartz.length - allowedQuartz.length
 
@@ -471,6 +500,17 @@ function RegularSlotCard({
       </CardContent>
     </Card>
   )
+}
+
+function formatArtsLearnt(
+  masterQuartz: MasterQuartz,
+  level: number,
+  artsById: Map<number, Art>,
+): string {
+  const names = collectCumulativeArtsLearnt(masterQuartz, level).map(
+    (artId) => artsById.get(artId)?.name.en ?? `#${artId}`,
+  )
+  return names.length > 0 ? names.join(', ') : 'None'
 }
 
 function formatElementRequirements(requirements: ElementRequirement[]): string {

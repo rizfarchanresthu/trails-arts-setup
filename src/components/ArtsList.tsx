@@ -18,6 +18,7 @@ type ArtsListProps = {
   arts: Art[]
   lineTotals: ElementTotals[]
   elementOrderSource: Art[]
+  showLineTotals?: boolean
 }
 
 const CATEGORY_ORDER: Record<Art['category'], number> = {
@@ -25,7 +26,7 @@ const CATEGORY_ORDER: Record<Art['category'], number> = {
   support: 1,
 }
 
-export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps) {
+export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals = true }: ArtsListProps) {
   const [selectedArt, setSelectedArt] = useState<Art | null>(null)
 
   const elementOrder = useMemo(() => {
@@ -63,21 +64,25 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
         <CardTitle className="text-xl">Available Arts ({sortedArts.length})</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className="grid gap-2">
-          <h3 className="text-sm font-medium">Line Totals</h3>
-          <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-            {lineTotals.map((totals, index) => (
-              <li key={`totals-${index}`}>
-                Line {index + 1}:{' '}
-                {Object.entries(totals)
-                  .map(([element, value]) => `${element}:${value}`)
-                  .join(', ')}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {showLineTotals ? (
+          <>
+            <div className="grid gap-2">
+              <h3 className="text-sm font-medium">Line Totals</h3>
+              <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                {lineTotals.map((totals, index) => (
+                  <li key={`totals-${index}`}>
+                    Line {index + 1}:{' '}
+                    {Object.entries(totals)
+                      .map(([element, value]) => `${element}:${value}`)
+                      .join(', ')}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-        <Separator />
+            <Separator />
+          </>
+        ) : null}
 
         {sortedArts.length === 0 ? (
           <Alert>

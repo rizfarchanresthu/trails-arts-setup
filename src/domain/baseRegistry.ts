@@ -1,10 +1,13 @@
 import artsAzure from '../database/arts/azure.json'
+import artsColdSteelI from '../database/arts/cold-steel-i.json'
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
 import artsZero from '../database/arts/zero.json'
 import masterQuartzAzure from '../database/master-quartz/azure.json'
+import masterQuartzColdSteelI from '../database/master-quartz/cold-steel-i.json'
 import quartzAzure from '../database/quartz/azure.json'
+import quartzColdSteelI from '../database/quartz/cold-steel-i.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
@@ -19,6 +22,7 @@ import {
   type MasterQuartzEffect,
   type MasterQuartzLevel,
   type Quartz,
+  type QuartzRank,
   type SlotId,
 } from './types'
 
@@ -135,7 +139,44 @@ const AZURE_BASE: BaseData = {
   },
 }
 
-export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE, ZERO_BASE, AZURE_BASE]
+const COLD_STEEL_I_TOPOLOGY: BaseData['topology'] = {
+  slotIds: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  centerSlot: 1,
+  outerSlots: [2, 3, 4, 5, 6, 7, 8, 9],
+  outerDirectionSequence: [2, 3, 4, 5, 6, 7, 8, 9],
+  outerAdjacency: {
+    1: [2, 3, 4, 5, 6, 7, 8, 9],
+    2: [1, 3, 9],
+    3: [1, 2, 4],
+    4: [1, 3, 5],
+    5: [1, 4, 6],
+    6: [1, 5, 7],
+    7: [1, 6, 8],
+    8: [1, 7, 9],
+    9: [1, 8, 2],
+  },
+  wrapsOuterRing: true,
+  maxLines: 8,
+  masterQuartzSlot: 1,
+  nodeTierDefaults: createNodeTierDefaults([2, 3, 4, 5, 6, 7, 8, 9], 99),
+}
+
+const COLD_STEEL_I_BASE: BaseData = {
+  id: 'cold-steel-i',
+  label: 'Cold Steel I',
+  quartz: quartzColdSteelI.map((entry) => normalizeQuartz(entry)),
+  arts: artsColdSteelI.map((entry) => normalizeArt(entry)),
+  masterQuartz: masterQuartzColdSteelI.map((entry) => normalizeMasterQuartz(entry)),
+  topology: COLD_STEEL_I_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ARCUS',
+    outerEdges: 'straight',
+    nodeShape: 'circle',
+  },
+  ruleSet: 'cold-steel-i',
+}
+
+export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE, ZERO_BASE, AZURE_BASE, COLD_STEEL_I_BASE]
 
 export function getBaseById(baseId: string): BaseData {
   const matched = BASES.find((base) => base.id === baseId)
@@ -150,7 +191,10 @@ function normalizeQuartz(input: unknown): Quartz {
     effect: String(record.effect),
     element: toElementName(record.element),
     tier: normalizeTier(record.tier),
+    rank: normalizeRank(record.rank),
     exclusive_groups: normalizeExclusiveGroups(record.exclusive_groups ?? record.exclusive_group),
+    line_exclusive_groups: normalizeExclusiveGroups(record.line_exclusive_groups),
+    arts_learnt: normalizeArtIds(record.arts_learnt),
     elemental_value: normalizeElementalValue(record.elemental_value),
     synthesis_cost: normalizeSynthesisCost(record.synthesis_cost),
   }
@@ -178,6 +222,7 @@ function normalizeMasterQuartzLevels(input: unknown): MasterQuartzLevel[] {
       return {
         level: Number(record.level),
         elemental_value: normalizeRequirementArray(record.elemental_value),
+        arts_learnt: normalizeArtIds(record.arts_learnt),
         effects: normalizeMasterQuartzEffects(record.effects),
       }
     })
@@ -217,9 +262,12 @@ function normalizeArt(input: unknown): Art {
   }
 }
 
-function normalizeElementalValue(input: unknown): ElementRequirement[] | 'No value' {
+function normalizeElementalValue(input: unknown): ElementRequirement[] | 'No value' | null {
   if (input === 'No value') {
     return 'No value'
+  }
+  if (input == null) {
+    return null
   }
   return normalizeRequirementArray(input)
 }
@@ -281,6 +329,23 @@ function normalizeExclusiveGroups(value: unknown): string[] {
     return []
   }
   return value.filter((entry): entry is string => typeof entry === 'string' && entry.length > 0)
+}
+
+function normalizeRank(value: unknown): QuartzRank | null | undefined {
+  if (value === 'R' || value === 'SR') {
+    return value
+  }
+  if (value === null) {
+    return null
+  }
+  return undefined
+}
+
+function normalizeArtIds(value: unknown): number[] {
+  if (!Array.isArray(value)) {
+    return []
+  }
+  return value.filter((entry): entry is number => typeof entry === 'number' && Number.isInteger(entry) && entry >= 1)
 }
 
 function createNodeTierDefaults(slotIds: SlotId[], tier: number): Record<number, number> {

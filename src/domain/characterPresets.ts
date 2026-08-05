@@ -1,4 +1,5 @@
 import azurePresets from '../database/character-preset/azure.json'
+import coldSteelIPresets from '../database/character-preset/cold-steel-i.json'
 import sky3rdPresets from '../database/character-preset/sky-3rd.json'
 import skyFcPresets from '../database/character-preset/sky-fc.json'
 import skyScPresets from '../database/character-preset/sky-sc.json'
@@ -6,19 +7,21 @@ import zeroPresets from '../database/character-preset/zero.json'
 import { getBaseById } from './baseRegistry'
 import { type LineDirection } from './rules/skyFcRules'
 import { type ElementName, type OrbmentTopology, type SlotId } from './types'
-import { type OrbmentPresetShape } from '../state/orbmentState'
+import { type OrbmentPresetShape, type SlotElementRestrictionShape } from '../state/orbmentState'
 
 type RawLineSlot = number | string
+
+type RawRestrictionGroup = {
+  slots: Array<number | string>
+  element: ElementName
+}
 
 type RawCharacterPreset = {
   id: string
   name: string
   line_count: number
   lines: RawLineSlot[][]
-  restriction: {
-    slots: Array<number | string>
-    element: ElementName
-  } | null
+  restriction: RawRestrictionGroup | RawRestrictionGroup[] | null
 }
 
 export type CharacterTemplate = {
@@ -26,10 +29,7 @@ export type CharacterTemplate = {
   name: string
   lineCount: number
   presetShape: OrbmentPresetShape
-  restriction: {
-    slots: SlotId[]
-    element: ElementName
-  } | null
+  restriction: SlotElementRestrictionShape
 }
 
 const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
@@ -38,6 +38,7 @@ const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
   'sky-3rd': sky3rdPresets as RawCharacterPreset[],
   zero: zeroPresets as RawCharacterPreset[],
   azure: azurePresets as RawCharacterPreset[],
+  'cold-steel-i': coldSteelIPresets as RawCharacterPreset[],
 }
 
 export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[] {
@@ -66,14 +67,24 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
       name: raw.name,
       lineCount: raw.line_count,
       presetShape,
-      restriction: raw.restriction
-        ? {
-            slots: raw.restriction.slots.map((slot) => resolvePresetSlot(slot, topology)),
-            element: raw.restriction.element,
-          }
-        : null,
+      restriction: resolvePresetRestrictions(raw.restriction, topology),
     }
   })
+}
+
+function resolvePresetRestrictions(
+  restriction: RawCharacterPreset['restriction'],
+  topology: OrbmentTopology,
+): SlotElementRestrictionShape {
+  if (!restriction) {
+    return null
+  }
+
+  const groups = Array.isArray(restriction) ? restriction : [restriction]
+  return groups.map((group) => ({
+    slots: group.slots.map((slot) => resolvePresetSlot(slot, topology)),
+    element: group.element,
+  }))
 }
 
 function resolvePresetSlot(slot: RawLineSlot, topology: OrbmentTopology): SlotId {

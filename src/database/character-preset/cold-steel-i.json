@@ -1,0 +1,181 @@
+[
+  {
+    "id": "rean-schwarzer",
+    "name": "Rean Schwarzer",
+    "line_count": 3,
+    "lines": [
+      ["M", 5, 6, 7, 8, 9],
+      ["M", 2, 3],
+      ["M", 4]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Time" },
+      { "slots": [9], "element": "Fire" }
+    ]
+  },
+  {
+    "id": "alisa-reinford",
+    "name": "Alisa Reinford",
+    "line_count": 3,
+    "lines": [
+      ["M", 5, 4, 3, 2, 9, 8],
+      ["M", 6],
+      ["M", 7]
+    ],
+    "restriction": [
+      { "slots": [3], "element": "Space" },
+      { "slots": [5, 9], "element": "Fire" }
+    ]
+  },
+  {
+    "id": "elliot-craig",
+    "name": "Elliot Craig",
+    "line_count": 2,
+    "lines": [
+      ["M", 5, 6, 7, 8, 9, 2, 3],
+      ["M", 4]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Space" },
+      { "slots": [9], "element": "Water" }
+    ]
+  },
+  {
+    "id": "laura-s-arseid",
+    "name": "Laura S. Arseid",
+    "line_count": 3,
+    "lines": [
+      ["M", 5, 4, 3, 2],
+      ["M", 7, 6],
+      ["M", 9, 8]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Water" },
+      { "slots": [5], "element": "Fire" }
+    ]
+  },
+  {
+    "id": "machias-regnitz",
+    "name": "Machias Regnitz",
+    "line_count": 3,
+    "lines": [
+      ["M", 5, 6, 7, 8],
+      ["M", 9, 2, 3],
+      ["M", 4]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Earth" },
+      { "slots": [5], "element": "Mirage" }
+    ]
+  },
+  {
+    "id": "emma-millstein",
+    "name": "Emma Millstein",
+    "line_count": 1,
+    "lines": [
+      ["M", 5, 4, 3, 2, 9, 8, 7, 6]
+    ],
+    "restriction": [
+      { "slots": [3, 7], "element": "Mirage" },
+      { "slots": [9], "element": "Earth" }
+    ]
+  },
+  {
+    "id": "jusis-albarea",
+    "name": "Jusis Albarea",
+    "line_count": 2,
+    "lines": [
+      ["M", 5, 6, 7, 8, 9, 2],
+      ["M", 3, 4]
+    ],
+    "restriction": [
+      { "slots": [5, 9], "element": "Space" },
+      { "slots": [7], "element": "Wind" }
+    ]
+  },
+  {
+    "id": "fie-clausell",
+    "name": "Fie Clausell",
+    "line_count": 4,
+    "lines": [
+      ["M", 5, 4, 3, 2],
+      ["M", 9, 8],
+      ["M", 6],
+      ["M", 7]
+    ],
+    "restriction": [
+      { "slots": [5, 9], "element": "Wind" },
+      { "slots": [7], "element": "Time" }
+    ]
+  },
+  {
+    "id": "gaius-worzel",
+    "name": "Gaius Worzel",
+    "line_count": 4,
+    "lines": [
+      ["M", 5, 6, 7],
+      ["M", 8, 9, 2],
+      ["M", 3],
+      ["M", 4]
+    ],
+    "restriction": [
+      { "slots": [5, 7], "element": "Wind" },
+      { "slots": [3], "element": "Earth" }
+    ]
+  },
+  {
+    "id": "millium-orion",
+    "name": "Millium Orion",
+    "line_count": 4,
+    "lines": [
+      ["M", 5, 4, 3, 2, 9],
+      ["M", 6],
+      ["M", 7],
+      ["M", 8]
+    ],
+    "restriction": [
+      { "slots": [7, 9], "element": "Mirage" },
+      { "slots": [5], "element": "Earth" }
+    ]
+  },
+  {
+    "id": "crow-armbrust",
+    "name": "Crow Armbrust",
+    "line_count": 2,
+    "lines": [
+      ["M", 5, 6, 7, 8, 9],
+      ["M", 2, 3, 4]
+    ],
+    "restriction": [
+      { "slots": [3, 5], "element": "Time" },
+      { "slots": [9], "element": "Water" }
+    ]
+  },
+  {
+    "id": "sara-valestein",
+    "name": "Sara Valestein",
+    "line_count": 2,
+    "lines": [
+      ["M", 5, 4, 3, 2, 9],
+      ["M", 8, 7, 6]
+    ],
+    "restriction": [
+      { "slots": [7], "element": "Wind" },
+      { "slots": [9], "element": "Fire" }
+    ]
+  },
+  {
+    "id": "angelica-rogner",
+    "name": "Angelica Rogner",
+    "line_count": 3,
+    "lines": [
+      ["M", 5, 4, 3, 2, 9],
+      ["M", 8, 7],
+      ["M", 6]
+    ],
+    "restriction": [
+      { "slots": [7, 9], "element": "Space" },
+      { "slots": [3], "element": "Time" }
+    ]
+  }
+]

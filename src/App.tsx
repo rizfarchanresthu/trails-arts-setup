@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
 import { getCharacterTemplatesForBase } from './domain/characterPresets'
+import { evaluateGrantedArts } from './domain/rules/coldSteelIRules'
 import { deriveLinesFromConfig } from './domain/rules/skyFcRules'
 import { type ElementName, type SlotId } from './domain/types'
 import {
@@ -72,6 +73,10 @@ function App() {
     return new Map((base.masterQuartz ?? []).map((masterQuartz) => [masterQuartz.id, masterQuartz]))
   }, [base.masterQuartz])
 
+  const artsById = useMemo(() => {
+    return new Map(base.arts.map((art) => [art.id, art]))
+  }, [base.arts])
+
   const characterTemplates = useMemo(() => {
     return getCharacterTemplatesForBase(selectedBaseId)
   }, [selectedBaseId])
@@ -89,14 +94,19 @@ function App() {
   }, [base.topology, orbmentState.arcLengths, orbmentState.lineCount, orbmentState.lineDirections, orbmentState.lineStarts])
 
   const evaluation = useMemo(() => {
-    return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz, {
+    const masterQuartzContext = {
       slotId: base.topology.masterQuartzSlot,
       masterQuartzById,
       equippedMasterQuartzId: orbmentState.equippedMasterQuartzId,
       masterQuartzLevel: orbmentState.masterQuartzLevel,
-    })
+    }
+    if (base.ruleSet === 'cold-steel-i') {
+      return evaluateGrantedArts(base.arts, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
+    }
+    return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
   }, [
     base.arts,
+    base.ruleSet,
     base.topology.masterQuartzSlot,
     derivedLines.lines,
     masterQuartzById,
@@ -445,7 +455,11 @@ function App() {
             }
             onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
               setOrbmentState((prev) =>
-                setEquippedQuartz(prev, slotId, quartzId, quartzById, base.topology.masterQuartzSlot),
+                setEquippedQuartz(prev, slotId, quartzId, quartzById, {
+                  masterQuartzSlot: base.topology.masterQuartzSlot,
+                  lines: derivedLines.lines,
+                  ruleSet: base.ruleSet,
+                }),
               )
             }
             onNodeTierChange={(slotId: SlotId, tier: number) =>
@@ -459,6 +473,8 @@ function App() {
             }
             topology={base.topology}
             orbmentVisual={base.orbmentVisual}
+            ruleSet={base.ruleSet}
+            artsById={artsById}
             selectedBaseId={selectedBaseId}
             selectedTemplateId={selectedTemplateId}
             characterTemplates={characterTemplates}
@@ -486,6 +502,7 @@ function App() {
             arts={evaluation.availableArts}
             lineTotals={evaluation.lineTotals}
             elementOrderSource={base.arts}
+            showLineTotals={base.ruleSet !== 'cold-steel-i'}
           />
         </TabsContent>
       </Tabs>

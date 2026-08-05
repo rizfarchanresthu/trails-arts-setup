@@ -50,6 +50,7 @@ const SC_SLOT_POINTS: Record<number, Point> = {
   7: { x: 170, y: 288 },
 }
 const FC_EMPTY_HEX_VERTEX: Point = { x: 170, y: 288 }
+const CS_SLOT_POINTS = createColdSteelSlotPoints()
 
 export function OrbmentGraph({
   lines,
@@ -367,7 +368,21 @@ function signedAngleDelta(from: number, to: number): number {
 }
 
 function lineColor(lineIndex: number): string {
-  return LINE_COLORS[lineIndex] ?? '#8f96a3'
+  return LINE_COLORS[lineIndex % LINE_COLORS.length]
+}
+
+function createColdSteelSlotPoints(): Record<number, Point> {
+  const points: Record<number, Point> = { 1: { ...RING_CENTER } }
+  const startAngle = (157.5 * Math.PI) / 180
+  const step = Math.PI / 4
+  for (let index = 0; index < 8; index += 1) {
+    const angle = startAngle + index * step
+    points[index + 2] = {
+      x: RING_CENTER.x + RING_RADIUS * Math.cos(angle),
+      y: RING_CENTER.y + RING_RADIUS * Math.sin(angle),
+    }
+  }
+  return points
 }
 
 function withAlpha(hexColor: string, alpha: number): string {
@@ -406,6 +421,15 @@ function getLayout(topology: OrbmentTopology): {
       guideSequence: [2, 3, 4, 5, 6, 7],
       gapMarker: null,
       showTier: true,
+    }
+  }
+
+  if (topology.slotIds.length === 9) {
+    return {
+      slotPoints: CS_SLOT_POINTS,
+      guideSequence: [2, 3, 4, 5, 6, 7, 8, 9],
+      gapMarker: null,
+      showTier: false,
     }
   }
 
