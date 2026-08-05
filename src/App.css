@@ -121,6 +121,20 @@ button:disabled {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.mqDescription,
+.mqElementalValue {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.mqEffects {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
 .slotCard,
 .arcCard,
 .artCard {

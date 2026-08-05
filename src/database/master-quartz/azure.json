@@ -1,0 +1,1917 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Shield",
+      "ja": "シールド"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/00/Shield_%28Ao_MQ%29.png",
+    "description": "Grants a DEF/ADF boost in battle.",
+    "levels": [
+      {
+        "level": 1,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 2
+          },
+          {
+            "element": "Water",
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises DEF/ADF when battle begins",
+            "detail": "2 turns of DEF/ADF+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 4
+          },
+          {
+            "element": "Water",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises DEF/ADF when battle begins",
+            "detail": "3 turns of DEF/ADF+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 6
+          },
+          {
+            "element": "Water",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises DEF/ADF when battle begins",
+            "detail": "4 turns of DEF/ADF+25%"
+          },
+          {
+            "title": "Raises DEF/ADF when HP is low",
+            "detail": "Once per fight when below 20% HP 4 turns of DEF/ADF+25%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 8
+          },
+          {
+            "element": "Water",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises DEF/ADF when battle begins",
+            "detail": "5 turns of DEF/ADF+25%"
+          },
+          {
+            "title": "Raises DEF/ADF when HP is low",
+            "detail": "Once per fight when below 20% HP 5 turns of DEF/ADF+25%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 10
+          },
+          {
+            "element": "Water",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises DEF/ADF when battle begins",
+            "detail": "6 turns of DEF/ADF+50%"
+          },
+          {
+            "title": "Raises DEF/ADF when HP is low",
+            "detail": "Once per fight when below 20% HP 6 turns of DEF/ADF+50%"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Refuge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Aegis",
+      "ja": "イージス"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0c/Aegis_%28Ao_MQ%29.png",
+    "description": "Raises DEF/ADF. Grants complete immunity under certain criteria.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 6
+          },
+          {
+            "element": "Space",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with immunity",
+            "detail": "1 stack(s) of complete immunity"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 8
+          },
+          {
+            "element": "Space",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with immunity",
+            "detail": "2 stack(s) of complete immunity"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 10
+          },
+          {
+            "element": "Space",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with immunity",
+            "detail": "2 stack(s) of complete immunity"
+          },
+          {
+            "title": "Grants immunity when HP is low",
+            "detail": "Once per fight when below 20% HP 2 stack(s) of complete immunity"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Refuge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Juggler",
+      "ja": "ジャグラー"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e2/Juggler_%28Ao_MQ%29.png",
+    "description": "Raises STR/ATS. Chance to inflict random ailments with attacks.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 6
+          },
+          {
+            "element": "Mirage",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict random ailments",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Offensive arts inflict random ailments",
+            "detail": "10% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 8
+          },
+          {
+            "element": "Mirage",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict random ailments",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Offensive arts inflict random ailments",
+            "detail": "20% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Earth",
+            "value": 10
+          },
+          {
+            "element": "Mirage",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict random ailments",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Offensive arts inflict random ailments",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Refuge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Canon",
+      "ja": "カノン"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fd/Canon_%28Ao_MQ%29.png",
+    "description": "Raises ATS. Increases potency of HP recovery arts.",
+    "levels": [
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 4
+          },
+          {
+            "element": "Time",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 1.2"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 6
+          },
+          {
+            "element": "Time",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 1.5"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 8
+          },
+          {
+            "element": "Time",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 2.0"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 10
+          },
+          {
+            "element": "Time",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 3.0"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Benevolence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Scepter",
+      "ja": "セプター"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/51/Scepter_%28Ao_MQ%29.png",
+    "description": "Raises STR/ATS. Obtain sepith from attacks.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 6
+          },
+          {
+            "element": "Mirage",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "15% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 8
+          },
+          {
+            "element": "Mirage",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 10
+          },
+          {
+            "element": "Mirage",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Benevolence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Magius",
+      "ja": "マギウス"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Magius_%28Ao_MQ%29.png",
+    "description": "Magic attacks get stronger the less HP you have.",
+    "levels": [
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 8
+          },
+          {
+            "elements": [
+              "Earth",
+              "Fire",
+              "Wind",
+              "Time",
+              "Space",
+              "Mirage"
+            ],
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Arts damage up as HP drops",
+            "detail": "Activates when using magic attacks Multiplied by a maximum of 1.5"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Water",
+            "value": 10
+          },
+          {
+            "elements": [
+              "Earth",
+              "Fire",
+              "Wind",
+              "Time",
+              "Space",
+              "Mirage"
+            ],
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Arts damage up as HP drops",
+            "detail": "Activates when using magic attacks Multiplied by a maximum of 2.0"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Benevolence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Force",
+      "ja": "フォース"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2d/Force_%28Ao_MQ%29.png",
+    "description": "Grants a STR boost in battle.",
+    "levels": [
+      {
+        "level": 1,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 2
+          },
+          {
+            "element": "Earth",
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR when battle begins",
+            "detail": "2 turns of STR+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 4
+          },
+          {
+            "element": "Earth",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR when battle begins",
+            "detail": "3 turns of STR+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 6
+          },
+          {
+            "element": "Earth",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR when battle begins",
+            "detail": "4 turns of STR+25%"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "Once per fight when below 20% HP 4 turns of STR+25%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 8
+          },
+          {
+            "element": "Earth",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR when battle begins",
+            "detail": "5 turns of STR+25%"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "Once per fight when below 20% HP 5 turns of STR+25%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 10
+          },
+          {
+            "element": "Earth",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR when battle begins",
+            "detail": "6 turns of STR+50%"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "Once per fight when below 20% HP 6 turns of STR+50%"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Triumph"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Axe",
+      "ja": "アックス"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cd/Axe_%28Ao_MQ%29.png",
+    "description": "Raises STR/HP. Increases the chance of critical strikes.",
+    "levels": [
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 4
+          },
+          {
+            "element": "Space",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "10% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 6
+          },
+          {
+            "element": "Space",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "15% chance"
+          },
+          {
+            "title": "Attacks/crafts inflict faint",
+            "detail": "5% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 8
+          },
+          {
+            "element": "Space",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "20% chance"
+          },
+          {
+            "title": "Attacks/crafts inflict faint",
+            "detail": "10% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 10
+          },
+          {
+            "element": "Space",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Attacks/crafts inflict faint",
+            "detail": "15% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Triumph"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Chevalier",
+      "ja": "シュバリエ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Chevalier_%28Ao_MQ%29.png",
+    "description": "Physical attacks get stronger the less HP you have.",
+    "levels": [
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 8
+          },
+          {
+            "elements": [
+              "Earth",
+              "Water",
+              "Wind",
+              "Time",
+              "Space",
+              "Mirage"
+            ],
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Physical damage up as HP drops",
+            "detail": "Activates when using physical attacks Multiplied by a maximum of 1.5"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Fire",
+            "value": 10
+          },
+          {
+            "elements": [
+              "Earth",
+              "Water",
+              "Wind",
+              "Time",
+              "Space",
+              "Mirage"
+            ],
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Physical damage up as HP drops",
+            "detail": "Activates when using physical attacks Multiplied by a maximum of 2.0"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Triumph"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Pixie",
+      "ja": "ピクシィ"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3f/Pixie_%28Ao_MQ%29.png",
+    "description": "Grants an ATS boost in battle.",
+    "levels": [
+      {
+        "level": 1,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 2
+          },
+          {
+            "element": "Fire",
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises ATS when battle begins",
+            "detail": "2 turns of ATS+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 4
+          },
+          {
+            "element": "Fire",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises ATS when battle begins",
+            "detail": "3 turns of ATS+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 6
+          },
+          {
+            "element": "Fire",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises ATS when battle begins",
+            "detail": "4 turns of ATS+25%"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "Once per fight when below 20% HP 4 turns of ATS+25%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 8
+          },
+          {
+            "element": "Fire",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises ATS when battle begins",
+            "detail": "5 turns of ATS+25%"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "Once per fight when below 20% HP 5 turns of ATS+25%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 10
+          },
+          {
+            "element": "Fire",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises ATS when battle begins",
+            "detail": "6 turns of ATS+50%"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "Once per fight when below 20% HP 6 turns of ATS+50%"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Tempests"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Wing",
+      "ja": "ウィング"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/27/Wing_%28Ao_MQ%29.png",
+    "description": "Raises ADF/SPD. Prevents ailments and stat down.",
+    "levels": [
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 4
+          },
+          {
+            "element": "Water",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Prevents ailments/stat down",
+            "detail": "25% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 6
+          },
+          {
+            "element": "Water",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Prevents ailments/stat down",
+            "detail": "50% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 8
+          },
+          {
+            "element": "Water",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Prevents ailments/stat down",
+            "detail": "75% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 10
+          },
+          {
+            "element": "Water",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Prevents ailments/stat down",
+            "detail": "100% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Tempests"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Kusanagi",
+      "ja": "クサナギ"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/db/Kusanagi_%28Ao_MQ%29.png",
+    "description": "Raises STR/ATS. Attacks/arts recover HP/EP.",
+    "levels": [
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 8
+          },
+          {
+            "element": "Earth",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through attacks/crafts",
+            "detail": "Recover 20% of damage as HP"
+          },
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Activates when using magic attacks Recover 1.0% of damage as EP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Wind",
+            "value": 10
+          },
+          {
+            "element": "Earth",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through attacks/crafts",
+            "detail": "Recover 30% of damage as HP"
+          },
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Activates when using magic attacks Recover 1.5% of damage as EP"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Tempests"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Crow",
+      "ja": "クロウ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e8/Crow_%28Ao_MQ%29.png",
+    "description": "Grants a SPD boost in battle.",
+    "levels": [
+      {
+        "level": 1,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 2
+          },
+          {
+            "element": "Wind",
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises SPD when battle begins",
+            "detail": "2 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 4
+          },
+          {
+            "element": "Wind",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises SPD when battle begins",
+            "detail": "3 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 6
+          },
+          {
+            "element": "Wind",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises SPD when battle begins",
+            "detail": "4 turns of SPD+25%"
+          },
+          {
+            "title": "Raises SPD when HP is low",
+            "detail": "Once per fight when below 20% HP 4 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 8
+          },
+          {
+            "element": "Wind",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises SPD when battle begins",
+            "detail": "5 turns of SPD+25%"
+          },
+          {
+            "title": "Raises SPD when HP is low",
+            "detail": "Once per fight when below 20% HP 5 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 10
+          },
+          {
+            "element": "Wind",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises SPD when battle begins",
+            "detail": "6 turns of SPD+50%"
+          },
+          {
+            "title": "Raises SPD when HP is low",
+            "detail": "Once per fight when below 20% HP 6 turns of SPD+50%"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Transience"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Keeper",
+      "ja": "キーパー"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/15/Keeper_%28Ao_MQ%29.png",
+    "description": "Raises DEF/ADF. Automatically recover from K.O.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 6
+          },
+          {
+            "element": "Earth",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Activates once per battle Recover 30% HP"
+          },
+          {
+            "title": "Attracts enemies' attention",
+            "detail": "Activates in battle (Effect: Small)"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 8
+          },
+          {
+            "element": "Earth",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Activates once per battle Recover 60% HP"
+          },
+          {
+            "title": "Attracts enemies' attention",
+            "detail": "Activates in battle (Effect: Medium)"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 10
+          },
+          {
+            "element": "Earth",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Activates once per battle Recover 90% HP"
+          },
+          {
+            "title": "Attracts enemies' attention",
+            "detail": "Activates in battle (Effect: Large)"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Transience"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Criminal",
+      "ja": "クリミナル"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/28/Criminal_%28Ao_MQ%29.png",
+    "description": "Raises EP. Offensive arts have a chance to deal critical damage.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 6
+          },
+          {
+            "element": "Mirage",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 8
+          },
+          {
+            "element": "Mirage",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "60% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Time",
+            "value": 10
+          },
+          {
+            "element": "Mirage",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Transience"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Platinum",
+      "ja": "プラチナ"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/58/Platinum_%28Ao_MQ%29.png",
+    "description": "Raises HP/ADF. Killing enemies restores HP.",
+    "levels": [
+      {
+        "level": 1,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 2
+          },
+          {
+            "element": "Water",
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+100 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 4
+          },
+          {
+            "element": "Water",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+200 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 6
+          },
+          {
+            "element": "Water",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+300 per enemy killed"
+          },
+          {
+            "title": "Recovers some HP after battles",
+            "detail": "HP+500 per battle"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 8
+          },
+          {
+            "element": "Water",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+400 per enemy killed"
+          },
+          {
+            "title": "Recovers some HP after battles",
+            "detail": "HP+1000 per battle"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 10
+          },
+          {
+            "element": "Water",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+500 per enemy killed"
+          },
+          {
+            "title": "Recovers some HP after battles",
+            "detail": "HP+2000 per battle"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Providence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Moebius",
+      "ja": "メビウス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Moebius_%28Ao_MQ%29.png",
+    "description": "Raises SPD. Increases potency of items.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 6
+          },
+          {
+            "element": "Wind",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Activates when using items in battle HP/EP recovery multiplied by 1.5"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "Activates when using items in battle RNG+3"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 8
+          },
+          {
+            "element": "Wind",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Activates when using items in battle HP/EP recovery multiplied by 2.0"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "Activates when using items in battle RNG+4"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 10
+          },
+          {
+            "element": "Wind",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Activates when using items in battle HP/EP recovery multiplied by 2.0 & Area (S)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "Activates when using items in battle RNG+4"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Providence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Emblem",
+      "ja": "エンブレム"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/af/Emblem_%28Ao_MQ%29.png",
+    "description": "Raises DEF/ADF/SPD. HP/EP/CP regenerate on the field.",
+    "levels": [
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 8
+          },
+          {
+            "element": "Time",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "HP/EP/CP regenerate on the field",
+            "detail": "Effect: Medium"
+          },
+          {
+            "title": "Chance to guarantee max advantage",
+            "detail": "60% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Space",
+            "value": 10
+          },
+          {
+            "element": "Time",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "HP/EP/CP regenerate on the field",
+            "detail": "Effect: Large"
+          },
+          {
+            "title": "Chance to guarantee max advantage",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Providence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Mirage",
+      "ja": "ミラージュ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8c/Mirage_%28Ao_MQ%29.png",
+    "description": "Raises EP/ATS. Killing enemies restores EP.",
+    "levels": [
+      {
+        "level": 1,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 2
+          },
+          {
+            "element": "Fire",
+            "value": 1
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers EP",
+            "detail": "EP+5 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 4
+          },
+          {
+            "element": "Fire",
+            "value": 2
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers EP",
+            "detail": "EP+10 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 6
+          },
+          {
+            "element": "Fire",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers EP",
+            "detail": "EP+15 per enemy killed"
+          },
+          {
+            "title": "Recovers some EP after battles",
+            "detail": "EP+25 per battle"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 8
+          },
+          {
+            "element": "Fire",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers EP",
+            "detail": "EP+20 per enemy killed"
+          },
+          {
+            "title": "Recovers some EP after battles",
+            "detail": "EP+50 per battle"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 10
+          },
+          {
+            "element": "Fire",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies recovers EP",
+            "detail": "EP+25 per enemy killed"
+          },
+          {
+            "title": "Recovers some EP after battles",
+            "detail": "EP+100 per battle"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Illusion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Phantom",
+      "ja": "ファントム"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/25/Phantom_%28Ao_MQ%29.png",
+    "description": "Raises SPD. Grants a STR/ATS/SPD boost in battle.",
+    "levels": [
+      {
+        "level": 3,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 6
+          },
+          {
+            "element": "Wind",
+            "value": 3
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR/ATS/SPD when battle begins",
+            "detail": "2 turns of STR/ATS/SPD+25%"
+          },
+          {
+            "title": "Chance to guarantee party advantage",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 8
+          },
+          {
+            "element": "Wind",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR/ATS/SPD when battle begins",
+            "detail": "3 turns of STR/ATS/SPD+25%"
+          },
+          {
+            "title": "Chance to guarantee party advantage",
+            "detail": "60% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 10
+          },
+          {
+            "element": "Wind",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Raises STR/ATS/SPD when battle begins",
+            "detail": "4 turns of STR/ATS/SPD+50%"
+          },
+          {
+            "title": "Chance to guarantee party advantage",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Illusion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Katze",
+      "ja": "カッツェ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Katze_%28Ao_MQ%29.png",
+    "description": "Raises ATS/ADF/SPD. Absorbs magic attacks.",
+    "levels": [
+      {
+        "level": 4,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 8
+          },
+          {
+            "element": "Space",
+            "value": 4
+          }
+        ],
+        "effects": [
+          {
+            "title": "Absorb magic attacks",
+            "detail": "50% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "elemental_value": [
+          {
+            "element": "Mirage",
+            "value": 10
+          },
+          {
+            "element": "Space",
+            "value": 5
+          }
+        ],
+        "effects": [
+          {
+            "title": "Absorb magic attacks",
+            "detail": "100% chance"
+          },
+          {
+            "title": "Master art",
+            "detail": "Rune of Illusion"
+          }
+        ]
+      }
+    ]
+  }
+]

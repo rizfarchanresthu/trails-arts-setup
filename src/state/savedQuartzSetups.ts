@@ -87,6 +87,7 @@ export function sanitizeForBase(
   setup: SavedQuartzSetup,
   validQuartzIds: Set<number>,
   topology: OrbmentTopology,
+  validMasterQuartzIds: Set<number> = new Set(),
 ): SavedQuartzSetup {
   const equippedQuartz: OrbmentState['equippedQuartz'] = { ...setup.orbmentState.equippedQuartz }
   for (const slotId of topology.slotIds) {
@@ -96,11 +97,23 @@ export function sanitizeForBase(
     }
   }
 
+  if (topology.masterQuartzSlot !== undefined) {
+    equippedQuartz[topology.masterQuartzSlot] = null
+  }
+
+  const equippedMasterQuartzId = setup.orbmentState.equippedMasterQuartzId
+  const sanitizedMasterQuartzId =
+    equippedMasterQuartzId !== null && validMasterQuartzIds.has(equippedMasterQuartzId)
+      ? equippedMasterQuartzId
+      : null
+
   return {
     ...setup,
     orbmentState: {
       ...setup.orbmentState,
       equippedQuartz,
+      equippedMasterQuartzId: sanitizedMasterQuartzId,
+      masterQuartzLevel: sanitizedMasterQuartzId ? setup.orbmentState.masterQuartzLevel : 1,
     },
   }
 }
@@ -213,6 +226,8 @@ function normalizeOrbmentState(value: unknown): OrbmentState | null {
     slotRestrictions: normalizeRestrictionMap(value.slotRestrictions, topology.slotIds),
     equippedQuartz: normalizeEquippedMap(value.equippedQuartz, topology.slotIds),
     nodeTiers: normalizeNodeTiersMap(value.nodeTiers, topology.slotIds, defaultState.nodeTiers),
+    equippedMasterQuartzId: normalizeOptionalId(value.equippedMasterQuartzId),
+    masterQuartzLevel: normalizePositiveInt(value.masterQuartzLevel) ?? 1,
   }
 }
 
@@ -235,7 +250,7 @@ function sanitizeOrbmentState(state: OrbmentState, topology: OrbmentTopology): O
     }
   }
 
-  return {
+  const sanitized: OrbmentState = {
     lineCount: safeLineCount,
     lineStarts,
     lineDirections,
@@ -243,7 +258,38 @@ function sanitizeOrbmentState(state: OrbmentState, topology: OrbmentTopology): O
     slotRestrictions: normalizeRestrictionMap(state.slotRestrictions, topology.slotIds),
     equippedQuartz: normalizeEquippedMap(state.equippedQuartz, topology.slotIds),
     nodeTiers: normalizeNodeTiersMap(state.nodeTiers, topology.slotIds, topology.nodeTierDefaults),
+    equippedMasterQuartzId: normalizeOptionalId(state.equippedMasterQuartzId),
+    masterQuartzLevel: Number.isInteger(state.masterQuartzLevel) && state.masterQuartzLevel >= 1
+      ? state.masterQuartzLevel
+      : 1,
   }
+
+  if (topology.masterQuartzSlot !== undefined) {
+    sanitized.equippedQuartz[topology.masterQuartzSlot] = null
+    sanitized.slotRestrictions[topology.masterQuartzSlot] = null
+  } else {
+    sanitized.equippedMasterQuartzId = null
+    sanitized.masterQuartzLevel = 1
+  }
+
+  return sanitized
+}
+
+function normalizeOptionalId(value: unknown): number | null {
+  if (value === null) {
+    return null
+  }
+  if (typeof value === 'number' && Number.isInteger(value) && value > 0) {
+    return value
+  }
+  return null
+}
+
+function normalizePositiveInt(value: unknown): number | null {
+  if (typeof value === 'number' && Number.isInteger(value) && value >= 1) {
+    return value
+  }
+  return null
 }
 
 function normalizeRestrictionMap(value: unknown, slotIds: SlotId[]): OrbmentState['slotRestrictions'] {

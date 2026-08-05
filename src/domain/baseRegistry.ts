@@ -1,12 +1,26 @@
+import artsAzure from '../database/arts/azure.json'
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
 import artsZero from '../database/arts/zero.json'
+import masterQuartzAzure from '../database/master-quartz/azure.json'
+import quartzAzure from '../database/quartz/azure.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
 import quartzZero from '../database/quartz/zero.json'
-import { ELEMENTS, type Art, type BaseData, type ElementName, type ElementRequirement, type Quartz, type SlotId } from './types'
+import {
+  ELEMENTS,
+  type Art,
+  type BaseData,
+  type ElementName,
+  type ElementRequirement,
+  type MasterQuartz,
+  type MasterQuartzEffect,
+  type MasterQuartzLevel,
+  type Quartz,
+  type SlotId,
+} from './types'
 
 const SKY_FC_TOPOLOGY: BaseData['topology'] = {
   slotIds: [1, 2, 3, 4, 5, 6],
@@ -101,7 +115,27 @@ const ZERO_BASE: BaseData = {
   },
 }
 
-export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE, ZERO_BASE]
+const AZURE_TOPOLOGY: BaseData['topology'] = {
+  ...ZERO_TOPOLOGY,
+  masterQuartzSlot: 1,
+  nodeTierDefaults: createNodeTierDefaults([2, 3, 4, 5, 6, 7], 2),
+}
+
+const AZURE_BASE: BaseData = {
+  id: 'azure',
+  label: 'Azure',
+  quartz: quartzAzure.map((entry) => normalizeQuartz(entry)),
+  arts: artsAzure.map((entry) => normalizeArt(entry)),
+  masterQuartz: masterQuartzAzure.map((entry) => normalizeMasterQuartz(entry)),
+  topology: AZURE_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ENIGMA II',
+    outerEdges: 'circular',
+    nodeShape: 'rect',
+  },
+}
+
+export const BASES: BaseData[] = [SKY_FC_BASE, SKY_SC_BASE, SKY_3RD_BASE, ZERO_BASE, AZURE_BASE]
 
 export function getBaseById(baseId: string): BaseData {
   const matched = BASES.find((base) => base.id === baseId)
@@ -120,6 +154,49 @@ function normalizeQuartz(input: unknown): Quartz {
     elemental_value: normalizeElementalValue(record.elemental_value),
     synthesis_cost: normalizeSynthesisCost(record.synthesis_cost),
   }
+}
+
+function normalizeMasterQuartz(input: unknown): MasterQuartz {
+  const record = input as Record<string, unknown>
+  return {
+    id: Number(record.id),
+    name: record.name as MasterQuartz['name'],
+    element: toElementName(record.element),
+    description: String(record.description),
+    levels: normalizeMasterQuartzLevels(record.levels),
+  }
+}
+
+function normalizeMasterQuartzLevels(input: unknown): MasterQuartzLevel[] {
+  if (!Array.isArray(input)) {
+    return []
+  }
+
+  return input
+    .map((entry) => {
+      const record = entry as Record<string, unknown>
+      return {
+        level: Number(record.level),
+        elemental_value: normalizeRequirementArray(record.elemental_value),
+        effects: normalizeMasterQuartzEffects(record.effects),
+      }
+    })
+    .filter((entry) => Number.isInteger(entry.level) && entry.level >= 1)
+    .sort((left, right) => left.level - right.level)
+}
+
+function normalizeMasterQuartzEffects(input: unknown): MasterQuartzEffect[] {
+  if (!Array.isArray(input)) {
+    return []
+  }
+
+  return input.map((entry) => {
+    const record = entry as Record<string, unknown>
+    return {
+      title: String(record.title ?? ''),
+      detail: String(record.detail ?? ''),
+    }
+  })
 }
 
 function normalizeArt(input: unknown): Art {

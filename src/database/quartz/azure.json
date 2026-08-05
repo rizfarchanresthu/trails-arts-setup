@@ -1,0 +1,2544 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Defense 1",
+      "ja": "防御１"
+    },
+    "effect": "DEF+6%/STR-3%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Defense 2",
+      "ja": "防御２"
+    },
+    "effect": "DEF+9%/STR-5%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Defense 3",
+      "ja": "防御３"
+    },
+    "effect": "DEF+12%/STR-7%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Topaz Gem",
+      "ja": "琥耀珠"
+    },
+    "effect": "DEF+15%/STR-9%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Poison",
+      "ja": "毒の刃"
+    },
+    "effect": "10% chance to poison enemy.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 150
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Poison 2",
+      "ja": "毒の刃２"
+    },
+    "effect": "20% chance to poison enemy.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Petrify",
+      "ja": "石化の刃"
+    },
+    "effect": "10% chance to petrify enemy.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 300
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Petrify 2",
+      "ja": "石化の刃２"
+    },
+    "effect": "20% chance to petrify enemy.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Shield Breaker",
+      "ja": "破盾の牙"
+    },
+    "effect": "15% chance to lower enemy DEF by 25%.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 500
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "breaker"
+    ]
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Septium Vein",
+      "ja": "耀脈"
+    },
+    "effect": "Increases all types of sepith dropped by enemies by 1-2.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      },
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Ingenuity",
+      "ja": "機功"
+    },
+    "effect": "EP slowly recovers by walking on the field.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Fire",
+          "Time"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Intimidation",
+      "ja": "虎威"
+    },
+    "effect": "Enemies more likely to run away on the field (party lead).",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Wind",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Saturn Bell",
+      "ja": "鎮星鈴"
+    },
+    "effect": "Can act immediately after using earth arts.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Earth_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "HP 1",
+      "ja": "ＨＰ１"
+    },
+    "effect": "Max HP+10%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "HP 2",
+      "ja": "ＨＰ２"
+    },
+    "effect": "Max HP+15%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "HP 3",
+      "ja": "ＨＰ３"
+    },
+    "effect": "Max HP+20%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Water Gem",
+      "ja": "水耀珠"
+    },
+    "effect": "Max HP+25%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Shield 1",
+      "ja": "魔防１"
+    },
+    "effect": "ADF+6%/ATS-3%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Shield 2",
+      "ja": "魔防２"
+    },
+    "effect": "ADF+9%/ATS-5%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Shield 3",
+      "ja": "魔防３"
+    },
+    "effect": "ADF+12%/ATS-7%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Sapphire Gem",
+      "ja": "蒼耀珠"
+    },
+    "effect": "ADF+15%/ATS-9%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Mute",
+      "ja": "封魔の刃"
+    },
+    "effect": "10% chance to mute enemy.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 150
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Mute 2",
+      "ja": "封魔の刃２"
+    },
+    "effect": "20% chance to mute enemy.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Freeze",
+      "ja": "凍結の刃"
+    },
+    "effect": "10% chance to freeze enemy.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 300
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Freeze 2",
+      "ja": "凍結の刃２"
+    },
+    "effect": "20% chance to freeze enemy.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Spirit Breaker",
+      "ja": "破霊の牙"
+    },
+    "effect": "15% chance to lower enemy ADF by 25%.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 500
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "breaker"
+    ]
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Effort",
+      "ja": "丹精"
+    },
+    "effect": "Increases chance to cook a supreme dish.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      },
+      {
+        "element": "Fire",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Heal",
+      "ja": "治癒"
+    },
+    "effect": "HP slowly recovers by walking on the field.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Earth",
+          "Wind"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "heal"
+    ]
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Mercury Bell",
+      "ja": "辰星鈴"
+    },
+    "effect": "Can act immediately after using water arts.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Water_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Attack 1",
+      "ja": "攻撃１"
+    },
+    "effect": "STR+6%/DEF-3%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Attack 2",
+      "ja": "攻撃２"
+    },
+    "effect": "STR+9%/DEF-5%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Attack 3",
+      "ja": "攻撃３"
+    },
+    "effect": "STR+12%/DEF-7%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Ruby Gem",
+      "ja": "紅耀珠"
+    },
+    "effect": "STR+15%/DEF-9%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Seal",
+      "ja": "封技の刃"
+    },
+    "effect": "10% chance to seal enemy.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 150
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Seal 2",
+      "ja": "封技の刃２"
+    },
+    "effect": "20% chance to seal enemy.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Burn",
+      "ja": "炎傷の刃"
+    },
+    "effect": "10% chance to burn enemy.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 300
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Burn 2",
+      "ja": "炎傷の刃２"
+    },
+    "effect": "20% chance to burn enemy.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Sword Breaker",
+      "ja": "破剣の牙"
+    },
+    "effect": "15% chance to lower enemy STR by 25%.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 500
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "breaker"
+    ]
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Prankster",
+      "ja": "悪戯"
+    },
+    "effect": "Increases chance to cook a peculiar dish.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      },
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Invigorate",
+      "ja": "練気"
+    },
+    "effect": "Gain CP by attacking enemies on the field.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Earth",
+          "Time"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "invigorate"
+    ]
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Dragon Vision",
+      "ja": "龍眼"
+    },
+    "effect": "Automatically analyzes defeated enemies.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Space",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Mars Bell",
+      "ja": "焔星鈴"
+    },
+    "effect": "Can act immediately after using fire arts.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7f/Fire_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Evade 1",
+      "ja": "回避１"
+    },
+    "effect": "EVA+10%/DEF-1%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Evade 2",
+      "ja": "回避２"
+    },
+    "effect": "EVA+15%/DEF-3%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Evade 3",
+      "ja": "回避３"
+    },
+    "effect": "EVA+20%/DEF-5%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Emerald Gem",
+      "ja": "翠耀珠"
+    },
+    "effect": "EVA+25%/DEF-7%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "Move 1",
+      "ja": "移動１"
+    },
+    "effect": "MOV+1",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 100
+      },
+      {
+        "element": "Space",
+        "value": 50
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "move"
+    ]
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "Move 2",
+      "ja": "移動２"
+    },
+    "effect": "MOV+2",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 1000
+      },
+      {
+        "element": "Space",
+        "value": 250
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "move"
+    ]
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "Wind Gem",
+      "ja": "風耀珠"
+    },
+    "effect": "MOV+3",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "move"
+    ]
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "Blind",
+      "ja": "暗闇の刃"
+    },
+    "effect": "10% chance to blind enemy.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 150
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Blind 2",
+      "ja": "暗闇の刃２"
+    },
+    "effect": "20% chance to blind enemy.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "Sleep",
+      "ja": "睡眠の刃"
+    },
+    "effect": "10% chance to put enemy to sleep.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 300
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Sleep 2",
+      "ja": "睡眠の刃２"
+    },
+    "effect": "20% chance to put enemy to sleep.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Leg Breaker",
+      "ja": "破剣の牙"
+    },
+    "effect": "15% chance to lower enemy MOV by 3.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 500
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "breaker"
+    ]
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Hare",
+      "ja": "脱兎"
+    },
+    "effect": "Increases chance of escaping from battle by 50%.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "Scent",
+      "ja": "美臭"
+    },
+    "effect": "Enemies more likely to notice you on the field (full party).",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Earth",
+          "Water"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 57,
+    "name": {
+      "en": "Jupiter Bell",
+      "ja": "歳星鈴"
+    },
+    "effect": "Can act immediately after using wind arts.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Wind_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 58,
+    "name": {
+      "en": "Action 1",
+      "ja": "行動力１"
+    },
+    "effect": "SPD+10%",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 60
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 59,
+    "name": {
+      "en": "Action 2",
+      "ja": "行動力２"
+    },
+    "effect": "SPD+15%",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 300
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 60,
+    "name": {
+      "en": "Action 3",
+      "ja": "行動力３"
+    },
+    "effect": "SPD+20%/MOV-1",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 1500
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 61,
+    "name": {
+      "en": "Onyx Gem",
+      "ja": "黒耀珠"
+    },
+    "effect": "SPD+25%/MOV-2",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 62,
+    "name": {
+      "en": "Impede 1",
+      "ja": "妨害１"
+    },
+    "effect": "Cancels enemy arts and crafts with 30% success rate.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      },
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 100
+      },
+      {
+        "element": "Wind",
+        "value": 50
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
+  },
+  {
+    "id": 63,
+    "name": {
+      "en": "Impede 2",
+      "ja": "妨害２"
+    },
+    "effect": "Cancels enemy arts and crafts with 60% success rate.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      },
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 1000
+      },
+      {
+        "element": "Wind",
+        "value": 250
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
+  },
+  {
+    "id": 64,
+    "name": {
+      "en": "Rift Gem",
+      "ja": "絶耀珠"
+    },
+    "effect": "Cancels enemy arts and crafts with 90% success rate.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 6
+      },
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
+  },
+  {
+    "id": 65,
+    "name": {
+      "en": "Cast 1",
+      "ja": "駆動１"
+    },
+    "effect": "Time to cast arts is cut by 25%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      },
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 100
+      },
+      {
+        "element": "Space",
+        "value": 50
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
+  },
+  {
+    "id": 66,
+    "name": {
+      "en": "Cast 2",
+      "ja": "駆動２"
+    },
+    "effect": "Time to cast arts is cut by 33%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 1000
+      },
+      {
+        "element": "Space",
+        "value": 250
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
+  },
+  {
+    "id": 67,
+    "name": {
+      "en": "Time Gem",
+      "ja": "刻耀珠"
+    },
+    "effect": "Time to cast arts is cut by 50%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
+  },
+  {
+    "id": 68,
+    "name": {
+      "en": "Speed Breaker",
+      "ja": "破迅の牙"
+    },
+    "effect": "15% chance to lower enemy SPD by 25%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 500
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "breaker"
+    ]
+  },
+  {
+    "id": 69,
+    "name": {
+      "en": "Luck",
+      "ja": "幸運"
+    },
+    "effect": "Increases enemy item drop rate by 100%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      },
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 70,
+    "name": {
+      "en": "Shackle",
+      "ja": "縛魔"
+    },
+    "effect": "Enemy movement is slowed on the field.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Water",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 71,
+    "name": {
+      "en": "Pluto Bell",
+      "ja": "冥王鈴"
+    },
+    "effect": "Can act immediately after using time arts.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Time_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 72,
+    "name": {
+      "en": "Hit 1",
+      "ja": "命中１"
+    },
+    "effect": "ACC+20%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 73,
+    "name": {
+      "en": "Hit 2",
+      "ja": "命中２"
+    },
+    "effect": "ACC+30%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 74,
+    "name": {
+      "en": "Hit 3",
+      "ja": "命中３"
+    },
+    "effect": "ACC+40%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 75,
+    "name": {
+      "en": "Light Gem",
+      "ja": "光耀珠"
+    },
+    "effect": "ACC+50%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 76,
+    "name": {
+      "en": "EP Cut 1",
+      "ja": "省ＥＰ１"
+    },
+    "effect": "Arts' EP cost -10%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 60
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 20
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 77,
+    "name": {
+      "en": "EP Cut 2",
+      "ja": "省ＥＰ２"
+    },
+    "effect": "Arts' EP cost -15%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 300
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 100
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 78,
+    "name": {
+      "en": "EP Cut 3",
+      "ja": "省ＥＰ３"
+    },
+    "effect": "Arts' EP cost -20%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1500
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 500
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 79,
+    "name": {
+      "en": "Gold Gem",
+      "ja": "金耀珠"
+    },
+    "effect": "Arts' EP cost -25%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Time",
+          "Mirage"
+        ],
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 80,
+    "name": {
+      "en": "Voice Breaker",
+      "ja": "破言の牙"
+    },
+    "effect": "15% chance to lower enemy ATS by 25%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 500
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "breaker"
+    ]
+  },
+  {
+    "id": 81,
+    "name": {
+      "en": "Eagle Eye",
+      "ja": "鷹目"
+    },
+    "effect": "Displays enemies on mini map (full party).",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "element": "Wind",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "eagle_eye"
+    ]
+  },
+  {
+    "id": 82,
+    "name": {
+      "en": "Range",
+      "ja": "範囲"
+    },
+    "effect": "Arts' effect range+1.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      },
+      {
+        "element": "Earth",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 83,
+    "name": {
+      "en": "Heaven's Eye",
+      "ja": "天眼"
+    },
+    "effect": "Combines the effects of Eagle Eye and Information.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Fire",
+          "Mirage"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "eagle_eye",
+      "information"
+    ]
+  },
+  {
+    "id": 84,
+    "name": {
+      "en": "Uranus Bell",
+      "ja": "天王鈴"
+    },
+    "effect": "Can act immediately after using space arts.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Space_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 85,
+    "name": {
+      "en": "Mind 1",
+      "ja": "精神１"
+    },
+    "effect": "ATS+6%/ADF-3%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 40
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 86,
+    "name": {
+      "en": "Mind 2",
+      "ja": "精神２"
+    },
+    "effect": "ATS+9%/ADF-5%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 87,
+    "name": {
+      "en": "Mind 3",
+      "ja": "精神３"
+    },
+    "effect": "ATS+12%/ADF-7%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 1000
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 88,
+    "name": {
+      "en": "Pearl Gem",
+      "ja": "白耀珠"
+    },
+    "effect": "ATS+15%/ADF-9%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 89,
+    "name": {
+      "en": "EP 1",
+      "ja": "ＥＰ１"
+    },
+    "effect": "Max EP+10%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 1
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 60
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 20
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 90,
+    "name": {
+      "en": "EP 2",
+      "ja": "ＥＰ２"
+    },
+    "effect": "Max EP+15%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 300
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 100
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 91,
+    "name": {
+      "en": "EP 3",
+      "ja": "ＥＰ３"
+    },
+    "effect": "Max EP+20%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 1500
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 500
+      }
+    ],
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 92,
+    "name": {
+      "en": "Silver Gem",
+      "ja": "銀耀珠"
+    },
+    "effect": "Max EP+25%",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      },
+      {
+        "elements": [
+          "Time",
+          "Space"
+        ],
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 93,
+    "name": {
+      "en": "Confuse",
+      "ja": "混乱の刃"
+    },
+    "effect": "10% chance to confuse enemy.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 300
+      }
+    ],
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 94,
+    "name": {
+      "en": "Confuse 2",
+      "ja": "混乱の刃２"
+    },
+    "effect": "20% chance to confuse enemy.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
+  },
+  {
+    "id": 95,
+    "name": {
+      "en": "Information",
+      "ja": "情報"
+    },
+    "effect": "See detailed information about enemies without analyzing.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      },
+      {
+        "element": "Water",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 1,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "information"
+    ]
+  },
+  {
+    "id": 96,
+    "name": {
+      "en": "Detection",
+      "ja": "探知"
+    },
+    "effect": "Displays treasure chest locations on mini map (full party).",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Earth",
+          "Space"
+        ],
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "detection"
+    ]
+  },
+  {
+    "id": 97,
+    "name": {
+      "en": "Shroud",
+      "ja": "幻朧"
+    },
+    "effect": "Enemies less likely to notice you on the field (full party).",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      },
+      {
+        "elements": [
+          "Earth",
+          "Water",
+          "Fire",
+          "Wind",
+          "Time",
+          "Space"
+        ],
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": [
+      "haze"
+    ]
+  },
+  {
+    "id": 98,
+    "name": {
+      "en": "Venus Bell",
+      "ja": "明王鈴"
+    },
+    "effect": "Can act immediately after using mirage arts.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 7
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "tier": 2,
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Mirage_%28Crossbell_Quartz%29.png",
+    "exclusive_groups": []
+  }
+]

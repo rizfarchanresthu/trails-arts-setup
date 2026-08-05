@@ -1,6 +1,8 @@
 import {
   ELEMENT_COLORS,
   LINE_COLORS,
+  formatSlotLabel,
+  type MasterQuartz,
   type OrbmentLine,
   type OrbmentTopology,
   type OrbmentVisual,
@@ -19,6 +21,9 @@ type OrbmentGraphProps = {
   topology: OrbmentTopology
   nodeTiers: NodeTierMap
   orbmentVisual?: OrbmentVisual
+  equippedMasterQuartzId?: number | null
+  masterQuartzLevel?: number
+  masterQuartzById?: Map<number, MasterQuartz>
 }
 
 const NODE_RADIUS = 24
@@ -54,6 +59,9 @@ export function OrbmentGraph({
   topology,
   nodeTiers,
   orbmentVisual,
+  equippedMasterQuartzId = null,
+  masterQuartzLevel = 1,
+  masterQuartzById = new Map(),
 }: OrbmentGraphProps) {
   const layout = getLayout(topology)
   const slotPoints = layout.slotPoints
@@ -98,9 +106,9 @@ export function OrbmentGraph({
             }
           }
 
-          const trimmed = useRectNodes
-            ? trimEdgeToRectBoundary(from, to, RECT_WIDTH, RECT_HEIGHT)
-            : trimEdgeToNodeBoundary(from, to, NODE_RADIUS)
+          const fromIsRect = useRectNodes && edge.from !== topology.masterQuartzSlot
+          const toIsRect = useRectNodes && edge.to !== topology.masterQuartzSlot
+          const trimmed = trimMixedEdge(from, to, fromIsRect, toIsRect)
 
           return (
             <line
@@ -118,15 +126,22 @@ export function OrbmentGraph({
         })}
 
         {topology.slotIds.map((slotId) => {
-          const restriction = slotRestrictions[slotId]
+          const isMasterSlot = topology.masterQuartzSlot === slotId
+          const restriction = isMasterSlot ? null : slotRestrictions[slotId]
           const equippedQuartzId = equippedQuartz[slotId]
-          const equippedQuartzName = equippedQuartzId ? quartzById.get(equippedQuartzId)?.name.en : null
+          const equippedQuartzName = isMasterSlot
+            ? (equippedMasterQuartzId ? masterQuartzById.get(equippedMasterQuartzId)?.name.en : null)
+            : equippedQuartzId
+              ? quartzById.get(equippedQuartzId)?.name.en
+              : null
           const fill = restriction ? withAlpha(ELEMENT_COLORS[restriction], 0.24) : '#ffffff'
           const stroke = restriction ? ELEMENT_COLORS[restriction] : '#8f96a3'
           const point = slotPoints[slotId]
-          const label = `${slotId}${layout.showTier ? ` T${nodeTiers[slotId]}` : ''}`
+          const label = isMasterSlot
+            ? `M${equippedMasterQuartzId ? ` L${masterQuartzLevel}` : ''}`
+            : `${formatSlotLabel(slotId, topology)}${layout.showTier ? ` T${nodeTiers[slotId]}` : ''}`
 
-          if (useRectNodes) {
+          if (useRectNodes && !isMasterSlot) {
             return (
               <g key={`slot-${slotId}`}>
                 <rect
@@ -152,12 +167,25 @@ export function OrbmentGraph({
           return (
             <g key={`slot-${slotId}`}>
               <circle cx={point.x} cy={point.y} r={NODE_RADIUS} fill={fill} stroke={stroke} strokeWidth={3} />
-              <text x={point.x} y={point.y - 31} className="orbmentNodeId">
-                {label}
-              </text>
-              <text x={point.x} y={point.y + 1} className="orbmentNodeText">
-                {shortName(equippedQuartzName)}
-              </text>
+              {isMasterSlot ? (
+                <>
+                  <text x={point.x} y={point.y - 8} className="orbmentNodeRectText">
+                    {label}
+                  </text>
+                  <text x={point.x} y={point.y + 10} className="orbmentNodeRectText">
+                    {shortName(equippedQuartzName)}
+                  </text>
+                </>
+              ) : (
+                <>
+                  <text x={point.x} y={point.y - 31} className="orbmentNodeId">
+                    {label}
+                  </text>
+                  <text x={point.x} y={point.y + 1} className="orbmentNodeText">
+                    {shortName(equippedQuartzName)}
+                  </text>
+                </>
+              )}
             </g>
           )
         })}
@@ -167,7 +195,7 @@ export function OrbmentGraph({
         {lines.map((line, index) => (
           <span key={`line-legend-${index}`} className="legendItem">
             <span className="legendSwatch" style={{ backgroundColor: lineColor(index) }} />
-            Line {index + 1}: {line.join('-')}
+            Line {index + 1}: {line.map((slotId) => formatSlotLabel(slotId, topology)).join('-')}
           </span>
         ))}
       </div>
@@ -185,33 +213,28 @@ function buildEdges(lines: OrbmentLine[]): { from: SlotId; to: SlotId; lineIndex
   return edges
 }
 
-function trimEdgeToNodeBoundary(from: Point, to: Point, radius: number): { start: Point; end: Point } {
-  const dx = to.x - from.x
-  const dy = to.y - from.y
-  const distance = Math.hypot(dx, dy)
-
-  if (distance === 0) {
-    return { start: from, end: to }
-  }
-
-  const ux = dx / distance
-  const uy = dy / distance
-
+function trimMixedEdge(
+  from: Point,
+  to: Point,
+  fromIsRect: boolean,
+  toIsRect: boolean,
+): { start: Point; end: Point } {
   return {
-    start: { x: from.x + ux * radius, y: from.y + uy * radius },
-    end: { x: to.x - ux * radius, y: to.y - uy * radius },
+    start: fromIsRect ? rectExitPoint(from, to, RECT_WIDTH, RECT_HEIGHT) : circleExitPoint(from, to, NODE_RADIUS),
+    end: toIsRect ? rectExitPoint(to, from, RECT_WIDTH, RECT_HEIGHT) : circleExitPoint(to, from, NODE_RADIUS),
   }
 }
 
-function trimEdgeToRectBoundary(
-  from: Point,
-  to: Point,
-  width: number,
-  height: number,
-): { start: Point; end: Point } {
+function circleExitPoint(origin: Point, target: Point, radius: number): Point {
+  const dx = target.x - origin.x
+  const dy = target.y - origin.y
+  const distance = Math.hypot(dx, dy)
+  if (distance === 0) {
+    return origin
+  }
   return {
-    start: rectExitPoint(from, to, width, height),
-    end: rectExitPoint(to, from, width, height),
+    x: origin.x + (dx / distance) * radius,
+    y: origin.y + (dy / distance) * radius,
   }
 }
 

@@ -48,6 +48,25 @@ export type Quartz = {
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
 }
 
+export type MasterQuartzEffect = {
+  title: string
+  detail: string
+}
+
+export type MasterQuartzLevel = {
+  level: number
+  elemental_value: ElementRequirement[]
+  effects: MasterQuartzEffect[]
+}
+
+export type MasterQuartz = {
+  id: number
+  name: LocalizedName
+  element: ElementName
+  description: string
+  levels: MasterQuartzLevel[]
+}
+
 export type Art = {
   id: number
   name: LocalizedName
@@ -79,6 +98,7 @@ export type OrbmentTopology = {
   wrapsOuterRing: boolean
   maxLines: number
   nodeTierDefaults: Record<number, number>
+  masterQuartzSlot?: SlotId
 }
 
 export type OrbmentVisual = {
@@ -92,8 +112,13 @@ export type BaseData = {
   label: string
   quartz: Quartz[]
   arts: Art[]
+  masterQuartz?: MasterQuartz[]
   topology: OrbmentTopology
   orbmentVisual?: OrbmentVisual
+}
+
+export function formatSlotLabel(slotId: SlotId, topology: OrbmentTopology): string {
+  return topology.masterQuartzSlot === slotId ? 'M' : String(slotId)
 }
 
 export type SavedQuartzSetup = {

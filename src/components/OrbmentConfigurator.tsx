@@ -1,6 +1,9 @@
 import {
   ELEMENTS,
+  formatSlotLabel,
   type ElementName,
+  type ElementRequirement,
+  type MasterQuartz,
   type OrbmentTopology,
   type OrbmentVisual,
   type Quartz,
@@ -8,9 +11,15 @@ import {
 } from '../domain/types'
 import { type OrbmentLine } from '../domain/types'
 import { type LineDirection } from '../domain/rules/skyFcRules'
-import { type OrbmentState, getAllowedQuartzForSlot, getAvailableLineStarts } from '../state/orbmentState'
+import {
+  type OrbmentState,
+  getAllowedQuartzForSlot,
+  getAvailableLineStarts,
+  getMasterQuartzLevelData,
+} from '../state/orbmentState'
 import { type CharacterTemplate } from '../domain/characterPresets'
 import { AppSelect } from './AppSelect'
+import { MasterQuartzPicker } from './MasterQuartzPicker'
 import { OrbmentGraph } from './OrbmentGraph'
 import { QuartzPicker } from './QuartzPicker'
 
@@ -20,6 +29,8 @@ type OrbmentConfiguratorProps = {
   lineWarnings: string[]
   quartzList: Quartz[]
   quartzById: Map<number, Quartz>
+  masterQuartzList?: MasterQuartz[]
+  masterQuartzById?: Map<number, MasterQuartz>
   onLineCountChange: (lineCount: number) => void
   onLineStartChange: (lineIndex: number, start: SlotId) => void
   onLineDirectionChange: (lineIndex: number, direction: LineDirection) => void
@@ -27,6 +38,8 @@ type OrbmentConfiguratorProps = {
   onRestrictionChange: (slotId: SlotId, restriction: ElementName | null) => void
   onQuartzChange: (slotId: SlotId, quartzId: number | null) => void
   onNodeTierChange: (slotId: SlotId, tier: number) => void
+  onMasterQuartzChange?: (masterQuartzId: number | null) => void
+  onMasterQuartzLevelChange?: (level: number) => void
   topology: OrbmentTopology
   selectedBaseId: string
   selectedTemplateId: string
@@ -41,6 +54,8 @@ export function OrbmentConfigurator({
   lineWarnings,
   quartzList,
   quartzById,
+  masterQuartzList = [],
+  masterQuartzById = new Map(),
   onLineCountChange,
   onLineStartChange,
   onLineDirectionChange,
@@ -48,6 +63,8 @@ export function OrbmentConfigurator({
   onRestrictionChange,
   onQuartzChange,
   onNodeTierChange,
+  onMasterQuartzChange,
+  onMasterQuartzLevelChange,
   topology,
   selectedBaseId,
   selectedTemplateId,
@@ -58,6 +75,11 @@ export function OrbmentConfigurator({
   const maxTier = Math.max(1, ...quartzList.map((quartz) => quartz.tier ?? 1))
   const showNodeTierControls = selectedBaseId !== 'sky-fc'
   const configTitle = orbmentVisual?.title ? `${orbmentVisual.title} Config` : 'Orbment Config'
+  const equippedMasterQuartz = state.equippedMasterQuartzId
+    ? masterQuartzById.get(state.equippedMasterQuartzId)
+    : null
+  const masterLevelData = getMasterQuartzLevelData(equippedMasterQuartz, state.masterQuartzLevel)
+
   return (
     <section className="panel">
       <h2>{configTitle}</h2>
@@ -104,7 +126,7 @@ export function OrbmentConfigurator({
                       value={String(state.lineStarts[index])}
                       options={getAvailableLineStarts(state, index, topology).map((start) => ({
                         value: String(start),
-                        label: String(start),
+                        label: formatSlotLabel(start, topology),
                       }))}
                       onChange={(nextValue) => onLineStartChange(index, Number(nextValue) as SlotId)}
                     />
@@ -149,7 +171,7 @@ export function OrbmentConfigurator({
             <ul>
               {lines.map((line, index) => (
                 <li key={`line-${index}`}>
-                  Line {index + 1}: {line.join(' -> ')}
+                  Line {index + 1}: {line.map((slotId) => formatSlotLabel(slotId, topology)).join(' -> ')}
                 </li>
               ))}
             </ul>
@@ -157,7 +179,10 @@ export function OrbmentConfigurator({
 
           <div className="linePreview">
             <h3>Adjacency Rule</h3>
-            <p>Outer links follow this base perimeter sequence: {topology.outerDirectionSequence.join(' -> ')}.</p>
+            <p>
+              Outer links follow this base perimeter sequence:{' '}
+              {topology.outerDirectionSequence.map((slotId) => formatSlotLabel(slotId, topology)).join(' -> ')}.
+            </p>
           </div>
 
           <div className="linePreview">
@@ -171,12 +196,61 @@ export function OrbmentConfigurator({
                     ? 'Sky 3rd templates are loaded from the Sky 3rd character preset database.'
                     : selectedBaseId === 'zero'
                       ? 'Zero templates are loaded from the Zero character preset database.'
-                      : 'No base-specific character presets are loaded for this base yet.'}
+                      : selectedBaseId === 'azure'
+                        ? 'Azure templates are loaded from the Azure character preset database.'
+                        : 'No base-specific character presets are loaded for this base yet.'}
             </p>
           </div>
 
           <div className="slotsGrid">
             {topology.slotIds.map((slotId) => {
+              if (topology.masterQuartzSlot === slotId) {
+                return (
+                  <article className="slotCard" key={`slot-${slotId}`}>
+                    <h4>Master</h4>
+                    <label>
+                      Master quartz
+                      <MasterQuartzPicker
+                        masterQuartzList={masterQuartzList}
+                        value={state.equippedMasterQuartzId}
+                        onChange={(masterQuartzId) => onMasterQuartzChange?.(masterQuartzId)}
+                      />
+                    </label>
+                    {equippedMasterQuartz ? (
+                      <>
+                        <label>
+                          MQ level
+                          <AppSelect
+                            value={String(state.masterQuartzLevel)}
+                            options={equippedMasterQuartz.levels.map((entry) => ({
+                              value: String(entry.level),
+                              label: `Level ${entry.level}`,
+                            }))}
+                            onChange={(nextValue) => onMasterQuartzLevelChange?.(Number(nextValue))}
+                          />
+                        </label>
+                        <p className="mqDescription">{equippedMasterQuartz.description}</p>
+                        {masterLevelData ? (
+                          <>
+                            <p className="mqElementalValue">
+                              Elemental value: {formatElementRequirements(masterLevelData.elemental_value)}
+                            </p>
+                            <ul className="mqEffects">
+                              {masterLevelData.effects.map((effect, index) => (
+                                <li key={`mq-effect-${index}`}>
+                                  <strong>{effect.title}</strong>
+                                  {effect.detail ? `: ${effect.detail}` : ''}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : null}
+                      </>
+                    ) : null}
+                  </article>
+                )
+              }
+
               const restriction = state.slotRestrictions[slotId]
               const restrictionOnlyQuartz = restriction
                 ? quartzList.filter((quartz) => quartz.element === restriction)
@@ -193,7 +267,7 @@ export function OrbmentConfigurator({
 
               return (
                 <article className="slotCard" key={`slot-${slotId}`}>
-                  <h4>Slot {slotId}</h4>
+                  <h4>Slot {formatSlotLabel(slotId, topology)}</h4>
                   {showNodeTierControls ? (
                     <label>
                       Node tier
@@ -251,9 +325,30 @@ export function OrbmentConfigurator({
             topology={topology}
             nodeTiers={state.nodeTiers}
             orbmentVisual={orbmentVisual}
+            equippedMasterQuartzId={state.equippedMasterQuartzId}
+            masterQuartzLevel={state.masterQuartzLevel}
+            masterQuartzById={masterQuartzById}
           />
         </div>
       </div>
     </section>
   )
+}
+
+function formatElementRequirements(requirements: ElementRequirement[]): string {
+  if (requirements.length === 0) {
+    return 'None'
+  }
+
+  return requirements
+    .map((requirement) => {
+      if (requirement.element) {
+        return `${requirement.element} ${requirement.value}`
+      }
+      if (requirement.elements && requirement.elements.length > 0) {
+        return `${requirement.elements.join('/')} ${requirement.value}`
+      }
+      return String(requirement.value)
+    })
+    .join(', ')
 }

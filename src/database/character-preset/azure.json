@@ -1,0 +1,119 @@
+[
+  {
+    "id": "lloyd-bannings",
+    "name": "Lloyd Bannings",
+    "line_count": 2,
+    "lines": [
+      ["M", 3, 2, 7],
+      ["M", 6, 5, 4]
+    ],
+    "restriction": null
+  },
+  {
+    "id": "elie-macdowell",
+    "name": "Elie MacDowell",
+    "line_count": 2,
+    "lines": [
+      ["M", 4],
+      ["M", 5, 6, 7, 2, 3]
+    ],
+    "restriction": {
+      "slots": [6],
+      "element": "Wind"
+    }
+  },
+  {
+    "id": "tio-plato",
+    "name": "Tio Plato",
+    "line_count": 1,
+    "lines": [
+      ["M", 4, 3, 2, 7, 6, 5]
+    ],
+    "restriction": {
+      "slots": [3],
+      "element": "Water"
+    }
+  },
+  {
+    "id": "randy-orlando",
+    "name": "Randy Orlando",
+    "line_count": 3,
+    "lines": [
+      ["M", 5, 4, 3],
+      ["M", 2, 7],
+      ["M", 6]
+    ],
+    "restriction": {
+      "slots": [4],
+      "element": "Fire"
+    }
+  },
+  {
+    "id": "noel-seeker",
+    "name": "Noel Seeker",
+    "line_count": 4,
+    "lines": [
+      ["M", 2],
+      ["M", 7],
+      ["M", 6],
+      ["M", 5, 4, 3]
+    ],
+    "restriction": {
+      "slots": [4],
+      "element": "Earth"
+    }
+  },
+  {
+    "id": "wazy-hemisphere",
+    "name": "Wazy Hemisphere",
+    "line_count": 2,
+    "lines": [
+      ["M", 3],
+      ["M", 4, 5, 6, 7, 2]
+    ],
+    "restriction": {
+      "slots": [5],
+      "element": "Space"
+    }
+  },
+  {
+    "id": "rixia-mao",
+    "name": "Rixia Mao",
+    "line_count": 3,
+    "lines": [
+      ["M", 2],
+      ["M", 7],
+      ["M", 6, 5, 4, 3]
+    ],
+    "restriction": {
+      "slots": [5],
+      "element": "Mirage"
+    }
+  },
+  {
+    "id": "alex-dudley",
+    "name": "Alex Dudley",
+    "line_count": 2,
+    "lines": [
+      ["M", 3, 2],
+      ["M", 4, 5, 6, 7]
+    ],
+    "restriction": {
+      "slots": [5],
+      "element": "Time"
+    }
+  },
+  {
+    "id": "arios-maclaine",
+    "name": "Arios MacLaine",
+    "line_count": 2,
+    "lines": [
+      ["M", 2, 3, 4, 5],
+      ["M", 6, 7]
+    ],
+    "restriction": {
+      "slots": [4],
+      "element": "Time"
+    }
+  }
+]

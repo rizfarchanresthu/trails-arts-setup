@@ -1,3 +1,4 @@
+import azurePresets from '../database/character-preset/azure.json'
 import sky3rdPresets from '../database/character-preset/sky-3rd.json'
 import skyFcPresets from '../database/character-preset/sky-fc.json'
 import skyScPresets from '../database/character-preset/sky-sc.json'
@@ -7,13 +8,15 @@ import { type LineDirection } from './rules/skyFcRules'
 import { type ElementName, type OrbmentTopology, type SlotId } from './types'
 import { type OrbmentPresetShape } from '../state/orbmentState'
 
+type RawLineSlot = number | string
+
 type RawCharacterPreset = {
   id: string
   name: string
   line_count: number
-  lines: number[][]
+  lines: RawLineSlot[][]
   restriction: {
-    slots: number[]
+    slots: Array<number | string>
     element: ElementName
   } | null
 }
@@ -34,6 +37,7 @@ const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
   'sky-sc': skyScPresets as RawCharacterPreset[],
   'sky-3rd': sky3rdPresets as RawCharacterPreset[],
   zero: zeroPresets as RawCharacterPreset[],
+  azure: azurePresets as RawCharacterPreset[],
 }
 
 export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[] {
@@ -47,7 +51,8 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
     const presetShape: OrbmentPresetShape = {
       lineCount: raw.line_count,
       lines: raw.lines.map((line) => {
-        const outer = line.slice(1) as SlotId[]
+        const resolved = line.map((slot) => resolvePresetSlot(slot, topology))
+        const outer = resolved.slice(1)
         return {
           start: outer[0] ?? 2,
           direction: inferLineDirection(outer, topology),
@@ -63,12 +68,19 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
       presetShape,
       restriction: raw.restriction
         ? {
-            slots: raw.restriction.slots.map((slot) => slot as SlotId),
+            slots: raw.restriction.slots.map((slot) => resolvePresetSlot(slot, topology)),
             element: raw.restriction.element,
           }
         : null,
     }
   })
+}
+
+function resolvePresetSlot(slot: RawLineSlot, topology: OrbmentTopology): SlotId {
+  if (slot === 'M' || slot === 'm') {
+    return topology.masterQuartzSlot ?? topology.centerSlot
+  }
+  return Number(slot) as SlotId
 }
 
 function inferLineDirection(outerPath: SlotId[], topology: OrbmentTopology): LineDirection {

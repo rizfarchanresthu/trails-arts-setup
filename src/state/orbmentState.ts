@@ -1,4 +1,11 @@
-import { type ElementName, type OrbmentTopology, type Quartz, type SlotId } from '../domain/types'
+import {
+  type ElementName,
+  type MasterQuartz,
+  type MasterQuartzLevel,
+  type OrbmentTopology,
+  type Quartz,
+  type SlotId,
+} from '../domain/types'
 import {
   clampLineCount,
   createDefaultArcLengths,
@@ -19,6 +26,8 @@ export type OrbmentState = {
   slotRestrictions: SlotRestrictionMap
   equippedQuartz: EquippedQuartzMap
   nodeTiers: NodeTierMap
+  equippedMasterQuartzId: number | null
+  masterQuartzLevel: number
 }
 
 export type OrbmentPresetShape = {
@@ -45,6 +54,8 @@ export function createInitialOrbmentState(topology: OrbmentTopology): OrbmentSta
     slotRestrictions: createSlotRestrictionMap(topology),
     equippedQuartz: createEquippedQuartzMap(topology),
     nodeTiers: createNodeTierMap(topology),
+    equippedMasterQuartzId: null,
+    masterQuartzLevel: 1,
   }
 }
 
@@ -102,6 +113,8 @@ export function applyPresetRestrictions(
     ...state,
     slotRestrictions,
     equippedQuartz: Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as EquippedQuartzMap,
+    equippedMasterQuartzId: null,
+    masterQuartzLevel: 1,
   }
 }
 
@@ -176,7 +189,12 @@ export function setSlotRestriction(
   slotId: SlotId,
   restriction: ElementName | null,
   quartzById: Map<number, Quartz>,
+  masterQuartzSlot?: SlotId,
 ): OrbmentState {
+  if (masterQuartzSlot !== undefined && slotId === masterQuartzSlot) {
+    return state
+  }
+
   const next = {
     ...state,
     slotRestrictions: {
@@ -214,7 +232,12 @@ export function setEquippedQuartz(
   slotId: SlotId,
   quartzId: number | null,
   quartzById: Map<number, Quartz>,
+  masterQuartzSlot?: SlotId,
 ): OrbmentState {
+  if (masterQuartzSlot !== undefined && slotId === masterQuartzSlot) {
+    return state
+  }
+
   if (!quartzId) {
     return {
       ...state,
@@ -303,12 +326,76 @@ export function getAvailableLineStarts(
   )
 }
 
+export function setEquippedMasterQuartz(
+  state: OrbmentState,
+  masterQuartzId: number | null,
+  masterQuartzById: Map<number, MasterQuartz>,
+): OrbmentState {
+  if (!masterQuartzId) {
+    return {
+      ...state,
+      equippedMasterQuartzId: null,
+    }
+  }
+
+  const masterQuartz = masterQuartzById.get(masterQuartzId)
+  if (!masterQuartz) {
+    return state
+  }
+
+  return {
+    ...state,
+    equippedMasterQuartzId: masterQuartzId,
+    masterQuartzLevel: clampMasterQuartzLevel(masterQuartz, state.masterQuartzLevel),
+  }
+}
+
+export function setMasterQuartzLevel(
+  state: OrbmentState,
+  level: number,
+  masterQuartzById: Map<number, MasterQuartz>,
+): OrbmentState {
+  const masterQuartz = state.equippedMasterQuartzId
+    ? masterQuartzById.get(state.equippedMasterQuartzId)
+    : null
+  if (!masterQuartz || !masterQuartz.levels.some((entry) => entry.level === level)) {
+    return state
+  }
+
+  return {
+    ...state,
+    masterQuartzLevel: level,
+  }
+}
+
+export function getMasterQuartzLevelData(
+  masterQuartz: MasterQuartz | null | undefined,
+  level: number,
+): MasterQuartzLevel | null {
+  if (!masterQuartz) {
+    return null
+  }
+  return masterQuartz.levels.find((entry) => entry.level === level) ?? null
+}
+
+export function clampMasterQuartzLevel(masterQuartz: MasterQuartz, level: number): number {
+  if (masterQuartz.levels.some((entry) => entry.level === level)) {
+    return level
+  }
+  return masterQuartz.levels[0]?.level ?? 1
+}
+
 export function setNodeTier(
   state: OrbmentState,
   slotId: SlotId,
   tier: number,
   quartzById: Map<number, Quartz>,
+  masterQuartzSlot?: SlotId,
 ): OrbmentState {
+  if (masterQuartzSlot !== undefined && slotId === masterQuartzSlot) {
+    return state
+  }
+
   if (!Number.isInteger(tier) || tier < 1) {
     return state
   }
