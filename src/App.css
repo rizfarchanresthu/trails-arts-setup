@@ -43,11 +43,28 @@ label {
 
 input,
 button {
-  padding: 0.45rem 0.6rem;
+  min-height: 36px;
+  padding: 0.2rem 0.5rem;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg);
   color: var(--text-h);
+  box-shadow: none;
+  font: inherit;
+  line-height: 1.35;
+  appearance: none;
+}
+
+input:hover,
+button:hover:not(:disabled) {
+  border-color: var(--text-h);
+}
+
+input:focus,
+input:focus-visible,
+button:focus-visible {
+  outline: none;
+  border-color: var(--text-h);
 }
 
 .appSelect {
@@ -59,8 +76,26 @@ button {
   z-index: 40;
 }
 
+.appSelect input,
+.appSelect input:hover,
+.appSelect input:focus,
+.appSelect input:focus-visible {
+  min-height: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  appearance: auto;
+}
+
 button {
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
 }
 
 .inlineActions {
@@ -104,9 +139,6 @@ button {
 .artButton {
   width: 100%;
   text-align: left;
-  background: #fff;
-  color: inherit;
-  cursor: pointer;
 }
 
 .artNameCell {
