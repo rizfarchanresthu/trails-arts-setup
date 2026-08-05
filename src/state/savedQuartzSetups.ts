@@ -371,17 +371,24 @@ function getSlotIdsFromMaps(value: Record<string, unknown>): SlotId[] {
 function createFallbackTopology(slotIds: SlotId[]): OrbmentTopology {
   const centerSlot = slotIds[0] ?? 1
   const outerSlots = slotIds.filter((slotId) => slotId !== centerSlot)
+  const wrapsOuterRing = outerSlots.length >= 6
   const adjacency: Record<number, SlotId[]> = {
     [centerSlot]: outerSlots,
   }
   for (let index = 0; index < outerSlots.length; index += 1) {
     const current = outerSlots[index]
     const neighbors: SlotId[] = [centerSlot]
-    if (outerSlots[index - 1]) {
-      neighbors.push(outerSlots[index - 1])
+    const previous = wrapsOuterRing
+      ? outerSlots[(index - 1 + outerSlots.length) % outerSlots.length]
+      : outerSlots[index - 1]
+    const next = wrapsOuterRing
+      ? outerSlots[(index + 1) % outerSlots.length]
+      : outerSlots[index + 1]
+    if (previous !== undefined) {
+      neighbors.push(previous)
     }
-    if (outerSlots[index + 1]) {
-      neighbors.push(outerSlots[index + 1])
+    if (next !== undefined) {
+      neighbors.push(next)
     }
     adjacency[current] = neighbors
   }
@@ -391,6 +398,7 @@ function createFallbackTopology(slotIds: SlotId[]): OrbmentTopology {
     outerSlots,
     outerDirectionSequence: outerSlots,
     outerAdjacency: adjacency,
+    wrapsOuterRing,
     maxLines: Math.max(1, outerSlots.length),
     nodeTierDefaults: Object.fromEntries(slotIds.map((slotId) => [slotId, 1])),
   }

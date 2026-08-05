@@ -239,16 +239,10 @@ export function setEquippedQuartz(
     return state
   }
 
-  if (quartz.exclusive_group) {
-    for (const [otherSlotKey, otherQuartzId] of Object.entries(state.equippedQuartz)) {
-      const otherSlotId = Number(otherSlotKey) as SlotId
-      if (otherSlotId === slotId || !otherQuartzId) {
-        continue
-      }
-      const otherQuartz = quartzById.get(otherQuartzId)
-      if (otherQuartz?.exclusive_group === quartz.exclusive_group) {
-        return state
-      }
+  if (quartz.exclusive_groups.length > 0) {
+    const usedGroups = getUsedExclusiveGroups(state.equippedQuartz, quartzById, slotId)
+    if (quartz.exclusive_groups.some((group) => usedGroups.has(group))) {
+      return state
     }
   }
 
@@ -282,7 +276,7 @@ export function getAllowedQuartzForSlot(
       return false
     }
 
-    if (!quartz.exclusive_group) {
+    if (quartz.exclusive_groups.length === 0) {
       return true
     }
 
@@ -290,7 +284,7 @@ export function getAllowedQuartzForSlot(
       return true
     }
 
-    return !usedGroups.has(quartz.exclusive_group)
+    return !quartz.exclusive_groups.some((group) => usedGroups.has(group))
   })
 }
 
@@ -353,8 +347,8 @@ export function getUsedExclusiveGroups(
       continue
     }
     const quartz = quartzById.get(quartzId)
-    if (quartz?.exclusive_group) {
-      groups.add(quartz.exclusive_group)
+    for (const group of quartz?.exclusive_groups ?? []) {
+      groups.add(group)
     }
   }
   return groups

@@ -43,7 +43,7 @@ export type Quartz = {
   effect: string
   element: ElementName
   tier?: number
-  exclusive_group: string | null
+  exclusive_groups: string[]
   elemental_value: ElementRequirement[] | 'No value'
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
 }
@@ -76,6 +76,7 @@ export type OrbmentTopology = {
   outerSlots: SlotId[]
   outerDirectionSequence: SlotId[]
   outerAdjacency: Record<number, SlotId[]>
+  wrapsOuterRing: boolean
   maxLines: number
   nodeTierDefaults: Record<number, number>
 }

@@ -72,10 +72,21 @@ function inferLineDirection(outerPath: SlotId[], topology: OrbmentTopology): Lin
     return 'cw'
   }
 
-  const firstIndex = topology.outerDirectionSequence.indexOf(outerPath[0])
-  const secondIndex = topology.outerDirectionSequence.indexOf(outerPath[1])
+  const sequence = topology.outerDirectionSequence
+  const firstIndex = sequence.indexOf(outerPath[0])
+  const secondIndex = sequence.indexOf(outerPath[1])
   if (firstIndex < 0 || secondIndex < 0) {
     return 'cw'
+  }
+
+  if (topology.wrapsOuterRing) {
+    const length = sequence.length
+    if (secondIndex === (firstIndex + 1) % length) {
+      return 'cw'
+    }
+    if (secondIndex === (firstIndex - 1 + length) % length) {
+      return 'ccw'
+    }
   }
 
   return secondIndex > firstIndex ? 'cw' : 'ccw'

@@ -150,7 +150,7 @@ function buildLineWalk(
       break
     }
     path.push(current)
-    const next = nextOuterByDirection(current, direction, topology.outerDirectionSequence)
+    const next = nextOuterByDirection(current, direction, topology)
     if (!next || !topology.outerAdjacency[current].includes(next) || claimed.has(next) || path.includes(next)) {
       const alternative = topology.outerAdjacency[current].find(
         (slotId) => slotId !== topology.centerSlot && !claimed.has(slotId) && !path.includes(slotId),
@@ -171,8 +171,9 @@ function buildLineWalk(
 function nextOuterByDirection(
   current: SlotId,
   direction: LineDirection,
-  directionSequence: SlotId[],
+  topology: OrbmentTopology,
 ): SlotId | null {
+  const directionSequence = topology.outerDirectionSequence
   const index = directionSequence.indexOf(current)
   if (index < 0) {
     return null
@@ -181,7 +182,10 @@ function nextOuterByDirection(
   const delta = direction === 'cw' ? 1 : -1
   const nextIndex = index + delta
   if (nextIndex < 0 || nextIndex >= directionSequence.length) {
-    return null
+    if (!topology.wrapsOuterRing) {
+      return null
+    }
+    return directionSequence[(nextIndex + directionSequence.length) % directionSequence.length]
   }
   return directionSequence[nextIndex]
 }

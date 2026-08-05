@@ -19,8 +19,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "defense",
-    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
   },
   {
     "id": 2,
@@ -42,8 +44,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "defense",
-    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
   },
   {
     "id": 3,
@@ -65,8 +69,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "defense",
-    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
   },
   {
     "id": 4,
@@ -88,8 +94,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 5,
@@ -111,8 +119,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 6,
@@ -129,8 +139,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Earth_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 7,
@@ -152,8 +164,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "hp",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
   },
   {
     "id": 8,
@@ -175,8 +189,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "hp",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
   },
   {
     "id": 9,
@@ -198,8 +214,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "hp",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
   },
   {
     "id": 10,
@@ -221,8 +239,10 @@
         "value": 30
       }
     ],
-    "exclusive_group": "mind",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
   },
   {
     "id": 11,
@@ -244,8 +264,10 @@
         "value": 300
       }
     ],
-    "exclusive_group": "mind",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
   },
   {
     "id": 12,
@@ -267,8 +289,10 @@
         "value": 900
       }
     ],
-    "exclusive_group": "mind",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
   },
   {
     "id": 13,
@@ -290,8 +314,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 14,
@@ -312,8 +338,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/3/34/Water_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "heal"
+    ]
   },
   {
     "id": 15,
@@ -335,8 +363,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "attack",
-    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
   },
   {
     "id": 16,
@@ -358,8 +388,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "attack",
-    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
   },
   {
     "id": 17,
@@ -381,8 +413,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "attack",
-    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
   },
   {
     "id": 18,
@@ -404,8 +438,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 19,
@@ -427,8 +463,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 20,
@@ -445,8 +483,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Fire_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 21,
@@ -468,8 +508,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "shield",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
   },
   {
     "id": 22,
@@ -491,8 +533,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "shield",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
   },
   {
     "id": 23,
@@ -514,8 +558,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "shield",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
   },
   {
     "id": 24,
@@ -537,8 +583,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "evade",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
   },
   {
     "id": 25,
@@ -560,8 +608,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "evade",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
   },
   {
     "id": 26,
@@ -583,8 +633,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "evade",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
   },
   {
     "id": 27,
@@ -606,8 +658,10 @@
         "value": 30
       }
     ],
-    "exclusive_group": "impede",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
   },
   {
     "id": 28,
@@ -629,8 +683,10 @@
         "value": 300
       }
     ],
-    "exclusive_group": "impede",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
   },
   {
     "id": 29,
@@ -647,8 +703,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": "impede",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
   },
   {
     "id": 30,
@@ -670,8 +728,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 31,
@@ -692,8 +752,8 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Wind_%28Sora_Quartz%29.png",
+    "exclusive_groups": []
   },
   {
     "id": 32,
@@ -715,8 +775,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "action",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
   },
   {
     "id": 33,
@@ -738,8 +800,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "action",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
   },
   {
     "id": 34,
@@ -761,8 +825,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "action",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
   },
   {
     "id": 35,
@@ -784,8 +850,10 @@
         "value": 50
       }
     ],
-    "exclusive_group": "status_inflict",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "status_inflict"
+    ]
   },
   {
     "id": 36,
@@ -807,8 +875,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "cast",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
   },
   {
     "id": 37,
@@ -830,8 +900,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "cast",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
   },
   {
     "id": 38,
@@ -848,8 +920,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": "deathblow",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "deathblow"
+    ]
   },
   {
     "id": 39,
@@ -861,8 +935,10 @@
     "element": "Time",
     "elemental_value": "No value",
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": "deathblow",
-    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d4/Time_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "deathblow"
+    ]
   },
   {
     "id": 40,
@@ -884,8 +960,10 @@
         "value": 100
       }
     ],
-    "exclusive_group": "move",
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "move"
+    ]
   },
   {
     "id": 41,
@@ -907,8 +985,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "move",
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "move"
+    ]
   },
   {
     "id": 42,
@@ -930,8 +1010,10 @@
         "value": 1000
       }
     ],
-    "exclusive_group": "move",
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "move"
+    ]
   },
   {
     "id": 43,
@@ -967,8 +1049,10 @@
         "value": 10
       }
     ],
-    "exclusive_group": "ep_cut",
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
   },
   {
     "id": 44,
@@ -1004,8 +1088,10 @@
         "value": 100
       }
     ],
-    "exclusive_group": "ep_cut",
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
   },
   {
     "id": 45,
@@ -1041,8 +1127,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "ep_cut",
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
   },
   {
     "id": 46,
@@ -1059,8 +1147,8 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": []
   },
   {
     "id": 47,
@@ -1081,8 +1169,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a1/Space_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "eagle_eye"
+    ]
   },
   {
     "id": 48,
@@ -1118,8 +1208,10 @@
         "value": 10
       }
     ],
-    "exclusive_group": "ep",
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
   },
   {
     "id": 49,
@@ -1155,8 +1247,10 @@
         "value": 100
       }
     ],
-    "exclusive_group": "ep",
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
   },
   {
     "id": 50,
@@ -1192,8 +1286,10 @@
         "value": 500
       }
     ],
-    "exclusive_group": "ep",
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
   },
   {
     "id": 51,
@@ -1215,8 +1311,10 @@
         "value": 20
       }
     ],
-    "exclusive_group": "hit",
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
   },
   {
     "id": 52,
@@ -1238,8 +1336,10 @@
         "value": 200
       }
     ],
-    "exclusive_group": "hit",
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
   },
   {
     "id": 53,
@@ -1261,8 +1361,10 @@
         "value": 800
       }
     ],
-    "exclusive_group": "hit",
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
   },
   {
     "id": 54,
@@ -1279,8 +1381,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "information"
+    ]
   },
   {
     "id": 55,
@@ -1301,8 +1405,10 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": [
+      "haze"
+    ]
   },
   {
     "id": 56,
@@ -1323,7 +1429,7 @@
       }
     ],
     "synthesis_cost": "Not synthesizable",
-    "exclusive_group": null,
-    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png"
+    "image_url": "https://static.wikitide.net/falcomwiki/4/45/Mirage_%28Sora_Quartz%29.png",
+    "exclusive_groups": []
   }
 ]
