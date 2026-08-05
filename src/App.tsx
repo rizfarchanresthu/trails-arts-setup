@@ -3,6 +3,7 @@ import './App.css'
 import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
 import { getCharacterTemplatesForBase } from './domain/characterPresets'
@@ -32,9 +33,12 @@ import {
   updateSavedQuartzSetup,
 } from './state/savedQuartzSetups'
 
+type MainTab = 'orbment' | 'arts'
+
 function App() {
   const [selectedBaseId, setSelectedBaseId] = useState('sky-fc')
   const [selectedTemplateId, setSelectedTemplateId] = useState('')
+  const [activeMainTab, setActiveMainTab] = useState<MainTab>('orbment')
   const [orbmentState, setOrbmentState] = useState(() => createInitialOrbmentState(getBaseById('sky-fc').topology))
   const [savedSetups, setSavedSetups] = useState(listSavedQuartzSetups)
   const [selectedSavedSetupId, setSelectedSavedSetupId] = useState('')
@@ -267,78 +271,95 @@ function App() {
         {setupNotice ? <p className="hintText">{setupNotice}</p> : null}
       </header>
 
-      <section className="topSection">
-        <OrbmentConfigurator
-          state={orbmentState}
-          lines={derivedLines.lines}
-          lineWarnings={derivedLines.warnings}
-          quartzList={base.quartz}
-          quartzById={quartzById}
-          masterQuartzList={base.masterQuartz ?? []}
-          masterQuartzById={masterQuartzById}
-          onLineCountChange={(lineCount) =>
-            setOrbmentState((prev) => updateLineCount(prev, lineCount, base.topology))
+      <Tabs
+        className="mainTabs"
+        value={activeMainTab}
+        onValueChange={(value) => {
+          if (value === 'orbment' || value === 'arts') {
+            setActiveMainTab(value)
           }
-          onLineStartChange={(lineIndex, start) =>
-            setOrbmentState((prev) => setLineStart(prev, lineIndex, start, base.topology))
-          }
-          onLineDirectionChange={(lineIndex, direction) =>
-            setOrbmentState((prev) => setLineDirection(prev, lineIndex, direction))
-          }
-          onTransferArcLength={(lineIndex, direction) =>
-            setOrbmentState((prev) => transferArcLength(prev, lineIndex, direction))
-          }
-          onRestrictionChange={(slotId: SlotId, restriction: ElementName | null) =>
-            setOrbmentState((prev) =>
-              setSlotRestriction(prev, slotId, restriction, quartzById, base.topology.masterQuartzSlot),
-            )
-          }
-          onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
-            setOrbmentState((prev) =>
-              setEquippedQuartz(prev, slotId, quartzId, quartzById, base.topology.masterQuartzSlot),
-            )
-          }
-          onNodeTierChange={(slotId: SlotId, tier: number) =>
-            setOrbmentState((prev) => setNodeTier(prev, slotId, tier, quartzById, base.topology.masterQuartzSlot))
-          }
-          onMasterQuartzChange={(masterQuartzId) =>
-            setOrbmentState((prev) => setEquippedMasterQuartz(prev, masterQuartzId, masterQuartzById))
-          }
-          onMasterQuartzLevelChange={(level) =>
-            setOrbmentState((prev) => setMasterQuartzLevel(prev, level, masterQuartzById))
-          }
-          topology={base.topology}
-          orbmentVisual={base.orbmentVisual}
-          selectedBaseId={selectedBaseId}
-          selectedTemplateId={selectedTemplateId}
-          characterTemplates={characterTemplates}
-          onTemplateChange={(templateId) => {
-            setSelectedTemplateId(templateId)
-            setSelectedSavedSetupId('')
-            setDraftBeforeSavedLoad(null)
-            setSetupNotice('')
-            if (!templateId) {
-              setOrbmentState(createInitialOrbmentState(base.topology))
-              return
+        }}
+      >
+        <TabsList>
+          <TabsTrigger className={activeMainTab === 'orbment' ? 'is-active-main-tab' : undefined} value="orbment">
+            Orbment
+          </TabsTrigger>
+          <TabsTrigger className={activeMainTab === 'arts' ? 'is-active-main-tab' : undefined} value="arts">
+            Available Arts ({evaluation.availableArts.length})
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent className="text-base" value="orbment">
+          <OrbmentConfigurator
+            state={orbmentState}
+            lines={derivedLines.lines}
+            lineWarnings={derivedLines.warnings}
+            quartzList={base.quartz}
+            quartzById={quartzById}
+            masterQuartzList={base.masterQuartz ?? []}
+            masterQuartzById={masterQuartzById}
+            onLineCountChange={(lineCount) =>
+              setOrbmentState((prev) => updateLineCount(prev, lineCount, base.topology))
             }
-            const selectedTemplate = characterTemplates.find((template) => template.id === templateId)
-            if (!selectedTemplate) {
-              return
+            onLineStartChange={(lineIndex, start) =>
+              setOrbmentState((prev) => setLineStart(prev, lineIndex, start, base.topology))
             }
-            const presetState = createOrbmentStateFromPreset(selectedTemplate.presetShape, base.topology)
-            const withRestrictions = applyPresetRestrictions(presetState, selectedTemplate.restriction)
-            setOrbmentState(withRestrictions)
-          }}
-        />
-      </section>
-
-      <section className="bottomSection">
-        <ArtsList
-          arts={evaluation.availableArts}
-          lineTotals={evaluation.lineTotals}
-          elementOrderSource={base.arts}
-        />
-      </section>
+            onLineDirectionChange={(lineIndex, direction) =>
+              setOrbmentState((prev) => setLineDirection(prev, lineIndex, direction))
+            }
+            onTransferArcLength={(lineIndex, direction) =>
+              setOrbmentState((prev) => transferArcLength(prev, lineIndex, direction))
+            }
+            onRestrictionChange={(slotId: SlotId, restriction: ElementName | null) =>
+              setOrbmentState((prev) =>
+                setSlotRestriction(prev, slotId, restriction, quartzById, base.topology.masterQuartzSlot),
+              )
+            }
+            onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
+              setOrbmentState((prev) =>
+                setEquippedQuartz(prev, slotId, quartzId, quartzById, base.topology.masterQuartzSlot),
+              )
+            }
+            onNodeTierChange={(slotId: SlotId, tier: number) =>
+              setOrbmentState((prev) => setNodeTier(prev, slotId, tier, quartzById, base.topology.masterQuartzSlot))
+            }
+            onMasterQuartzChange={(masterQuartzId) =>
+              setOrbmentState((prev) => setEquippedMasterQuartz(prev, masterQuartzId, masterQuartzById))
+            }
+            onMasterQuartzLevelChange={(level) =>
+              setOrbmentState((prev) => setMasterQuartzLevel(prev, level, masterQuartzById))
+            }
+            topology={base.topology}
+            orbmentVisual={base.orbmentVisual}
+            selectedBaseId={selectedBaseId}
+            selectedTemplateId={selectedTemplateId}
+            characterTemplates={characterTemplates}
+            onTemplateChange={(templateId) => {
+              setSelectedTemplateId(templateId)
+              setSelectedSavedSetupId('')
+              setDraftBeforeSavedLoad(null)
+              setSetupNotice('')
+              if (!templateId) {
+                setOrbmentState(createInitialOrbmentState(base.topology))
+                return
+              }
+              const selectedTemplate = characterTemplates.find((template) => template.id === templateId)
+              if (!selectedTemplate) {
+                return
+              }
+              const presetState = createOrbmentStateFromPreset(selectedTemplate.presetShape, base.topology)
+              const withRestrictions = applyPresetRestrictions(presetState, selectedTemplate.restriction)
+              setOrbmentState(withRestrictions)
+            }}
+          />
+        </TabsContent>
+        <TabsContent className="text-base" value="arts">
+          <ArtsList
+            arts={evaluation.availableArts}
+            lineTotals={evaluation.lineTotals}
+            elementOrderSource={base.arts}
+          />
+        </TabsContent>
+      </Tabs>
     </main>
   )
 }
