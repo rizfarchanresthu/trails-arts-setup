@@ -3,6 +3,7 @@ import artsColdSteelI from '../database/arts/cold-steel-i.json'
 import artsColdSteelII from '../database/arts/cold-steel-ii.json'
 import artsColdSteelIII from '../database/arts/cold-steel-iii.json'
 import artsColdSteelIV from '../database/arts/cold-steel-iv.json'
+import artsReverie from '../database/arts/reverie.json'
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
@@ -12,11 +13,13 @@ import masterQuartzColdSteelI from '../database/master-quartz/cold-steel-i.json'
 import masterQuartzColdSteelII from '../database/master-quartz/cold-steel-ii.json'
 import masterQuartzColdSteelIII from '../database/master-quartz/cold-steel-iii.json'
 import masterQuartzColdSteelIV from '../database/master-quartz/cold-steel-iv.json'
+import masterQuartzReverie from '../database/master-quartz/reverie.json'
 import quartzAzure from '../database/quartz/azure.json'
 import quartzColdSteelI from '../database/quartz/cold-steel-i.json'
 import quartzColdSteelII from '../database/quartz/cold-steel-ii.json'
 import quartzColdSteelIII from '../database/quartz/cold-steel-iii.json'
 import quartzColdSteelIV from '../database/quartz/cold-steel-iv.json'
+import quartzReverie from '../database/quartz/reverie.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
@@ -265,6 +268,21 @@ const COLD_STEEL_IV_BASE: BaseData = {
   ruleSet: 'cold-steel-iv',
 }
 
+const REVERIE_BASE: BaseData = {
+  id: 'reverie',
+  label: 'Reverie',
+  quartz: quartzReverie.map((entry) => normalizeQuartz(entry)),
+  arts: artsReverie.map((entry) => normalizeArt(entry)),
+  masterQuartz: masterQuartzReverie.map((entry) => normalizeMasterQuartz(entry)),
+  topology: COLD_STEEL_IV_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ARCUS II',
+    outerEdges: 'straight',
+    nodeShape: 'circle',
+  },
+  ruleSet: 'reverie',
+}
+
 export const BASES: BaseData[] = [
   SKY_FC_BASE,
   SKY_SC_BASE,
@@ -275,6 +293,7 @@ export const BASES: BaseData[] = [
   COLD_STEEL_II_BASE,
   COLD_STEEL_III_BASE,
   COLD_STEEL_IV_BASE,
+  REVERIE_BASE,
 ]
 
 export function getBaseById(baseId: string): BaseData {
@@ -461,7 +480,7 @@ function normalizeExclusiveGroups(value: unknown): string[] {
 }
 
 function normalizeRank(value: unknown): QuartzRank | null | undefined {
-  if (value === 'R' || value === 'SR') {
+  if (value === 'R' || value === 'SR' || value === 'UR') {
     return value
   }
   if (value === null) {

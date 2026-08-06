@@ -1,0 +1,1886 @@
+[
+  {
+    "id": "lloyd-bannings",
+    "name": "Lloyd Bannings",
+    "route": "Lloyd Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "elie-macdowell",
+    "name": "Elie MacDowell",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "tio-plato",
+    "name": "Tio Plato",
+    "route": "Lloyd Route",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "randy-orlando",
+    "name": "Randy Orlando",
+    "route": "Lloyd Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4
+      ],
+      [
+        "M",
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "noel-seeker",
+    "name": "Noel Seeker",
+    "route": "Lloyd Route",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "wazy-hemisphere",
+    "name": "Wazy Hemisphere",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          4,
+          6
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "rixia-mao",
+    "name": "Rixia Mao",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "lechter-arundel",
+    "name": "Lechter Arundel",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "tita-russell",
+    "name": "Tita Russell",
+    "route": "Lloyd Route",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "agate-crosner",
+    "name": "Agate Crosner",
+    "route": "Lloyd Route",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4
+      ],
+      [
+        "M",
+        5,
+        6
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "alisa-reinford",
+    "name": "Alisa Reinford",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "sharon-krueger",
+    "name": "Sharon Krueger",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "estelle-bright",
+    "name": "Estelle Bright",
+    "route": "Lloyd Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "joshua-bright",
+    "name": "Joshua Bright",
+    "route": "Lloyd Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "machias-regnitz",
+    "name": "Machias Regnitz",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "towa-herschel",
+    "name": "Towa Herschel",
+    "route": "Lloyd Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "rean-schwarzer",
+    "name": "Rean Schwarzer",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "juna-crawford",
+    "name": "Juna Crawford",
+    "route": "Rean Route",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "kurt-vander",
+    "name": "Kurt Vander",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "altina-orion",
+    "name": "Altina Orion",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "musse-egret",
+    "name": "Musse Egret",
+    "route": "Rean Route",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "ash-carbide",
+    "name": "Ash Carbide",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4
+      ],
+      [
+        "M",
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          8
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "claire-rieveldt",
+    "name": "Claire Rieveldt",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "elliot-craig",
+    "name": "Elliot Craig",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "elise-schwarzer",
+    "name": "Elise Schwarzer",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "jusis-albarea",
+    "name": "Jusis Albarea",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "millium-orion",
+    "name": "Millium Orion",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "crow-armbrust",
+    "name": "Crow Armbrust",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "emma-millstein",
+    "name": "Emma Millstein",
+    "route": "Rean Route",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "fie-clausell",
+    "name": "Fie Clausell",
+    "route": "Rean Route",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6
+      ],
+      [
+        "M",
+        5,
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "gaius-worzel",
+    "name": "Gaius Worzel",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        6,
+        5,
+        4,
+        3,
+        2
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "sara-valestein",
+    "name": "Sara Valestein",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "laura-s-arseid",
+    "name": "Laura S. Arseid",
+    "route": "Rean Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6
+      ],
+      [
+        "M",
+        5,
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "celine",
+    "name": "Celine",
+    "route": "Rean Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "c",
+    "name": "C",
+    "route": "C Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "lapis-rosenberg",
+    "name": "Lapis Rosenberg",
+    "route": "C Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "nadia-rayne",
+    "name": "Nadia Rayne",
+    "route": "C Route",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "swin-abel",
+    "name": "Swin Abel",
+    "route": "C Route",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4
+      ],
+      [
+        "M",
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "renne-bright",
+    "name": "Renne Bright",
+    "route": "C Route",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "duvalie",
+    "name": "Duvalie",
+    "route": "C Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "arios-maclaine",
+    "name": "Arios MacLaine",
+    "route": "C Route",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "angelica-rogner",
+    "name": "Angelica Rogner",
+    "route": "Reverie Corridor",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "alfin-reise-arnor",
+    "name": "Alfin Reise Arnor",
+    "route": "Reverie Corridor",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "aurelia-le-guin",
+    "name": "Aurelia Le Guin",
+    "route": "Reverie Corridor",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "george-nome",
+    "name": "George Nome",
+    "route": "Reverie Corridor",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "olivert-reise-arnor",
+    "name": "Olivert Reise Arnor",
+    "route": "Reverie Corridor",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "roselia-millstein",
+    "name": "Roselia Millstein",
+    "route": "Reverie Corridor",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "toval-randonneur",
+    "name": "Toval Randonneur",
+    "route": "Reverie Corridor",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "victor-s-arseid",
+    "name": "Victor S. Arseid",
+    "route": "Reverie Corridor",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "vita-clotilde",
+    "name": "Vita Clotilde",
+    "route": "Reverie Corridor",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "mcburn",
+    "name": "McBurn",
+    "route": "Reverie Corridor",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          6,
+          8
+        ],
+        "element": "Fire"
+      }
+    ]
+  }
+]

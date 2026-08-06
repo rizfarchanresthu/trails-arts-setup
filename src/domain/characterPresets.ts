@@ -3,6 +3,7 @@ import coldSteelIPresets from '../database/character-preset/cold-steel-i.json'
 import coldSteelIIPresets from '../database/character-preset/cold-steel-ii.json'
 import coldSteelIIIPresets from '../database/character-preset/cold-steel-iii.json'
 import coldSteelIVPresets from '../database/character-preset/cold-steel-iv.json'
+import reveriePresets from '../database/character-preset/reverie.json'
 import sky3rdPresets from '../database/character-preset/sky-3rd.json'
 import skyFcPresets from '../database/character-preset/sky-fc.json'
 import skyScPresets from '../database/character-preset/sky-sc.json'
@@ -25,6 +26,7 @@ type RawCharacterPreset = {
   line_count: number
   lines: RawLineSlot[][]
   restriction: RawRestrictionGroup | RawRestrictionGroup[] | null
+  route?: string
 }
 
 export type CharacterTemplate = {
@@ -33,6 +35,7 @@ export type CharacterTemplate = {
   lineCount: number
   presetShape: OrbmentPresetShape
   restriction: SlotElementRestrictionShape
+  route?: string
 }
 
 const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
@@ -45,6 +48,7 @@ const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
   'cold-steel-ii': coldSteelIIPresets as RawCharacterPreset[],
   'cold-steel-iii': coldSteelIIIPresets as RawCharacterPreset[],
   'cold-steel-iv': coldSteelIVPresets as RawCharacterPreset[],
+  reverie: reveriePresets as RawCharacterPreset[],
 }
 
 export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[] {
@@ -74,6 +78,7 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
       lineCount: raw.line_count,
       presetShape,
       restriction: resolvePresetRestrictions(raw.restriction, topology),
+      ...(raw.route ? { route: raw.route } : {}),
     }
   })
 }

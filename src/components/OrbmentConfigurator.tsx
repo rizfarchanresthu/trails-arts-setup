@@ -30,7 +30,7 @@ import {
   getAvailableLineStarts,
   getMasterQuartzLevelData,
 } from '../state/orbmentState'
-import { AppSelect } from './AppSelect'
+import { AppSelect, type SelectOptions } from './AppSelect'
 import { MasterQuartzPicker } from './MasterQuartzPicker'
 import { OrbmentGraph } from './OrbmentGraph'
 import { QuartzPicker } from './QuartzPicker'
@@ -99,6 +99,7 @@ export function OrbmentConfigurator({
     selectedBaseId !== 'sky-fc' && ruleSet !== 'cold-steel-i' && ruleSet !== 'cold-steel-iii'
   const showGrantedArts = isColdSteelRuleSet(ruleSet)
   const configTitle = orbmentVisual?.title ? `${orbmentVisual.title} Config` : 'Orbment Config'
+  const characterPresetOptions = buildCharacterPresetOptions(characterTemplates)
   const equippedMasterQuartz = state.equippedMasterQuartzId
     ? masterQuartzById.get(state.equippedMasterQuartzId)
     : null
@@ -185,13 +186,8 @@ export function OrbmentConfigurator({
                 Character preset
                 <AppSelect
                   value={selectedTemplateId}
-                  options={[
-                    { value: '', label: 'Custom' },
-                    ...characterTemplates.map((template) => ({
-                      value: template.id,
-                      label: template.name,
-                    })),
-                  ]}
+                  isSearchable
+                  options={characterPresetOptions}
                   onChange={onTemplateChange}
                 />
               </Label>
@@ -308,7 +304,9 @@ export function OrbmentConfigurator({
                                 ? 'Cold Steel III templates are loaded from the Cold Steel III character preset database.'
                                 : selectedBaseId === 'cold-steel-iv'
                                   ? 'Cold Steel IV templates are loaded from the Cold Steel IV character preset database.'
-                                  : 'No base-specific character presets are loaded for this base yet.'}
+                                  : selectedBaseId === 'reverie'
+                                    ? 'Reverie templates are loaded from the Reverie character preset database, grouped by route.'
+                                    : 'No base-specific character presets are loaded for this base yet.'}
               </p>
             </div>
           </div>
@@ -596,4 +594,33 @@ function formatElementRequirements(requirements: ElementRequirement[]): string {
       return String(requirement.value)
     })
     .join(', ')
+}
+
+function buildCharacterPresetOptions(characterTemplates: CharacterTemplate[]): SelectOptions {
+  const customOption = { value: '', label: 'Custom' }
+  const hasRoutes = characterTemplates.some((template) => template.route)
+
+  if (!hasRoutes) {
+    return [
+      customOption,
+      ...characterTemplates.map((template) => ({
+        value: template.id,
+        label: template.name,
+      })),
+    ]
+  }
+
+  const groups: Array<{ label: string; options: Array<{ value: string; label: string }> }> = []
+  for (const template of characterTemplates) {
+    const route = template.route ?? 'Other'
+    const existing = groups.find((group) => group.label === route)
+    const option = { value: template.id, label: template.name }
+    if (existing) {
+      existing.options.push(option)
+    } else {
+      groups.push({ label: route, options: [option] })
+    }
+  }
+
+  return [customOption, ...groups]
 }

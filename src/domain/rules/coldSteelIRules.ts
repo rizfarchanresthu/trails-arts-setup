@@ -9,7 +9,7 @@ import {
 } from '../types'
 
 export function quartzFamilyName(quartz: Quartz): string {
-  if (quartz.rank === 'R' || quartz.rank === 'SR') {
+  if (quartz.rank === 'R' || quartz.rank === 'SR' || quartz.rank === 'UR') {
     const parenthesized = ` (${quartz.rank})`
     if (quartz.name.en.endsWith(parenthesized)) {
       return quartz.name.en.slice(0, -parenthesized.length)
