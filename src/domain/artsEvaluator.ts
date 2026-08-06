@@ -15,6 +15,8 @@ export type MasterQuartzEvalContext = {
   masterQuartzById: Map<number, MasterQuartz>
   equippedMasterQuartzId: number | null
   masterQuartzLevel: number
+  equippedSubMasterQuartzId?: number | null
+  subMasterQuartzLevel?: number
 }
 
 export function evaluateAvailableArts(

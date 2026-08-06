@@ -20,7 +20,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       1
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 2,
@@ -47,7 +48,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       1
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 3,
@@ -74,7 +76,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       2
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 4,
@@ -101,7 +104,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       2
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 5,
@@ -128,7 +132,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       3
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 6,
@@ -155,7 +160,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       3
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 7,
@@ -178,7 +184,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       4
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 8,
@@ -205,7 +212,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       4
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 9,
@@ -228,7 +236,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       5
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 10,
@@ -255,7 +264,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       5
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 11,
@@ -282,7 +292,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       34
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 12,
@@ -309,7 +320,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       34
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 13,
@@ -332,7 +344,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       35
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 14,
@@ -359,7 +372,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       35
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 15,
@@ -382,7 +396,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       36
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 16,
@@ -409,7 +424,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       36
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 17,
@@ -432,7 +448,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       37
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 18,
@@ -459,7 +476,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       37
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 19,
@@ -489,7 +507,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/a/ae/Earth_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 20,
@@ -519,7 +538,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/a/ae/Earth_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 21,
@@ -549,7 +569,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/a/ae/Earth_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 22,
@@ -585,7 +606,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 23,
@@ -621,7 +643,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 24,
@@ -641,7 +664,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/48/Earth_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 25,
@@ -665,7 +689,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/48/Earth_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 26,
@@ -695,7 +720,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 27,
@@ -727,7 +753,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/48/Earth_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 28,
@@ -742,7 +769,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/8/80/Earth_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 29,
@@ -759,7 +787,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 30,
@@ -774,7 +803,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/8/80/Earth_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 31,
@@ -789,7 +819,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/8/80/Earth_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 32,
@@ -812,7 +843,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       6
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 33,
@@ -839,7 +871,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       6
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 34,
@@ -866,7 +899,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       7
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 35,
@@ -893,7 +927,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       7
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 36,
@@ -920,7 +955,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       8
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 37,
@@ -947,7 +983,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       8
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 38,
@@ -970,7 +1007,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       9
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 39,
@@ -997,7 +1035,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       9
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 40,
@@ -1020,7 +1059,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       10
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 41,
@@ -1047,7 +1087,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       10
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 42,
@@ -1070,7 +1111,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       38
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 43,
@@ -1097,7 +1139,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       38
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 44,
@@ -1120,7 +1163,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       39
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 45,
@@ -1147,7 +1191,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       39
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 46,
@@ -1170,7 +1215,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       40
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 47,
@@ -1197,7 +1243,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       40
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 48,
@@ -1224,7 +1271,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       41
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 49,
@@ -1251,7 +1299,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       41
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 50,
@@ -1278,7 +1327,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       42
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 51,
@@ -1305,7 +1355,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       42
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 52,
@@ -1339,7 +1390,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Water_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 53,
@@ -1373,7 +1425,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Water_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 54,
@@ -1403,7 +1456,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Water_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 55,
@@ -1433,7 +1487,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Water_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 56,
@@ -1463,7 +1518,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/e/e0/Water_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 57,
@@ -1499,7 +1555,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 58,
@@ -1535,7 +1592,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 59,
@@ -1555,7 +1613,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/d/da/Water_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 60,
@@ -1583,7 +1642,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/d/da/Water_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 61,
@@ -1609,7 +1669,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 62,
@@ -1641,7 +1702,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/d/da/Water_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 63,
@@ -1658,7 +1720,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 64,
@@ -1673,7 +1736,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/d/d5/Water_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 65,
@@ -1688,7 +1752,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/d/d5/Water_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 66,
@@ -1711,7 +1776,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       11
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 67,
@@ -1738,7 +1804,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       11
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 68,
@@ -1765,7 +1832,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       12
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 69,
@@ -1792,7 +1860,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       12
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 70,
@@ -1819,7 +1888,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       13
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 71,
@@ -1846,7 +1916,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       13
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 72,
@@ -1873,7 +1944,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       14
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 73,
@@ -1900,7 +1972,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       14
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 74,
@@ -1923,7 +1996,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       15
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 75,
@@ -1950,7 +2024,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       15
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 76,
@@ -1973,7 +2048,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       16
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 77,
@@ -2000,7 +2076,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       16
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 78,
@@ -2027,7 +2104,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       43
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 79,
@@ -2054,7 +2132,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       43
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 80,
@@ -2081,7 +2160,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       44
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 81,
@@ -2108,7 +2188,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       44
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 82,
@@ -2131,7 +2212,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       45
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 83,
@@ -2158,7 +2240,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       45
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 84,
@@ -2181,7 +2264,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       46
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 85,
@@ -2208,7 +2292,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       46
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 86,
@@ -2238,7 +2323,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 87,
@@ -2268,7 +2354,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 88,
@@ -2298,7 +2385,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/2/21/Fire_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 89,
@@ -2334,7 +2422,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 90,
@@ -2370,7 +2459,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 91,
@@ -2390,7 +2480,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/4d/Fire_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 92,
@@ -2422,7 +2513,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/4d/Fire_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 93,
@@ -2446,7 +2538,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/4d/Fire_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 94,
@@ -2472,7 +2565,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 95,
@@ -2504,7 +2598,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/4/4d/Fire_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 96,
@@ -2521,7 +2616,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 97,
@@ -2536,7 +2632,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/5/56/Fire_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 98,
@@ -2551,7 +2648,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/5/56/Fire_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 99,
@@ -2574,7 +2672,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       17
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 100,
@@ -2601,7 +2700,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       17
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 101,
@@ -2628,7 +2728,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       18
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 102,
@@ -2655,7 +2756,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       18
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 103,
@@ -2682,7 +2784,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       19
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 104,
@@ -2709,7 +2812,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       19
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 105,
@@ -2732,7 +2836,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       20
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 106,
@@ -2759,7 +2864,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       20
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 107,
@@ -2782,7 +2888,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       21
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 108,
@@ -2809,7 +2916,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       21
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 109,
@@ -2836,7 +2944,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       47
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 110,
@@ -2863,7 +2972,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       47
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 111,
@@ -2890,7 +3000,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       48
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 112,
@@ -2917,7 +3028,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       48
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 113,
@@ -2944,7 +3056,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       49
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 114,
@@ -2971,7 +3084,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       49
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 115,
@@ -3005,7 +3119,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/d/d1/Wind_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 116,
@@ -3039,7 +3154,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/d/d1/Wind_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 117,
@@ -3069,7 +3185,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/d/d1/Wind_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 118,
@@ -3099,7 +3216,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/d/d1/Wind_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 119,
@@ -3129,7 +3247,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/d/d1/Wind_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 120,
@@ -3165,7 +3284,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 121,
@@ -3201,7 +3321,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 122,
@@ -3221,7 +3342,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/8/8d/Wind_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 123,
@@ -3249,7 +3371,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/8/8d/Wind_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 124,
@@ -3275,7 +3398,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 125,
@@ -3307,7 +3431,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/8/8d/Wind_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 126,
@@ -3322,7 +3447,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Wind_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 127,
@@ -3339,7 +3465,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 128,
@@ -3354,7 +3481,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Wind_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 129,
@@ -3369,7 +3497,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Wind_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 130,
@@ -3384,7 +3513,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Wind_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 131,
@@ -3407,7 +3537,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       22
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 132,
@@ -3434,7 +3565,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       22
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 133,
@@ -3461,7 +3593,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       23
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 134,
@@ -3488,7 +3621,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       23
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 135,
@@ -3518,7 +3652,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       24
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 136,
@@ -3545,7 +3680,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       24
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 137,
@@ -3568,7 +3704,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       25
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 138,
@@ -3595,7 +3732,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       25
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 139,
@@ -3622,7 +3760,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       50
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 140,
@@ -3649,7 +3788,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       50
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 141,
@@ -3676,7 +3816,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       51
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 142,
@@ -3703,7 +3844,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       51
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 143,
@@ -3726,7 +3868,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       52
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 144,
@@ -3753,7 +3896,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       52
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 145,
@@ -3783,7 +3927,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 146,
@@ -3813,7 +3958,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 147,
@@ -3843,7 +3989,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 148,
@@ -3880,7 +4027,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 149,
@@ -3917,7 +4065,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 150,
@@ -3954,7 +4103,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 151,
@@ -3991,7 +4141,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/be/Time_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 152,
@@ -4017,7 +4168,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 153,
@@ -4039,7 +4191,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 154,
@@ -4071,7 +4224,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Time_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 155,
@@ -4086,7 +4240,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/a/a0/Time_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 156,
@@ -4103,7 +4258,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 157,
@@ -4118,7 +4274,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/a/a0/Time_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 158,
@@ -4133,7 +4290,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/a/a0/Time_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 159,
@@ -4156,7 +4314,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       26
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 160,
@@ -4183,7 +4342,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       26
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 161,
@@ -4210,7 +4370,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       27
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 162,
@@ -4237,7 +4398,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       27
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 163,
@@ -4267,7 +4429,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       28
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 164,
@@ -4294,7 +4457,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       28
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 165,
@@ -4317,7 +4481,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       29
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 166,
@@ -4344,7 +4509,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       29
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 167,
@@ -4371,7 +4537,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       53
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 168,
@@ -4398,7 +4565,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       53
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 169,
@@ -4425,7 +4593,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       54
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 170,
@@ -4452,7 +4621,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       54
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 171,
@@ -4479,7 +4649,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       55
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 172,
@@ -4506,7 +4677,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       55
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 173,
@@ -4543,7 +4715,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Space_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 174,
@@ -4580,7 +4753,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Space_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 175,
@@ -4617,7 +4791,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Space_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 176,
@@ -4647,7 +4822,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Space_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 177,
@@ -4671,7 +4847,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/7/71/Space_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 178,
@@ -4691,7 +4868,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/7/71/Space_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 179,
@@ -4719,7 +4897,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/7/71/Space_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 180,
@@ -4745,7 +4924,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 181,
@@ -4767,7 +4947,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 182,
@@ -4799,7 +4980,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/7/71/Space_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 183,
@@ -4814,7 +4996,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Space_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 184,
@@ -4831,7 +5014,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 185,
@@ -4846,7 +5030,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Space_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 186,
@@ -4861,7 +5046,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/f/fb/Space_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 187,
@@ -4884,7 +5070,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       30
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 188,
@@ -4911,7 +5098,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       30
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 189,
@@ -4938,7 +5126,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       31
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 190,
@@ -4965,7 +5154,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       31
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 191,
@@ -4995,7 +5185,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       32
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 192,
@@ -5022,7 +5213,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       32
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 193,
@@ -5045,7 +5237,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       33
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 194,
@@ -5072,7 +5265,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       33
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 195,
@@ -5095,7 +5289,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       56
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 196,
@@ -5122,7 +5317,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       56
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 197,
@@ -5152,7 +5348,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       57
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 198,
@@ -5179,7 +5376,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       57
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 199,
@@ -5209,7 +5407,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       58
-    ]
+    ],
+    "tier": 0
   },
   {
     "id": 200,
@@ -5236,7 +5435,8 @@
     "line_exclusive_groups": [],
     "arts_learnt": [
       58
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 201,
@@ -5273,7 +5473,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/bd/Mirage_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 202,
@@ -5310,7 +5511,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/bd/Mirage_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 203,
@@ -5340,7 +5542,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/bd/Mirage_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 204,
@@ -5370,7 +5573,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/bd/Mirage_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 205,
@@ -5400,7 +5604,8 @@
     },
     "image_url": "https://static.wikitide.net/falcomwiki/b/bd/Mirage_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 0
   },
   {
     "id": 206,
@@ -5420,7 +5625,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Mirage_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 207,
@@ -5440,7 +5646,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Mirage_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 208,
@@ -5464,7 +5671,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Mirage_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 209,
@@ -5498,7 +5706,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "status_effect"
-    ]
+    ],
+    "tier": 1
   },
   {
     "id": 210,
@@ -5530,7 +5739,8 @@
     ],
     "image_url": "https://static.wikitide.net/falcomwiki/e/e4/Mirage_R_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 1
   },
   {
     "id": 211,
@@ -5547,7 +5757,8 @@
     "exclusive_groups": [],
     "line_exclusive_groups": [
       "stat_reduction"
-    ]
+    ],
+    "tier": 2
   },
   {
     "id": 212,
@@ -5562,7 +5773,8 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/2/2d/Mirage_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   },
   {
     "id": 213,
@@ -5577,6 +5789,7 @@
     "synthesis_cost": "Not synthesizable",
     "image_url": "https://static.wikitide.net/falcomwiki/2/2d/Mirage_SR_%28Sen_Quartz%29.png",
     "exclusive_groups": [],
-    "line_exclusive_groups": []
+    "line_exclusive_groups": [],
+    "tier": 2
   }
 ]

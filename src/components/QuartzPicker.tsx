@@ -11,7 +11,7 @@ type QuartzPickerProps = {
 function parseQuartzSearch(input: string): { text: string; maxTier: number | null } {
   let maxTier: number | null = null
   const text = input
-    .replace(/\b(?:t|tier)\s*([1-3])\b/gi, (_, digit: string) => {
+    .replace(/\b(?:t|tier)\s*([0-3])\b/gi, (_, digit: string) => {
       const nextTier = Number(digit)
       maxTier = maxTier == null ? nextTier : Math.max(maxTier, nextTier)
       return ' '

@@ -25,10 +25,10 @@ export const ELEMENT_COLORS: Record<ElementName, string> = {
 export const LOST_QUARTZ_COLOR = '#8a4ecf'
 
 export const LINE_COLORS = [
-  '#f25f5c',
+  '#f2c14e',
   '#4d9de0',
   '#5abf90',
-  '#f2c14e',
+  '#f25f5c',
   '#9c89b8',
   '#f28482',
   '#84a59d',
@@ -37,10 +37,10 @@ export const LINE_COLORS = [
 
 export type QuartzRank = 'R' | 'SR'
 
-export type OrbmentRuleSetId = 'sky-crossbell' | 'cold-steel-i' | 'cold-steel-ii'
+export type OrbmentRuleSetId = 'sky-crossbell' | 'cold-steel-i' | 'cold-steel-ii' | 'cold-steel-iii'
 
 export function isColdSteelRuleSet(ruleSet?: OrbmentRuleSetId): boolean {
-  return ruleSet === 'cold-steel-i' || ruleSet === 'cold-steel-ii'
+  return ruleSet === 'cold-steel-i' || ruleSet === 'cold-steel-ii' || ruleSet === 'cold-steel-iii'
 }
 
 export type SlotId = number
@@ -122,6 +122,7 @@ export type OrbmentTopology = {
   maxLines: number
   nodeTierDefaults: Record<number, number>
   masterQuartzSlot?: SlotId
+  subMasterQuartzSlot?: SlotId
 }
 
 export type OrbmentVisual = {
@@ -142,7 +143,13 @@ export type BaseData = {
 }
 
 export function formatSlotLabel(slotId: SlotId, topology: OrbmentTopology): string {
-  return topology.masterQuartzSlot === slotId ? 'M' : String(slotId)
+  if (topology.masterQuartzSlot === slotId) {
+    return 'M'
+  }
+  if (topology.subMasterQuartzSlot === slotId) {
+    return 'S'
+  }
+  return String(slotId)
 }
 
 export function isLostQuartz(quartz: Quartz): quartz is Quartz & { element: ElementName[] } {

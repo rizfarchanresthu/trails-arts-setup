@@ -6,6 +6,7 @@ type MasterQuartzPickerProps = {
   masterQuartzList: MasterQuartz[]
   value: number | null
   onChange: (masterQuartzId: number | null) => void
+  excludeId?: number | null
 }
 
 function filterMasterQuartzOption(option: FilterOptionOption<SelectOption>, inputValue: string): boolean {
@@ -44,12 +45,13 @@ function formatMasterQuartzOptionLabel(option: SelectOption) {
   )
 }
 
-export function MasterQuartzPicker({ masterQuartzList, value, onChange }: MasterQuartzPickerProps) {
+export function MasterQuartzPicker({ masterQuartzList, value, onChange, excludeId = null }: MasterQuartzPickerProps) {
   const groupedOptions: Array<SelectOption | SelectGroup> = [
     { value: '', label: 'Empty slot' },
     ...ELEMENTS.flatMap((element): SelectGroup[] => {
       const options = masterQuartzList
         .filter((masterQuartz) => masterQuartz.element === element)
+        .filter((masterQuartz) => masterQuartz.id !== excludeId || masterQuartz.id === value)
         .map((masterQuartz) => ({
           value: String(masterQuartz.id),
           label: masterQuartz.name.en,

@@ -10,9 +10,13 @@ import {
 
 export function quartzFamilyName(quartz: Quartz): string {
   if (quartz.rank === 'R' || quartz.rank === 'SR') {
-    const suffix = ` (${quartz.rank})`
-    if (quartz.name.en.endsWith(suffix)) {
-      return quartz.name.en.slice(0, -suffix.length)
+    const parenthesized = ` (${quartz.rank})`
+    if (quartz.name.en.endsWith(parenthesized)) {
+      return quartz.name.en.slice(0, -parenthesized.length)
+    }
+    const plain = ` ${quartz.rank}`
+    if (quartz.name.en.endsWith(plain)) {
+      return quartz.name.en.slice(0, -plain.length)
     }
   }
   return quartz.name.en
@@ -103,6 +107,15 @@ export function evaluateGrantedArts(
     const equipped = masterQuartz.masterQuartzById.get(masterQuartz.equippedMasterQuartzId)
     if (equipped) {
       for (const artId of collectCumulativeArtsLearnt(equipped, masterQuartz.masterQuartzLevel)) {
+        grantedIds.add(artId)
+      }
+    }
+  }
+
+  if (masterQuartz?.equippedSubMasterQuartzId) {
+    const equipped = masterQuartz.masterQuartzById.get(masterQuartz.equippedSubMasterQuartzId)
+    if (equipped) {
+      for (const artId of collectCumulativeArtsLearnt(equipped, masterQuartz.subMasterQuartzLevel ?? 1)) {
         grantedIds.add(artId)
       }
     }

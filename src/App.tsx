@@ -25,6 +25,8 @@ import {
   setLineDirection,
   setLineStart,
   setMasterQuartzLevel,
+  setEquippedSubMasterQuartz,
+  setSubMasterQuartzLevel,
   setNodeTier,
   setSlotRestriction,
   transferArcLength,
@@ -99,6 +101,8 @@ function App() {
       masterQuartzById,
       equippedMasterQuartzId: orbmentState.equippedMasterQuartzId,
       masterQuartzLevel: orbmentState.masterQuartzLevel,
+      equippedSubMasterQuartzId: orbmentState.equippedSubMasterQuartzId,
+      subMasterQuartzLevel: orbmentState.subMasterQuartzLevel,
     }
     if (isColdSteelRuleSet(base.ruleSet)) {
       return evaluateGrantedArts(base.arts, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
@@ -112,7 +116,9 @@ function App() {
     masterQuartzById,
     orbmentState.equippedMasterQuartzId,
     orbmentState.equippedQuartz,
+    orbmentState.equippedSubMasterQuartzId,
     orbmentState.masterQuartzLevel,
+    orbmentState.subMasterQuartzLevel,
     quartzById,
   ])
 
@@ -450,26 +456,41 @@ function App() {
             }
             onRestrictionChange={(slotId: SlotId, restriction: ElementName | null) =>
               setOrbmentState((prev) =>
-                setSlotRestriction(prev, slotId, restriction, quartzById, base.topology.masterQuartzSlot),
+                setSlotRestriction(prev, slotId, restriction, quartzById, {
+                  masterQuartzSlot: base.topology.masterQuartzSlot,
+                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                }),
               )
             }
             onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
               setOrbmentState((prev) =>
                 setEquippedQuartz(prev, slotId, quartzId, quartzById, {
                   masterQuartzSlot: base.topology.masterQuartzSlot,
+                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
                   lines: derivedLines.lines,
                   ruleSet: base.ruleSet,
                 }),
               )
             }
             onNodeTierChange={(slotId: SlotId, tier: number) =>
-              setOrbmentState((prev) => setNodeTier(prev, slotId, tier, quartzById, base.topology.masterQuartzSlot))
+              setOrbmentState((prev) =>
+                setNodeTier(prev, slotId, tier, quartzById, {
+                  masterQuartzSlot: base.topology.masterQuartzSlot,
+                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                }),
+              )
             }
             onMasterQuartzChange={(masterQuartzId) =>
               setOrbmentState((prev) => setEquippedMasterQuartz(prev, masterQuartzId, masterQuartzById))
             }
             onMasterQuartzLevelChange={(level) =>
               setOrbmentState((prev) => setMasterQuartzLevel(prev, level, masterQuartzById))
+            }
+            onSubMasterQuartzChange={(subMasterQuartzId) =>
+              setOrbmentState((prev) => setEquippedSubMasterQuartz(prev, subMasterQuartzId, masterQuartzById))
+            }
+            onSubMasterQuartzLevelChange={(level) =>
+              setOrbmentState((prev) => setSubMasterQuartzLevel(prev, level, masterQuartzById))
             }
             topology={base.topology}
             orbmentVisual={base.orbmentVisual}
@@ -547,5 +568,7 @@ function cloneOrbmentState(state: OrbmentState): OrbmentState {
     nodeTiers: { ...state.nodeTiers },
     equippedMasterQuartzId: state.equippedMasterQuartzId,
     masterQuartzLevel: state.masterQuartzLevel,
+    equippedSubMasterQuartzId: state.equippedSubMasterQuartzId,
+    subMasterQuartzLevel: state.subMasterQuartzLevel,
   }
 }

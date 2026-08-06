@@ -182,12 +182,31 @@ export function sanitizeForBase(
   if (topology.masterQuartzSlot !== undefined) {
     equippedQuartz[topology.masterQuartzSlot] = null
   }
+  if (topology.subMasterQuartzSlot !== undefined) {
+    equippedQuartz[topology.subMasterQuartzSlot] = null
+  }
 
   const equippedMasterQuartzId = setup.orbmentState.equippedMasterQuartzId
   const sanitizedMasterQuartzId =
     equippedMasterQuartzId !== null && validMasterQuartzIds.has(equippedMasterQuartzId)
       ? equippedMasterQuartzId
       : null
+
+  const equippedSubMasterQuartzId = setup.orbmentState.equippedSubMasterQuartzId
+  let sanitizedSubMasterQuartzId =
+    topology.subMasterQuartzSlot !== undefined &&
+    equippedSubMasterQuartzId !== null &&
+    validMasterQuartzIds.has(equippedSubMasterQuartzId)
+      ? equippedSubMasterQuartzId
+      : null
+
+  if (
+    sanitizedSubMasterQuartzId !== null &&
+    sanitizedMasterQuartzId !== null &&
+    sanitizedSubMasterQuartzId === sanitizedMasterQuartzId
+  ) {
+    sanitizedSubMasterQuartzId = null
+  }
 
   return {
     ...setup,
@@ -196,6 +215,8 @@ export function sanitizeForBase(
       equippedQuartz,
       equippedMasterQuartzId: sanitizedMasterQuartzId,
       masterQuartzLevel: sanitizedMasterQuartzId ? setup.orbmentState.masterQuartzLevel : 1,
+      equippedSubMasterQuartzId: sanitizedSubMasterQuartzId,
+      subMasterQuartzLevel: sanitizedSubMasterQuartzId ? setup.orbmentState.subMasterQuartzLevel : 1,
     },
   }
 }
@@ -310,6 +331,8 @@ function normalizeOrbmentState(value: unknown): OrbmentState | null {
     nodeTiers: normalizeNodeTiersMap(value.nodeTiers, topology.slotIds, defaultState.nodeTiers),
     equippedMasterQuartzId: normalizeOptionalId(value.equippedMasterQuartzId),
     masterQuartzLevel: normalizePositiveInt(value.masterQuartzLevel) ?? 1,
+    equippedSubMasterQuartzId: normalizeOptionalId(value.equippedSubMasterQuartzId),
+    subMasterQuartzLevel: normalizePositiveInt(value.subMasterQuartzLevel) ?? 1,
   }
 }
 
@@ -344,6 +367,10 @@ function sanitizeOrbmentState(state: OrbmentState, topology: OrbmentTopology): O
     masterQuartzLevel: Number.isInteger(state.masterQuartzLevel) && state.masterQuartzLevel >= 1
       ? state.masterQuartzLevel
       : 1,
+    equippedSubMasterQuartzId: normalizeOptionalId(state.equippedSubMasterQuartzId),
+    subMasterQuartzLevel: Number.isInteger(state.subMasterQuartzLevel) && state.subMasterQuartzLevel >= 1
+      ? state.subMasterQuartzLevel
+      : 1,
   }
 
   if (topology.masterQuartzSlot !== undefined) {
@@ -352,6 +379,22 @@ function sanitizeOrbmentState(state: OrbmentState, topology: OrbmentTopology): O
   } else {
     sanitized.equippedMasterQuartzId = null
     sanitized.masterQuartzLevel = 1
+  }
+
+  if (topology.subMasterQuartzSlot !== undefined) {
+    sanitized.equippedQuartz[topology.subMasterQuartzSlot] = null
+    sanitized.slotRestrictions[topology.subMasterQuartzSlot] = null
+  } else {
+    sanitized.equippedSubMasterQuartzId = null
+    sanitized.subMasterQuartzLevel = 1
+  }
+
+  if (
+    sanitized.equippedMasterQuartzId !== null &&
+    sanitized.equippedSubMasterQuartzId === sanitized.equippedMasterQuartzId
+  ) {
+    sanitized.equippedSubMasterQuartzId = null
+    sanitized.subMasterQuartzLevel = 1
   }
 
   return sanitized

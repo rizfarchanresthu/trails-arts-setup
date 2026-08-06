@@ -52,6 +52,8 @@ type OrbmentConfiguratorProps = {
   onNodeTierChange: (slotId: SlotId, tier: number) => void
   onMasterQuartzChange?: (masterQuartzId: number | null) => void
   onMasterQuartzLevelChange?: (level: number) => void
+  onSubMasterQuartzChange?: (subMasterQuartzId: number | null) => void
+  onSubMasterQuartzLevelChange?: (level: number) => void
   topology: OrbmentTopology
   selectedBaseId: string
   selectedTemplateId: string
@@ -79,6 +81,8 @@ export function OrbmentConfigurator({
   onNodeTierChange,
   onMasterQuartzChange,
   onMasterQuartzLevelChange,
+  onSubMasterQuartzChange,
+  onSubMasterQuartzLevelChange,
   topology,
   selectedBaseId,
   selectedTemplateId,
@@ -88,14 +92,21 @@ export function OrbmentConfigurator({
   ruleSet,
   artsById = new Map(),
 }: OrbmentConfiguratorProps) {
-  const maxTier = Math.max(1, ...quartzList.map((quartz) => quartz.tier ?? 1))
-  const showNodeTierControls = selectedBaseId !== 'sky-fc' && ruleSet !== 'cold-steel-i'
+  const quartzTiers = quartzList.map((quartz) => quartz.tier).filter((tier): tier is number => tier != null)
+  const minTier = quartzTiers.length > 0 ? Math.min(...quartzTiers) : 1
+  const maxTier = quartzTiers.length > 0 ? Math.max(...quartzTiers) : 1
+  const showNodeTierControls =
+    selectedBaseId !== 'sky-fc' && ruleSet !== 'cold-steel-i' && ruleSet !== 'cold-steel-iii'
   const showGrantedArts = isColdSteelRuleSet(ruleSet)
   const configTitle = orbmentVisual?.title ? `${orbmentVisual.title} Config` : 'Orbment Config'
   const equippedMasterQuartz = state.equippedMasterQuartzId
     ? masterQuartzById.get(state.equippedMasterQuartzId)
     : null
   const masterLevelData = getMasterQuartzLevelData(equippedMasterQuartz, state.masterQuartzLevel)
+  const equippedSubMasterQuartz = state.equippedSubMasterQuartzId
+    ? masterQuartzById.get(state.equippedSubMasterQuartzId)
+    : null
+  const subMasterLevelData = getMasterQuartzLevelData(equippedSubMasterQuartz, state.subMasterQuartzLevel)
   const centerSlotId = topology.masterQuartzSlot ?? topology.centerSlot
   const { lineColumns, unassignedSlotIds } = getLineColumnSlotIds(lines, topology)
 
@@ -104,6 +115,8 @@ export function OrbmentConfigurator({
       return (
         <MasterSlotCard
           key={`slot-${slotId}`}
+          title="Master"
+          quartzLabel="Master quartz"
           equippedMasterQuartz={equippedMasterQuartz}
           masterLevelData={masterLevelData}
           masterQuartzList={masterQuartzList}
@@ -113,6 +126,28 @@ export function OrbmentConfigurator({
           onMasterQuartzLevelChange={onMasterQuartzLevelChange}
           showGrantedArts={showGrantedArts}
           artsById={artsById}
+          excludeId={state.equippedSubMasterQuartzId}
+        />
+      )
+    }
+
+    if (topology.subMasterQuartzSlot === slotId) {
+      return (
+        <MasterSlotCard
+          key={`slot-${slotId}`}
+          title="Sub-Master"
+          quartzLabel="Sub-master quartz"
+          equippedMasterQuartz={equippedSubMasterQuartz}
+          masterLevelData={subMasterLevelData}
+          masterQuartzList={masterQuartzList}
+          masterQuartzLevel={state.subMasterQuartzLevel}
+          equippedMasterQuartzId={state.equippedSubMasterQuartzId}
+          onMasterQuartzChange={onSubMasterQuartzChange}
+          onMasterQuartzLevelChange={onSubMasterQuartzLevelChange}
+          showGrantedArts={showGrantedArts}
+          artsById={artsById}
+          excludeId={state.equippedMasterQuartzId}
+          firstEffectOnly
         />
       )
     }
@@ -125,6 +160,7 @@ export function OrbmentConfigurator({
         topology={topology}
         quartzList={quartzList}
         quartzById={quartzById}
+        minTier={minTier}
         maxTier={maxTier}
         showNodeTierControls={showNodeTierControls}
         onRestrictionChange={onRestrictionChange}
@@ -268,7 +304,9 @@ export function OrbmentConfigurator({
                             ? 'Cold Steel I templates are loaded from the Cold Steel I character preset database.'
                             : selectedBaseId === 'cold-steel-ii'
                               ? 'Cold Steel II templates are loaded from the Cold Steel II character preset database.'
-                              : 'No base-specific character presets are loaded for this base yet.'}
+                              : selectedBaseId === 'cold-steel-iii'
+                                ? 'Cold Steel III templates are loaded from the Cold Steel III character preset database.'
+                                : 'No base-specific character presets are loaded for this base yet.'}
               </p>
             </div>
           </div>
@@ -284,6 +322,8 @@ export function OrbmentConfigurator({
               orbmentVisual={orbmentVisual}
               equippedMasterQuartzId={state.equippedMasterQuartzId}
               masterQuartzLevel={state.masterQuartzLevel}
+              equippedSubMasterQuartzId={state.equippedSubMasterQuartzId}
+              subMasterQuartzLevel={state.subMasterQuartzLevel}
               masterQuartzById={masterQuartzById}
               showTier={showNodeTierControls}
             />
@@ -291,7 +331,12 @@ export function OrbmentConfigurator({
         </div>
 
         <div className="slotsByLine">
-          <div>{renderSlotCard(centerSlotId)}</div>
+          <div className="grid gap-3">
+            {renderSlotCard(centerSlotId)}
+            {topology.subMasterQuartzSlot !== undefined
+              ? renderSlotCard(topology.subMasterQuartzSlot)
+              : null}
+          </div>
           <div className="slotsLineColumns">
             {lineColumns.map((column) => (
               <div className="slotsLineColumn" key={`line-column-${column.lineIndex}`}>
@@ -332,6 +377,8 @@ function getLineColumnSlotIds(lines: OrbmentLine[], topology: OrbmentTopology) {
 }
 
 type MasterSlotCardProps = {
+  title?: string
+  quartzLabel?: string
   equippedMasterQuartz: MasterQuartz | null | undefined
   masterLevelData: MasterQuartzLevel | null
   masterQuartzList: MasterQuartz[]
@@ -341,9 +388,13 @@ type MasterSlotCardProps = {
   onMasterQuartzLevelChange?: (level: number) => void
   showGrantedArts?: boolean
   artsById?: Map<number, Art>
+  excludeId?: number | null
+  firstEffectOnly?: boolean
 }
 
 function MasterSlotCard({
+  title = 'Master',
+  quartzLabel = 'Master quartz',
   equippedMasterQuartz,
   masterLevelData,
   masterQuartzList,
@@ -353,19 +404,26 @@ function MasterSlotCard({
   onMasterQuartzLevelChange,
   showGrantedArts = false,
   artsById = new Map(),
+  excludeId = null,
+  firstEffectOnly = false,
 }: MasterSlotCardProps) {
+  const displayedEffects = firstEffectOnly
+    ? (masterLevelData?.effects.slice(0, 1) ?? [])
+    : (masterLevelData?.effects ?? [])
+
   return (
     <Card size="sm">
       <CardHeader>
-        <CardTitle>Master</CardTitle>
+        <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-3">
         <Label className="grid gap-1.5 font-normal">
-          Master quartz
+          {quartzLabel}
           <MasterQuartzPicker
             masterQuartzList={masterQuartzList}
             value={equippedMasterQuartzId}
             onChange={(masterQuartzId) => onMasterQuartzChange?.(masterQuartzId)}
+            excludeId={excludeId}
           />
         </Label>
         {equippedMasterQuartz ? (
@@ -394,7 +452,7 @@ function MasterSlotCard({
                   </p>
                 )}
                 <ul className="grid list-disc gap-1 pl-5 text-sm">
-                  {masterLevelData.effects.map((effect, index) => (
+                  {displayedEffects.map((effect, index) => (
                     <li key={`mq-effect-${index}`}>
                       <strong>{effect.title}</strong>
                       {effect.detail ? `: ${effect.detail}` : ''}
@@ -416,6 +474,7 @@ type RegularSlotCardProps = {
   topology: OrbmentTopology
   quartzList: Quartz[]
   quartzById: Map<number, Quartz>
+  minTier: number
   maxTier: number
   showNodeTierControls: boolean
   onRestrictionChange: (slotId: SlotId, restriction: ElementName | null) => void
@@ -431,6 +490,7 @@ function RegularSlotCard({
   topology,
   quartzList,
   quartzById,
+  minTier,
   maxTier,
   showNodeTierControls,
   onRestrictionChange,
@@ -463,10 +523,12 @@ function RegularSlotCard({
             Node tier
             <AppSelect
               value={String(state.nodeTiers[slotId])}
-              options={Array.from({ length: maxTier }, (_, index) => index + 1).map((tierValue) => ({
-                value: String(tierValue),
-                label: `Tier ${tierValue}`,
-              }))}
+              options={Array.from({ length: maxTier - minTier + 1 }, (_, index) => minTier + index).map(
+                (tierValue) => ({
+                  value: String(tierValue),
+                  label: `Tier ${tierValue}`,
+                }),
+              )}
               onChange={(nextValue) => onNodeTierChange(slotId, Number(nextValue))}
             />
           </Label>

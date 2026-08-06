@@ -33,6 +33,8 @@ export type OrbmentState = {
   nodeTiers: NodeTierMap
   equippedMasterQuartzId: number | null
   masterQuartzLevel: number
+  equippedSubMasterQuartzId: number | null
+  subMasterQuartzLevel: number
 }
 
 export type OrbmentPresetShape = {
@@ -63,6 +65,8 @@ export function createInitialOrbmentState(topology: OrbmentTopology): OrbmentSta
     nodeTiers: createNodeTierMap(topology),
     equippedMasterQuartzId: null,
     masterQuartzLevel: 1,
+    equippedSubMasterQuartzId: null,
+    subMasterQuartzLevel: 1,
   }
 }
 
@@ -123,6 +127,8 @@ export function applyPresetRestrictions(
     equippedQuartz: Object.fromEntries(slotIds.map((slotId) => [slotId, null])) as EquippedQuartzMap,
     equippedMasterQuartzId: null,
     masterQuartzLevel: 1,
+    equippedSubMasterQuartzId: null,
+    subMasterQuartzLevel: 1,
   }
 }
 
@@ -197,9 +203,9 @@ export function setSlotRestriction(
   slotId: SlotId,
   restriction: ElementName | null,
   quartzById: Map<number, Quartz>,
-  masterQuartzSlot?: SlotId,
+  reservedSlots?: SlotId | ReservedMasterSlots,
 ): OrbmentState {
-  if (masterQuartzSlot !== undefined && slotId === masterQuartzSlot) {
+  if (isReservedMasterSlot(slotId, reservedSlots)) {
     return state
   }
 
@@ -234,8 +240,14 @@ export function setSlotRestriction(
   }
 }
 
+export type ReservedMasterSlots = {
+  masterQuartzSlot?: SlotId
+  subMasterQuartzSlot?: SlotId
+}
+
 export type EquipQuartzContext = {
   masterQuartzSlot?: SlotId
+  subMasterQuartzSlot?: SlotId
   lines?: OrbmentLine[]
   ruleSet?: OrbmentRuleSetId
 }
@@ -248,7 +260,7 @@ export function setEquippedQuartz(
   context: EquipQuartzContext | SlotId = {},
 ): OrbmentState {
   const options = typeof context === 'number' ? { masterQuartzSlot: context } : context
-  if (options.masterQuartzSlot !== undefined && slotId === options.masterQuartzSlot) {
+  if (isReservedMasterSlot(slotId, options)) {
     return state
   }
 
@@ -278,13 +290,13 @@ export function setEquippedQuartz(
     }
     if (options.ruleSet === 'cold-steel-ii') {
       const nodeTier = state.nodeTiers[slotId]
-      if (quartz.tier && quartz.tier > nodeTier) {
+      if (quartz.tier != null && quartz.tier > nodeTier) {
         return state
       }
     }
   } else {
     const nodeTier = state.nodeTiers[slotId]
-    if (quartz.tier && quartz.tier > nodeTier) {
+    if (quartz.tier != null && quartz.tier > nodeTier) {
       return state
     }
 
@@ -333,7 +345,7 @@ export function getAllowedQuartzForSlot(
       }
       if (context.ruleSet === 'cold-steel-ii') {
         const nodeTier = nodeTiers[slotId]
-        if (quartz.tier && quartz.tier > nodeTier) {
+        if (quartz.tier != null && quartz.tier > nodeTier) {
           return false
         }
       }
@@ -341,7 +353,7 @@ export function getAllowedQuartzForSlot(
     }
 
     const nodeTier = nodeTiers[slotId]
-    if (quartz.tier && quartz.tier > nodeTier) {
+    if (quartz.tier != null && quartz.tier > nodeTier) {
       return false
     }
 
@@ -385,6 +397,10 @@ export function setEquippedMasterQuartz(
     return state
   }
 
+  if (state.equippedSubMasterQuartzId === masterQuartzId) {
+    return state
+  }
+
   return {
     ...state,
     equippedMasterQuartzId: masterQuartzId,
@@ -410,6 +426,52 @@ export function setMasterQuartzLevel(
   }
 }
 
+export function setEquippedSubMasterQuartz(
+  state: OrbmentState,
+  subMasterQuartzId: number | null,
+  masterQuartzById: Map<number, MasterQuartz>,
+): OrbmentState {
+  if (!subMasterQuartzId) {
+    return {
+      ...state,
+      equippedSubMasterQuartzId: null,
+    }
+  }
+
+  const masterQuartz = masterQuartzById.get(subMasterQuartzId)
+  if (!masterQuartz) {
+    return state
+  }
+
+  if (state.equippedMasterQuartzId === subMasterQuartzId) {
+    return state
+  }
+
+  return {
+    ...state,
+    equippedSubMasterQuartzId: subMasterQuartzId,
+    subMasterQuartzLevel: clampMasterQuartzLevel(masterQuartz, state.subMasterQuartzLevel),
+  }
+}
+
+export function setSubMasterQuartzLevel(
+  state: OrbmentState,
+  level: number,
+  masterQuartzById: Map<number, MasterQuartz>,
+): OrbmentState {
+  const masterQuartz = state.equippedSubMasterQuartzId
+    ? masterQuartzById.get(state.equippedSubMasterQuartzId)
+    : null
+  if (!masterQuartz || !masterQuartz.levels.some((entry) => entry.level === level)) {
+    return state
+  }
+
+  return {
+    ...state,
+    subMasterQuartzLevel: level,
+  }
+}
+
 export function getMasterQuartzLevelData(
   masterQuartz: MasterQuartz | null | undefined,
   level: number,
@@ -432,13 +494,13 @@ export function setNodeTier(
   slotId: SlotId,
   tier: number,
   quartzById: Map<number, Quartz>,
-  masterQuartzSlot?: SlotId,
+  reservedSlots?: SlotId | ReservedMasterSlots,
 ): OrbmentState {
-  if (masterQuartzSlot !== undefined && slotId === masterQuartzSlot) {
+  if (isReservedMasterSlot(slotId, reservedSlots)) {
     return state
   }
 
-  if (!Number.isInteger(tier) || tier < 1) {
+  if (!Number.isInteger(tier) || tier < 0) {
     return state
   }
 
@@ -451,7 +513,7 @@ export function setNodeTier(
   }
   const equippedId = next.equippedQuartz[slotId]
   const equippedQuartz = equippedId ? quartzById.get(equippedId) : null
-  if (!equippedQuartz || !equippedQuartz.tier || equippedQuartz.tier <= tier) {
+  if (!equippedQuartz || equippedQuartz.tier == null || equippedQuartz.tier <= tier) {
     return next
   }
 
@@ -495,4 +557,17 @@ function createNodeTierMap(topology: OrbmentTopology): NodeTierMap {
   return Object.fromEntries(
     topology.slotIds.map((slotId) => [slotId, topology.nodeTierDefaults[slotId] ?? 1]),
   ) as NodeTierMap
+}
+
+function isReservedMasterSlot(slotId: SlotId, reservedSlots?: SlotId | ReservedMasterSlots): boolean {
+  if (reservedSlots == null) {
+    return false
+  }
+  if (typeof reservedSlots === 'number') {
+    return slotId === reservedSlots
+  }
+  return (
+    (reservedSlots.masterQuartzSlot !== undefined && slotId === reservedSlots.masterQuartzSlot) ||
+    (reservedSlots.subMasterQuartzSlot !== undefined && slotId === reservedSlots.subMasterQuartzSlot)
+  )
 }

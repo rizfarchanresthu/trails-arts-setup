@@ -77,7 +77,7 @@
     ],
     "restriction": [
       { "slots": [3, 7], "element": "Mirage" },
-      { "slots": [9], "element": "Earth" }
+      { "slots": [9], "element": "Fire" }
     ]
   },
   {
@@ -268,6 +268,44 @@
     "restriction": [
       { "slots": [3, 7], "element": "Mirage" },
       { "slots": [5], "element": "Wind" }
+    ]
+  },
+  {
+    "id": "crow-armbrust",
+    "name": "Crow Armbrust",
+    "line_count": 2,
+    "lines": [
+      ["M", 5, 6, 7, 8, 9],
+      ["M", 2, 3, 4]
+    ],
+    "restriction": [
+      { "slots": [3, 5], "element": "Time" },
+      { "slots": [9], "element": "Water" }
+    ]
+  },
+  {
+    "id": "altina-orion",
+    "name": "Altina Orion",
+    "line_count": 2,
+    "lines": [
+      ["M", 7, 6, 5, 4, 3],
+      ["M", 2, 9, 8]
+    ],
+    "restriction": [
+      { "slots": [5, 7], "element": "Time" },
+      { "slots": [3], "element": "Earth" }
+    ]
+  },
+  {
+    "id": "vita-clotilde",
+    "name": "Vita Clotilde",
+    "line_count": 1,
+    "lines": [
+      ["M", 7, 6, 5, 4, 3, 2, 9, 8]
+    ],
+    "restriction": [
+      { "slots": [3, 9], "element": "Water" },
+      { "slots": [5], "element": "Mirage" }
     ]
   }
 ]

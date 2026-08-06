@@ -1,6 +1,7 @@
 import artsAzure from '../database/arts/azure.json'
 import artsColdSteelI from '../database/arts/cold-steel-i.json'
 import artsColdSteelII from '../database/arts/cold-steel-ii.json'
+import artsColdSteelIII from '../database/arts/cold-steel-iii.json'
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
@@ -8,9 +9,11 @@ import artsZero from '../database/arts/zero.json'
 import masterQuartzAzure from '../database/master-quartz/azure.json'
 import masterQuartzColdSteelI from '../database/master-quartz/cold-steel-i.json'
 import masterQuartzColdSteelII from '../database/master-quartz/cold-steel-ii.json'
+import masterQuartzColdSteelIII from '../database/master-quartz/cold-steel-iii.json'
 import quartzAzure from '../database/quartz/azure.json'
 import quartzColdSteelI from '../database/quartz/cold-steel-i.json'
 import quartzColdSteelII from '../database/quartz/cold-steel-ii.json'
+import quartzColdSteelIII from '../database/quartz/cold-steel-iii.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
@@ -201,6 +204,44 @@ const COLD_STEEL_II_BASE: BaseData = {
   ruleSet: 'cold-steel-ii',
 }
 
+const COLD_STEEL_III_TOPOLOGY: BaseData['topology'] = {
+  slotIds: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  centerSlot: 1,
+  outerSlots: [2, 3, 4, 5, 6, 7, 8],
+  outerDirectionSequence: [2, 3, 4, 5, 6, 7, 8],
+  outerAdjacency: {
+    1: [2, 3, 4, 5, 6, 7, 8, 9],
+    2: [1, 3],
+    3: [1, 2, 4],
+    4: [1, 3, 5],
+    5: [1, 4, 6],
+    6: [1, 5, 7],
+    7: [1, 6, 8],
+    8: [1, 7],
+    9: [1],
+  },
+  wrapsOuterRing: false,
+  maxLines: 7,
+  masterQuartzSlot: 1,
+  subMasterQuartzSlot: 9,
+  nodeTierDefaults: createNodeTierDefaults([2, 3, 4, 5, 6, 7, 8], 99),
+}
+
+const COLD_STEEL_III_BASE: BaseData = {
+  id: 'cold-steel-iii',
+  label: 'Cold Steel III',
+  quartz: quartzColdSteelIII.map((entry) => normalizeQuartz(entry)),
+  arts: artsColdSteelIII.map((entry) => normalizeArt(entry)),
+  masterQuartz: masterQuartzColdSteelIII.map((entry) => normalizeMasterQuartz(entry)),
+  topology: COLD_STEEL_III_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ARCUS II',
+    outerEdges: 'straight',
+    nodeShape: 'circle',
+  },
+  ruleSet: 'cold-steel-iii',
+}
+
 export const BASES: BaseData[] = [
   SKY_FC_BASE,
   SKY_SC_BASE,
@@ -209,6 +250,7 @@ export const BASES: BaseData[] = [
   AZURE_BASE,
   COLD_STEEL_I_BASE,
   COLD_STEEL_II_BASE,
+  COLD_STEEL_III_BASE,
 ]
 
 export function getBaseById(baseId: string): BaseData {
@@ -378,7 +420,7 @@ function toElementName(value: unknown): ElementName {
 }
 
 function normalizeTier(value: unknown): number | undefined {
-  if (typeof value !== 'number' || !Number.isInteger(value) || value < 1) {
+  if (typeof value !== 'number' || !Number.isInteger(value) || value < 0) {
     return undefined
   }
   return value
