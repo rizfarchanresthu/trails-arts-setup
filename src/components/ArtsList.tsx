@@ -1,10 +1,24 @@
 import { useMemo, useState } from 'react'
-import { ELEMENT_COLORS, type Art, type ElementName, type ElementTotals } from '../domain/types'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { Separator } from '@/components/ui/separator'
+import { ELEMENT_COLORS, getArtElements, type Art, type ElementTotals } from '../domain/types'
 
 type ArtsListProps = {
   arts: Art[]
   lineTotals: ElementTotals[]
   elementOrderSource: Art[]
+  showLineTotals?: boolean
 }
 
 const CATEGORY_ORDER: Record<Art['category'], number> = {
@@ -12,14 +26,15 @@ const CATEGORY_ORDER: Record<Art['category'], number> = {
   support: 1,
 }
 
-export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps) {
+export function ArtsList({ arts, lineTotals, elementOrderSource, showLineTotals = true }: ArtsListProps) {
   const [selectedArt, setSelectedArt] = useState<Art | null>(null)
 
   const elementOrder = useMemo(() => {
-    const order = new Map<ElementName, number>()
+    const order = new Map<string, number>()
     for (const art of elementOrderSource) {
-      if (!order.has(art.element)) {
-        order.set(art.element, order.size)
+      const key = getArtElements(art).join('/')
+      if (!order.has(key)) {
+        order.set(key, order.size)
       }
     }
     return order
@@ -27,8 +42,8 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
 
   const sortedArts = useMemo(() => {
     return [...arts].sort((left, right) => {
-      const leftElementIndex = elementOrder.get(left.element) ?? Number.MAX_SAFE_INTEGER
-      const rightElementIndex = elementOrder.get(right.element) ?? Number.MAX_SAFE_INTEGER
+      const leftElementIndex = elementOrder.get(getArtElements(left).join('/')) ?? Number.MAX_SAFE_INTEGER
+      const rightElementIndex = elementOrder.get(getArtElements(right).join('/')) ?? Number.MAX_SAFE_INTEGER
 
       if (leftElementIndex !== rightElementIndex) {
         return leftElementIndex - rightElementIndex
@@ -45,100 +60,130 @@ export function ArtsList({ arts, lineTotals, elementOrderSource }: ArtsListProps
   }, [arts, elementOrder])
 
   return (
-    <section className="panel">
-      <h2>Available Arts ({sortedArts.length})</h2>
-
-      <div className="linePreview">
-        <h3>Line Totals</h3>
-        <ul>
-          {lineTotals.map((totals, index) => (
-            <li key={`totals-${index}`}>
-              Line {index + 1}:{' '}
-              {Object.entries(totals)
-                .map(([element, value]) => `${element}:${value}`)
-                .join(', ')}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="artList">
-        {sortedArts.map((art) => (
-          <button
-            key={art.id}
-            type="button"
-            className="artCard artButton"
-            onClick={() => setSelectedArt(art)}
-          >
-            <span className="artNameCell">
-              {art.image_url ? <img className="artIcon" src={art.image_url} alt="" loading="lazy" /> : null}
-              <strong>{art.name.en}</strong>
-            </span>
-            <span className="elementBadge" style={{ color: ELEMENT_COLORS[art.element] }}>
-              {art.element}
-            </span>
-            <span>{art.category}</span>
-            <span>{art.cost}</span>
-          </button>
-        ))}
-      </div>
-
-      {selectedArt ? (
-        <div className="modalBackdrop" role="presentation" onClick={() => setSelectedArt(null)}>
-          <article className="modalCard" role="dialog" aria-modal="true" onClick={(event) => event.stopPropagation()}>
-            <div className="modalHeader">
-              <h3>{selectedArt.name.en}</h3>
-              <button type="button" onClick={() => setSelectedArt(null)}>
-                Close
-              </button>
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-xl">Available Arts ({sortedArts.length})</CardTitle>
+      </CardHeader>
+      <CardContent className="grid gap-4">
+        {showLineTotals ? (
+          <>
+            <div className="grid gap-2">
+              <h3 className="text-sm font-medium">Line Totals</h3>
+              <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                {lineTotals.map((totals, index) => (
+                  <li key={`totals-${index}`}>
+                    Line {index + 1}:{' '}
+                    {Object.entries(totals)
+                      .map(([element, value]) => `${element}:${value}`)
+                      .join(', ')}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <p>Japanese: {selectedArt.name.ja}</p>
-            <p>
-              Element:{' '}
-              <span className="elementBadge" style={{ color: ELEMENT_COLORS[selectedArt.element] }}>
-                {selectedArt.element}
-              </span>
-            </p>
-            <p>Category: {selectedArt.category}</p>
-            <p>Cost: {selectedArt.cost}</p>
-            <p>
-              Time: Cast {selectedArt.time.cast}, Delay {selectedArt.time.delay}
-            </p>
-            <p>Power: {selectedArt.power ?? '-'}</p>
-            <p>Target: {selectedArt.target}</p>
-            <p>Effect: {selectedArt.effect ?? '-'}</p>
-            <p>Description: {selectedArt.description}</p>
-            <p>
-              Requirement:{' '}
-              {selectedArt.elemental_value.map((entry, index) => (
-                <span key={`req-${selectedArt.id}-${index}`}>
-                  {entry.element ? (
-                    <>
-                      <span className="elementBadge" style={{ color: ELEMENT_COLORS[entry.element] }}>
-                        {entry.element}
-                      </span>{' '}
-                      {entry.value}
-                    </>
-                  ) : (
-                    <>
-                      {(entry.elements ?? []).map((element, elementIndex) => (
-                        <span key={`req-element-${selectedArt.id}-${index}-${element}`} className="inlineElementGroup">
-                          {elementIndex > 0 ? '/' : ''}
-                          <span className="elementBadge" style={{ color: ELEMENT_COLORS[element] }}>
-                            {element}
-                          </span>
-                        </span>
-                      ))}{' '}
-                      {entry.value}
-                    </>
-                  )}
-                  {index < selectedArt.elemental_value.length - 1 ? ', ' : ''}
-                </span>
+
+            <Separator />
+          </>
+        ) : null}
+
+        {sortedArts.length === 0 ? (
+          <Alert>
+            <AlertDescription>No arts unlocked for the current orbment setup.</AlertDescription>
+          </Alert>
+        ) : (
+          <ScrollArea className="h-[min(70vh,40rem)]">
+            <div className="grid gap-2 pr-3">
+              {sortedArts.map((art) => (
+                <Button
+                  key={art.id}
+                  type="button"
+                  variant="outline"
+                  className="artCard h-auto justify-stretch whitespace-normal px-3 py-2 text-left"
+                  onClick={() => setSelectedArt(art)}
+                >
+                  <span className="inline-flex min-w-0 items-center gap-2">
+                    {art.image_url ? (
+                      <img className="size-4 shrink-0 object-contain" src={art.image_url} alt="" loading="lazy" />
+                    ) : null}
+                    <strong className="truncate">{art.name.en}</strong>
+                  </span>
+                  <ArtElementBadges art={art} />
+                  <span className="text-muted-foreground">{art.category}</span>
+                  <span className="text-muted-foreground">{art.cost}</span>
+                </Button>
               ))}
-            </p>
-          </article>
-        </div>
-      ) : null}
-    </section>
+            </div>
+          </ScrollArea>
+        )}
+      </CardContent>
+
+      <Dialog open={selectedArt != null} onOpenChange={(open) => !open && setSelectedArt(null)}>
+        <DialogContent className="max-h-[85vh] overflow-auto sm:max-w-lg" showCloseButton>
+          {selectedArt ? (
+            <>
+              <DialogHeader>
+                <DialogTitle>{selectedArt.name.en}</DialogTitle>
+                <DialogDescription>Japanese: {selectedArt.name.ja}</DialogDescription>
+              </DialogHeader>
+              <Separator />
+              <div className="grid gap-2 text-sm">
+                <p>
+                  Element:{' '}
+                  <ArtElementBadges art={selectedArt} />
+                </p>
+                <p>Category: {selectedArt.category}</p>
+                <p>Cost: {selectedArt.cost}</p>
+                <p>
+                  Time: Cast {selectedArt.time.cast}, Delay {selectedArt.time.delay}
+                </p>
+                <p>Power: {selectedArt.power ?? '-'}</p>
+                <p>Target: {selectedArt.target}</p>
+                <p>Effect: {selectedArt.effect ?? '-'}</p>
+                <p>Description: {selectedArt.description}</p>
+                <p>
+                  Requirement:{' '}
+                  {selectedArt.elemental_value.map((entry, index) => (
+                    <span key={`req-${selectedArt.id}-${index}`}>
+                      {entry.element ? (
+                        <>
+                          <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[entry.element], color: 'white' }}>
+                            {entry.element}
+                          </Badge>{' '}
+                          {entry.value}
+                        </>
+                      ) : (
+                        <>
+                          {(entry.elements ?? []).map((element, elementIndex) => (
+                            <span key={`req-element-${selectedArt.id}-${index}-${element}`}>
+                              {elementIndex > 0 ? '/' : ''}
+                              <Badge variant="outline" style={{ backgroundColor: ELEMENT_COLORS[element], color: 'white' }}>
+                                {element}
+                              </Badge>
+                            </span>
+                          ))}{' '}
+                          {entry.value}
+                        </>
+                      )}
+                      {index < selectedArt.elemental_value.length - 1 ? ', ' : ''}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </>
+          ) : null}
+        </DialogContent>
+      </Dialog>
+    </Card>
+  )
+}
+
+function ArtElementBadges({ art }: { art: Art }) {
+  return (
+    <span className="artCardElements">
+      {getArtElements(art).map((element) => (
+        <Badge key={element} variant="outline" style={{ backgroundColor: ELEMENT_COLORS[element], color: 'white' }}>
+          {element}
+        </Badge>
+      ))}
+    </span>
   )
 }

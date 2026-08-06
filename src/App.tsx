@@ -1,14 +1,20 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import './App.css'
 import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
 import { getCharacterTemplatesForBase } from './domain/characterPresets'
+import { evaluateGrantedArts } from './domain/rules/coldSteelIRules'
 import { deriveLinesFromConfig } from './domain/rules/skyFcRules'
-import { type ElementName, type SlotId } from './domain/types'
+import { isColdSteelRuleSet, type ElementName, type SlotId } from './domain/types'
 import {
   applyPresetRestrictions,
   createOrbmentStateFromPreset,
@@ -19,21 +25,27 @@ import {
   setLineDirection,
   setLineStart,
   setMasterQuartzLevel,
+  setEquippedSubMasterQuartz,
+  setSubMasterQuartzLevel,
   setNodeTier,
   setSlotRestriction,
   transferArcLength,
   updateLineCount,
 } from './state/orbmentState'
 import {
+  buildExportedSetup,
   createSavedQuartzSetup,
   deleteSavedQuartzSetup,
   getSavedQuartzSetupById,
   listSavedQuartzSetups,
+  parseExportedSetup,
+  sanitizeExportedSetup,
   sanitizeForBase,
   updateSavedQuartzSetup,
 } from './state/savedQuartzSetups'
 
 type MainTab = 'orbment' | 'arts'
+type SetupNoticeTone = 'default' | 'success' | 'error'
 
 function App() {
   const [selectedBaseId, setSelectedBaseId] = useState('sky-fc')
@@ -43,13 +55,15 @@ function App() {
   const [savedSetups, setSavedSetups] = useState(listSavedQuartzSetups)
   const [selectedSavedSetupId, setSelectedSavedSetupId] = useState('')
   const [setupName, setSetupName] = useState('My setup')
-  const [setupNotice, setSetupNotice] = useState('')
+  const [setupNotice, setSetupNoticeState] = useState('')
+  const [setupNoticeTone, setSetupNoticeTone] = useState<SetupNoticeTone>('default')
   const [draftBeforeSavedLoad, setDraftBeforeSavedLoad] = useState<{
     baseId: string
     templateId: string
     setupName: string
     orbmentState: OrbmentState
   } | null>(null)
+  const importFileInputRef = useRef<HTMLInputElement>(null)
 
   const base = useMemo(() => getBaseById(selectedBaseId), [selectedBaseId])
 
@@ -60,6 +74,10 @@ function App() {
   const masterQuartzById = useMemo(() => {
     return new Map((base.masterQuartz ?? []).map((masterQuartz) => [masterQuartz.id, masterQuartz]))
   }, [base.masterQuartz])
+
+  const artsById = useMemo(() => {
+    return new Map(base.arts.map((art) => [art.id, art]))
+  }, [base.arts])
 
   const characterTemplates = useMemo(() => {
     return getCharacterTemplatesForBase(selectedBaseId)
@@ -78,25 +96,39 @@ function App() {
   }, [base.topology, orbmentState.arcLengths, orbmentState.lineCount, orbmentState.lineDirections, orbmentState.lineStarts])
 
   const evaluation = useMemo(() => {
-    return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz, {
+    const masterQuartzContext = {
       slotId: base.topology.masterQuartzSlot,
       masterQuartzById,
       equippedMasterQuartzId: orbmentState.equippedMasterQuartzId,
       masterQuartzLevel: orbmentState.masterQuartzLevel,
-    })
+      equippedSubMasterQuartzId: orbmentState.equippedSubMasterQuartzId,
+      subMasterQuartzLevel: orbmentState.subMasterQuartzLevel,
+    }
+    if (isColdSteelRuleSet(base.ruleSet)) {
+      return evaluateGrantedArts(base.arts, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
+    }
+    return evaluateAvailableArts(base.arts, derivedLines.lines, quartzById, orbmentState.equippedQuartz, masterQuartzContext)
   }, [
     base.arts,
+    base.ruleSet,
     base.topology.masterQuartzSlot,
     derivedLines.lines,
     masterQuartzById,
     orbmentState.equippedMasterQuartzId,
     orbmentState.equippedQuartz,
+    orbmentState.equippedSubMasterQuartzId,
     orbmentState.masterQuartzLevel,
+    orbmentState.subMasterQuartzLevel,
     quartzById,
   ])
 
   function refreshSavedSetups(): void {
     setSavedSetups(listSavedQuartzSetups())
+  }
+
+  function setSetupNotice(message: string, tone: SetupNoticeTone = 'default'): void {
+    setSetupNoticeState(message)
+    setSetupNoticeTone(message ? tone : 'default')
   }
 
   function saveAsSetup(): void {
@@ -179,6 +211,84 @@ function App() {
     setSetupNotice('Deleted saved setup.')
   }
 
+  function resetCurrentEditor(): void {
+    setSelectedTemplateId('')
+    setOrbmentState(createInitialOrbmentState(base.topology))
+    setSelectedSavedSetupId('')
+    setDraftBeforeSavedLoad(null)
+    setSetupName('My setup')
+    setSetupNotice(`Reset to default for ${base.label}.`)
+  }
+
+  function exportCurrentSetup(): void {
+    const exported = buildExportedSetup({
+      baseGame: selectedBaseId,
+      templateId: selectedTemplateId || null,
+      name: setupName.trim() || 'Untitled setup',
+      orbmentState,
+    })
+    const blob = new Blob([JSON.stringify(exported, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `${toExportFileName(exported.name)}.json`
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    URL.revokeObjectURL(url)
+    setSetupNotice(`Exported "${exported.name}".`)
+  }
+
+  async function importSetupFromFile(file: File): Promise<void> {
+    let text: string
+    try {
+      text = await file.text()
+    } catch {
+      setSetupNotice('Could not read the selected file.', 'error')
+      return
+    }
+
+    let parsed: unknown
+    try {
+      parsed = JSON.parse(text) as unknown
+    } catch {
+      setSetupNotice('Import file is not valid JSON.', 'error')
+      return
+    }
+
+    const exported = parseExportedSetup(parsed)
+    if (!exported) {
+      setSetupNotice('Import file is not a valid setup export.', 'error')
+      return
+    }
+
+    const targetBase = BASES.find((baseOption) => baseOption.id === exported.baseGame)
+    if (!targetBase) {
+      setSetupNotice(`Imported setup base "${exported.baseGame}" is not available in this build.`, 'error')
+      return
+    }
+
+    const validQuartzIds = new Set(targetBase.quartz.map((quartz) => quartz.id))
+    const validMasterQuartzIds = new Set((targetBase.masterQuartz ?? []).map((masterQuartz) => masterQuartz.id))
+    const sanitized = sanitizeExportedSetup(exported, validQuartzIds, targetBase.topology, validMasterQuartzIds)
+    const templatesForBase = getCharacterTemplatesForBase(targetBase.id)
+    const restoredTemplateId =
+      sanitized.templateId && templatesForBase.some((template) => template.id === sanitized.templateId)
+        ? sanitized.templateId
+        : ''
+    const templateLabel = restoredTemplateId
+      ? (templatesForBase.find((template) => template.id === restoredTemplateId)?.name ?? restoredTemplateId)
+      : 'Custom'
+
+    setSelectedBaseId(targetBase.id)
+    setSelectedTemplateId(restoredTemplateId)
+    setOrbmentState(sanitized.orbmentState)
+    setSelectedSavedSetupId('')
+    setDraftBeforeSavedLoad(null)
+    setSetupName(sanitized.name)
+    setSetupNotice(`Imported "${sanitized.name}" (${targetBase.label}, ${templateLabel}).`, 'success')
+  }
+
   function onSavedSetupSelectionChange(setupId: string): void {
     if (!setupId) {
       setSelectedSavedSetupId('')
@@ -208,71 +318,106 @@ function App() {
   }
 
   return (
-    <main className="appShell">
-      <header className="panel">
-        <h1>Trails Series Quartz Setup</h1>
-        <div className="fieldRow">
-          <label>
-            Base
-            <AppSelect
-              value={selectedBaseId}
-              options={BASES.map((baseOption) => ({
-                value: baseOption.id,
-                label: baseOption.label,
-              }))}
-              onChange={(nextBaseId) => {
-                if (!nextBaseId) {
-                  return
-                }
-                setSelectedBaseId(nextBaseId)
-                setSelectedTemplateId('')
-                setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
-                setSelectedSavedSetupId('')
-                setDraftBeforeSavedLoad(null)
-                setSetupNotice('')
-              }}
-            />
-          </label>
-          <div className="fieldRow rowRightControls">
-            <label>
-              Saved setup
+    <main className="mx-auto grid min-h-screen max-w-[1200px] gap-4 p-4">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl">Trails Series Quartz Setup</CardTitle>
+        </CardHeader>
+        <CardContent className="grid gap-3">
+          <div className="flex flex-wrap items-end gap-3">
+            <Label className="grid min-w-40 gap-1.5 font-normal">
+              Base
               <AppSelect
-                value={selectedSavedSetupId}
-                options={[
-                  { value: '', label: 'Select saved setup' },
-                  ...savedSetups.map((setup) => {
-                    const setupBase = getBaseById(setup.baseGame)
-                    return {
-                      value: setup.id,
-                      label: `${setup.name} (${setupBase.label})`,
-                    }
-                  }),
-                ]}
-                onChange={onSavedSetupSelectionChange}
+                value={selectedBaseId}
+                options={BASES.map((baseOption) => ({
+                  value: baseOption.id,
+                  label: baseOption.label,
+                }))}
+                onChange={(nextBaseId) => {
+                  if (!nextBaseId) {
+                    return
+                  }
+                  setSelectedBaseId(nextBaseId)
+                  setSelectedTemplateId('')
+                  setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
+                  setSelectedSavedSetupId('')
+                  setDraftBeforeSavedLoad(null)
+                  setSetupNotice('')
+                }}
               />
-            </label>
-            <label>
-              Setup name
-              <input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
-            </label>
-            <div className="inlineActions">
-            <button type="button" onClick={saveCurrentSetup}>
-              Save
-            </button>
-            <button type="button" onClick={saveAsSetup}>
-              Save As
-            </button>
-            <button type="button" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
-              Delete
-            </button>
+            </Label>
+            <Button type="button" variant="outline" onClick={resetCurrentEditor}>
+              Reset
+            </Button>
+            <div className="ml-auto flex flex-wrap items-end gap-3">
+              <Label className="grid min-w-40 gap-1.5 font-normal">
+                Saved setup
+                <AppSelect
+                  value={selectedSavedSetupId}
+                  options={[
+                    { value: '', label: 'Select saved setup' },
+                    ...savedSetups.map((setup) => {
+                      const setupBase = getBaseById(setup.baseGame)
+                      return {
+                        value: setup.id,
+                        label: `${setup.name} (${setupBase.label})`,
+                      }
+                    }),
+                  ]}
+                  onChange={onSavedSetupSelectionChange}
+                />
+              </Label>
+              <Label className="grid min-w-40 gap-1.5 font-normal">
+                Setup name
+                <Input value={setupName} onChange={(event) => setSetupName(event.target.value)} />
+              </Label>
+              <div className="flex flex-wrap gap-2">
+                <Button type="button" onClick={saveCurrentSetup}>
+                  Save
+                </Button>
+                <Button type="button" variant="outline" onClick={saveAsSetup}>
+                  Save As
+                </Button>
+                <Button type="button" variant="destructive" onClick={removeSavedSetup} disabled={!selectedSavedSetupId}>
+                  Delete
+                </Button>
+                <Button type="button" variant="outline" onClick={exportCurrentSetup}>
+                  Export
+                </Button>
+                <Button type="button" variant="outline" onClick={() => importFileInputRef.current?.click()}>
+                  Import
+                </Button>
+                <input
+                  ref={importFileInputRef}
+                  type="file"
+                  accept=".json,application/json"
+                  className="hidden"
+                  onChange={(event) => {
+                    const file = event.target.files?.[0]
+                    event.target.value = ''
+                    if (!file) {
+                      return
+                    }
+                    void importSetupFromFile(file)
+                  }}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        {setupNotice ? <p className="hintText">{setupNotice}</p> : null}
-      </header>
+          {setupNotice ? (
+            <Alert
+              variant={
+                setupNoticeTone === 'error' ? 'destructive' : setupNoticeTone === 'success' ? 'success' : 'default'
+              }
+            >
+              <AlertDescription>{setupNotice}</AlertDescription>
+            </Alert>
+          ) : null}
+        </CardContent>
+      </Card>
 
       <Tabs
-        className="mainTabs"
+        className="min-w-0 gap-4"
         value={activeMainTab}
         onValueChange={(value) => {
           if (value === 'orbment' || value === 'arts') {
@@ -280,15 +425,15 @@ function App() {
           }
         }}
       >
-        <TabsList>
-          <TabsTrigger className={activeMainTab === 'orbment' ? 'is-active-main-tab' : undefined} value="orbment">
+        <TabsList className="h-auto gap-2 p-1">
+          <TabsTrigger className="px-3 py-1.5" value="orbment">
             Orbment
           </TabsTrigger>
-          <TabsTrigger className={activeMainTab === 'arts' ? 'is-active-main-tab' : undefined} value="arts">
+          <TabsTrigger className="px-3 py-1.5" value="arts">
             Available Arts ({evaluation.availableArts.length})
           </TabsTrigger>
         </TabsList>
-        <TabsContent className="text-base" value="orbment">
+        <TabsContent className="text-base outline-none" value="orbment">
           <OrbmentConfigurator
             state={orbmentState}
             lines={derivedLines.lines}
@@ -311,16 +456,29 @@ function App() {
             }
             onRestrictionChange={(slotId: SlotId, restriction: ElementName | null) =>
               setOrbmentState((prev) =>
-                setSlotRestriction(prev, slotId, restriction, quartzById, base.topology.masterQuartzSlot),
+                setSlotRestriction(prev, slotId, restriction, quartzById, {
+                  masterQuartzSlot: base.topology.masterQuartzSlot,
+                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                }),
               )
             }
             onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
               setOrbmentState((prev) =>
-                setEquippedQuartz(prev, slotId, quartzId, quartzById, base.topology.masterQuartzSlot),
+                setEquippedQuartz(prev, slotId, quartzId, quartzById, {
+                  masterQuartzSlot: base.topology.masterQuartzSlot,
+                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                  lines: derivedLines.lines,
+                  ruleSet: base.ruleSet,
+                }),
               )
             }
             onNodeTierChange={(slotId: SlotId, tier: number) =>
-              setOrbmentState((prev) => setNodeTier(prev, slotId, tier, quartzById, base.topology.masterQuartzSlot))
+              setOrbmentState((prev) =>
+                setNodeTier(prev, slotId, tier, quartzById, {
+                  masterQuartzSlot: base.topology.masterQuartzSlot,
+                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                }),
+              )
             }
             onMasterQuartzChange={(masterQuartzId) =>
               setOrbmentState((prev) => setEquippedMasterQuartz(prev, masterQuartzId, masterQuartzById))
@@ -328,8 +486,16 @@ function App() {
             onMasterQuartzLevelChange={(level) =>
               setOrbmentState((prev) => setMasterQuartzLevel(prev, level, masterQuartzById))
             }
+            onSubMasterQuartzChange={(subMasterQuartzId) =>
+              setOrbmentState((prev) => setEquippedSubMasterQuartz(prev, subMasterQuartzId, masterQuartzById))
+            }
+            onSubMasterQuartzLevelChange={(level) =>
+              setOrbmentState((prev) => setSubMasterQuartzLevel(prev, level, masterQuartzById))
+            }
             topology={base.topology}
             orbmentVisual={base.orbmentVisual}
+            ruleSet={base.ruleSet}
+            artsById={artsById}
             selectedBaseId={selectedBaseId}
             selectedTemplateId={selectedTemplateId}
             characterTemplates={characterTemplates}
@@ -352,11 +518,12 @@ function App() {
             }}
           />
         </TabsContent>
-        <TabsContent className="text-base" value="arts">
+        <TabsContent className="text-base outline-none" value="arts">
           <ArtsList
             arts={evaluation.availableArts}
             lineTotals={evaluation.lineTotals}
             elementOrderSource={base.arts}
+            showLineTotals={!isColdSteelRuleSet(base.ruleSet)}
           />
         </TabsContent>
       </Tabs>
@@ -382,6 +549,14 @@ function getUniqueSetupName(requestedName: string, savedSetups: Array<{ id: stri
   }
 }
 
+function toExportFileName(name: string): string {
+  const sanitized = name
+    .trim()
+    .replace(/[^\w.-]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+  return sanitized || 'setup'
+}
+
 function cloneOrbmentState(state: OrbmentState): OrbmentState {
   return {
     ...state,
@@ -393,5 +568,7 @@ function cloneOrbmentState(state: OrbmentState): OrbmentState {
     nodeTiers: { ...state.nodeTiers },
     equippedMasterQuartzId: state.equippedMasterQuartzId,
     masterQuartzLevel: state.masterQuartzLevel,
+    equippedSubMasterQuartzId: state.equippedSubMasterQuartzId,
+    subMasterQuartzLevel: state.subMasterQuartzLevel,
   }
 }

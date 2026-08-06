@@ -1,0 +1,1853 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Iron",
+      "ja": "アイアン"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ca/Iron_%28Sen_MQ%29.png",
+    "description": "Obtain a significant DEF/ADF bonus.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          1
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with DEF/ADF raised",
+            "detail": "1 turn of DEF/ADF+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          35
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with DEF/ADF raised",
+            "detail": "2 turns of DEF/ADF+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with DEF/ADF raised",
+            "detail": "3 turns of DEF/ADF+25%"
+          },
+          {
+            "title": "Raises DEF/ADF when HP is low",
+            "detail": "3 turns of DEF/ADF+25% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          36
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with DEF/ADF raised",
+            "detail": "4 turns of DEF/ADF+25%"
+          },
+          {
+            "title": "Raises DEF/ADF when HP is low",
+            "detail": "4 turns of DEF/ADF+25% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with DEF/ADF raised",
+            "detail": "5 turns of DEF/ADF+50%"
+          },
+          {
+            "title": "Raises DEF and ADF when HP is low",
+            "detail": "5 turns of DEF/ADF+50% Once per fight when below 20% HP"
+          },
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 10% HP, CP+10 Activates once per battle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Tauros",
+      "ja": "タウロス"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2e/Tauros_%28Sen_MQ%29.png",
+    "description": "Attacks do more damage, but delay afterwards is longer.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          36,
+          46,
+          2
+        ],
+        "effects": [
+          {
+            "title": "Damage of regular attacks raised",
+            "detail": "Damage multiplied by 1.5 Delay after attack multiplied by 1.5"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          3
+        ],
+        "effects": [
+          {
+            "title": "Damage of regular attacks raised",
+            "detail": "Damage multiplied by 2 Delay after attack multiplied by 1.5"
+          },
+          {
+            "title": "Accuracy up",
+            "detail": "ACC+75%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          4
+        ],
+        "effects": [
+          {
+            "title": "Damage of regular attacks raised",
+            "detail": "Damage multiplied by 2.5 Delay after attack multiplied by 2"
+          },
+          {
+            "title": "Accuracy up",
+            "detail": "ACC+100%"
+          },
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "5% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Aegis",
+      "ja": "イージス"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5f/Aegis_%28Sen_MQ%29.png",
+    "description": "Reflect magic damage and gain immunity against physical damage.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          1,
+          34,
+          36
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with Immunity/Reflect"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          37
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with Immunity/Reflect"
+          },
+          {
+            "title": "Immunity/Reflect when HP is low",
+            "detail": "Once per battle when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          5
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with Immunity/Reflect"
+          },
+          {
+            "title": "Immunity/Reflect when HP is low",
+            "detail": "Once per battle when below 20% HP"
+          },
+          {
+            "title": "Reduced AT Delay after earth arts",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Megalith",
+      "ja": "メガリス"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/24/Megalith_%28Sen_MQ%29.png",
+    "description": "Increases obtained EXP.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [
+          2,
+          3,
+          34,
+          36
+        ],
+        "effects": [
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.25"
+          },
+          {
+            "title": "HP/EP/CP regenerate on field",
+            "detail": "Effect: Small"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          37
+        ],
+        "effects": [
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.5"
+          },
+          {
+            "title": "HP/EP/CP regenerate on field",
+            "detail": "Effect: Large"
+          },
+          {
+            "title": "Enemies less likely to notice you"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Canon",
+      "ja": "カノン"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fd/Canon_%28Sen_MQ%29.png",
+    "description": "Increases potency of healing arts.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          38,
+          6
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 1.25"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          39
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 1.5"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          8
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 1.75"
+          },
+          {
+            "title": "Begin battle with gradual HP regen",
+            "detail": "Recover 30% of max HP for 3 turns"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          40
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 2"
+          },
+          {
+            "title": "Begin battle with gradual HP regen",
+            "detail": "Recover 30% of max HP for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          42
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 3"
+          },
+          {
+            "title": "Begin battle with gradual HP regen",
+            "detail": "Recover 30% of max HP for 5 turns"
+          },
+          {
+            "title": "Gradual HP regen when HP is low",
+            "detail": "Recover 30% of max HP for 5 turns Once per fight when below 20% HP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Scepter",
+      "ja": "セプター"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fa/Scepter_%28Sen_MQ%29.png",
+    "description": "Obtain sepith from attacks/crafts.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          6
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          7
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "40% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "50% chance"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "20% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          8
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "40% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          9
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "50% chance"
+          },
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Aries",
+      "ja": "アリエス"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5c/Aries_%28Sen_MQ%29.png",
+    "description": "Recover HP through offensive arts.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          6,
+          7,
+          8
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 10% of damage as HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          9
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 15% of damage as HP"
+          },
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 1% of damage as EP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          10
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 20% of damage as HP"
+          },
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 2% of damage as EP"
+          },
+          {
+            "title": "Reduced AT Delay after water arts",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Orochi",
+      "ja": "ヲロチ"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/06/Orochi_%28Sen_MQ%29.png",
+    "description": "Randomly increases physical damage.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Randomly increases physical damage",
+            "detail": "Multiplied by a maximum of 1.8"
+          },
+          {
+            "title": "Randomly increases magic damage",
+            "detail": "Multiplied by a maximum of 1.5"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Randomly increases physical damage",
+            "detail": "Multiplied by a maximum of 2.5"
+          },
+          {
+            "title": "Randomly increases magic damage",
+            "detail": "Multiplied by a maximum of 1.8"
+          },
+          {
+            "title": "Attacks/crafts inflict poison",
+            "detail": "50% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Force",
+      "ja": "フォース"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Force_%28Sen_MQ%29.png",
+    "description": "Killing enemies restores CP.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          11
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+5 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          43
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+10 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+15 per enemy killed"
+          },
+          {
+            "title": "Restores CP when HP is low",
+            "detail": "CP+50 Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          44
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+20 per enemy killed"
+          },
+          {
+            "title": "Restores CP when HP is low",
+            "detail": "CP+100 Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+25 per enemy killed"
+          },
+          {
+            "title": "Restores CP when HP is low",
+            "detail": "CP+200 Once per fight when below 20% HP"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "5 turns of STR+25% Once per fight when below 20% HP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Brave",
+      "ja": "ブレイブ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2a/Brave_%28Sen_MQ%29.png",
+    "description": "Obtain a significant STR bonus.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          11
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with STR raised",
+            "detail": "1 turn of STR+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          45
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with STR raised",
+            "detail": "2 turns of STR+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with STR raised",
+            "detail": "3 turns of STR+25%"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "3 turns of STR+25% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          46
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with STR raised",
+            "detail": "4 turns of STR+25%"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "4 turns of STR+25% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with STR raised",
+            "detail": "5 turns of STR+50%"
+          },
+          {
+            "title": "Raises STR when HP is low",
+            "detail": "5 turns of STR+50% Once per fight when below 20% HP"
+          },
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "5% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Criminal",
+      "ja": "クリミナル"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8e/Criminal_%28Sen_MQ%29.png",
+    "description": "Offensive arts deal critical damage.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          15
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Restores EP when HP is low",
+            "detail": "EP+10% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          16
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Restores EP when HP is low",
+            "detail": "EP+20% Once per fight when below 20% HP"
+          },
+          {
+            "title": "Reduced AT Delay after fire arts",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Vermillion",
+      "ja": "バーミリオン"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/30/Vermillion_%28Sen_MQ%29.png",
+    "description": "Increases physical damage relative to how high HP is.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "High HP increases physical damage",
+            "detail": "Multiplied by a maximum of 1.5"
+          },
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+500 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "High HP increases physical damage",
+            "detail": "Multiplied by a maximum of 2"
+          },
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "HP+1000 per enemy killed"
+          },
+          {
+            "title": "Attacks/crafts inflict burn",
+            "detail": "50% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Falco",
+      "ja": "ファルコ"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1f/Falco_%28Sen_MQ%29.png",
+    "description": "Gain insight status.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          17
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with insight status",
+            "detail": "Lasts for 2 turns"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          54
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with insight status",
+            "detail": "Lasts for 3 turns"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with insight status",
+            "detail": "Lasts for 4 turns"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+3%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          49
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with insight status",
+            "detail": "Lasts for 5 turns"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+6%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with insight status",
+            "detail": "Lasts for 6 turns"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+9%"
+          },
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "5% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Mistral",
+      "ja": "ミストラル"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/f7/Mistral_%28Sen_MQ%29.png",
+    "description": "Obtain a significant ATS bonus.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          17
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with ATS raised",
+            "detail": "1 turn of ATS+25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with ATS raised",
+            "detail": "2 turns of ATS+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          19
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with ATS raised",
+            "detail": "3 turns of ATS+25%"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "3 turns of ATS+25% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with ATS raised",
+            "detail": "4 turns of ATS+25%"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "4 turns of ATS+25% Once per fight when below 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          20
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with ATS raised",
+            "detail": "5 turns of ATS+50%"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "5 turns of ATS+50% Once per fight when below 20% HP"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "30% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Wing",
+      "ja": "ウィング"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/db/Wing_%28Sen_MQ%29.png",
+    "description": "Prevents abnormal status/stat down.",
+    "levels": [
+      {
+        "level": 2,
+        "arts_learnt": [
+          17,
+          47
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "25% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          49
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "50% chance"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+3%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          48
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "75% chance"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+6%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          21
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "100% chance"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+9%"
+          },
+          {
+            "title": "Reduced AT Delay after wind arts",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Thor",
+      "ja": "トール"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/ff/Thor_%28Sen_MQ%29.png",
+    "description": "Recover HP/EP through attacks/crafts.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [
+          18,
+          20
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through attacks/crafts",
+            "detail": "Recover 20% of damage as HP"
+          },
+          {
+            "title": "Recover EP through attacks/crafts",
+            "detail": "Recover 1% of damage as EP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          21
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through attacks/crafts",
+            "detail": "Recover 30% of damage as HP"
+          },
+          {
+            "title": "Recover EP through attacks/crafts",
+            "detail": "Recover 2% of damage as EP"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+10%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Raven",
+      "ja": "レイヴン"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d5/Raven_%28Sen_MQ%29.png",
+    "description": "Obtain a significant SPD bonus.",
+    "levels": [
+      {
+        "level": 2,
+        "arts_learnt": [
+          50
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with SPD raised",
+            "detail": "2 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          23
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with SPD raised",
+            "detail": "3 turns of SPD+25%"
+          },
+          {
+            "title": "Raises SPD when HP is low",
+            "detail": "Once per fight when below 20% HP 3 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Begin battle with SPD raised",
+            "detail": "4 turns of SPD+25%"
+          },
+          {
+            "title": "Raises SPD when HP is low",
+            "detail": "Once per fight when below 20% HP 4 turns of SPD+25%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          52
+        ],
+        "effects": [
+          {
+            "title": "Begin battle with SPD raised",
+            "detail": "5 turns of SPD+50%"
+          },
+          {
+            "title": "Raises SPD when HP is low",
+            "detail": "Once per fight when below 20% HP 5 turns of SPD+50%"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+10%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Cypher",
+      "ja": "サイファー"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d5/Cypher_%28Sen_MQ%29.png",
+    "description": "Attacks/crafts cause stat down.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          22,
+          23
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "30% chance (effect is random)"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          51
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "60% chance (effect is random)"
+          },
+          {
+            "title": "Offensive arts cause stat down",
+            "detail": "10% chance (effect is random)"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          24
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "90% chance (effect is random)"
+          },
+          {
+            "title": "Offensive arts cause stat down",
+            "detail": "20% chance (effect is random)"
+          },
+          {
+            "title": "Attacks/crafts kill enemy",
+            "detail": "20% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Katze",
+      "ja": "カッツエ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Katze_%28Sen_MQ%29.png",
+    "description": "Absorb enemy magic damage.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          22,
+          23
+        ],
+        "effects": [
+          {
+            "title": "Absorb magic attacks",
+            "detail": "50% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          24
+        ],
+        "effects": [
+          {
+            "title": "Absorb magic attacks",
+            "detail": "75% chance"
+          },
+          {
+            "title": "Restores EP at start of battle",
+            "detail": "10% restored"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          25
+        ],
+        "effects": [
+          {
+            "title": "Absorb magic attacks",
+            "detail": "100% chance"
+          },
+          {
+            "title": "Restores EP at start of battle",
+            "detail": "20% restored"
+          },
+          {
+            "title": "Reduced AT Delay after time arts",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Murakumo",
+      "ja": "ムラクモ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/44/Murakumo_%28Sen_MQ%29.png",
+    "description": "Attacks/crafts sometimes deal critical damage.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "10% chance"
+          },
+          {
+            "title": "Accuracy up",
+            "detail": "ACC+75%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attacks/crafts deal critical damage",
+            "detail": "20% chance"
+          },
+          {
+            "title": "Accuracy up",
+            "detail": "ACC+100%"
+          },
+          {
+            "title": "Increases damage dealt by criticals",
+            "detail": "Multiplied by 2 (usually 1.5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Angel",
+      "ja": "エンゼル"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ef/Angel_%28Sen_MQ%29.png",
+    "description": "Automatically recover from K.O.",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          41,
+          26
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 10% HP, CP+10 Activates once per battle"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          53
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 25% HP, CP+25 Activates once per battle"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          54
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 50% HP, CP+50 Activates once per battle"
+          },
+          {
+            "title": "Gradual HP regen when HP is low",
+            "detail": "Lasts for 3 turns Once per fight when under 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          28
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 100% HP, CP+100 Activates once per battle"
+          },
+          {
+            "title": "Gradual HP regen when HP is low",
+            "detail": "Lasts for 4 turns Once per fight when under 20% HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          29
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 100% HP/EP, CP+200 Activates twice per battle"
+          },
+          {
+            "title": "Gradual HP regen when HP is low",
+            "detail": "Lasts for 5 turns Once per fight when under 20% HP"
+          },
+          {
+            "title": "Delay after space arts reduced",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Moebius",
+      "ja": "メビウス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3b/Moebius_%28Sen_MQ%29.png",
+    "description": "Increases potency of healing items.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          26,
+          27,
+          47
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 1.25 (HP/EP/battle only)"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          42
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 1.5 (HP/EP/battle only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "Range+4"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          48
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 2 (HP/EP/battle only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "Range+8"
+          },
+          {
+            "title": "Healing items affect a wider area",
+            "detail": "Area: Medium"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Chevalier",
+      "ja": "シュバリエ"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Chevalier_%28Sen_MQ%29.png",
+    "description": "Increases physical damage relative to how low HP is.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [
+          36,
+          46,
+          54,
+          44
+        ],
+        "effects": [
+          {
+            "title": "Physical damage up as HP drops",
+            "detail": "Multiplied by a maximum of 1.5"
+          },
+          {
+            "title": "Attracts enemies' attention",
+            "detail": "30% chance of activating in battle"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          55
+        ],
+        "effects": [
+          {
+            "title": "Physical damage up as HP drops",
+            "detail": "Multiplied by a maximum of 2"
+          },
+          {
+            "title": "Attracts enemies' attention",
+            "detail": "90% chance of activating in battle"
+          },
+          {
+            "title": "Raise STR/DEF when HP is low",
+            "detail": "5 turns of STR/DEF+25% Once per fight when under 20% HP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Emblem",
+      "ja": "エンブレム"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1d/Emblem_%28Sen_MQ%29.png",
+    "description": "Decreases damage received relative to how low HP is.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [
+          26,
+          27,
+          53,
+          54
+        ],
+        "effects": [
+          {
+            "title": "Low HP decreases received damage",
+            "detail": "Reduced by a maximum of 30%"
+          },
+          {
+            "title": "Increases item drop rate",
+            "detail": "Drop rate+30%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          29
+        ],
+        "effects": [
+          {
+            "title": "Low HP decreases received damage",
+            "detail": "Reduced by a maximum of 60%"
+          },
+          {
+            "title": "Increases item drop rate",
+            "detail": "Drop rate+100%"
+          },
+          {
+            "title": "Increases number of dropped items",
+            "detail": "Number multiplied by 2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Mirage",
+      "ja": "ミラージュ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/23/Mirage_%28Sen_MQ%29.png",
+    "description": "Killing enemies restores EP.",
+    "levels": [
+      {
+        "level": 2,
+        "arts_learnt": [
+          56,
+          30
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores EP",
+            "detail": "EP+10 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          31
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores EP",
+            "detail": "EP+15 per enemy killed"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "25% chance Can counter evaded magic"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          58
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores EP",
+            "detail": "EP+20 per enemy killed"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "50% chance Can counter evaded magic"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          32
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores EP",
+            "detail": "EP+25 per enemy killed"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "75% chance Can counter evaded magic"
+          },
+          {
+            "title": "Raises ATS when HP is low",
+            "detail": "5 turns of ATS+25% Once per fight when below 20% HP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Pandora",
+      "ja": "パンドラ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/de/Pandora_%28Sen_MQ%29.png",
+    "description": "Damage of offensive arts is raised, but more EP is consumed.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          31,
+          3,
+          8
+        ],
+        "effects": [
+          {
+            "title": "Damage of offensive arts raised",
+            "detail": "Multiplied by a maximum of 1.2 Consumed EP multiplied by 1.5"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          54
+        ],
+        "effects": [
+          {
+            "title": "Damage of offensive arts raised",
+            "detail": "Multiplied by a maximum of 1.5 Consumed EP multiplied by 1.5"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+1"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          33
+        ],
+        "effects": [
+          {
+            "title": "Damage of offensive arts raised",
+            "detail": "Multiplied by a maximum of 2 Consumed EP multiplied by 1.5"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+2"
+          },
+          {
+            "title": "Reduced AT Delay after mirage arts",
+            "detail": "Delay reduced by 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Juggler",
+      "ja": "ジャグラー"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/85/Juggler_%28Sen_MQ%29.png",
+    "description": "Attacks/crafts inflict random abnormalities.",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          58,
+          30,
+          31
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "30% chance (random abnormality)"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          37
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "60% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "10% chance (random abnormality)"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          32
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "90% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "20% chance (random abnormality)"
+          },
+          {
+            "title": "Attacks/crafts inflict nightmare",
+            "detail": "50% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Magius",
+      "ja": "マギウス"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Magius_%28Sen_MQ%29.png",
+    "description": "Increases magic damage relative to how low HP is.",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [
+          30,
+          31,
+          32,
+          24,
+          28
+        ],
+        "effects": [
+          {
+            "title": "Arts damage up as HP drops",
+            "detail": "Multiplied by a maximum of 1.5"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+1"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          33
+        ],
+        "effects": [
+          {
+            "title": "Arts damage up as HP drops",
+            "detail": "Multiplied by a maximum of 2"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+2"
+          },
+          {
+            "title": "Raises ATS/ADF when HP is low",
+            "detail": "5 turns of ATS/ADF+25% Once per fight when under 20% HP"
+          }
+        ]
+      }
+    ]
+  }
+]

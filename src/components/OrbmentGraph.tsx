@@ -23,15 +23,22 @@ type OrbmentGraphProps = {
   orbmentVisual?: OrbmentVisual
   equippedMasterQuartzId?: number | null
   masterQuartzLevel?: number
+  equippedSubMasterQuartzId?: number | null
+  subMasterQuartzLevel?: number
   masterQuartzById?: Map<number, MasterQuartz>
+  showTier?: boolean
 }
 
 const NODE_RADIUS = 24
+const MASTER_NODE_RADIUS = 32
+const SUB_MASTER_NODE_RADIUS = 28
 const RECT_WIDTH = 32
 const RECT_HEIGHT = 52
 const RECT_RX = 4
 const RING_CENTER: Point = { x: 170, y: 170 }
 const RING_RADIUS = 118
+const SUB_MASTER_RING_RADIUS = RING_RADIUS * 0.5
+const SUB_MASTER_LINK_COLOR = '#c9a227'
 const FC_SLOT_POINTS: Record<number, Point> = {
   1: { x: 170, y: 170 },
   2: { x: 68, y: 230 },
@@ -50,6 +57,9 @@ const SC_SLOT_POINTS: Record<number, Point> = {
   7: { x: 170, y: 288 },
 }
 const FC_EMPTY_HEX_VERTEX: Point = { x: 170, y: 288 }
+const CS_SLOT_POINTS = createColdSteelSlotPoints()
+const CS3_SLOT_POINTS = createColdSteelIIISlotPoints()
+const CS3_GUIDE_POINTS = createColdSteelIIIGuidePoints()
 
 export function OrbmentGraph({
   lines,
@@ -61,18 +71,23 @@ export function OrbmentGraph({
   orbmentVisual,
   equippedMasterQuartzId = null,
   masterQuartzLevel = 1,
+  equippedSubMasterQuartzId = null,
+  subMasterQuartzLevel = 1,
   masterQuartzById = new Map(),
+  showTier,
 }: OrbmentGraphProps) {
   const layout = getLayout(topology)
+  const shouldShowTier = showTier ?? layout.showTier
   const slotPoints = layout.slotPoints
   const edges = buildEdges(lines)
   const outerPath = layout.guideSequence
-    .map((slotId) => slotPoints[slotId])
+    .map((slotId) => layout.guidePoints?.[slotId] ?? slotPoints[slotId])
     .map((point) => `${point.x},${point.y}`)
     .join(' ')
   const title = orbmentVisual?.title ?? 'Orbment'
   const useCircularOuter = orbmentVisual?.outerEdges === 'circular'
   const useRectNodes = orbmentVisual?.nodeShape === 'rect'
+  const subMasterSlot = topology.subMasterQuartzSlot
 
   return (
     <section className="orbmentPanel">
@@ -81,6 +96,19 @@ export function OrbmentGraph({
         <polygon points={outerPath} className="orbmentHexGuide" />
         {layout.gapMarker ? (
           <circle cx={layout.gapMarker.x} cy={layout.gapMarker.y} r={6} className="orbmentGapMarker" />
+        ) : null}
+
+        {subMasterSlot !== undefined && slotPoints[topology.centerSlot] && slotPoints[subMasterSlot] ? (
+          <line
+            x1={circleExitPoint(slotPoints[topology.centerSlot], slotPoints[subMasterSlot], MASTER_NODE_RADIUS).x}
+            y1={circleExitPoint(slotPoints[topology.centerSlot], slotPoints[subMasterSlot], MASTER_NODE_RADIUS).y}
+            x2={circleExitPoint(slotPoints[subMasterSlot], slotPoints[topology.centerSlot], SUB_MASTER_NODE_RADIUS).x}
+            y2={circleExitPoint(slotPoints[subMasterSlot], slotPoints[topology.centerSlot], SUB_MASTER_NODE_RADIUS).y}
+            stroke={SUB_MASTER_LINK_COLOR}
+            strokeWidth={4}
+            strokeLinecap="round"
+            className="orbmentEdge"
+          />
         ) : null}
 
         {edges.map((edge, index) => {
@@ -106,9 +134,27 @@ export function OrbmentGraph({
             }
           }
 
-          const fromIsRect = useRectNodes && edge.from !== topology.masterQuartzSlot
-          const toIsRect = useRectNodes && edge.to !== topology.masterQuartzSlot
-          const trimmed = trimMixedEdge(from, to, fromIsRect, toIsRect)
+          const fromIsRect =
+            useRectNodes &&
+            edge.from !== topology.masterQuartzSlot &&
+            edge.from !== topology.subMasterQuartzSlot
+          const toIsRect =
+            useRectNodes &&
+            edge.to !== topology.masterQuartzSlot &&
+            edge.to !== topology.subMasterQuartzSlot
+          const fromRadius =
+            edge.from === topology.masterQuartzSlot
+              ? MASTER_NODE_RADIUS
+              : edge.from === topology.subMasterQuartzSlot
+                ? SUB_MASTER_NODE_RADIUS
+                : NODE_RADIUS
+          const toRadius =
+            edge.to === topology.masterQuartzSlot
+              ? MASTER_NODE_RADIUS
+              : edge.to === topology.subMasterQuartzSlot
+                ? SUB_MASTER_NODE_RADIUS
+                : NODE_RADIUS
+          const trimmed = trimMixedEdge(from, to, fromIsRect, toIsRect, fromRadius, toRadius)
 
           return (
             <line
@@ -127,21 +173,31 @@ export function OrbmentGraph({
 
         {topology.slotIds.map((slotId) => {
           const isMasterSlot = topology.masterQuartzSlot === slotId
-          const restriction = isMasterSlot ? null : slotRestrictions[slotId]
+          const isSubMasterSlot = topology.subMasterQuartzSlot === slotId
+          const restriction = isMasterSlot || isSubMasterSlot ? null : slotRestrictions[slotId]
           const equippedQuartzId = equippedQuartz[slotId]
           const equippedQuartzName = isMasterSlot
             ? (equippedMasterQuartzId ? masterQuartzById.get(equippedMasterQuartzId)?.name.en : null)
-            : equippedQuartzId
-              ? quartzById.get(equippedQuartzId)?.name.en
-              : null
+            : isSubMasterSlot
+              ? (equippedSubMasterQuartzId ? masterQuartzById.get(equippedSubMasterQuartzId)?.name.en : null)
+              : equippedQuartzId
+                ? quartzById.get(equippedQuartzId)?.name.en
+                : null
           const fill = restriction ? withAlpha(ELEMENT_COLORS[restriction], 0.24) : '#ffffff'
           const stroke = restriction ? ELEMENT_COLORS[restriction] : '#8f96a3'
           const point = slotPoints[slotId]
           const label = isMasterSlot
             ? `M${equippedMasterQuartzId ? ` L${masterQuartzLevel}` : ''}`
-            : `${formatSlotLabel(slotId, topology)}${layout.showTier ? ` T${nodeTiers[slotId]}` : ''}`
+            : isSubMasterSlot
+              ? `S${equippedSubMasterQuartzId ? ` L${subMasterQuartzLevel}` : ''}`
+              : `${formatSlotLabel(slotId, topology)}${shouldShowTier ? ` T${nodeTiers[slotId]}` : ''}`
+          const nodeRadius = isMasterSlot
+            ? MASTER_NODE_RADIUS
+            : isSubMasterSlot
+              ? SUB_MASTER_NODE_RADIUS
+              : NODE_RADIUS
 
-          if (useRectNodes && !isMasterSlot) {
+          if (useRectNodes && !isMasterSlot && !isSubMasterSlot) {
             return (
               <g key={`slot-${slotId}`}>
                 <rect
@@ -166,8 +222,8 @@ export function OrbmentGraph({
 
           return (
             <g key={`slot-${slotId}`}>
-              <circle cx={point.x} cy={point.y} r={NODE_RADIUS} fill={fill} stroke={stroke} strokeWidth={3} />
-              {isMasterSlot ? (
+              <circle cx={point.x} cy={point.y} r={nodeRadius} fill={fill} stroke={stroke} strokeWidth={3} />
+              {isMasterSlot || isSubMasterSlot ? (
                 <>
                   <text x={point.x} y={point.y - 8} className="orbmentNodeRectText">
                     {label}
@@ -218,10 +274,12 @@ function trimMixedEdge(
   to: Point,
   fromIsRect: boolean,
   toIsRect: boolean,
+  fromRadius = NODE_RADIUS,
+  toRadius = NODE_RADIUS,
 ): { start: Point; end: Point } {
   return {
-    start: fromIsRect ? rectExitPoint(from, to, RECT_WIDTH, RECT_HEIGHT) : circleExitPoint(from, to, NODE_RADIUS),
-    end: toIsRect ? rectExitPoint(to, from, RECT_WIDTH, RECT_HEIGHT) : circleExitPoint(to, from, NODE_RADIUS),
+    start: fromIsRect ? rectExitPoint(from, to, RECT_WIDTH, RECT_HEIGHT) : circleExitPoint(from, to, fromRadius),
+    end: toIsRect ? rectExitPoint(to, from, RECT_WIDTH, RECT_HEIGHT) : circleExitPoint(to, from, toRadius),
   }
 }
 
@@ -367,7 +425,56 @@ function signedAngleDelta(from: number, to: number): number {
 }
 
 function lineColor(lineIndex: number): string {
-  return LINE_COLORS[lineIndex] ?? '#8f96a3'
+  return LINE_COLORS[lineIndex % LINE_COLORS.length]
+}
+
+function createColdSteelSlotPoints(): Record<number, Point> {
+  const points: Record<number, Point> = { 1: { ...RING_CENTER } }
+  const startAngle = (157.5 * Math.PI) / 180
+  const step = Math.PI / 4
+  for (let index = 0; index < 8; index += 1) {
+    const angle = startAngle + index * step
+    points[index + 2] = {
+      x: RING_CENTER.x + RING_RADIUS * Math.cos(angle),
+      y: RING_CENTER.y + RING_RADIUS * Math.sin(angle),
+    }
+  }
+  return points
+}
+
+function createColdSteelIIISlotPoints(): Record<number, Point> {
+  const points: Record<number, Point> = { 1: { ...RING_CENTER } }
+  // Cardinal octagon: 2 SW, 3 W, 4 NW, 5 N, 6 NE, 7 E, 8 SE (SVG y-down)
+  const outerAnglesDeg = [135, 180, 225, 270, 315, 0, 45]
+  for (let index = 0; index < outerAnglesDeg.length; index += 1) {
+    const angle = (outerAnglesDeg[index] * Math.PI) / 180
+    points[index + 2] = {
+      x: RING_CENTER.x + RING_RADIUS * Math.cos(angle),
+      y: RING_CENTER.y + RING_RADIUS * Math.sin(angle),
+    }
+  }
+  // Slot 9: inset south (90°)
+  const southAngle = (90 * Math.PI) / 180
+  points[9] = {
+    x: RING_CENTER.x + SUB_MASTER_RING_RADIUS * Math.cos(southAngle),
+    y: RING_CENTER.y + SUB_MASTER_RING_RADIUS * Math.sin(southAngle),
+  }
+  return points
+}
+
+function createColdSteelIIIGuidePoints(): Record<number, Point> {
+  const points: Record<number, Point> = {}
+  // Full cardinal octagon including empty south vertex for the guide polygon
+  const guideAnglesDeg = [135, 180, 225, 270, 315, 0, 45, 90]
+  const guideSlotIds = [2, 3, 4, 5, 6, 7, 8, 0]
+  for (let index = 0; index < guideAnglesDeg.length; index += 1) {
+    const angle = (guideAnglesDeg[index] * Math.PI) / 180
+    points[guideSlotIds[index]] = {
+      x: RING_CENTER.x + RING_RADIUS * Math.cos(angle),
+      y: RING_CENTER.y + RING_RADIUS * Math.sin(angle),
+    }
+  }
+  return points
 }
 
 function withAlpha(hexColor: string, alpha: number): string {
@@ -388,6 +495,7 @@ function shortName(value: string | null | undefined): string {
 function getLayout(topology: OrbmentTopology): {
   slotPoints: Record<number, Point>
   guideSequence: SlotId[]
+  guidePoints?: Record<number, Point>
   gapMarker: Point | null
   showTier: boolean
 } {
@@ -406,6 +514,25 @@ function getLayout(topology: OrbmentTopology): {
       guideSequence: [2, 3, 4, 5, 6, 7],
       gapMarker: null,
       showTier: true,
+    }
+  }
+
+  if (topology.slotIds.length === 9 && topology.subMasterQuartzSlot !== undefined) {
+    return {
+      slotPoints: CS3_SLOT_POINTS,
+      guideSequence: [2, 3, 4, 5, 6, 7, 8, 0],
+      guidePoints: CS3_GUIDE_POINTS,
+      gapMarker: null,
+      showTier: false,
+    }
+  }
+
+  if (topology.slotIds.length === 9) {
+    return {
+      slotPoints: CS_SLOT_POINTS,
+      guideSequence: [2, 3, 4, 5, 6, 7, 8, 9],
+      gapMarker: null,
+      showTier: false,
     }
   }
 

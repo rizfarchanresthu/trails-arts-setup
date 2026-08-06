@@ -1,0 +1,2780 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Skuld",
+      "ja": "スクルド"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fe/Skuld_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          1
+        ],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 80%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          26
+        ],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 100%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 120%"
+          },
+          {
+            "title": "HP regen when battle begins/HP is low",
+            "detail": "2 turns of 15% HP recovery"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          29
+        ],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 140%"
+          },
+          {
+            "title": "HP regen when battle begins/HP is low",
+            "detail": "2 turns of 15% HP recovery"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 160%"
+          },
+          {
+            "title": "HP regen when battle begins/HP is low",
+            "detail": "3 turns of 15% HP recovery"
+          },
+          {
+            "title": "HP recovers automatically",
+            "detail": "HP+1% every turn"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          3
+        ],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 180%"
+          },
+          {
+            "title": "HP regen when battle begins/HP is low",
+            "detail": "3 turns of 15% HP recovery"
+          },
+          {
+            "title": "HP recovers automatically",
+            "detail": "HP+1.5% every turn"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "High HP increases break damage",
+            "detail": "Break damage increased by up to 200%"
+          },
+          {
+            "title": "HP regen when battle begins/HP is low",
+            "detail": "4 turns of 15% HP recovery"
+          },
+          {
+            "title": "HP recovers automatically",
+            "detail": "HP+2% every turn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Keeper",
+      "ja": "キーパー"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7c/Keeper_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          26,
+          28
+        ],
+        "effects": [
+          {
+            "title": "Damage received down as HP drops",
+            "detail": "Decreases damage to 10%~99%"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Damage increased by 30%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          2
+        ],
+        "effects": [
+          {
+            "title": "Damage received down as HP drops",
+            "detail": "Decreases damage to 15%~99%"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Damage increased by 45%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Damage received down as HP drops",
+            "detail": "Decreases damage to 20%~99%"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Damage increased by 60%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+3%"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          29
+        ],
+        "effects": [
+          {
+            "title": "Damage received down as HP drops",
+            "detail": "Decreases damage to 25%~99%"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Damage increased by 75%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+5%"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          3
+        ],
+        "effects": [
+          {
+            "title": "Damage received down as HP drops",
+            "detail": "Decreases damage to 30%~99%"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Damage increased by 90%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+7%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Aegis",
+      "ja": "イージス"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/24/Aegis_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          26
+        ],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "20% chance of activating in battle"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          28
+        ],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "30% chance of activating in battle"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "40% chance of activating in battle"
+          },
+          {
+            "title": "Absolute reflect when battle begins/HP is low",
+            "detail": "Can occur 1x per battle"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          3
+        ],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "50% chance of activating in battle"
+          },
+          {
+            "title": "Absolute reflect when battle begins/HP is low",
+            "detail": "Can occur 1x per battle"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "60% chance of activating in battle"
+          },
+          {
+            "title": "Absolute reflect when battle begins/HP is low",
+            "detail": "Can occur 2x per battle"
+          },
+          {
+            "title": "Reduced AT delay after earth arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          29
+        ],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "70% chance of activating in battle"
+          },
+          {
+            "title": "Absolute reflect when battle begins/HP is low",
+            "detail": "Can occur 2x per battle"
+          },
+          {
+            "title": "Reduced AT delay after earth arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          4
+        ],
+        "effects": [
+          {
+            "title": "Attract enemies' attention",
+            "detail": "80% chance of activating in battle"
+          },
+          {
+            "title": "Absolute reflect when battle begins/HP is low",
+            "detail": "Can occur 3x per battle"
+          },
+          {
+            "title": "Reduced AT delay after earth arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Minotauros",
+      "ja": "ゴーズ"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Minotauros_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 5,
+        "arts_learnt": [
+          26,
+          2,
+          28
+        ],
+        "effects": [
+          {
+            "title": "Damage of attacks and crafts raised",
+            "detail": "Damage increased by 100% Delay after attack multiplied by 1.5"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Break damage increased by 60%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+3%"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          4
+        ],
+        "effects": [
+          {
+            "title": "Damage of attacks and crafts raised",
+            "detail": "Damage increased by 110% Delay after attack multiplied by 1.5"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Break damage increased by 75%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+5%"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Damage of attacks and crafts raised",
+            "detail": "Damage increased by 120% Delay after attack multiplied by 1.5"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Break damage increased by 90%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+7%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Canon",
+      "ja": "カノン"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/ac/Canon_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 2,
+        "arts_learnt": [
+          30,
+          5
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 2.25"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          34
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 2.5"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "5 EP per turn"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          7
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 2.75"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "10 EP per turn"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [
+          33
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 3"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "15 EP per turn"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          32
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 3.25"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "20 EP per turn"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+3"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          35
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing arts",
+            "detail": "Amount healed multiplied by 3.5"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "25 EP per turn"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Kaleido",
+      "ja": "カレイド"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Kaleido_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          33
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "50% chance"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          31
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "55% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.6"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          6
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "65% chance"
+          },
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.7"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "70% chance"
+          },
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.8"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "75% chance"
+          },
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 1.9"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "45% chance"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          8
+        ],
+        "effects": [
+          {
+            "title": "Obtain sepith from attacks/crafts",
+            "detail": "80% chance"
+          },
+          {
+            "title": "Increases obtained EXP",
+            "detail": "Obtained EXP multiplied by 2"
+          },
+          {
+            "title": "Obtain sepith from offensive arts",
+            "detail": "60% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Virgo",
+      "ja": "ヴァルゴ"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/7/78/Virgo_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          33,
+          31
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "40% chance"
+          },
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 2% damage as HP"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          6
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "45% chance"
+          },
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 4% damage as HP"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "50% chance"
+          },
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 6% damage as HP"
+          },
+          {
+            "title": "Reduced AT delay after water arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          35
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "55% chance"
+          },
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 8% damage as HP"
+          },
+          {
+            "title": "Reduced AT delay after water arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          8
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Recover HP through offensive arts",
+            "detail": "Recover 10% damage as HP"
+          },
+          {
+            "title": "Reduced AT delay after water arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Magius",
+      "ja": "マギウス"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/aa/Magius_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "effects": [
+          {
+            "title": "Arts damage up as HP drops",
+            "detail": "Increased by a maximum of 225%"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "35% chance"
+          },
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 1 HP, CP+100 (1x per battle)"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Arts damage up as HP drops",
+            "detail": "Increased by a maximum of 250%"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "40% chance"
+          },
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 1 HP, CP+200 (1x per battle)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Brigid",
+      "ja": "カグツチ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c6/Brigid_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          9
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+8 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          36
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+10 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+12 per enemy killed"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+1 every turn"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          38
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+14 per enemy killed"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+2 every turn"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+16 per enemy killed"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+3 every turn"
+          },
+          {
+            "title": "Restores CP when HP is low",
+            "detail": "CP+200 (1x per battle)"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          11
+        ],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+18 per enemy killed"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+4 every turn"
+          },
+          {
+            "title": "Restores CP when HP is low",
+            "detail": "CP+200 (1x per battle)"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+20 per enemy killed"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+5 every turn"
+          },
+          {
+            "title": "Restores CP when HP is low",
+            "detail": "CP+200 (2x per battle)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Regulus",
+      "ja": "レグルス"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fc/Regulus_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 2,
+        "arts_learnt": [
+          37,
+          10
+        ],
+        "effects": [
+          {
+            "title": "Increases CP obtained when damaged",
+            "detail": "Obtained CP multiplied by 1.75"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases CP obtained when damaged",
+            "detail": "Obtained CP multiplied by 2"
+          },
+          {
+            "title": "Raises STR when battle begins/HP is low",
+            "detail": "STR↑ (S) for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          39
+        ],
+        "effects": [
+          {
+            "title": "Increases CP obtained when damaged",
+            "detail": "Obtained CP multiplied by 2.25"
+          },
+          {
+            "title": "Raises STR when battle begins/HP is low",
+            "detail": "STR↑ (S) for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases CP obtained when damaged",
+            "detail": "Obtained CP multiplied by 2.5"
+          },
+          {
+            "title": "Raises STR when battle begins/HP is low",
+            "detail": "STR↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced delay after using an S-Craft",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          12
+        ],
+        "effects": [
+          {
+            "title": "Increases CP obtained when damaged",
+            "detail": "Obtained CP multiplied by 2.75"
+          },
+          {
+            "title": "Raises STR when battle begins/HP is low",
+            "detail": "STR↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced delay after using an S-Craft",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases CP obtained when damaged",
+            "detail": "Obtained CP multiplied by 3"
+          },
+          {
+            "title": "Raises STR when battle begins/HP is low",
+            "detail": "STR↑ (L) for 4 turns"
+          },
+          {
+            "title": "Reduced delay after using an S-Craft",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Beowulf",
+      "ja": "ベオウルフ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Beowulf_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 5,
+        "arts_learnt": [
+          9,
+          10,
+          38
+        ],
+        "effects": [
+          {
+            "title": "Recover CP through offensive arts",
+            "detail": "CP+5 per enemy killed"
+          },
+          {
+            "title": "Raises STR/DEF/ATS/ADF/SPD when HP is low",
+            "detail": "STR/DEF/ATS/ADF/SPD↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after fire arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          11
+        ],
+        "effects": [
+          {
+            "title": "Recover CP through offensive arts",
+            "detail": "CP+6 per enemy killed"
+          },
+          {
+            "title": "Raises STR/DEF/ATS/ADF/SPD when HP is low",
+            "detail": "STR/DEF/ATS/ADF/SPD↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after fire arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          12
+        ],
+        "effects": [
+          {
+            "title": "Recover CP through offensive arts",
+            "detail": "CP+7 per enemy killed"
+          },
+          {
+            "title": "Raises STR/DEF/ATS/ADF/SPD when HP is low",
+            "detail": "STR/DEF/ATS/ADF/SPD↑ (L) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after fire arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Chevalier",
+      "ja": "シュバリエ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/05/Chevalier_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "effects": [
+          {
+            "title": "Physical damage up as HP drops",
+            "detail": "Increased by a maximum of 225%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+8%"
+          },
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 1 HP, CP+100 (1x per battle)"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Physical damage up as HP drops",
+            "detail": "Increased by a maximum of 250%"
+          },
+          {
+            "title": "Critical rate up",
+            "detail": "CRT+10%"
+          },
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 1 HP, CP+200 (1x per battle)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Sirius",
+      "ja": "シリウス"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/f8/Sirius_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          13
+        ],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 300%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          40
+        ],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 350%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 400%"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+2%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          15
+        ],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 450%"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+4%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 500%"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+6%"
+          },
+          {
+            "title": "Insight status when battle begins",
+            "detail": "Lasts for 2 turns"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          16
+        ],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 550%"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+8%"
+          },
+          {
+            "title": "Insight status when battle begins",
+            "detail": "Lasts for 2 turns"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Stronger counterattacks after evading",
+            "detail": "Damage increased by 600%"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+10%"
+          },
+          {
+            "title": "Insight status when battle begins/HP is low",
+            "detail": "Lasts for 2 turns"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Oberon",
+      "ja": "オベロン"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Oberon_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          13
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "40% chance"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          14
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "50% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [
+          42
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "60% chance"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "5% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          15
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "70% chance"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "10% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "80% chance"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "15% chance"
+          },
+          {
+            "title": "Reduced AT delay after wind arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          41
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "90% chance"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "20% chance"
+          },
+          {
+            "title": "Reduced AT delay after wind arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          16
+        ],
+        "effects": [
+          {
+            "title": "Prevents abnormal status/stat down",
+            "detail": "100% chance"
+          },
+          {
+            "title": "Evades magic attacks",
+            "detail": "25% chance"
+          },
+          {
+            "title": "Reduced AT delay after wind arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Tempest",
+      "ja": "テンペスト"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fd/Tempest_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          42,
+          15,
+          41,
+          16
+        ],
+        "effects": [
+          {
+            "title": "Critical rate up as HP drops",
+            "detail": "Increased by a maximum of 60%"
+          },
+          {
+            "title": "Insight status when battle begins/HP is low",
+            "detail": "Lasts for 3 turns"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+9%"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Critical rate up as HP drops",
+            "detail": "Increased by a maximum of 70%"
+          },
+          {
+            "title": "Insight status when battle begins/HP is low",
+            "detail": "Lasts for 4 turns"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+12%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Thor",
+      "ja": "トール"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0e/Thor_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 5,
+        "arts_learnt": [
+          42,
+          14,
+          41
+        ],
+        "effects": [
+          {
+            "title": "Increases damage to enemies with status effects",
+            "detail": "Damage increased by 40%"
+          },
+          {
+            "title": "Attacks/crafts inflict seal",
+            "detail": "20% chance"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Break damage increased by 50%"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          16
+        ],
+        "effects": [
+          {
+            "title": "Increases damage to enemies with status effects",
+            "detail": "Damage increased by 45%"
+          },
+          {
+            "title": "Attacks/crafts inflict seal",
+            "detail": "25% chance"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Break damage increased by 75%"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases damage to enemies with status effects",
+            "detail": "Damage increased by 50%"
+          },
+          {
+            "title": "Attacks/crafts inflict seal",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Break damage up",
+            "detail": "Break damage increased by 100%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Deva",
+      "ja": "ディーヴァ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5b/Deva_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 1,
+        "arts_learnt": [
+          17
+        ],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "10% chance"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "arts_learnt": [
+          44
+        ],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "15% chance"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "20% chance"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "20% chance"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          18
+        ],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "25% chance"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "25% chance"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Reduced AT delay after time arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          45
+        ],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "35% chance"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "35% chance"
+          },
+          {
+            "title": "Reduced AT delay after time arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          19
+        ],
+        "effects": [
+          {
+            "title": "Evades magic attacks",
+            "detail": "40% chance"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "40% chance"
+          },
+          {
+            "title": "Reduced AT delay after time arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Zephyr",
+      "ja": "ゼファー"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c3/Zephyr_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 2,
+        "arts_learnt": [
+          43,
+          17
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "55% chance (effect is random)"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "60% chance (effect is random)"
+          },
+          {
+            "title": "Raises SPD when battle begins/HP is low",
+            "detail": "SPD↑ (S) for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          44
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "65% chance (effect is random)"
+          },
+          {
+            "title": "Raises SPD when battle begins/HP is low",
+            "detail": "SPD↑ (S) for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "70% chance (effect is random)"
+          },
+          {
+            "title": "Raises SPD when battle begins/HP is low",
+            "detail": "SPD↑ (M) for 4 turns"
+          },
+          {
+            "title": "Attacks/crafts cause delay",
+            "detail": "Delay+1"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          45
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "75% chance (effect is random)"
+          },
+          {
+            "title": "Raises SPD when battle begins/HP is low",
+            "detail": "SPD↑ (M) for 4 turns"
+          },
+          {
+            "title": "Attacks/crafts cause delay",
+            "detail": "Delay+2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "80% chance (effect is random)"
+          },
+          {
+            "title": "Raises SPD when battle begins/HP is low",
+            "detail": "SPD↑ (L) for 4 turns"
+          },
+          {
+            "title": "Attacks/crafts cause delay",
+            "detail": "Delay+3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Katze",
+      "ja": "カッツェ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/2b/Katze_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          17,
+          43
+        ],
+        "effects": [
+          {
+            "title": "Absorbs magic attacks",
+            "detail": "30% chance"
+          },
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "10% chance (effect is random)"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          18
+        ],
+        "effects": [
+          {
+            "title": "Absorbs magic attacks",
+            "detail": "35% chance"
+          },
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "20% chance (effect is random)"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Absorbs magic attacks",
+            "detail": "40% chance"
+          },
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "30% chance (effect is random)"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "20% chance"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          45
+        ],
+        "effects": [
+          {
+            "title": "Absorbs magic attacks",
+            "detail": "45% chance"
+          },
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "40% chance (effect is random)"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "30% chance"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Absorbs magic attacks",
+            "detail": "50% chance"
+          },
+          {
+            "title": "Attacks/crafts cause stat down",
+            "detail": "50% chance (effect is random)"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "40% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Gungnir",
+      "ja": "グングニル"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/07/Gungnir_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          17,
+          18,
+          45,
+          19
+        ],
+        "effects": [
+          {
+            "title": "Increases damage dealt by criticals",
+            "detail": "Critical damage increased by 130%"
+          },
+          {
+            "title": "Increases critical rate",
+            "detail": "CRT+16%"
+          },
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+12 per enemy killed"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases damage dealt by criticals",
+            "detail": "Critical damage increased by 150%"
+          },
+          {
+            "title": "Increases critical rate",
+            "detail": "CRT+20%"
+          },
+          {
+            "title": "Killing enemies restores CP",
+            "detail": "CP+16 per enemy killed"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Moebius",
+      "ja": "メビウス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5f/Moebius_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          46,
+          20
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 1.6 (HP/EP/fight only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "RNG+2"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          47
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 1.7 (HP/EP/fight only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "RNG+3"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 1.8 (HP/EP/fight only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "RNG+4"
+          },
+          {
+            "title": "Healing items affect a wider area",
+            "detail": "Area: Medium"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          21
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 1.9 (HP/EP/fight only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "RNG+6"
+          },
+          {
+            "title": "Healing items affect a wider area",
+            "detail": "Area: Medium"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          48
+        ],
+        "effects": [
+          {
+            "title": "Increases potency of healing items",
+            "detail": "Multiplied by 2 (HP/EP/fight only)"
+          },
+          {
+            "title": "Increases item range",
+            "detail": "RNG+8"
+          },
+          {
+            "title": "Healing items affect a wider area",
+            "detail": "Area: Medium"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Sophia",
+      "ja": "ソフィア"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Sophia_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          20,
+          47
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 50% HP, CP+50 (1x per battle)"
+          },
+          {
+            "title": "Raises DEF/ADF when battle begins/HP is low",
+            "detail": "DEF/ADF↑ (S) for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          21
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 75% HP, CP+75 (1x per battle)"
+          },
+          {
+            "title": "Raises DEF/ADF when battle begins/HP is low",
+            "detail": "DEF/ADF↑ (S) for 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 100% HP, CP+100 (1x per battle)"
+          },
+          {
+            "title": "Raises DEF/ADF when battle begins/HP is low",
+            "detail": "DEF/ADF↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after space arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          48
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 100% HP, CP+200 (1x per battle)"
+          },
+          {
+            "title": "Raises DEF/ADF when battle begins/HP is low",
+            "detail": "DEF/ADF↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after space arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          22
+        ],
+        "effects": [
+          {
+            "title": "Automatically recover from K.O.",
+            "detail": "Recover 100% HP, CP+200 (2x per battle)"
+          },
+          {
+            "title": "Raises DEF/ADF when battle begins/HP is low",
+            "detail": "DEF/ADF↑ (L) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after space arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Dunamis",
+      "ja": "デュナミス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bd/Dunamis_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          20,
+          46,
+          47,
+          21
+        ],
+        "effects": [
+          {
+            "title": "Recover HP through attacks/crafts",
+            "detail": "Recover 9% damage as HP"
+          },
+          {
+            "title": "Raises STR/ATS when battle begins/HP is low",
+            "detail": "STR/ATS↑ (M) for 4 turns"
+          },
+          {
+            "title": "Increases critical rate",
+            "detail": "CRT+5%"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Recover HP through attacks/crafts",
+            "detail": "Recover 10% damage as HP"
+          },
+          {
+            "title": "Raises STR/ATS when battle begins/HP is low",
+            "detail": "STR/ATS↑ (L) for 4 turns"
+          },
+          {
+            "title": "Increases critical rate",
+            "detail": "CRT+7%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Emblem",
+      "ja": "エンブレム"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Emblem_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 5,
+        "arts_learnt": [
+          46,
+          20,
+          47
+        ],
+        "effects": [
+          {
+            "title": "HP/EP/CP regenerate on field",
+            "detail": "+3% per second"
+          },
+          {
+            "title": "Raises stats when battle begins",
+            "detail": "STR/DEF/ATS/ADF/SPD↑ (S) for 3 turns"
+          },
+          {
+            "title": "Increase dropped items",
+            "detail": "Multiply number of items dropped by 2 Only when user kills the enemy"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          21
+        ],
+        "effects": [
+          {
+            "title": "HP/EP/CP regenerate on field",
+            "detail": "+3% per second"
+          },
+          {
+            "title": "Raises stats when battle begins",
+            "detail": "STR/DEF/ATS/ADF/SPD↑ (S) for 3 turns"
+          },
+          {
+            "title": "Increase dropped items",
+            "detail": "Multiply number of items dropped by 2 Only when user kills the enemy"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          48
+        ],
+        "effects": [
+          {
+            "title": "HP/EP/CP regenerate on field",
+            "detail": "+4% per second"
+          },
+          {
+            "title": "Raises stats when battle begins",
+            "detail": "STR/DEF/ATS/ADF/SPD↑ (S) for 4 turns"
+          },
+          {
+            "title": "Increase dropped items",
+            "detail": "Multiply number of items dropped by 2 Only when user kills the enemy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Valhalla EX",
+      "ja": "ヴァルハラ"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c4/Valhalla_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          46,
+          20,
+          47,
+          21,
+          48
+        ],
+        "effects": [
+          {
+            "title": "High HP increases physical damage",
+            "detail": "Increased by up to 70%"
+          },
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "25% HP per enemy killed"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+9%"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          22
+        ],
+        "effects": [
+          {
+            "title": "High HP increases physical damage",
+            "detail": "Increased by up to 80%"
+          },
+          {
+            "title": "Killing enemies recovers HP",
+            "detail": "30% HP per enemy killed"
+          },
+          {
+            "title": "Evasion up",
+            "detail": "EVA+12%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Titania",
+      "ja": "ティタニア"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Titania_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          50,
+          23
+        ],
+        "effects": [
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 0.6% of damage as EP"
+          },
+          {
+            "title": "Raises ATS/ADF when battle begins/HP is low",
+            "detail": "ATS/ADF↑ (S) 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          24
+        ],
+        "effects": [
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 0.7% of damage as EP"
+          },
+          {
+            "title": "Raises ATS/ADF when battle begins/HP is low",
+            "detail": "ATS/ADF↑ (S) 4 turns"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 0.8% of damage as EP"
+          },
+          {
+            "title": "Raises ATS/ADF when battle begins/HP is low",
+            "detail": "ATS/ADF↑ (M) 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after mirage arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          51
+        ],
+        "effects": [
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 0.9% of damage as EP"
+          },
+          {
+            "title": "Raises ATS/ADF when battle begins/HP is low",
+            "detail": "ATS/ADF↑ (M) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after mirage arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          25
+        ],
+        "effects": [
+          {
+            "title": "Recover EP through offensive arts",
+            "detail": "Recover 1% of damage as EP"
+          },
+          {
+            "title": "Raises ATS/ADF when battle begins/HP is low",
+            "detail": "ATS/ADF↑ (L) for 4 turns"
+          },
+          {
+            "title": "Reduced AT delay after mirage arts",
+            "detail": "Delay reduced to 1/2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Gloom",
+      "ja": "オボロ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6d/Gloom_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          49,
+          23
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "30% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "10% chance (random abnormality)"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          50
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "35% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "20% chance (random abnormality)"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "40% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "30% chance (random abnormality)"
+          },
+          {
+            "title": "Begin battle with stealth",
+            "detail": "Lasts for 1 turn"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          24
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "45% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "40% chance (random abnormality)"
+          },
+          {
+            "title": "Begin battle with stealth",
+            "detail": "Lasts for 1 turn"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          51
+        ],
+        "effects": [
+          {
+            "title": "Attacks/crafts inflict abnormalities",
+            "detail": "50% chance (random abnormality)"
+          },
+          {
+            "title": "Offensive arts inflict abnormalities",
+            "detail": "50% chance (random abnormality)"
+          },
+          {
+            "title": "Begin battle with stealth",
+            "detail": "Lasts for 1 turn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Scorpio",
+      "ja": "スコルピオ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c6/Scorpio_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 3,
+        "arts_learnt": [
+          49,
+          23
+        ],
+        "effects": [
+          {
+            "title": "Increases damage to enemies in break state",
+            "detail": "Damage increased by 70%"
+          },
+          {
+            "title": "Break damage up as HP drops",
+            "detail": "Increased by up to 100%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "arts_learnt": [
+          50
+        ],
+        "effects": [
+          {
+            "title": "Increases damage to enemies in break state",
+            "detail": "Damage increased by 90%"
+          },
+          {
+            "title": "Break damage up as HP drops",
+            "detail": "Increased by up to 150%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases damage to enemies in break state",
+            "detail": "Damage increased by 110%"
+          },
+          {
+            "title": "Break damage up as HP drops",
+            "detail": "Increased by up to 200%"
+          },
+          {
+            "title": "Attacks/crafts inflict nightmare",
+            "detail": "20% chance"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          24
+        ],
+        "effects": [
+          {
+            "title": "Increases damage to enemies in break state",
+            "detail": "Damage increased by 130%"
+          },
+          {
+            "title": "Break damage up as HP drops",
+            "detail": "Increased by up to 250%"
+          },
+          {
+            "title": "Attacks/crafts inflict nightmare",
+            "detail": "25% chance"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "Increases damage to enemies in break state",
+            "detail": "Damage increased by 150%"
+          },
+          {
+            "title": "Break damage up as HP drops",
+            "detail": "Increased by up to 300%"
+          },
+          {
+            "title": "Attacks/crafts inflict nightmare",
+            "detail": "30% chance"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Pandora",
+      "ja": "パンドラ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1c/Pandora_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 6,
+        "arts_learnt": [
+          50,
+          23,
+          51,
+          24
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts do more damage",
+            "detail": "Damage increased by 90% Consumed EP multiplied by 1.5"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "35% chance"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+3"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          25
+        ],
+        "effects": [
+          {
+            "title": "Offensive arts do more damage",
+            "detail": "Damage increased by 100% Consumed EP multiplied by 1.5"
+          },
+          {
+            "title": "Offensive arts deal critical damage",
+            "detail": "40% chance"
+          },
+          {
+            "title": "Arts affect a wider area",
+            "detail": "Area+4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Regalia EX",
+      "ja": "レガリア"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/50/Regalia_%28Sen_III_MQ%29.png",
+    "description": "",
+    "levels": [
+      {
+        "level": 4,
+        "arts_learnt": [
+          49,
+          23,
+          50,
+          24
+        ],
+        "effects": [
+          {
+            "title": "High HP increases magic damage",
+            "detail": "Increased by up to 50%"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "25 EP every turn"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "arts_learnt": [],
+        "effects": [
+          {
+            "title": "High HP increases magic damage",
+            "detail": "Increased by up to 60%"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "30 EP every turn"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+4 every turn"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "arts_learnt": [
+          51
+        ],
+        "effects": [
+          {
+            "title": "High HP increases magic damage",
+            "detail": "Increased by up to 70%"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "35 EP every turn"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+6 every turn"
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "arts_learnt": [
+          25
+        ],
+        "effects": [
+          {
+            "title": "High HP increases magic damage",
+            "detail": "Increased by up to 80%"
+          },
+          {
+            "title": "EP recovers automatically",
+            "detail": "48 EP every turn"
+          },
+          {
+            "title": "CP increases automatically",
+            "detail": "CP+8 every turn"
+          }
+        ]
+      }
+    ]
+  }
+]

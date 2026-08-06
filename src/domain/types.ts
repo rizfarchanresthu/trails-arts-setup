@@ -22,7 +22,42 @@ export const ELEMENT_COLORS: Record<ElementName, string> = {
   Mirage: '#D6D3CE',
 }
 
-export const LINE_COLORS = ['#f25f5c', '#4d9de0', '#5abf90', '#f2c14e', '#9c89b8'] as const
+export const LOST_QUARTZ_COLOR = '#8a4ecf'
+
+export const LINE_COLORS = [
+  '#f2c14e',
+  '#4d9de0',
+  '#5abf90',
+  '#f25f5c',
+  '#9c89b8',
+  '#f28482',
+  '#84a59d',
+  '#f6bd60',
+] as const
+
+export type QuartzRank = 'R' | 'SR' | 'UR'
+
+export type OrbmentRuleSetId =
+  | 'sky-crossbell'
+  | 'cold-steel-i'
+  | 'cold-steel-ii'
+  | 'cold-steel-iii'
+  | 'cold-steel-iv'
+  | 'reverie'
+
+export function isColdSteelRuleSet(ruleSet?: OrbmentRuleSetId): boolean {
+  return (
+    ruleSet === 'cold-steel-i' ||
+    ruleSet === 'cold-steel-ii' ||
+    ruleSet === 'cold-steel-iii' ||
+    ruleSet === 'cold-steel-iv' ||
+    ruleSet === 'reverie'
+  )
+}
+
+export function enforcesColdSteelNodeTiers(ruleSet?: OrbmentRuleSetId): boolean {
+  return ruleSet === 'cold-steel-ii' || ruleSet === 'cold-steel-iv' || ruleSet === 'reverie'
+}
 
 export type SlotId = number
 
@@ -41,10 +76,13 @@ export type Quartz = {
   id: number
   name: LocalizedName
   effect: string
-  element: ElementName
+  element: ElementName | ElementName[]
   tier?: number
+  rank?: QuartzRank | null
   exclusive_groups: string[]
-  elemental_value: ElementRequirement[] | 'No value'
+  line_exclusive_groups?: string[]
+  arts_learnt?: number[]
+  elemental_value: ElementRequirement[] | 'No value' | null
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
 }
 
@@ -55,7 +93,8 @@ export type MasterQuartzEffect = {
 
 export type MasterQuartzLevel = {
   level: number
-  elemental_value: ElementRequirement[]
+  elemental_value?: ElementRequirement[]
+  arts_learnt?: number[]
   effects: MasterQuartzEffect[]
 }
 
@@ -71,7 +110,7 @@ export type Art = {
   id: number
   name: LocalizedName
   image_url: string | null
-  element: ElementName
+  element: ElementName | ElementName[]
   category: 'offensive' | 'support'
   elemental_value: ElementRequirement[]
   cost: string
@@ -99,6 +138,7 @@ export type OrbmentTopology = {
   maxLines: number
   nodeTierDefaults: Record<number, number>
   masterQuartzSlot?: SlotId
+  subMasterQuartzSlot?: SlotId
 }
 
 export type OrbmentVisual = {
@@ -115,10 +155,32 @@ export type BaseData = {
   masterQuartz?: MasterQuartz[]
   topology: OrbmentTopology
   orbmentVisual?: OrbmentVisual
+  ruleSet?: OrbmentRuleSetId
 }
 
 export function formatSlotLabel(slotId: SlotId, topology: OrbmentTopology): string {
-  return topology.masterQuartzSlot === slotId ? 'M' : String(slotId)
+  if (topology.masterQuartzSlot === slotId) {
+    return 'M'
+  }
+  if (topology.subMasterQuartzSlot === slotId) {
+    return 'S'
+  }
+  return String(slotId)
+}
+
+export function isLostQuartz(quartz: Quartz): quartz is Quartz & { element: ElementName[] } {
+  return Array.isArray(quartz.element)
+}
+
+export function getArtElements(art: Pick<Art, 'element'>): ElementName[] {
+  return Array.isArray(art.element) ? art.element : [art.element]
+}
+
+export function quartzFitsSlotRestriction(quartz: Quartz, restriction: ElementName | null | undefined): boolean {
+  if (Array.isArray(quartz.element)) {
+    return restriction != null && quartz.element.includes(restriction)
+  }
+  return restriction == null || quartz.element === restriction
 }
 
 export type SavedQuartzSetup = {
@@ -133,4 +195,17 @@ export type SavedQuartzSetup = {
 export type SavedQuartzSetupStorage = {
   version: 1
   setups: SavedQuartzSetup[]
+}
+
+export const EXPORTED_SETUP_KIND = 'trails-arts-gallery-setup'
+export const EXPORTED_SETUP_VERSION = 1
+
+export type ExportedQuartzSetup = {
+  kind: typeof EXPORTED_SETUP_KIND
+  version: typeof EXPORTED_SETUP_VERSION
+  baseGame: string
+  templateId: string | null
+  name: string
+  exported_at: string
+  orbmentState: OrbmentState
 }

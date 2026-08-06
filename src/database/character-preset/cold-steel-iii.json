@@ -1,0 +1,913 @@
+[
+  {
+    "id": "rean-schwarzer",
+    "name": "Rean Schwarzer",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "juna-crawford",
+    "name": "Juna Crawford",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "kurt-vander",
+    "name": "Kurt Vander",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "altina-orion",
+    "name": "Altina Orion",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "musse-egret",
+    "name": "Musse Egret",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "ash-carbide",
+    "name": "Ash Carbide",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4
+      ],
+      [
+        "M",
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          8
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "alisa-reinford",
+    "name": "Alisa Reinford",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "elliot-craig",
+    "name": "Elliot Craig",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "laura-s-arseid",
+    "name": "Laura S. Arseid",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6
+      ],
+      [
+        "M",
+        5,
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "machias-regnitz",
+    "name": "Machias Regnitz",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        "M",
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Earth"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "emma-millstein",
+    "name": "Emma Millstein",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "jusis-albarea",
+    "name": "Jusis Albarea",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        "M",
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "fie-clausell",
+    "name": "Fie Clausell",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6
+      ],
+      [
+        "M",
+        5,
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "gaius-worzel",
+    "name": "Gaius Worzel",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        6,
+        5,
+        4,
+        3,
+        2
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "millium-orion",
+    "name": "Millium Orion",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "sara-valestein",
+    "name": "Sara Valestein",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Wind"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "claire-rieveldt",
+    "name": "Claire Rieveldt",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "agate-crosner",
+    "name": "Agate Crosner",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4
+      ],
+      [
+        "M",
+        5,
+        6
+      ],
+      [
+        "M",
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "tio-plato",
+    "name": "Tio Plato",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Water"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "olivier-lenheim",
+    "name": "Olivier Lenheim",
+    "line_count": 1,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          4,
+          8
+        ],
+        "element": "Mirage"
+      },
+      {
+        "slots": [
+          6
+        ],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "sharon-krueger",
+    "name": "Sharon Krueger",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          7
+        ],
+        "element": "Time"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "angelica-rogner",
+    "name": "Angelica Rogner",
+    "line_count": 3,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4,
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          6
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "aurelia-le-guin",
+    "name": "Aurelia Le Guin",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      [
+        "M",
+        3,
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "tita-russell",
+    "name": "Tita Russell",
+    "line_count": 4,
+    "lines": [
+      [
+        "M",
+        8,
+        7,
+        6,
+        5
+      ],
+      [
+        "M",
+        4
+      ],
+      [
+        "M",
+        3
+      ],
+      [
+        "M",
+        2
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          3,
+          7
+        ],
+        "element": "Space"
+      },
+      {
+        "slots": [
+          5
+        ],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "lechter-arundel",
+    "name": "Lechter Arundel",
+    "line_count": 2,
+    "lines": [
+      [
+        "M",
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        "M",
+        8
+      ]
+    ],
+    "restriction": [
+      {
+        "slots": [
+          2,
+          8
+        ],
+        "element": "Fire"
+      },
+      {
+        "slots": [
+          4
+        ],
+        "element": "Time"
+      }
+    ]
+  }
+]
