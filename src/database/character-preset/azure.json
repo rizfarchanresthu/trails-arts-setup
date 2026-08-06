@@ -4,8 +4,8 @@
     "name": "Lloyd Bannings",
     "line_count": 2,
     "lines": [
-      ["M", 3, 2, 7],
-      ["M", 6, 5, 4]
+      ["M", 6, 5, 4],
+      ["M", 3, 2, 7]
     ],
     "restriction": null
   },
@@ -55,8 +55,8 @@
     "lines": [
       ["M", 5, 4, 3],
       ["M", 2],
-      ["M", 6],
-      ["M", 7]
+      ["M", 7],
+      ["M", 6]
     ],
     "restriction": {
       "slots": [4],
