@@ -1,32 +1,50 @@
-# React + TypeScript + Vite
+# Trails Arts Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A web tool for planning **orbment** (quartz) setups from the *Trails* (*Kiseki*) RPG series. Equip quartz and master quartz, configure lines and slot restrictions, and see which **arts** your setup unlocks — using game-accurate element totals and rule sets.
 
-Currently, two official plugins are available:
+## Supported games
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Trails in the Sky FC / SC / the 3rd
+- Trails from Zero / to Azure
+- Trails of Cold Steel I–IV
+- Trails into Reverie
 
-## React Compiler
+Character presets, quartz catalogs, master quartz, and arts data are stored per game under `src/database/`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Interactive orbment configurator with game-specific topologies and rules
+- Quartz and master quartz pickers
+- Live arts evaluation from your equipped setup
+- Save, load, import, and export setups in the browser
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Tech stack
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+| Layer | Choice |
+| --- | --- |
+| UI | [React](https://react.dev/) 19 |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Build / dev | [Vite](https://vite.dev/) 8 |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) 4 |
+| Components | [shadcn/ui](https://ui.shadcn.com/) (built on [Base UI](https://base-ui.com/)) |
+| Icons | [Lucide](https://lucide.dev/) |
+| Selects | [react-select](https://react-select.com/) |
+| Lint | [Oxlint](https://oxc.rs/docs/guide/usage/linter) |
+| Font | Geist Variable (`@fontsource-variable/geist`) |
+
+Game data lives as static JSON. Domain logic (arts evaluation, rule sets, presets) sits in `src/domain/`; UI state for the orbment and saved setups is in `src/state/`.
+
+## Getting started
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Other scripts:
+
+```bash
+npm run build    # typecheck + production build
+npm run preview  # serve the production build
+npm run lint     # run Oxlint
+```
