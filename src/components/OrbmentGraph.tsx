@@ -30,8 +30,8 @@ type OrbmentGraphProps = {
 }
 
 const NODE_RADIUS = 24
-const MASTER_NODE_RADIUS = 28
-const SUB_MASTER_NODE_RADIUS = 26
+const MASTER_NODE_RADIUS = 32
+const SUB_MASTER_NODE_RADIUS = 28
 const RECT_WIDTH = 32
 const RECT_HEIGHT = 52
 const RECT_RX = 4
