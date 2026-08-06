@@ -148,6 +148,31 @@ button.artCard,
   font-weight: 700;
 }
 
+.dark .orbmentSvg {
+  background: radial-gradient(
+    circle at center,
+    color-mix(in oklab, var(--card) 100%, transparent) 0%,
+    color-mix(in oklab, var(--background) 80%, var(--card)) 70%,
+    var(--background) 100%
+  );
+}
+
+.dark .orbmentHexGuide,
+.dark .orbmentRing {
+  stroke: color-mix(in oklab, var(--foreground) 22%, transparent);
+}
+
+.dark .orbmentGapMarker {
+  fill: color-mix(in oklab, var(--foreground) 10%, var(--card));
+  stroke: color-mix(in oklab, var(--foreground) 28%, transparent);
+}
+
+.dark .orbmentNodeId,
+.dark .orbmentNodeText,
+.dark .orbmentNodeRectText {
+  fill: var(--foreground);
+}
+
 .lineLegend {
   width: 100%;
   display: grid;

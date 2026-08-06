@@ -30,7 +30,7 @@ Character presets, quartz catalogs, master quartz, and arts data are stored per 
 | Icons | [Lucide](https://lucide.dev/) |
 | Selects | [react-select](https://react-select.com/) |
 | Lint | [Oxlint](https://oxc.rs/docs/guide/usage/linter) |
-| Font | Geist Variable (`@fontsource-variable/geist`) |
+| Font | Cuprum Variable (default); Geist Variable via in-app toggle |
 
 Game data lives as static JSON. Domain logic (arts evaluation, rule sets, presets) sits in `src/domain/`; UI state for the orbment and saved setups is in `src/state/`.
 

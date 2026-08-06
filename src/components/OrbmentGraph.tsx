@@ -183,7 +183,7 @@ export function OrbmentGraph({
               : equippedQuartzId
                 ? quartzById.get(equippedQuartzId)?.name.en
                 : null
-          const fill = restriction ? withAlpha(ELEMENT_COLORS[restriction], 0.24) : '#ffffff'
+          const fill = restriction ? withAlpha(ELEMENT_COLORS[restriction], 0.24) : 'var(--card)'
           const stroke = restriction ? ELEMENT_COLORS[restriction] : '#8f96a3'
           const point = slotPoints[slotId]
           const label = isMasterSlot

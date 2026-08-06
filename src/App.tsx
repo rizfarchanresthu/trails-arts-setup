@@ -1,14 +1,17 @@
 import { useMemo, useRef, useState } from 'react'
+import { Moon, Sun, Type } from 'lucide-react'
 import './App.css'
 import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardAction, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useFont } from './hooks/useFont'
+import { useTheme } from './hooks/useTheme'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
 import { getCharacterTemplatesForBase } from './domain/characterPresets'
@@ -48,6 +51,8 @@ type MainTab = 'orbment' | 'arts'
 type SetupNoticeTone = 'default' | 'success' | 'error'
 
 function App() {
+  const { theme, toggleTheme } = useTheme()
+  const { font, toggleFont } = useFont()
   const [selectedBaseId, setSelectedBaseId] = useState('sky-fc')
   const [selectedTemplateId, setSelectedTemplateId] = useState('')
   const [activeMainTab, setActiveMainTab] = useState<MainTab>('orbment')
@@ -322,6 +327,28 @@ function App() {
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl">Trails Series Quartz Setup</CardTitle>
+          <CardAction>
+            <div className="flex items-center gap-1">
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                onClick={toggleFont}
+                aria-label={font === 'cuprum' ? 'Switch to Geist font' : 'Switch to Cuprum font'}
+              >
+                <Type />
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                onClick={toggleTheme}
+                aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+              >
+                {theme === 'dark' ? <Sun /> : <Moon />}
+              </Button>
+            </div>
+          </CardAction>
         </CardHeader>
         <CardContent className="grid gap-3">
           <div className="flex flex-wrap items-end gap-3">
