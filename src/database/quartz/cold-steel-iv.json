@@ -1,0 +1,8539 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Needle Shoot",
+      "ja": "ニードルショット"
+    },
+    "effect": "Needle Shoot",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 40
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      1
+    ],
+    "tier": 0
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Needle Shoot R",
+      "ja": "ニードルショットＲ"
+    },
+    "effect": "Needle Shoot STR+8/DEF+16",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Needle Shoot",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      1
+    ],
+    "tier": 1
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Needle Shoot SR",
+      "ja": "ニードルショットＳＲ"
+    },
+    "effect": "Needle Shoot STR+16/DEF+32",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Needle Shoot R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      1
+    ],
+    "tier": 2
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Ivy Nail",
+      "ja": "アイヴィネイル"
+    },
+    "effect": "Ivy Nail",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      2
+    ],
+    "tier": 0
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Ivy Nail R",
+      "ja": "アイヴィネイルＲ"
+    },
+    "effect": "Ivy Nail STR+12/DEF+24",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Ivy Nail",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      2
+    ],
+    "tier": 1
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Ivy Nail SR",
+      "ja": "アイヴィネイルＳＲ"
+    },
+    "effect": "Ivy Nail STR+24/DEF+48",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Ivy Nail R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      2
+    ],
+    "tier": 2
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Megalith Fall",
+      "ja": "メガリスフォール"
+    },
+    "effect": "Megalith Fall",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 360
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      3
+    ],
+    "tier": 0
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Megalith Fall R",
+      "ja": "メガリスフォールＲ"
+    },
+    "effect": "Megalith Fall STR+16/DEF+32",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Megalith Fall",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      3
+    ],
+    "tier": 1
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Megalith Fall SR",
+      "ja": "メガリスフォールＳＲ"
+    },
+    "effect": "Megalith Fall STR+32/DEF+64",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Megalith Fall R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      3
+    ],
+    "tier": 2
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Gravion Hammer",
+      "ja": "グラヴィオン・ハンマー"
+    },
+    "effect": "Gravion Hammer",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 1080
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      4
+    ],
+    "tier": 0
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Gravion Hammer R",
+      "ja": "グラヴィオン・ハンマーＲ"
+    },
+    "effect": "Gravion Hammer STR+20/DEF+40",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Gravion Hammer",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      4
+    ],
+    "tier": 1
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Gravion Hammer SR",
+      "ja": "グラヴィオン・ハンマーＳＲ"
+    },
+    "effect": "Gravion Hammer STR+40/DEF+80",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Gravion Hammer R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      4
+    ],
+    "tier": 2
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Crest",
+      "ja": "クレスト"
+    },
+    "effect": "Crest",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 30
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      27
+    ],
+    "tier": 0
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Crest R",
+      "ja": "クレストＲ"
+    },
+    "effect": "Crest HP+400/DEF+12",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crest",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      27
+    ],
+    "tier": 1
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Crest SR",
+      "ja": "クレストＳＲ"
+    },
+    "effect": "Crest HP+800/DEF+24",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crest R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      27
+    ],
+    "tier": 2
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "La Crest",
+      "ja": "ラ・クレスト"
+    },
+    "effect": "Crest",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      27
+    ],
+    "tier": 0
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "La Crest R",
+      "ja": "ラ・クレストＲ"
+    },
+    "effect": "La Crest HP+600/DEF+20",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "La Crest",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      28
+    ],
+    "tier": 1
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "La Crest SR",
+      "ja": "ラ・クレストＳＲ"
+    },
+    "effect": "La Crest HP+1200/DEF+40",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "La Crest R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      28
+    ],
+    "tier": 2
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Earth Pulse",
+      "ja": "アースグロウ"
+    },
+    "effect": "Earth Pulse",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 90
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      26
+    ],
+    "tier": 0
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Earth Pulse R",
+      "ja": "アースグロウＲ"
+    },
+    "effect": "Earth Pulse HP+400/DEF+16",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Earth Pulse",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      26
+    ],
+    "tier": 1
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Earth Pulse SR",
+      "ja": "アースグロウＳＲ"
+    },
+    "effect": "Earth Pulse HP+800/DEF+32",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Earth Pulse R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      26
+    ],
+    "tier": 2
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Adamantine Shield",
+      "ja": "アダマスシールド"
+    },
+    "effect": "Adamantine Shield",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 300
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      29
+    ],
+    "tier": 0
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Adamantine Shield R",
+      "ja": "アダマスシールドＲ"
+    },
+    "effect": "Adamantine Shield HP+800/DEF+32",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Adamantine Shield",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      29
+    ],
+    "tier": 1
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Adamantine Shield SR",
+      "ja": "アダマスシールドＳＲ"
+    },
+    "effect": "Adamantine Shield HP+1600/DEF+64",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Adamantine Shield R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      29
+    ],
+    "tier": 2
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Defense 1",
+      "ja": "防御１"
+    },
+    "effect": "DEF+40",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Defense 2",
+      "ja": "防御２"
+    },
+    "effect": "DEF+80",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Defense 3",
+      "ja": "防御３"
+    },
+    "effect": "DEF+160",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Break 1",
+      "ja": "破壊１"
+    },
+    "effect": "STR+10/Break damage+20%",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Break 2",
+      "ja": "破壊２"
+    },
+    "effect": "STR+20/Break damage+40%",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Break 3",
+      "ja": "破壊３"
+    },
+    "effect": "STR+40/Break damage+60%",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Poison",
+      "ja": "毒の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can poison enemies (10% chance).",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Poison II",
+      "ja": "毒の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can poison enemies (15% chance).",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Poison",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Poison III",
+      "ja": "毒の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can poison enemies (20% chance).",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Poison II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Petrify",
+      "ja": "石化の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can petrify enemies (10% chance).",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Petrify II",
+      "ja": "石化の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can petrify enemies (15% chance).",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Petrify",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Petrify III",
+      "ja": "石化の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can petrify enemies (20% chance).",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Petrify II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Shield Breaker",
+      "ja": "破盾の牙"
+    },
+    "effect": "STR+15 Attacks/crafts cause DEF↓(S) (20% chance).",
+    "element": "Earth",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/93/Earth_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Shield Breaker II",
+      "ja": "破盾の牙Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts cause DEF↓(S) (25% chance).",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Shield Breaker",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Shield Breaker III",
+      "ja": "破盾の牙Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts cause DEF↓(S) (30% chance).",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Shield Breaker II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Earth Bell",
+      "ja": "地言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using earth arts.",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Needle Shoot R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Steel Bell",
+      "ja": "鋼星鈴"
+    },
+    "effect": "Megalith Fall ATS+60 Damage+30% and delay halved when using earth arts.",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Earth Bell",
+        "value": 1
+      },
+      {
+        "quartz": "Megalith Fall SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      3
+    ],
+    "tier": 2
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Septium Vein",
+      "ja": "耀脈"
+    },
+    "effect": "EP+80/ATS+10 Enemies drop more sepith.",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crest R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Dragon Vein",
+      "ja": "龍脈"
+    },
+    "effect": "EP+160/ATS+20 The Assault Gauge gradually recovers in the field.",
+    "element": "Earth",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Ivy Nail R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8f/Earth_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Impenetrable Shield",
+      "ja": "金剛盾"
+    },
+    "effect": "La Crest / Earth Pulse / Adamantine Shield HP+2400/DEF+96/ADF+96/ATS+48",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "La Crest SR",
+        "value": 1
+      },
+      {
+        "quartz": "Earth Pulse SR",
+        "value": 1
+      },
+      {
+        "quartz": "Adamantine Shield SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      28,
+      26,
+      29
+    ],
+    "tier": 2
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Genbu",
+      "ja": "玄武刃"
+    },
+    "effect": "STR+80 Attacks/crafts can poison or petrify enemies (25% chance).",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Poison III",
+        "value": 1
+      },
+      {
+        "quartz": "Petrify III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Rakan Gem",
+      "ja": "羅漢珠"
+    },
+    "effect": "STR+40/DEF+40 Break damage+80%/Enemies drop more sepith.",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Septium Vein",
+        "value": 1
+      },
+      {
+        "quartz": "Break 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "Acala Gem",
+      "ja": "不動珠"
+    },
+    "effect": "Gravion Hammer HP+2000/DEF+200 Assault Points gradually recover in the field.",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Dragon Vein",
+        "value": 1
+      },
+      {
+        "quartz": "Defense 3",
+        "value": 1
+      },
+      {
+        "quartz": "Gravion Hammer SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      4
+    ],
+    "tier": 2
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "Amberl Gem",
+      "ja": "琥耀珠"
+    },
+    "effect": "DEF+400/ADF+400",
+    "element": "Earth",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Defense 3",
+        "value": 2
+      },
+      {
+        "quartz": "Shield 3",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/94/Earth_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "Aqua Bleed",
+      "ja": "アクアブリード"
+    },
+    "effect": "Aqua Bleed",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 40
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      5
+    ],
+    "tier": 0
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "Aqua Bleed R",
+      "ja": "アクアブリードＲ"
+    },
+    "effect": "Aqua Bleed ATS+8/ADF+16",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Aqua Bleed",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      5
+    ],
+    "tier": 1
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Aqua Bleed SR",
+      "ja": "アクアブリードＳＲ"
+    },
+    "effect": "Aqua Bleed ATS+16/ADF+32",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Aqua Bleed R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      5
+    ],
+    "tier": 2
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "Crystal Edge",
+      "ja": "クリスタルエッジ"
+    },
+    "effect": "Crystal Edge",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      6
+    ],
+    "tier": 0
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Crystal Edge R",
+      "ja": "クリスタルエッジＲ"
+    },
+    "effect": "Crystal Edge ATS+12/ADF+24",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crystal Edge",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      6
+    ],
+    "tier": 1
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Crystal Edge SR",
+      "ja": "クリスタルエッジＳＲ"
+    },
+    "effect": "Crystal Edge ATS+24/ADF+48",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crystal Edge R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      6
+    ],
+    "tier": 2
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Blue Ascension",
+      "ja": "ブルーアセンション"
+    },
+    "effect": "Blue Ascension",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 360
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      7
+    ],
+    "tier": 0
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "Blue Ascension R",
+      "ja": "ブルーアセンションＲ"
+    },
+    "effect": "Blue Ascension ATS+16/ADF+24",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Blue Ascension",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      7
+    ],
+    "tier": 1
+  },
+  {
+    "id": 57,
+    "name": {
+      "en": "Blue Ascension SR",
+      "ja": "ブルーアセンションＳＲ"
+    },
+    "effect": "Blue Ascension ATS+32/ADF+64",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Blue Ascension R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      7
+    ],
+    "tier": 2
+  },
+  {
+    "id": 58,
+    "name": {
+      "en": "Diamond Nova",
+      "ja": "ダイヤモンド・ノヴァ"
+    },
+    "effect": "Diamond Nova",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 1080
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      8
+    ],
+    "tier": 0
+  },
+  {
+    "id": 59,
+    "name": {
+      "en": "Diamond Nova R",
+      "ja": "ダイヤモンド・ノヴァＲ"
+    },
+    "effect": "Diamond Nova ATS+20/ADF+40",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Diamond Nova",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      8
+    ],
+    "tier": 1
+  },
+  {
+    "id": 60,
+    "name": {
+      "en": "Diamond Nova SR",
+      "ja": "ダイヤモンド・ノヴァＳＲ"
+    },
+    "effect": "Diamond Nova ATS+40/ADF+80",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Diamond Nova R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      8
+    ],
+    "tier": 2
+  },
+  {
+    "id": 61,
+    "name": {
+      "en": "Tear",
+      "ja": "ティア"
+    },
+    "effect": "Tear",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 30
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      30
+    ],
+    "tier": 0
+  },
+  {
+    "id": 62,
+    "name": {
+      "en": "Tear R",
+      "ja": "ティアＲ"
+    },
+    "effect": "Tear HP+400",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Tear",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      30
+    ],
+    "tier": 1
+  },
+  {
+    "id": 63,
+    "name": {
+      "en": "Tear SR",
+      "ja": "ティアＳＲ"
+    },
+    "effect": "Tear HP+800",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Tear R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      30
+    ],
+    "tier": 2
+  },
+  {
+    "id": 64,
+    "name": {
+      "en": "Teara",
+      "ja": "ティアラ"
+    },
+    "effect": "Teara",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      31
+    ],
+    "tier": 0
+  },
+  {
+    "id": 65,
+    "name": {
+      "en": "Teara R",
+      "ja": "ティアラＲ"
+    },
+    "effect": "Teara HP+800",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Teara",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      31
+    ],
+    "tier": 1
+  },
+  {
+    "id": 66,
+    "name": {
+      "en": "Teara SR",
+      "ja": "ティアラＳＲ"
+    },
+    "effect": "Teara HP+1600",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Teara R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      31
+    ],
+    "tier": 2
+  },
+  {
+    "id": 67,
+    "name": {
+      "en": "Tearal",
+      "ja": "ティアラル"
+    },
+    "effect": "Tearal",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 480
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      32
+    ],
+    "tier": 0
+  },
+  {
+    "id": 68,
+    "name": {
+      "en": "Tearal R",
+      "ja": "ティアラルＲ"
+    },
+    "effect": "Tearal HP+1600",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Tearal",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      32
+    ],
+    "tier": 1
+  },
+  {
+    "id": 69,
+    "name": {
+      "en": "Tearal SR",
+      "ja": "ティアラルＳＲ"
+    },
+    "effect": "Tearal HP+3200",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Tearal R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      32
+    ],
+    "tier": 2
+  },
+  {
+    "id": 70,
+    "name": {
+      "en": "Curia",
+      "ja": "キュリア"
+    },
+    "effect": "Curia",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 20
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      33
+    ],
+    "tier": 0
+  },
+  {
+    "id": 71,
+    "name": {
+      "en": "Curia R",
+      "ja": "キュリアＲ"
+    },
+    "effect": "Curia EP+80",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Curia",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      33
+    ],
+    "tier": 1
+  },
+  {
+    "id": 72,
+    "name": {
+      "en": "Curia SR",
+      "ja": "キュリアＳＲ"
+    },
+    "effect": "Curia EP+160",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Curia R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      33
+    ],
+    "tier": 2
+  },
+  {
+    "id": 73,
+    "name": {
+      "en": "Thelas",
+      "ja": "セラス"
+    },
+    "effect": "Thelas",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 100
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      34
+    ],
+    "tier": 0
+  },
+  {
+    "id": 74,
+    "name": {
+      "en": "Thelas R",
+      "ja": "セラスＲ"
+    },
+    "effect": "Thelas HP+400/EP+40",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Thelas",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      34
+    ],
+    "tier": 1
+  },
+  {
+    "id": 75,
+    "name": {
+      "en": "Thelas SR",
+      "ja": "セラスＳＲ"
+    },
+    "effect": "Thelas HP+800/EP+80",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Thelas R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      34
+    ],
+    "tier": 2
+  },
+  {
+    "id": 76,
+    "name": {
+      "en": "Athelas",
+      "ja": "アセラス"
+    },
+    "effect": "Athelas",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 800
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      35
+    ],
+    "tier": 0
+  },
+  {
+    "id": 77,
+    "name": {
+      "en": "Athelas R",
+      "ja": "アセラスＲ"
+    },
+    "effect": "Athelas HP+800/EP+80",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Athelas",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      35
+    ],
+    "tier": 1
+  },
+  {
+    "id": 78,
+    "name": {
+      "en": "Athelas SR",
+      "ja": "アセラスＳＲ"
+    },
+    "effect": "Athelas HP+1600/EP+160",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Athelas R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      35
+    ],
+    "tier": 2
+  },
+  {
+    "id": 79,
+    "name": {
+      "en": "HP 1",
+      "ja": "ＨＰ１"
+    },
+    "effect": "HP+1200",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 80,
+    "name": {
+      "en": "HP 2",
+      "ja": "ＨＰ２"
+    },
+    "effect": "HP+2400",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 81,
+    "name": {
+      "en": "HP 3",
+      "ja": "ＨＰ３"
+    },
+    "effect": "HP+4800",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 82,
+    "name": {
+      "en": "Shield 1",
+      "ja": "魔防１"
+    },
+    "effect": "ADF+40 Magic attack evasion+10%",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 83,
+    "name": {
+      "en": "Shield 2",
+      "ja": "魔防２"
+    },
+    "effect": "ADF+80 Magic attack evasion+15%",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 84,
+    "name": {
+      "en": "Shield 3",
+      "ja": "魔防３"
+    },
+    "effect": "ADF+160 Magic attack evasion+20%",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 85,
+    "name": {
+      "en": "Mute",
+      "ja": "封魔の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can mute enemies (10% chance).",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 86,
+    "name": {
+      "en": "Mute II",
+      "ja": "封魔の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can mute enemies (15% chance).",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Mute",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 87,
+    "name": {
+      "en": "Mute III",
+      "ja": "封魔の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can mute enemies (20% chance).",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Mute II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 88,
+    "name": {
+      "en": "Freeze",
+      "ja": "凍結の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can freeze enemies (10% chance).",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 89,
+    "name": {
+      "en": "Freeze II",
+      "ja": "凍結の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can freeze enemies (15% chance).",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Freeze",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 90,
+    "name": {
+      "en": "Freeze III",
+      "ja": "凍結の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can freeze enemies (20% chance).",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Freeze II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 91,
+    "name": {
+      "en": "Spirit Breaker",
+      "ja": "破霊の牙"
+    },
+    "effect": "STR+15 Attacks/crafts cause ADF↓(S) (20% chance).",
+    "element": "Water",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/7e/Water_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 92,
+    "name": {
+      "en": "Spirit Breaker II",
+      "ja": "破霊の牙Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts cause ADF↓(S) (25% chance).",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Spirit Breaker",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 93,
+    "name": {
+      "en": "Spirit Breaker III",
+      "ja": "破霊の牙Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts cause ADF↓(S) (30% chance).",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Spirit Breaker II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 94,
+    "name": {
+      "en": "Water Bell",
+      "ja": "水言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using Water arts.",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Aqua Bleed R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 95,
+    "name": {
+      "en": "Ocean Bell",
+      "ja": "海星鈴"
+    },
+    "effect": "Blue Ascension ATS+60 Damage+30% and delay halved when using water arts.",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Water Bell",
+        "value": 1
+      },
+      {
+        "quartz": "Blue Ascension SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      7
+    ],
+    "tier": 2
+  },
+  {
+    "id": 96,
+    "name": {
+      "en": "Effort",
+      "ja": "丹精"
+    },
+    "effect": "Thelas EP+80/ATS+10 Gives a 70% chance to make a superb dish when cooking.",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Thelas R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      34
+    ],
+    "tier": 1
+  },
+  {
+    "id": 97,
+    "name": {
+      "en": "Heal",
+      "ja": "治癒"
+    },
+    "effect": "Tear / Teara / Curia HP+1200/EP+120 Gradual HP recovery on the field.",
+    "element": "Water",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Tear R",
+        "value": 1
+      },
+      {
+        "quartz": "Teara R",
+        "value": 1
+      },
+      {
+        "quartz": "Curia R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 9
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/ce/Water_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      30,
+      31,
+      33
+    ],
+    "tier": 1
+  },
+  {
+    "id": 98,
+    "name": {
+      "en": "Waterfall",
+      "ja": "瀑布"
+    },
+    "effect": "Deal bonus damage to low-level enemies (max+50%).",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crystal Edge SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 36
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 99,
+    "name": {
+      "en": "Seiryuu",
+      "ja": "青龍刃"
+    },
+    "effect": "STR+80 Attacks/crafts can mute or freeze enemies (25% chance).",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Mute III",
+        "value": 1
+      },
+      {
+        "quartz": "Freeze III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 100,
+    "name": {
+      "en": "Sennin Gem",
+      "ja": "仙道珠"
+    },
+    "effect": "Tearal / Athelas HP+3200/ADF+160 Magic attack evasion+25%",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Tearal R",
+        "value": 1
+      },
+      {
+        "quartz": "Athelas SR",
+        "value": 1
+      },
+      {
+        "quartz": "Shield 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      32,
+      35
+    ],
+    "tier": 2
+  },
+  {
+    "id": 101,
+    "name": {
+      "en": "Hyoushou Gem",
+      "ja": "氷将珠"
+    },
+    "effect": "Diamond Nova EP+200/ATS+80 Gradual HP recovery on the field.",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Heal",
+        "value": 1
+      },
+      {
+        "quartz": "Diamond Nova SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      8
+    ],
+    "tier": 2
+  },
+  {
+    "id": 102,
+    "name": {
+      "en": "Sapphirl Gem",
+      "ja": "蒼耀珠"
+    },
+    "effect": "HP+6400/EP+640",
+    "element": "Water",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "HP 3",
+        "value": 2
+      },
+      {
+        "quartz": "EP 3",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Water_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 103,
+    "name": {
+      "en": "Fire Bolt",
+      "ja": "ファイアボルト"
+    },
+    "effect": "Fire Bolt",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 40
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      9
+    ],
+    "tier": 0
+  },
+  {
+    "id": 104,
+    "name": {
+      "en": "Fire Bolt R",
+      "ja": "ファイアボルトＲ"
+    },
+    "effect": "Fire Bolt STR+12/DEF+8",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fire Bolt",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      9
+    ],
+    "tier": 1
+  },
+  {
+    "id": 105,
+    "name": {
+      "en": "Fire Bolt SR",
+      "ja": "ファイアボルトＳＲ"
+    },
+    "effect": "Fire Bolt STR+20/DEF+12",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fire Bolt R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      9
+    ],
+    "tier": 2
+  },
+  {
+    "id": 106,
+    "name": {
+      "en": "Venom Flame",
+      "ja": "ベノムフレイム"
+    },
+    "effect": "Venom Flame",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      10
+    ],
+    "tier": 0
+  },
+  {
+    "id": 107,
+    "name": {
+      "en": "Venom Flame R",
+      "ja": "ベノムフレイムＲ"
+    },
+    "effect": "Venom Flame STR+18/DEF+12",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Venom Flame",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      10
+    ],
+    "tier": 1
+  },
+  {
+    "id": 108,
+    "name": {
+      "en": "Venom Flame SR",
+      "ja": "ベノムフレイムＳＲ"
+    },
+    "effect": "Venom Flame STR+30/DEF+18",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Venom Flame R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      10
+    ],
+    "tier": 2
+  },
+  {
+    "id": 109,
+    "name": {
+      "en": "Flare Butterfly",
+      "ja": "フレアバタフライ"
+    },
+    "effect": "Flare Butterfly",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 360
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      11
+    ],
+    "tier": 0
+  },
+  {
+    "id": 110,
+    "name": {
+      "en": "Flare Butterfly R",
+      "ja": "フレアバタフライＲ"
+    },
+    "effect": "Flare Butterfly STR+24/DEF+16",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Flare Butterfly",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      11
+    ],
+    "tier": 1
+  },
+  {
+    "id": 111,
+    "name": {
+      "en": "Flare Butterfly SR",
+      "ja": "フレアバタフライＳＲ"
+    },
+    "effect": "Flare Butterfly STR+40/DEF+24",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Flare Butterfly R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      11
+    ],
+    "tier": 2
+  },
+  {
+    "id": 112,
+    "name": {
+      "en": "Zeruel Cannon",
+      "ja": "ゼルエル・カノン"
+    },
+    "effect": "Zeruel Cannon",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 1080
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      12
+    ],
+    "tier": 0
+  },
+  {
+    "id": 113,
+    "name": {
+      "en": "Zeruel Cannon R",
+      "ja": "ゼルエル・カノンＲ"
+    },
+    "effect": "Zeruel Cannon STR+30/DEF+20",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Zeruel Cannon",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      12
+    ],
+    "tier": 1
+  },
+  {
+    "id": 114,
+    "name": {
+      "en": "Zeruel Cannon SR",
+      "ja": "ゼルエル・カノンＳＲ"
+    },
+    "effect": "Zeruel Cannon STR+50/DEF+30",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Zeruel Cannon R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      12
+    ],
+    "tier": 2
+  },
+  {
+    "id": 115,
+    "name": {
+      "en": "Forte",
+      "ja": "フォルテ"
+    },
+    "effect": "Forte",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 30
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      37
+    ],
+    "tier": 0
+  },
+  {
+    "id": 116,
+    "name": {
+      "en": "Forte R",
+      "ja": "フォルテＲ"
+    },
+    "effect": "Forte EP+40/STR+12",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Forte",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      37
+    ],
+    "tier": 1
+  },
+  {
+    "id": 117,
+    "name": {
+      "en": "Forte SR",
+      "ja": "フォルテＳＲ"
+    },
+    "effect": "Forte EP+60/STR+18",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Forte R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      37
+    ],
+    "tier": 2
+  },
+  {
+    "id": 118,
+    "name": {
+      "en": "La Forte",
+      "ja": "ラ・フォルテ"
+    },
+    "effect": "La Forte",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      38
+    ],
+    "tier": 0
+  },
+  {
+    "id": 119,
+    "name": {
+      "en": "La Forte R",
+      "ja": "ラ・フォルテＲ"
+    },
+    "effect": "La Forte EP+80/STR+24",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "La Forte",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      38
+    ],
+    "tier": 1
+  },
+  {
+    "id": 120,
+    "name": {
+      "en": "La Forte SR",
+      "ja": "ラ・フォルテＳＲ"
+    },
+    "effect": "La Forte EP+120/STR+36",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "La Forte R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      38
+    ],
+    "tier": 2
+  },
+  {
+    "id": 121,
+    "name": {
+      "en": "Heat Up",
+      "ja": "ウォリアーゲイン"
+    },
+    "effect": "Heat Up",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 90
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      39
+    ],
+    "tier": 0
+  },
+  {
+    "id": 122,
+    "name": {
+      "en": "Heat Up R",
+      "ja": "ウォリアーゲインＲ"
+    },
+    "effect": "Heat Up EP+60/STR+16",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Heat Up",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      39
+    ],
+    "tier": 1
+  },
+  {
+    "id": 123,
+    "name": {
+      "en": "Heat Up SR",
+      "ja": "ウォリアーゲインＳＲ"
+    },
+    "effect": "Heat Up EP+90/STR+24",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Heat Up R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      39
+    ],
+    "tier": 2
+  },
+  {
+    "id": 124,
+    "name": {
+      "en": "Impassion",
+      "ja": "メルティライズ"
+    },
+    "effect": "Impassion",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      36
+    ],
+    "tier": 0
+  },
+  {
+    "id": 125,
+    "name": {
+      "en": "Impassion R",
+      "ja": "メルティライズＲ"
+    },
+    "effect": "Impassion EP+20/STR+8",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Impassion",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      36
+    ],
+    "tier": 1
+  },
+  {
+    "id": 126,
+    "name": {
+      "en": "Impassion SR",
+      "ja": "メルティライズＳＲ"
+    },
+    "effect": "Impassion EP+30/STR+12",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Impassion R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      36
+    ],
+    "tier": 2
+  },
+  {
+    "id": 127,
+    "name": {
+      "en": "Attack 1",
+      "ja": "攻撃１"
+    },
+    "effect": "STR+20",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 128,
+    "name": {
+      "en": "Attack 2",
+      "ja": "攻撃２"
+    },
+    "effect": "STR+40",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 129,
+    "name": {
+      "en": "Attack 3",
+      "ja": "攻撃３"
+    },
+    "effect": "STR+80",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 130,
+    "name": {
+      "en": "Strike 1",
+      "ja": "必殺１"
+    },
+    "effect": "Critical rate +2%",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 131,
+    "name": {
+      "en": "Strike 2",
+      "ja": "必殺２"
+    },
+    "effect": "Critical rate +4%",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 132,
+    "name": {
+      "en": "Strike 3",
+      "ja": "必殺３"
+    },
+    "effect": "Critical rate +6%",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 133,
+    "name": {
+      "en": "Seal",
+      "ja": "封技の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can seal enemies (10% chance).",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 134,
+    "name": {
+      "en": "Seal II",
+      "ja": "封技の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can seal enemies (15% chance).",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seal",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 135,
+    "name": {
+      "en": "Seal III",
+      "ja": "封技の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can seal enemies (20% chance).",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seal II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 136,
+    "name": {
+      "en": "Burn",
+      "ja": "炎傷の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can burn enemies (10% chance).",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 137,
+    "name": {
+      "en": "Burn II",
+      "ja": "炎傷の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can burn enemies (15% chance).",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Burn",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 138,
+    "name": {
+      "en": "Burn III",
+      "ja": "炎傷の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can burn enemies (20% chance).",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Burn II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 139,
+    "name": {
+      "en": "Sword Breaker",
+      "ja": "破剣の牙"
+    },
+    "effect": "STR+15 Attacks/crafts cause STR↓(S) (20% chance).",
+    "element": "Fire",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/38/Fire_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 140,
+    "name": {
+      "en": "Sword Breaker II",
+      "ja": "破剣の牙Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts cause STR↓(S) (25% chance).",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Sword Breaker",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 141,
+    "name": {
+      "en": "Sword Breaker III",
+      "ja": "破剣の牙Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts cause STR↓(S) (30% chance).",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Sword Breaker II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 142,
+    "name": {
+      "en": "Fire Bell",
+      "ja": "火言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using fire arts.",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fire Bolt SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 143,
+    "name": {
+      "en": "Pyre Bell",
+      "ja": "焔星鈴"
+    },
+    "effect": "Flare Butterfly ATS+60 Damage+30% and delay halved when using fire arts.",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fire Bell",
+        "value": 1
+      },
+      {
+        "quartz": "Flare Butterfly SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      11
+    ],
+    "tier": 2
+  },
+  {
+    "id": 144,
+    "name": {
+      "en": "Invigorate",
+      "ja": "練気"
+    },
+    "effect": "Forte / Impassion STR+10 Restores CP by attacking enemies on the field.",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Forte R",
+        "value": 1
+      },
+      {
+        "quartz": "Impassion R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      37,
+      36
+    ],
+    "tier": 1
+  },
+  {
+    "id": 145,
+    "name": {
+      "en": "Ingenuity",
+      "ja": "機功"
+    },
+    "effect": "Heat Up EP+160/ATS+20 Gradual EP recovery on the field.",
+    "element": "Fire",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Heat Up R",
+        "value": 1
+      },
+      {
+        "quartz": "Venom Flame R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/26/Fire_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      39
+    ],
+    "tier": 1
+  },
+  {
+    "id": 146,
+    "name": {
+      "en": "Rage",
+      "ja": "憤怒"
+    },
+    "effect": "La Forte ACC+100%/EVA+10% Counterattacks after evading always deal critical damage.",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "La Forte SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 36
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      38
+    ],
+    "tier": 2
+  },
+  {
+    "id": 147,
+    "name": {
+      "en": "Suzaku",
+      "ja": "朱雀刃"
+    },
+    "effect": "STR+80 Attacks/crafts can seal or burn enemies (25% chance).",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seal III",
+        "value": 1
+      },
+      {
+        "quartz": "Burn III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 148,
+    "name": {
+      "en": "Mars Gem",
+      "ja": "武神珠"
+    },
+    "effect": "STR+160/Critical rate +8% Restores CP by attacking enemies on the field.",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Attack 3",
+        "value": 1
+      },
+      {
+        "quartz": "Strike 3",
+        "value": 1
+      },
+      {
+        "quartz": "Invigorate",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 149,
+    "name": {
+      "en": "Vulcan Gem",
+      "ja": "炎帝珠"
+    },
+    "effect": "Zeruel Cannon STR+80/ATS+80 Gradual EP recovery on the field.",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Zeruel Cannon SR",
+        "value": 1
+      },
+      {
+        "quartz": "Ingenuity",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      12
+    ],
+    "tier": 2
+  },
+  {
+    "id": 150,
+    "name": {
+      "en": "Carnelia Gem",
+      "ja": "紅耀珠"
+    },
+    "effect": "STR+200",
+    "element": "Fire",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Attack 3",
+        "value": 4
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c8/Fire_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 151,
+    "name": {
+      "en": "Air Strike",
+      "ja": "エアストライク"
+    },
+    "effect": "Air Strike",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 40
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      13
+    ],
+    "tier": 0
+  },
+  {
+    "id": 152,
+    "name": {
+      "en": "Air Strike R",
+      "ja": "エアストライクＲ"
+    },
+    "effect": "Air Strike ATS+12/ADF+8",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Air Strike",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      13
+    ],
+    "tier": 1
+  },
+  {
+    "id": 153,
+    "name": {
+      "en": "Air Strike SR",
+      "ja": "エアストライクＳＲ"
+    },
+    "effect": "Air Strike ATS+20/ADF+12",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Air Strike R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      13
+    ],
+    "tier": 2
+  },
+  {
+    "id": 154,
+    "name": {
+      "en": "Nemesis Arrow",
+      "ja": "ネメシスアロー"
+    },
+    "effect": "Nemesis Arrow",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      14
+    ],
+    "tier": 0
+  },
+  {
+    "id": 155,
+    "name": {
+      "en": "Nemesis Arrow R",
+      "ja": "ネメシスアローＲ"
+    },
+    "effect": "Nemesis Arrow ATS+18/ADF+12",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Nemesis Arrow",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      14
+    ],
+    "tier": 1
+  },
+  {
+    "id": 156,
+    "name": {
+      "en": "Nemesis Arrow SR",
+      "ja": "ネメシスアローＳＲ"
+    },
+    "effect": "Nemesis Arrow ATS+30/ADF+18",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Nemesis Arrow R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      14
+    ],
+    "tier": 2
+  },
+  {
+    "id": 157,
+    "name": {
+      "en": "Aerial Dust",
+      "ja": "エアリアルダスト"
+    },
+    "effect": "Aerial Dust",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 360
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      15
+    ],
+    "tier": 0
+  },
+  {
+    "id": 158,
+    "name": {
+      "en": "Aerial Dust R",
+      "ja": "エアリアルダストＲ"
+    },
+    "effect": "Aerial Dust ATS+24/ADF+16",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Aerial Dust",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      15
+    ],
+    "tier": 1
+  },
+  {
+    "id": 159,
+    "name": {
+      "en": "Aerial Dust SR",
+      "ja": "エアリアルダストＳＲ"
+    },
+    "effect": "Aerial Dust ATS+40/ADF+24",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Aerial Dust R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      15
+    ],
+    "tier": 2
+  },
+  {
+    "id": 160,
+    "name": {
+      "en": "Ixion Volt",
+      "ja": "イクシオン・ヴォルト"
+    },
+    "effect": "Ixion Volt",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 1080
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      16
+    ],
+    "tier": 0
+  },
+  {
+    "id": 161,
+    "name": {
+      "en": "Ixion Volt R",
+      "ja": "イクシオン・ヴォルトＲ"
+    },
+    "effect": "Ixion Volt ATS+30/ADF+20",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Ixion Volt",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      16
+    ],
+    "tier": 1
+  },
+  {
+    "id": 162,
+    "name": {
+      "en": "Ixion Volt SR",
+      "ja": "イクシオン・ヴォルトＳＲ"
+    },
+    "effect": "Ixion Volt ATS+50/ADF+30",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Ixion Volt R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      16
+    ],
+    "tier": 2
+  },
+  {
+    "id": 163,
+    "name": {
+      "en": "Breath",
+      "ja": "ブレス"
+    },
+    "effect": "Breath",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 80
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      40
+    ],
+    "tier": 0
+  },
+  {
+    "id": 164,
+    "name": {
+      "en": "Breath R",
+      "ja": "ブレスＲ"
+    },
+    "effect": "Breath HP+400/SPD+2/MOV+1",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Breath",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      40
+    ],
+    "tier": 1
+  },
+  {
+    "id": 165,
+    "name": {
+      "en": "Breath SR",
+      "ja": "ブレスＳＲ"
+    },
+    "effect": "Breath HP+800/SPD+4/MOV+2",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Breath R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      40
+    ],
+    "tier": 2
+  },
+  {
+    "id": 166,
+    "name": {
+      "en": "Holy Breath",
+      "ja": "ホーリーブレス"
+    },
+    "effect": "Holy Breath",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 400
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      41
+    ],
+    "tier": 0
+  },
+  {
+    "id": 167,
+    "name": {
+      "en": "Holy Breath R",
+      "ja": "ホーリーブレスＲ"
+    },
+    "effect": "Holy Breath HP+800/SPD+4/MOV+2",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Holy Breath",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      41
+    ],
+    "tier": 1
+  },
+  {
+    "id": 168,
+    "name": {
+      "en": "Holy Breath SR",
+      "ja": "ホーリーブレスＳＲ"
+    },
+    "effect": "Holy Breath HP+1600/SPD+8/MOV+4",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Holy Breath R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      41
+    ],
+    "tier": 2
+  },
+  {
+    "id": 169,
+    "name": {
+      "en": "Recuria",
+      "ja": "レキュリア"
+    },
+    "effect": "Recuria",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      42
+    ],
+    "tier": 0
+  },
+  {
+    "id": 170,
+    "name": {
+      "en": "Recuria R",
+      "ja": "レキュリアＲ"
+    },
+    "effect": "Recuria HP+400/EP+40/EVA+2%",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Recuria",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      42
+    ],
+    "tier": 1
+  },
+  {
+    "id": 171,
+    "name": {
+      "en": "Recuria SR",
+      "ja": "レキュリアＳＲ"
+    },
+    "effect": "Recuria HP+800/EP+80/EVA+4%",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Recuria R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      42
+    ],
+    "tier": 2
+  },
+  {
+    "id": 172,
+    "name": {
+      "en": "Evade 1",
+      "ja": "回避１"
+    },
+    "effect": "EVA+3%",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 173,
+    "name": {
+      "en": "Evade 2",
+      "ja": "回避２"
+    },
+    "effect": "EVA+6%",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 174,
+    "name": {
+      "en": "Evade 3",
+      "ja": "回避３"
+    },
+    "effect": "EVA+9%",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 175,
+    "name": {
+      "en": "Move 1",
+      "ja": "移動１"
+    },
+    "effect": "SPD+1/MOV+2",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 176,
+    "name": {
+      "en": "Move 2",
+      "ja": "移動２"
+    },
+    "effect": "SPD+2/MOV+4",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 177,
+    "name": {
+      "en": "Move 3",
+      "ja": "移動３"
+    },
+    "effect": "SPD+3/MOV+6",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 178,
+    "name": {
+      "en": "Blind",
+      "ja": "暗闇の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can blind enemies (10% chance).",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 179,
+    "name": {
+      "en": "Blind II",
+      "ja": "暗闇の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can blind enemies (15% chance).",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Blind",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 180,
+    "name": {
+      "en": "Blind III",
+      "ja": "暗闇の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can blind enemies (20% chance).",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Blind II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 181,
+    "name": {
+      "en": "Sleep",
+      "ja": "睡眠の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can put enemies to sleep (10% chance).",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 182,
+    "name": {
+      "en": "Sleep II",
+      "ja": "睡眠の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can put enemies to sleep (15% chance).",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Sleep",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 183,
+    "name": {
+      "en": "Sleep III",
+      "ja": "睡眠の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can put enemies to sleep (20% chance).",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Sleep II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 184,
+    "name": {
+      "en": "Leg Breaker",
+      "ja": "破脚の牙"
+    },
+    "effect": "STR+15 Attacks/crafts cause MOV↓(S) (20% chance).",
+    "element": "Wind",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cc/Wind_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 185,
+    "name": {
+      "en": "Leg Breaker II",
+      "ja": "破脚の牙Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts cause MOV↓(S) (25% chance).",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Leg Breaker",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 186,
+    "name": {
+      "en": "Leg Breaker III",
+      "ja": "破脚の牙Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts cause MOV↓(S) (30% chance).",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Leg Breaker II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 187,
+    "name": {
+      "en": "Wind Bell",
+      "ja": "風言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using wind arts.",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Air Strike R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 188,
+    "name": {
+      "en": "Storm Bell",
+      "ja": "嵐星鈴"
+    },
+    "effect": "Aerial Dust ATS+60 Damage+30% and delay halved when using wind arts.",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Wind Bell",
+        "value": 1
+      },
+      {
+        "quartz": "Aerial Dust SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      15
+    ],
+    "tier": 2
+  },
+  {
+    "id": 189,
+    "name": {
+      "en": "Scent",
+      "ja": "美臭"
+    },
+    "effect": "Breath / Nemesis Arrow / Aerial Dust HP+800/EP+80/ATS+20 Makes enemies more likely to notice you.",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Breath R",
+        "value": 1
+      },
+      {
+        "quartz": "Nemesis Arrow R",
+        "value": 1
+      },
+      {
+        "quartz": "Aerial Dust R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 9
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      40,
+      14,
+      15
+    ],
+    "tier": 1
+  },
+  {
+    "id": 190,
+    "name": {
+      "en": "Bluster",
+      "ja": "風魔"
+    },
+    "effect": "Recuria STR+40 Abnormal statuses inflicted on foes last 1 more turn.",
+    "element": "Wind",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Recuria R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/Wind_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      42
+    ],
+    "tier": 1
+  },
+  {
+    "id": 191,
+    "name": {
+      "en": "Revolution",
+      "ja": "革命"
+    },
+    "effect": "Deal bonus damage to high-level enemies (max+50%)",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Aerial Dust SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 36
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 192,
+    "name": {
+      "en": "Byakko",
+      "ja": "白虎刃"
+    },
+    "effect": "STR+80 Attacks/crafts can blind or put enemies to sleep (25% chance).",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Blind III",
+        "value": 1
+      },
+      {
+        "quartz": "Sleep III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 193,
+    "name": {
+      "en": "Aeolus Gem",
+      "ja": "風神珠"
+    },
+    "effect": "Holy Breath HP+2000/ATS+50/ADF+50/SPD+4/MOV+8 Abnormal statuses inflicted on foes last 1 more turn.",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Holy Breath SR",
+        "value": 1
+      },
+      {
+        "quartz": "Move 3",
+        "value": 1
+      },
+      {
+        "quartz": "Bluster",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      41
+    ],
+    "tier": 2
+  },
+  {
+    "id": 194,
+    "name": {
+      "en": "Zeus Gem",
+      "ja": "雷神珠"
+    },
+    "effect": "Ixion Volt EVA+12%",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Ixion Volt SR",
+        "value": 1
+      },
+      {
+        "quartz": "Evade 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      16
+    ],
+    "tier": 2
+  },
+  {
+    "id": 195,
+    "name": {
+      "en": "Esmelas Gem",
+      "ja": "翠耀珠"
+    },
+    "effect": "SPD+4/MOV+8/EVA+12%",
+    "element": "Wind",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Evade 3",
+        "value": 2
+      },
+      {
+        "quartz": "Move 3",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ed/Wind_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 196,
+    "name": {
+      "en": "Soul Blur",
+      "ja": "ソウルブラー"
+    },
+    "effect": "Soul Blur",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 80
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      17
+    ],
+    "tier": 0
+  },
+  {
+    "id": 197,
+    "name": {
+      "en": "Soul Blur R",
+      "ja": "ソウルブラーＲ"
+    },
+    "effect": "Soul Blur SPD+3",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Soul Blur",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      17
+    ],
+    "tier": 1
+  },
+  {
+    "id": 198,
+    "name": {
+      "en": "Soul Blur SR",
+      "ja": "ソウルブラーＳＲ"
+    },
+    "effect": "Soul Blur SPD+6",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Soul Blur R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      17
+    ],
+    "tier": 2
+  },
+  {
+    "id": 199,
+    "name": {
+      "en": "Calvary Edge",
+      "ja": "カルバリーエッジ"
+    },
+    "effect": "Calvary Edge",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 320
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      18
+    ],
+    "tier": 0
+  },
+  {
+    "id": 200,
+    "name": {
+      "en": "Calvary Edge R",
+      "ja": "カルバリーエッジＲ"
+    },
+    "effect": "Calvary Edge SPD+5",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Calvary Edge",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      18
+    ],
+    "tier": 1
+  },
+  {
+    "id": 201,
+    "name": {
+      "en": "Calvary Edge SR",
+      "ja": "カルバリーエッジＳＲ"
+    },
+    "effect": "Calvary Edge SPD+10",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Calvary Edge R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      18
+    ],
+    "tier": 2
+  },
+  {
+    "id": 202,
+    "name": {
+      "en": "Lost Genesis",
+      "ja": "ロスト・ジェネシス"
+    },
+    "effect": "Lost Genesis",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 1280
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      19
+    ],
+    "tier": 0
+  },
+  {
+    "id": 203,
+    "name": {
+      "en": "Lost Genesis R",
+      "ja": "ロスト・ジェネシスＲ"
+    },
+    "effect": "Lost Genesis SPD+7",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Lost Genesis",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 5
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      19
+    ],
+    "tier": 1
+  },
+  {
+    "id": 204,
+    "name": {
+      "en": "Lost Genesis SR",
+      "ja": "ロスト・ジェネシスＳＲ"
+    },
+    "effect": "Lost Genesis SPD+14",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Lost Genesis R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 20
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      19
+    ],
+    "tier": 2
+  },
+  {
+    "id": 205,
+    "name": {
+      "en": "Chrono Drive",
+      "ja": "クロノドライブ"
+    },
+    "effect": "Chrono Drive",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      43
+    ],
+    "tier": 0
+  },
+  {
+    "id": 206,
+    "name": {
+      "en": "Chrono Drive R",
+      "ja": "クロノドライブＲ"
+    },
+    "effect": "Chrono Drive SPD+4",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Drive",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      43
+    ],
+    "tier": 1
+  },
+  {
+    "id": 207,
+    "name": {
+      "en": "Chrono Drive SR",
+      "ja": "クロノドライブＳＲ"
+    },
+    "effect": "Chrono Drive SPD+8",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Drive R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      43
+    ],
+    "tier": 2
+  },
+  {
+    "id": 208,
+    "name": {
+      "en": "Chrono Break",
+      "ja": "クロノブレイク"
+    },
+    "effect": "Chrono Break",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      44
+    ],
+    "tier": 0
+  },
+  {
+    "id": 209,
+    "name": {
+      "en": "Chrono Break R",
+      "ja": "クロノブレイクＲ"
+    },
+    "effect": "Chrono Break SPD+4",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Break",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      44
+    ],
+    "tier": 1
+  },
+  {
+    "id": 210,
+    "name": {
+      "en": "Chrono Break SR",
+      "ja": "クロノブレイクＳＲ"
+    },
+    "effect": "Chrono Break SPD+8",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Break R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      44
+    ],
+    "tier": 2
+  },
+  {
+    "id": 211,
+    "name": {
+      "en": "Chrono Burst",
+      "ja": "クロノバースト"
+    },
+    "effect": "Chrono Burst",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 480
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      45
+    ],
+    "tier": 0
+  },
+  {
+    "id": 212,
+    "name": {
+      "en": "Chrono Burst R",
+      "ja": "クロノバーストＲ"
+    },
+    "effect": "Chrono Burst SPD+6",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Burst",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      45
+    ],
+    "tier": 1
+  },
+  {
+    "id": 213,
+    "name": {
+      "en": "Chrono Burst SR",
+      "ja": "クロノバーストＳＲ"
+    },
+    "effect": "Chrono Burst SPD+12",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Burst R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      45
+    ],
+    "tier": 2
+  },
+  {
+    "id": 214,
+    "name": {
+      "en": "Action 1",
+      "ja": "行動力１"
+    },
+    "effect": "SPD+4",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 215,
+    "name": {
+      "en": "Action 2",
+      "ja": "行動力２"
+    },
+    "effect": "SPD+8",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 216,
+    "name": {
+      "en": "Action 3",
+      "ja": "行動力３"
+    },
+    "effect": "SPD+16",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 217,
+    "name": {
+      "en": "Cast 1",
+      "ja": "駆動１"
+    },
+    "effect": "Time to cast arts is cut by 20%",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 218,
+    "name": {
+      "en": "Cast 2",
+      "ja": "駆動２"
+    },
+    "effect": "Time to cast arts is cut by 25%",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 219,
+    "name": {
+      "en": "Cast 3",
+      "ja": "駆動３"
+    },
+    "effect": "Time to cast arts is cut by 33%",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 220,
+    "name": {
+      "en": "Nightmare",
+      "ja": "悪夢の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can inflict nightmares on enemies (10% chance).",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 221,
+    "name": {
+      "en": "Nightmare II",
+      "ja": "悪夢の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can inflict nightmares on enemies (15% chance).",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Nightmare",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 222,
+    "name": {
+      "en": "Nightmare III",
+      "ja": "悪夢の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can inflict nightmares on enemies (20% chance).",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Nightmare II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 223,
+    "name": {
+      "en": "Speed Breaker",
+      "ja": "破迅の牙"
+    },
+    "effect": "STR+15 Attacks/crafts cause SPD↓(S) (20% chance).",
+    "element": "Time",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3d/Time_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 224,
+    "name": {
+      "en": "Speed Breaker II",
+      "ja": "破迅の牙Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts cause SPD↓(S) (25% chance).",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Speed Breaker",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 225,
+    "name": {
+      "en": "Speed Breaker III",
+      "ja": "破迅の牙Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts cause SPD↓(S) (30% chance).",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Speed Breaker II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 226,
+    "name": {
+      "en": "Black Bell",
+      "ja": "黒言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using time arts.",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Soul Blur R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 227,
+    "name": {
+      "en": "Epoch Bell",
+      "ja": "刻界鈴"
+    },
+    "effect": "Calvary Edge ATS+60 Damage+30% and delay halved when using time arts.",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Black Bell",
+        "value": 1
+      },
+      {
+        "quartz": "Calvary Edge SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      18
+    ],
+    "tier": 2
+  },
+  {
+    "id": 228,
+    "name": {
+      "en": "Nightgleam",
+      "ja": "夜煌"
+    },
+    "effect": "First attack art used deals +50% damage. Attacks/crafts can K.O. enemies (5% chance).",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Calvary Edge R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 229,
+    "name": {
+      "en": "Prankster",
+      "ja": "悪戯"
+    },
+    "effect": "Chrono Break HP+800/STR+10 Gives 70% chance to make a peculiar dish when cooking.",
+    "element": "Time",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Break R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bc/Time_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      44
+    ],
+    "tier": 1
+  },
+  {
+    "id": 230,
+    "name": {
+      "en": "Hades Gem",
+      "ja": "冥皇"
+    },
+    "effect": "First attack art used deals +100% damage. ATS+30 Attacks/crafts can K.O. enemies (20% chance).",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Nightgleam",
+        "value": 1
+      },
+      {
+        "quartz": "Nightmare III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 231,
+    "name": {
+      "en": "Umbral Gyre",
+      "ja": "影輪牙"
+    },
+    "effect": "STR+80 Attack/crafts cause SPD/MOV↓(S) (40% chance).",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Leg Breaker III",
+        "value": 1
+      },
+      {
+        "quartz": "Speed Breaker III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 232,
+    "name": {
+      "en": "Skanda Gem",
+      "ja": "韋駄天珠"
+    },
+    "effect": "Chrono Drive / Chrono Break / Chrono Burst SPD+20",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Chrono Drive SR",
+        "value": 1
+      },
+      {
+        "quartz": "Chrono Break SR",
+        "value": 1
+      },
+      {
+        "quartz": "Chrono Burst SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      43,
+      44,
+      45
+    ],
+    "tier": 2
+  },
+  {
+    "id": 233,
+    "name": {
+      "en": "Diabolos Gem",
+      "ja": "魔王珠"
+    },
+    "effect": "Lost Genesis ATS+80 Time to cast arts is cut by 50%.",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Lost Genesis SR",
+        "value": 1
+      },
+      {
+        "quartz": "Cast 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      19
+    ],
+    "tier": 2
+  },
+  {
+    "id": 234,
+    "name": {
+      "en": "Nohval Gem",
+      "ja": "黒耀珠"
+    },
+    "effect": "SPD+32",
+    "element": "Time",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Action 3",
+        "value": 4
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/8/86/Time_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 235,
+    "name": {
+      "en": "Golden Sphere",
+      "ja": "ゴルトスフィア"
+    },
+    "effect": "Golden Sphere",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 80
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      20
+    ],
+    "tier": 0
+  },
+  {
+    "id": 236,
+    "name": {
+      "en": "Golden Sphere R",
+      "ja": "ゴルトスフィアＲ"
+    },
+    "effect": "Golden Sphere HP+200/STR+8/ATS+8",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Golden Sphere",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      20
+    ],
+    "tier": 1
+  },
+  {
+    "id": 237,
+    "name": {
+      "en": "Golden Sphere SR",
+      "ja": "ゴルトスフィアＳＲ"
+    },
+    "effect": "Golden Sphere HP+400/STR+16/ATS+16",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Golden Sphere R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      20
+    ],
+    "tier": 2
+  },
+  {
+    "id": 238,
+    "name": {
+      "en": "Cross Crusade",
+      "ja": "エクスクルセイド"
+    },
+    "effect": "Cross Crusade",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 320
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      21
+    ],
+    "tier": 0
+  },
+  {
+    "id": 239,
+    "name": {
+      "en": "Cross Crusade R",
+      "ja": "エクスクルセイドＲ"
+    },
+    "effect": "Cross Crusade HP+400/STR+12/ATS+12",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Cross Crusade",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      21
+    ],
+    "tier": 1
+  },
+  {
+    "id": 240,
+    "name": {
+      "en": "Cross Crusade SR",
+      "ja": "エクスクルセイドＳＲ"
+    },
+    "effect": "Cross Crusade HP+800/STR+24/ATS+24",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Cross Crusade R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      21
+    ],
+    "tier": 2
+  },
+  {
+    "id": 241,
+    "name": {
+      "en": "Seventh Caliber",
+      "ja": "セヴンス・キャリバー"
+    },
+    "effect": "Seventh Caliber",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1280
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      22
+    ],
+    "tier": 0
+  },
+  {
+    "id": 242,
+    "name": {
+      "en": "Seventh Caliber R",
+      "ja": "セヴンス・キャリバーＲ"
+    },
+    "effect": "Seventh Caliber HP+800/STR+16/ATS+16",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seventh Caliber",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 5
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      22
+    ],
+    "tier": 1
+  },
+  {
+    "id": 243,
+    "name": {
+      "en": "Seventh Caliber SR",
+      "ja": "セヴンス・キャリバーＳＲ"
+    },
+    "effect": "Seventh Caliber HP+1600/STR+32/ATS+32",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seventh Caliber R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 20
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      22
+    ],
+    "tier": 2
+  },
+  {
+    "id": 244,
+    "name": {
+      "en": "Fortuna",
+      "ja": "フォルトゥナ"
+    },
+    "effect": "Fortuna",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      46
+    ],
+    "tier": 0
+  },
+  {
+    "id": 245,
+    "name": {
+      "en": "Fortuna R",
+      "ja": "フォルトゥナＲ"
+    },
+    "effect": "Fortuna ATS+8/ADF+8",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fortuna",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      46
+    ],
+    "tier": 1
+  },
+  {
+    "id": 246,
+    "name": {
+      "en": "Fortuna SR",
+      "ja": "フォルトゥナＳＲ"
+    },
+    "effect": "Fortuna ATS+16/ADF+32",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fortuna R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      46
+    ],
+    "tier": 2
+  },
+  {
+    "id": 247,
+    "name": {
+      "en": "Shining",
+      "ja": "シャイニング"
+    },
+    "effect": "Shining",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 240
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      47
+    ],
+    "tier": 0
+  },
+  {
+    "id": 248,
+    "name": {
+      "en": "Shining R",
+      "ja": "シャイニングＲ"
+    },
+    "effect": "Shining STR+12/DEF+24/ACC+60%",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Shining",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      47
+    ],
+    "tier": 1
+  },
+  {
+    "id": 249,
+    "name": {
+      "en": "Shining SR",
+      "ja": "シャイニングＳＲ"
+    },
+    "effect": "Shining STR+24/DEF+48/ACC+80%",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Shining R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      47
+    ],
+    "tier": 2
+  },
+  {
+    "id": 250,
+    "name": {
+      "en": "Seraphic Ring",
+      "ja": "セラフィムリング"
+    },
+    "effect": "Seraphic Ring",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1080
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      48
+    ],
+    "tier": 0
+  },
+  {
+    "id": 251,
+    "name": {
+      "en": "Seraphic Ring R",
+      "ja": "セラフィムリングＲ"
+    },
+    "effect": "Seraphic Ring HP+1000/EP+100",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seraphic Ring",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 5
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      48
+    ],
+    "tier": 1
+  },
+  {
+    "id": 252,
+    "name": {
+      "en": "Seraphic Ring SR",
+      "ja": "セラフィムリングＳＲ"
+    },
+    "effect": "Seraphic Ring HP+2000/EP+200",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seraphic Ring R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 20
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      48
+    ],
+    "tier": 2
+  },
+  {
+    "id": 253,
+    "name": {
+      "en": "EP Cut 1",
+      "ja": "省ＥＰ１"
+    },
+    "effect": "Arts EP cost -10%.",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 254,
+    "name": {
+      "en": "EP Cut 2",
+      "ja": "省ＥＰ２"
+    },
+    "effect": "Arts EP cost -20%.",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 255,
+    "name": {
+      "en": "EP Cut 3",
+      "ja": "省ＥＰ３"
+    },
+    "effect": "Arts EP cost -30%.",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 256,
+    "name": {
+      "en": "Hit 1",
+      "ja": "命中１"
+    },
+    "effect": "ACC+50%/Critical rate +1%",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 257,
+    "name": {
+      "en": "Hit 2",
+      "ja": "命中２"
+    },
+    "effect": "ACC+75%/Critical rate +2%",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 258,
+    "name": {
+      "en": "Hit 3",
+      "ja": "命中３"
+    },
+    "effect": "ACC+100%/Critical rate +3%",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 259,
+    "name": {
+      "en": "Impede 1",
+      "ja": "妨害１"
+    },
+    "effect": "STR+10 Attacks/crafts can cancel arts (30% chance) Delay+1",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 120
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 260,
+    "name": {
+      "en": "Impede 2",
+      "ja": "妨害２"
+    },
+    "effect": "STR+20 Attacks/crafts can cancel arts (60% chance) Delay+2",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 360
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 261,
+    "name": {
+      "en": "Impede 3",
+      "ja": "妨害３"
+    },
+    "effect": "STR+30 Attacks/crafts can cancel arts (90% chance) Delay+3",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 1080
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 262,
+    "name": {
+      "en": "Faint",
+      "ja": "気絶の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can faint enemies (10% chance).",
+    "element": "Space",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d8/Space_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 263,
+    "name": {
+      "en": "Faint II",
+      "ja": "気絶の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can faint enemies (15% chance).",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Faint",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 264,
+    "name": {
+      "en": "Faint III",
+      "ja": "気絶の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can faint enemies (20% chance).",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Faint II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 265,
+    "name": {
+      "en": "Golden Bell",
+      "ja": "金言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using space arts.",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Golden Sphere R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 266,
+    "name": {
+      "en": "Holy Bell",
+      "ja": "聖界鈴"
+    },
+    "effect": "Cross Crusade ATS+60 Damage+30% and delay halved when using space arts.",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Cross Crusade SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 36
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      21
+    ],
+    "tier": 2
+  },
+  {
+    "id": 267,
+    "name": {
+      "en": "Lone Blade",
+      "ja": "孤剣"
+    },
+    "effect": "First attack/craft used deals +50% damage. Balance Down (10% chance) (1 turn).",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Cross Crusade R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 268,
+    "name": {
+      "en": "Luck",
+      "ja": "幸運"
+    },
+    "effect": "Fortuna STR+10 Item drop rate +50% (equipped character only).",
+    "element": "Space",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fortuna R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Space_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      46
+    ],
+    "tier": 1
+  },
+  {
+    "id": 269,
+    "name": {
+      "en": "Domination",
+      "ja": "覇道"
+    },
+    "effect": "First attack/craft used deals +100% damage. HP+1600 Balance Down (20% chance) (1 turn).",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Lone Blade",
+        "value": 1
+      },
+      {
+        "quartz": "Faint III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 270,
+    "name": {
+      "en": "Seraph",
+      "ja": "熾天使"
+    },
+    "effect": "Fortuna / Shining / Seraphic Ring HP+2400/EP+240/STR+20/ATS+20/DEF+40/ADF+40/ACC+100% Item drop rate +50% (equipped character only).",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Fortuna SR",
+        "value": 1
+      },
+      {
+        "quartz": "Shining SR",
+        "value": 1
+      },
+      {
+        "quartz": "Seraphic Ring SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      46,
+      47,
+      48
+    ],
+    "tier": 2
+  },
+  {
+    "id": 271,
+    "name": {
+      "en": "Solar Gyre",
+      "ja": "日輪牙"
+    },
+    "effect": "STR+80 Attack/crafts cause STR/DEF↓(S) (40% chance).",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Shield Breaker III",
+        "value": 1
+      },
+      {
+        "quartz": "Sword Breaker III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 272,
+    "name": {
+      "en": "Deus Gem",
+      "ja": "天帝珠"
+    },
+    "effect": "EP+200/ATS+40/ADF+40 Arts EP cost -40%.",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "EP Cut 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 48
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 273,
+    "name": {
+      "en": "Sevenfold Gem",
+      "ja": "七剣珠"
+    },
+    "effect": "Seventh Caliber HP+2000/STR+40/DEF+40 Attacks/crafts can cancel arts (100% chance). Delay +4",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Seventh Caliber SR",
+        "value": 1
+      },
+      {
+        "quartz": "Hit 3",
+        "value": 1
+      },
+      {
+        "quartz": "Impede 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 24
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      22
+    ],
+    "tier": 2
+  },
+  {
+    "id": 274,
+    "name": {
+      "en": "Goldia Gem",
+      "ja": "金耀珠"
+    },
+    "effect": "ACC+100%/Critical rate+9%",
+    "element": "Space",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Hit 3",
+        "value": 2
+      },
+      {
+        "quartz": "Strike 3",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/70/Space_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 275,
+    "name": {
+      "en": "Silver Thorn",
+      "ja": "シルバーソーン"
+    },
+    "effect": "Silver Thorn",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 80
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      23
+    ],
+    "tier": 0
+  },
+  {
+    "id": 276,
+    "name": {
+      "en": "Silver Thorn R",
+      "ja": "シルバーソーンＲ"
+    },
+    "effect": "Silver Thorn EP+40/ATS+18",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Silver Thorn",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      23
+    ],
+    "tier": 1
+  },
+  {
+    "id": 277,
+    "name": {
+      "en": "Silver Thorn SR",
+      "ja": "シルバーソーンＳＲ"
+    },
+    "effect": "Silver Thorn EP+80/ATS+36",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Silver Thorn R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      23
+    ],
+    "tier": 2
+  },
+  {
+    "id": 278,
+    "name": {
+      "en": "Galion Fort",
+      "ja": "ガリオンフォート"
+    },
+    "effect": "Galion Fort",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 320
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      24
+    ],
+    "tier": 0
+  },
+  {
+    "id": 279,
+    "name": {
+      "en": "Galion Fort R",
+      "ja": "ガリオンフォートＲ"
+    },
+    "effect": "Galion Fort EP+80/ATS+24",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Galion Fort",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      24
+    ],
+    "tier": 1
+  },
+  {
+    "id": 280,
+    "name": {
+      "en": "Galion Fort SR",
+      "ja": "ガリオンフォートＳＲ"
+    },
+    "effect": "Galion Fort EP+160/ATS+48",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Galion Fort R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      24
+    ],
+    "tier": 2
+  },
+  {
+    "id": 281,
+    "name": {
+      "en": "Albion Wolf",
+      "ja": "アルビオン・ヴォルフ"
+    },
+    "effect": "Albion Wolf",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 1280
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      25
+    ],
+    "tier": 0
+  },
+  {
+    "id": 282,
+    "name": {
+      "en": "Albion Wolf R",
+      "ja": "アルビオン・ヴォルフＲ"
+    },
+    "effect": "Albion Wolf EP+120/ATS+30",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Albion Wolf",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 5
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      25
+    ],
+    "tier": 1
+  },
+  {
+    "id": 283,
+    "name": {
+      "en": "Albion Wolf SR",
+      "ja": "アルビオン・ヴォルフＳＲ"
+    },
+    "effect": "Albion Wolf EP+240/ATS+60",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Albion Wolf R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 20
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      25
+    ],
+    "tier": 2
+  },
+  {
+    "id": 284,
+    "name": {
+      "en": "Analyze",
+      "ja": "アナライズ"
+    },
+    "effect": "Analyze",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 20
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      49
+    ],
+    "tier": 0
+  },
+  {
+    "id": 285,
+    "name": {
+      "en": "Analyze R",
+      "ja": "アナライズＲ"
+    },
+    "effect": "Analyze ATS+5/ACC+50%",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Analyze",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 1
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      49
+    ],
+    "tier": 1
+  },
+  {
+    "id": 286,
+    "name": {
+      "en": "Analyze SR",
+      "ja": "アナライズＳＲ"
+    },
+    "effect": "Analyze ATS+10/ACC+100%",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Analyze R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      49
+    ],
+    "tier": 2
+  },
+  {
+    "id": 287,
+    "name": {
+      "en": "Saintly Force",
+      "ja": "セイントフォース"
+    },
+    "effect": "Saintly Force",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 80
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      50
+    ],
+    "tier": 0
+  },
+  {
+    "id": 288,
+    "name": {
+      "en": "Saintly Force R",
+      "ja": "セイントフォースＲ"
+    },
+    "effect": "Saintly Force STR+12/ATS+12",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Saintly Force",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      50
+    ],
+    "tier": 1
+  },
+  {
+    "id": 289,
+    "name": {
+      "en": "Saintly Force SR",
+      "ja": "セイントフォースＳＲ"
+    },
+    "effect": "Saintly Force STR+24/ATS+24",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Saintly Force R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      50
+    ],
+    "tier": 2
+  },
+  {
+    "id": 290,
+    "name": {
+      "en": "Crescent Mirror",
+      "ja": "クレセントミラー"
+    },
+    "effect": "Crescent Mirror",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 240
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      51
+    ],
+    "tier": 0
+  },
+  {
+    "id": 291,
+    "name": {
+      "en": "Crescent Mirror R",
+      "ja": "クレセントミラーＲ"
+    },
+    "effect": "Crescent Mirror ATS+16/ADF+24",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crescent Mirror",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 3
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      51
+    ],
+    "tier": 1
+  },
+  {
+    "id": 292,
+    "name": {
+      "en": "Crescent Mirror SR",
+      "ja": "クレセントミラーＳＲ"
+    },
+    "effect": "Crescent Mirror ATS+32/ADF+48",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Crescent Mirror R",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      51
+    ],
+    "tier": 2
+  },
+  {
+    "id": 293,
+    "name": {
+      "en": "EP 1",
+      "ja": "ＥＰ１"
+    },
+    "effect": "EP+120",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 294,
+    "name": {
+      "en": "EP 2",
+      "ja": "ＥＰ２"
+    },
+    "effect": "EP+240",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 295,
+    "name": {
+      "en": "EP 3",
+      "ja": "ＥＰ３"
+    },
+    "effect": "EP+480",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 296,
+    "name": {
+      "en": "Mind 1",
+      "ja": "精神１"
+    },
+    "effect": "ATS+20",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 60
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 297,
+    "name": {
+      "en": "Mind 2",
+      "ja": "精神２"
+    },
+    "effect": "ATS+40",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 240
+      },
+      {
+        "item": "U-Material",
+        "value": 2
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 298,
+    "name": {
+      "en": "Mind 3",
+      "ja": "精神３"
+    },
+    "effect": "ATS+80",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 960
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 0
+  },
+  {
+    "id": 299,
+    "name": {
+      "en": "Confuse",
+      "ja": "混乱の刃"
+    },
+    "effect": "STR+15 Attacks/crafts can confuse enemies (10% chance).",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 300,
+    "name": {
+      "en": "Confuse II",
+      "ja": "混乱の刃Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts can confuse enemies (15% chance).",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Confuse",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 301,
+    "name": {
+      "en": "Confuse III",
+      "ja": "混乱の刃Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts can confuse enemies (20% chance).",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Confuse II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "status_effect"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 302,
+    "name": {
+      "en": "Voice Breaker",
+      "ja": "破言の牙"
+    },
+    "effect": "STR+15 Attacks/crafts cause ATS↓(S) (20% chance).",
+    "element": "Mirage",
+    "rank": null,
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/95/Mirage_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 0
+  },
+  {
+    "id": 303,
+    "name": {
+      "en": "Voice Breaker II",
+      "ja": "破言の牙Ⅱ"
+    },
+    "effect": "STR+30 Attacks/crafts cause ATS↓(S) (25% chance).",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Voice Breaker",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 4
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 1
+  },
+  {
+    "id": 304,
+    "name": {
+      "en": "Voice Breaker III",
+      "ja": "破言の牙Ⅲ"
+    },
+    "effect": "STR+50 Attacks/crafts cause ATS↓(S) (30% chance).",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Voice Breaker II",
+        "value": 2
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 305,
+    "name": {
+      "en": "Silver Bell",
+      "ja": "銀言鈴"
+    },
+    "effect": "ATS+30 Delay halved when using mirage arts.",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Silver Thorn R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 12
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 306,
+    "name": {
+      "en": "Astral Bell",
+      "ja": "幽界鈴"
+    },
+    "effect": "Galion Fort ATS+60 Damage+30% and delay halved when using mirage arts.",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Galion Fort SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 36
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      24
+    ],
+    "tier": 2
+  },
+  {
+    "id": 307,
+    "name": {
+      "en": "Moon Lens",
+      "ja": "月鏡"
+    },
+    "effect": "EP+20/ATS+20 Shows data on enemies yet to be analyzed. Enemies and chests are shown on the map.",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Analyze R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 308,
+    "name": {
+      "en": "Sacred Mirror",
+      "ja": "八咫鏡"
+    },
+    "effect": "Silver Thorn / Analyze EP+80/ATS+80 Shows data on enemies yet to be analyzed. Enemies and chests are shown on the map.",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Moon Lens",
+        "value": 1
+      },
+      {
+        "quartz": "Silver Thorn SR",
+        "value": 1
+      },
+      {
+        "quartz": "Analyze SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      23,
+      49
+    ],
+    "tier": 2
+  },
+  {
+    "id": 309,
+    "name": {
+      "en": "Intimidation",
+      "ja": "虎威"
+    },
+    "effect": "EP+240/ATS+60 Make enemies on the field more likely to run from you.",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Saintly Force R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 310,
+    "name": {
+      "en": "Dragon Vision",
+      "ja": "龍眼"
+    },
+    "effect": "EP+240/ATS+60 Automatically analyzes defeated enemies.",
+    "element": "Mirage",
+    "rank": "R",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Galion Fort R",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 18
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1b/Mirage_R_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 1
+  },
+  {
+    "id": 311,
+    "name": {
+      "en": "Tamamo Gem",
+      "ja": "玉藻"
+    },
+    "effect": "STR+80 Attacks/crafts can charm enemies (25% chance).",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Confuse III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 36
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 312,
+    "name": {
+      "en": "Lunar Gyre",
+      "ja": "月輪牙"
+    },
+    "effect": "STR+80 Attack/crafts cause ATS/ADF↓(S) (40% chance).",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Spirit Breaker III",
+        "value": 1
+      },
+      {
+        "quartz": "Voice Breaker III",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [
+      "stat_reduction"
+    ],
+    "tier": 2
+  },
+  {
+    "id": 313,
+    "name": {
+      "en": "Odin Gem",
+      "ja": "賢王珠"
+    },
+    "effect": "Saintly Force / Crescent Mirror STR+100/ATS+100",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Saintly Force SR",
+        "value": 1
+      },
+      {
+        "quartz": "Crescent Mirror SR",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 32
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      50,
+      51
+    ],
+    "tier": 2
+  },
+  {
+    "id": 314,
+    "name": {
+      "en": "Fenrir Gem",
+      "ja": "銀狼珠"
+    },
+    "effect": "Albion Wolf EP+320/ATS+160",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Albion Wolf SR",
+        "value": 1
+      },
+      {
+        "quartz": "EP 3",
+        "value": 1
+      },
+      {
+        "quartz": "Mind 3",
+        "value": 1
+      },
+      {
+        "item": "U-Material",
+        "value": 16
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      25
+    ],
+    "tier": 2
+  },
+  {
+    "id": 315,
+    "name": {
+      "en": "Argem Gem",
+      "ja": "銀耀珠"
+    },
+    "effect": "ATS+200",
+    "element": "Mirage",
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": [
+      {
+        "quartz": "Mind 3",
+        "value": 4
+      },
+      {
+        "item": "U-Material",
+        "value": 8
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/39/Mirage_SR_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "tier": 2
+  },
+  {
+    "id": 316,
+    "name": {
+      "en": "Frozen Epoch",
+      "ja": "アイシクル・メテオ"
+    },
+    "effect": "Frozen Epoch HP+1000/EP+100/DEF+100/ADF+100",
+    "element": [
+      "Earth",
+      "Water",
+      "Space"
+    ],
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Lost_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      55
+    ],
+    "tier": 2
+  },
+  {
+    "id": 317,
+    "name": {
+      "en": "Leanan's Kiss",
+      "ja": "リアノーン・キス"
+    },
+    "effect": "Leanan's Kiss EP+100/ATS+100/ADF+100/EVA+10%",
+    "element": [
+      "Water",
+      "Fire",
+      "Mirage"
+    ],
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Lost_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      53
+    ],
+    "tier": 2
+  },
+  {
+    "id": 318,
+    "name": {
+      "en": "Prominence Nova",
+      "ja": "プロミネンス・ロア"
+    },
+    "effect": "Prominence Nova STR+100/DEF+100/MOV+10/ACC+100%",
+    "element": [
+      "Fire",
+      "Wind",
+      "Space"
+    ],
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Lost_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      52
+    ],
+    "tier": 2
+  },
+  {
+    "id": 319,
+    "name": {
+      "en": "Grail Thelas",
+      "ja": "グラール・セラス"
+    },
+    "effect": "Grail Thelas HP+1000/SPD+10/MOV+10/ACC+100%",
+    "element": [
+      "Earth",
+      "Fire",
+      "Time"
+    ],
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Lost_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      54
+    ],
+    "tier": 2
+  },
+  {
+    "id": 320,
+    "name": {
+      "en": "Aeonian Emperor",
+      "ja": "ロード・レグナリオン"
+    },
+    "effect": "Aeonian Emperor STR+100/ATS+100/SPD+10/EVA+10%",
+    "element": [
+      "Wind",
+      "Time",
+      "Mirage"
+    ],
+    "rank": "SR",
+    "elemental_value": null,
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Lost_%28Sen_III_Quartz%29.png",
+    "exclusive_groups": [],
+    "line_exclusive_groups": [],
+    "arts_learnt": [
+      56
+    ],
+    "tier": 2
+  }
+]

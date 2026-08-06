@@ -1,5 +1,6 @@
 import { canEquipColdSteelIQuartz } from '../domain/rules/coldSteelIRules'
 import {
+  enforcesColdSteelNodeTiers,
   isColdSteelRuleSet,
   quartzFitsSlotRestriction,
   type ElementName,
@@ -288,7 +289,7 @@ export function setEquippedQuartz(
     if (!canEquipColdSteelIQuartz(quartz, slotId, state.equippedQuartz, quartzById, options.lines ?? [])) {
       return state
     }
-    if (options.ruleSet === 'cold-steel-ii') {
+    if (enforcesColdSteelNodeTiers(options.ruleSet)) {
       const nodeTier = state.nodeTiers[slotId]
       if (quartz.tier != null && quartz.tier > nodeTier) {
         return state
@@ -343,7 +344,7 @@ export function getAllowedQuartzForSlot(
       if (!canEquipColdSteelIQuartz(quartz, slotId, equippedQuartz, quartzById, context.lines ?? [])) {
         return false
       }
-      if (context.ruleSet === 'cold-steel-ii') {
+      if (enforcesColdSteelNodeTiers(context.ruleSet)) {
         const nodeTier = nodeTiers[slotId]
         if (quartz.tier != null && quartz.tier > nodeTier) {
           return false

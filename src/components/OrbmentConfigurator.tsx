@@ -306,7 +306,9 @@ export function OrbmentConfigurator({
                               ? 'Cold Steel II templates are loaded from the Cold Steel II character preset database.'
                               : selectedBaseId === 'cold-steel-iii'
                                 ? 'Cold Steel III templates are loaded from the Cold Steel III character preset database.'
-                                : 'No base-specific character presets are loaded for this base yet.'}
+                                : selectedBaseId === 'cold-steel-iv'
+                                  ? 'Cold Steel IV templates are loaded from the Cold Steel IV character preset database.'
+                                  : 'No base-specific character presets are loaded for this base yet.'}
               </p>
             </div>
           </div>

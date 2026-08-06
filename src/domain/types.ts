@@ -37,10 +37,24 @@ export const LINE_COLORS = [
 
 export type QuartzRank = 'R' | 'SR'
 
-export type OrbmentRuleSetId = 'sky-crossbell' | 'cold-steel-i' | 'cold-steel-ii' | 'cold-steel-iii'
+export type OrbmentRuleSetId =
+  | 'sky-crossbell'
+  | 'cold-steel-i'
+  | 'cold-steel-ii'
+  | 'cold-steel-iii'
+  | 'cold-steel-iv'
 
 export function isColdSteelRuleSet(ruleSet?: OrbmentRuleSetId): boolean {
-  return ruleSet === 'cold-steel-i' || ruleSet === 'cold-steel-ii' || ruleSet === 'cold-steel-iii'
+  return (
+    ruleSet === 'cold-steel-i' ||
+    ruleSet === 'cold-steel-ii' ||
+    ruleSet === 'cold-steel-iii' ||
+    ruleSet === 'cold-steel-iv'
+  )
+}
+
+export function enforcesColdSteelNodeTiers(ruleSet?: OrbmentRuleSetId): boolean {
+  return ruleSet === 'cold-steel-ii' || ruleSet === 'cold-steel-iv'
 }
 
 export type SlotId = number

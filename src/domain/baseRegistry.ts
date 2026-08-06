@@ -2,6 +2,7 @@ import artsAzure from '../database/arts/azure.json'
 import artsColdSteelI from '../database/arts/cold-steel-i.json'
 import artsColdSteelII from '../database/arts/cold-steel-ii.json'
 import artsColdSteelIII from '../database/arts/cold-steel-iii.json'
+import artsColdSteelIV from '../database/arts/cold-steel-iv.json'
 import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
@@ -10,10 +11,12 @@ import masterQuartzAzure from '../database/master-quartz/azure.json'
 import masterQuartzColdSteelI from '../database/master-quartz/cold-steel-i.json'
 import masterQuartzColdSteelII from '../database/master-quartz/cold-steel-ii.json'
 import masterQuartzColdSteelIII from '../database/master-quartz/cold-steel-iii.json'
+import masterQuartzColdSteelIV from '../database/master-quartz/cold-steel-iv.json'
 import quartzAzure from '../database/quartz/azure.json'
 import quartzColdSteelI from '../database/quartz/cold-steel-i.json'
 import quartzColdSteelII from '../database/quartz/cold-steel-ii.json'
 import quartzColdSteelIII from '../database/quartz/cold-steel-iii.json'
+import quartzColdSteelIV from '../database/quartz/cold-steel-iv.json'
 import quartzSky3rd from '../database/quartz/sky-3rd.json'
 import quartzSkyFc from '../database/quartz/sky-fc.json'
 import quartzSkySc from '../database/quartz/sky-sc.json'
@@ -242,6 +245,26 @@ const COLD_STEEL_III_BASE: BaseData = {
   ruleSet: 'cold-steel-iii',
 }
 
+const COLD_STEEL_IV_TOPOLOGY: BaseData['topology'] = {
+  ...COLD_STEEL_III_TOPOLOGY,
+  nodeTierDefaults: createNodeTierDefaults([2, 3, 4, 5, 6, 7, 8], 2),
+}
+
+const COLD_STEEL_IV_BASE: BaseData = {
+  id: 'cold-steel-iv',
+  label: 'Cold Steel IV',
+  quartz: quartzColdSteelIV.map((entry) => normalizeQuartz(entry)),
+  arts: artsColdSteelIV.map((entry) => normalizeArt(entry)),
+  masterQuartz: masterQuartzColdSteelIV.map((entry) => normalizeMasterQuartz(entry)),
+  topology: COLD_STEEL_IV_TOPOLOGY,
+  orbmentVisual: {
+    title: 'ARCUS II',
+    outerEdges: 'straight',
+    nodeShape: 'circle',
+  },
+  ruleSet: 'cold-steel-iv',
+}
+
 export const BASES: BaseData[] = [
   SKY_FC_BASE,
   SKY_SC_BASE,
@@ -251,6 +274,7 @@ export const BASES: BaseData[] = [
   COLD_STEEL_I_BASE,
   COLD_STEEL_II_BASE,
   COLD_STEEL_III_BASE,
+  COLD_STEEL_IV_BASE,
 ]
 
 export function getBaseById(baseId: string): BaseData {

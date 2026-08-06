@@ -2,6 +2,7 @@ import azurePresets from '../database/character-preset/azure.json'
 import coldSteelIPresets from '../database/character-preset/cold-steel-i.json'
 import coldSteelIIPresets from '../database/character-preset/cold-steel-ii.json'
 import coldSteelIIIPresets from '../database/character-preset/cold-steel-iii.json'
+import coldSteelIVPresets from '../database/character-preset/cold-steel-iv.json'
 import sky3rdPresets from '../database/character-preset/sky-3rd.json'
 import skyFcPresets from '../database/character-preset/sky-fc.json'
 import skyScPresets from '../database/character-preset/sky-sc.json'
@@ -43,6 +44,7 @@ const PRESETS_BY_BASE: Record<string, RawCharacterPreset[]> = {
   'cold-steel-i': coldSteelIPresets as RawCharacterPreset[],
   'cold-steel-ii': coldSteelIIPresets as RawCharacterPreset[],
   'cold-steel-iii': coldSteelIIIPresets as RawCharacterPreset[],
+  'cold-steel-iv': coldSteelIVPresets as RawCharacterPreset[],
 }
 
 export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[] {
