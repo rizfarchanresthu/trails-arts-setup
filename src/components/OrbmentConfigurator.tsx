@@ -15,6 +15,7 @@ import {
   type Art,
   type ElementName,
   type ElementRequirement,
+  type ElementTotals,
   type MasterQuartz,
   type MasterQuartzLevel,
   type OrbmentLine,
@@ -62,6 +63,8 @@ type OrbmentConfiguratorProps = {
   orbmentVisual?: OrbmentVisual
   ruleSet?: OrbmentRuleSetId
   artsById?: Map<number, Art>
+  availableArts?: Art[]
+  lineTotals?: ElementTotals[]
 }
 
 export function OrbmentConfigurator({
@@ -91,6 +94,8 @@ export function OrbmentConfigurator({
   orbmentVisual,
   ruleSet,
   artsById = new Map(),
+  availableArts = [],
+  lineTotals = [],
 }: OrbmentConfiguratorProps) {
   const quartzTiers = quartzList.map((quartz) => quartz.tier).filter((tier): tier is number => tier != null)
   const minTier = quartzTiers.length > 0 ? Math.min(...quartzTiers) : 1
@@ -326,6 +331,8 @@ export function OrbmentConfigurator({
               subMasterQuartzLevel={state.subMasterQuartzLevel}
               masterQuartzById={masterQuartzById}
               showTier={showNodeTierControls}
+              availableArts={availableArts}
+              lineTotals={lineTotals}
             />
           </div>
         </div>

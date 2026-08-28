@@ -1,7 +1,15 @@
+import { Download } from 'lucide-react'
+import { useRef } from 'react'
+import { Button } from '@/components/ui/button'
+import { exportOrbmentPng } from '@/lib/exportOrbmentPng'
 import {
   ELEMENT_COLORS,
   LINE_COLORS,
   formatSlotLabel,
+  getArtElements,
+  type ElementName,
+  type Art,
+  type ElementTotals,
   type MasterQuartz,
   type OrbmentLine,
   type OrbmentTopology,
@@ -27,6 +35,8 @@ type OrbmentGraphProps = {
   subMasterQuartzLevel?: number
   masterQuartzById?: Map<number, MasterQuartz>
   showTier?: boolean
+  availableArts?: Art[]
+  lineTotals?: ElementTotals[]
 }
 
 const NODE_RADIUS = 24
@@ -75,6 +85,8 @@ export function OrbmentGraph({
   subMasterQuartzLevel = 1,
   masterQuartzById = new Map(),
   showTier,
+  availableArts = [],
+  lineTotals = [],
 }: OrbmentGraphProps) {
   const layout = getLayout(topology)
   const shouldShowTier = showTier ?? layout.showTier
@@ -88,11 +100,85 @@ export function OrbmentGraph({
   const useCircularOuter = orbmentVisual?.outerEdges === 'circular'
   const useRectNodes = orbmentVisual?.nodeShape === 'rect'
   const subMasterSlot = topology.subMasterQuartzSlot
+  const svgRef = useRef<SVGSVGElement>(null)
+  const legendEntries = lines.map((line, index) => ({
+    color: lineColor(index),
+    text: `Line ${index + 1}: ${line.map((slotId) => formatSlotLabel(slotId, topology)).join('-')}`,
+  }))
+
+  const resolveEquippedName = (slotId: SlotId): string | null => {
+    if (slotId === topology.masterQuartzSlot) {
+      return equippedMasterQuartzId ? (masterQuartzById.get(equippedMasterQuartzId)?.name.en ?? null) : null
+    }
+    if (slotId === topology.subMasterQuartzSlot) {
+      return equippedSubMasterQuartzId
+        ? (masterQuartzById.get(equippedSubMasterQuartzId)?.name.en ?? null)
+        : null
+    }
+    const quartzId = equippedQuartz[slotId]
+    return quartzId ? (quartzById.get(quartzId)?.name.en ?? null) : null
+  }
+
+  const slotDisplayLabel = (slotId: SlotId): string | null => {
+    if (slotId === topology.masterQuartzSlot) return `Master (L${masterQuartzLevel})`
+    if (slotId === topology.subMasterQuartzSlot) return `Sub-Master (L${subMasterQuartzLevel})`
+    return null
+  }
+
+  const slotAccentColor = (slotId: SlotId): string | null => {
+    if (slotId === topology.masterQuartzSlot || slotId === topology.subMasterQuartzSlot) return null
+    const restriction = slotRestrictions[slotId]
+    return restriction ? ELEMENT_COLORS[restriction] : null
+  }
+
+  const handleExport = () => {
+    if (!svgRef.current) return
+    const exportLines = lines.map((line, index) => ({
+      color: lineColor(index),
+      slots: line.map((slotId) => ({
+        label: slotDisplayLabel(slotId),
+        quartz: resolveEquippedName(slotId),
+        accent: slotAccentColor(slotId),
+      })),
+      totals: Object.entries(lineTotals[index] ?? {})
+        .filter(([, value]) => value > 0)
+        .map(([element, value]) => ({
+          element,
+          value,
+          color: ELEMENT_COLORS[element as ElementName],
+        })),
+    }))
+
+    if (subMasterSlot !== undefined && !lines.some((line) => line.includes(subMasterSlot))) {
+      exportLines.push({
+        color: SUB_MASTER_LINK_COLOR,
+        slots: [
+          {
+            label: slotDisplayLabel(subMasterSlot),
+            quartz: resolveEquippedName(subMasterSlot),
+            accent: null,
+          },
+        ],
+        totals: [],
+      })
+    }
+
+    void exportOrbmentPng({
+      svg: svgRef.current,
+      title,
+      lines: exportLines,
+      arts: availableArts.map((art) => ({
+        name: art.name.en,
+        color: ELEMENT_COLORS[getArtElements(art)[0]],
+      })),
+      fileName: `orbment-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`,
+    })
+  }
 
   return (
     <section className="orbmentPanel">
       <h3>{title}</h3>
-      <svg viewBox="0 0 340 340" className="orbmentSvg" aria-label={`${title} graph`}>
+      <svg ref={svgRef} viewBox="0 0 340 340" className="orbmentSvg" aria-label={`${title} graph`}>
         <polygon points={outerPath} className="orbmentHexGuide" />
         {layout.gapMarker ? (
           <circle cx={layout.gapMarker.x} cy={layout.gapMarker.y} r={6} className="orbmentGapMarker" />
@@ -248,13 +334,18 @@ export function OrbmentGraph({
       </svg>
 
       <div className="lineLegend">
-        {lines.map((line, index) => (
+        {legendEntries.map((entry, index) => (
           <span key={`line-legend-${index}`} className="legendItem">
-            <span className="legendSwatch" style={{ backgroundColor: lineColor(index) }} />
-            Line {index + 1}: {line.map((slotId) => formatSlotLabel(slotId, topology)).join('-')}
+            <span className="legendSwatch" style={{ backgroundColor: entry.color }} />
+            {entry.text}
           </span>
         ))}
       </div>
+
+      <Button variant="outline" size="sm" onClick={handleExport} className="orbmentExportButton">
+        <Download />
+        Download PNG
+      </Button>
     </section>
   )
 }
