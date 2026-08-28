@@ -101,6 +101,10 @@ button.artCard,
   border-radius: 10px;
 }
 
+.orbmentExportButton {
+  justify-self: center;
+}
+
 .orbmentHexGuide {
   fill: none;
   stroke: #d8deea;

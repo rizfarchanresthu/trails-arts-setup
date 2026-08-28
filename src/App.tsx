@@ -523,6 +523,8 @@ function App() {
             orbmentVisual={base.orbmentVisual}
             ruleSet={base.ruleSet}
             artsById={artsById}
+            availableArts={evaluation.availableArts}
+            lineTotals={evaluation.lineTotals}
             selectedBaseId={selectedBaseId}
             selectedTemplateId={selectedTemplateId}
             characterTemplates={characterTemplates}
