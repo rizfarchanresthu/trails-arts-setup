@@ -102,8 +102,10 @@ export type MasterQuartz = {
   id: number
   name: LocalizedName
   element: ElementName
+  image_url?: string | null
   description: string
   levels: MasterQuartzLevel[]
+  isCustom?: boolean
 }
 
 export type Art = {
@@ -208,4 +210,27 @@ export type ExportedQuartzSetup = {
   name: string
   exported_at: string
   orbmentState: OrbmentState
+}
+
+export type CustomMasterQuartzEntry = {
+  baseGame: string
+  created_at: string
+  edited_at: string
+  masterQuartz: MasterQuartz
+}
+
+export type CustomMasterQuartzStorage = {
+  version: 1
+  entries: CustomMasterQuartzEntry[]
+}
+
+export const EXPORTED_MASTER_QUARTZ_KIND = 'trails-arts-gallery-master-quartz'
+export const EXPORTED_MASTER_QUARTZ_VERSION = 1
+
+export type ExportedMasterQuartz = {
+  kind: typeof EXPORTED_MASTER_QUARTZ_KIND
+  version: typeof EXPORTED_MASTER_QUARTZ_VERSION
+  baseGame: string
+  exported_at: string
+  masterQuartz: MasterQuartz
 }

@@ -3,6 +3,7 @@ import { Moon, Sun, Type } from 'lucide-react'
 import './App.css'
 import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
+import { MasterQuartzEditor, type MasterQuartzNoticeTone } from './components/MasterQuartzEditor'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -15,13 +16,37 @@ import { useTheme } from './hooks/useTheme'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
 import { getCharacterTemplatesForBase } from './domain/characterPresets'
+import { getMasterQuartzSchema } from './domain/masterQuartzSchemas'
 import { evaluateGrantedArts } from './domain/rules/coldSteelIRules'
 import { deriveLinesFromConfig } from './domain/rules/skyFcRules'
-import { isColdSteelRuleSet, type ElementName, type SlotId } from './domain/types'
+import {
+  isColdSteelRuleSet,
+  type BaseData,
+  type CustomMasterQuartzEntry,
+  type ElementName,
+  type MasterQuartz,
+  type SlotId,
+} from './domain/types'
+import {
+  buildExportedMasterQuartz,
+  createCustomMasterQuartz,
+  deleteCustomMasterQuartz,
+  listCustomMasterQuartz,
+  parseExportedMasterQuartz,
+  updateCustomMasterQuartz,
+  validateMasterQuartz,
+} from './state/customMasterQuartz'
+import {
+  createEmptyMasterQuartzDraft,
+  draftFromMasterQuartz,
+  masterQuartzFromDraft,
+  type MasterQuartzDraft,
+} from './state/masterQuartzDraft'
 import {
   applyPresetRestrictions,
   createOrbmentStateFromPreset,
   createInitialOrbmentState,
+  reconcileEquippedMasterQuartz,
   type OrbmentState,
   setEquippedMasterQuartz,
   setEquippedQuartz,
@@ -47,7 +72,7 @@ import {
   updateSavedQuartzSetup,
 } from './state/savedQuartzSetups'
 
-type MainTab = 'orbment' | 'arts'
+type MainTab = 'orbment' | 'arts' | 'master-quartz'
 type SetupNoticeTone = 'default' | 'success' | 'error'
 
 function App() {
@@ -69,16 +94,30 @@ function App() {
     orbmentState: OrbmentState
   } | null>(null)
   const importFileInputRef = useRef<HTMLInputElement>(null)
+  const [customMasterQuartzEntries, setCustomMasterQuartzEntries] = useState(() => listCustomMasterQuartz())
+  const [selectedCustomMasterQuartzId, setSelectedCustomMasterQuartzId] = useState<number | null>(null)
+  const [masterQuartzDraft, setMasterQuartzDraft] = useState<MasterQuartzDraft>(createEmptyMasterQuartzDraft)
+  const [masterQuartzNotice, setMasterQuartzNoticeState] = useState('')
+  const [masterQuartzNoticeTone, setMasterQuartzNoticeTone] = useState<MasterQuartzNoticeTone>('default')
 
   const base = useMemo(() => getBaseById(selectedBaseId), [selectedBaseId])
+  const masterQuartzSchema = getMasterQuartzSchema(selectedBaseId)
 
   const quartzById = useMemo(() => {
     return new Map(base.quartz.map((quartz) => [quartz.id, quartz]))
   }, [base.quartz])
 
+  const customMasterQuartzForBase = useMemo(() => {
+    return customMasterQuartzEntries.filter((entry) => entry.baseGame === selectedBaseId)
+  }, [customMasterQuartzEntries, selectedBaseId])
+
+  const masterQuartzList = useMemo(() => {
+    return buildMasterQuartzList(base, customMasterQuartzEntries)
+  }, [base, customMasterQuartzEntries])
+
   const masterQuartzById = useMemo(() => {
-    return new Map((base.masterQuartz ?? []).map((masterQuartz) => [masterQuartz.id, masterQuartz]))
-  }, [base.masterQuartz])
+    return new Map(masterQuartzList.map((masterQuartz) => [masterQuartz.id, masterQuartz]))
+  }, [masterQuartzList])
 
   const artsById = useMemo(() => {
     return new Map(base.arts.map((art) => [art.id, art]))
@@ -193,9 +232,14 @@ function App() {
     }
 
     const validQuartzIds = new Set(targetBase.quartz.map((quartz) => quartz.id))
-    const validMasterQuartzIds = new Set((targetBase.masterQuartz ?? []).map((masterQuartz) => masterQuartz.id))
+    const validMasterQuartzIds = new Set(
+      buildMasterQuartzList(targetBase, customMasterQuartzEntries).map((masterQuartz) => masterQuartz.id),
+    )
     const sanitizedSetup = sanitizeForBase(setup, validQuartzIds, targetBase.topology, validMasterQuartzIds)
 
+    if (targetBase.id !== selectedBaseId) {
+      resetMasterQuartzEditor()
+    }
     setSelectedBaseId(sanitizedSetup.baseGame)
     setSelectedTemplateId('')
     setOrbmentState(sanitizedSetup.orbmentState)
@@ -232,16 +276,150 @@ function App() {
       name: setupName.trim() || 'Untitled setup',
       orbmentState,
     })
-    const blob = new Blob([JSON.stringify(exported, null, 2)], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `${toExportFileName(exported.name)}.json`
-    document.body.appendChild(link)
-    link.click()
-    link.remove()
-    URL.revokeObjectURL(url)
+    downloadJson(`${toExportFileName(exported.name)}.json`, exported)
     setSetupNotice(`Exported "${exported.name}".`)
+  }
+
+  function changeBase(nextBaseId: string): void {
+    setSelectedBaseId(nextBaseId)
+    setSelectedTemplateId('')
+    setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
+    setSelectedSavedSetupId('')
+    setDraftBeforeSavedLoad(null)
+    setSetupNotice('')
+    resetMasterQuartzEditor()
+  }
+
+  function setMasterQuartzNotice(message: string, tone: MasterQuartzNoticeTone = 'default'): void {
+    setMasterQuartzNoticeState(message)
+    setMasterQuartzNoticeTone(message ? tone : 'default')
+  }
+
+  function resetMasterQuartzEditor(): void {
+    setSelectedCustomMasterQuartzId(null)
+    setMasterQuartzDraft(createEmptyMasterQuartzDraft())
+    setMasterQuartzNotice('')
+  }
+
+  function refreshCustomMasterQuartz(): void {
+    const entries = listCustomMasterQuartz()
+    setCustomMasterQuartzEntries(entries)
+    const nextById = new Map(buildMasterQuartzList(base, entries).map((masterQuartz) => [masterQuartz.id, masterQuartz]))
+    setOrbmentState((prev) => reconcileEquippedMasterQuartz(prev, nextById))
+  }
+
+  function buildMasterQuartzFromDraft(): MasterQuartz | null {
+    if (!masterQuartzSchema) {
+      return null
+    }
+    const candidate = masterQuartzFromDraft(masterQuartzDraft, selectedCustomMasterQuartzId ?? 0, masterQuartzSchema)
+    const error = validateMasterQuartz(candidate, masterQuartzSchema)
+    if (error) {
+      setMasterQuartzNotice(error, 'error')
+      return null
+    }
+    return candidate
+  }
+
+  function saveMasterQuartz(asNew: boolean): void {
+    const candidate = buildMasterQuartzFromDraft()
+    if (!candidate) {
+      return
+    }
+
+    if (!asNew && selectedCustomMasterQuartzId != null) {
+      const updated = updateCustomMasterQuartz(selectedBaseId, selectedCustomMasterQuartzId, candidate)
+      refreshCustomMasterQuartz()
+      if (!updated) {
+        setSelectedCustomMasterQuartzId(null)
+        setMasterQuartzNotice('Selected master quartz no longer exists. Use Save As.', 'error')
+        return
+      }
+      setMasterQuartzDraft(draftFromMasterQuartz(updated.masterQuartz))
+      setMasterQuartzNotice(`Updated "${updated.masterQuartz.name.en}".`, 'success')
+      return
+    }
+
+    const created = createCustomMasterQuartz(selectedBaseId, candidate)
+    refreshCustomMasterQuartz()
+    setSelectedCustomMasterQuartzId(created.masterQuartz.id)
+    setMasterQuartzDraft(draftFromMasterQuartz(created.masterQuartz))
+    setMasterQuartzNotice(`Saved "${created.masterQuartz.name.en}" to the ${base.label} master quartz list.`, 'success')
+  }
+
+  function removeCustomMasterQuartz(): void {
+    if (selectedCustomMasterQuartzId == null) {
+      setMasterQuartzNotice('Select a custom master quartz to delete.')
+      return
+    }
+    deleteCustomMasterQuartz(selectedBaseId, selectedCustomMasterQuartzId)
+    refreshCustomMasterQuartz()
+    setSelectedCustomMasterQuartzId(null)
+    setMasterQuartzDraft(createEmptyMasterQuartzDraft())
+    setMasterQuartzNotice('Deleted custom master quartz.')
+  }
+
+  function selectCustomMasterQuartz(id: number | null): void {
+    if (id == null) {
+      resetMasterQuartzEditor()
+      return
+    }
+    const entry = customMasterQuartzForBase.find((candidate) => candidate.masterQuartz.id === id)
+    if (!entry) {
+      setMasterQuartzNotice('Could not find that custom master quartz.', 'error')
+      refreshCustomMasterQuartz()
+      return
+    }
+    setSelectedCustomMasterQuartzId(id)
+    setMasterQuartzDraft(draftFromMasterQuartz(entry.masterQuartz))
+    setMasterQuartzNotice('')
+  }
+
+  function exportMasterQuartz(): void {
+    const candidate = buildMasterQuartzFromDraft()
+    if (!candidate) {
+      return
+    }
+    const exported = buildExportedMasterQuartz(selectedBaseId, candidate)
+    downloadJson(`${toExportFileName(`${selectedBaseId}_${exported.masterQuartz.name.en}`)}.json`, exported)
+    setMasterQuartzNotice(`Exported "${exported.masterQuartz.name.en}".`)
+  }
+
+  async function importMasterQuartzFromFile(file: File): Promise<void> {
+    let parsed: unknown
+    try {
+      parsed = JSON.parse(await file.text()) as unknown
+    } catch {
+      setMasterQuartzNotice('Import file could not be read as JSON.', 'error')
+      return
+    }
+
+    const exported = parseExportedMasterQuartz(parsed)
+    if (!exported) {
+      setMasterQuartzNotice('Import file is not a valid master quartz export.', 'error')
+      return
+    }
+
+    const targetBase = BASES.find((baseOption) => baseOption.id === exported.baseGame)
+    if (!targetBase) {
+      setMasterQuartzNotice(`Imported master quartz base "${exported.baseGame}" is not available in this build.`, 'error')
+      return
+    }
+    if (!getMasterQuartzSchema(targetBase.id)) {
+      setMasterQuartzNotice(`Master quartz creation isn't available for ${targetBase.label} yet.`, 'error')
+      return
+    }
+
+    if (targetBase.id !== selectedBaseId) {
+      changeBase(targetBase.id)
+    }
+    setActiveMainTab('master-quartz')
+    setSelectedCustomMasterQuartzId(null)
+    setMasterQuartzDraft(draftFromMasterQuartz(exported.masterQuartz))
+    setMasterQuartzNotice(
+      `Imported "${exported.masterQuartz.name.en}" (${targetBase.label}). Click Save to add it to the master quartz list.`,
+      'success',
+    )
   }
 
   async function importSetupFromFile(file: File): Promise<void> {
@@ -274,7 +452,9 @@ function App() {
     }
 
     const validQuartzIds = new Set(targetBase.quartz.map((quartz) => quartz.id))
-    const validMasterQuartzIds = new Set((targetBase.masterQuartz ?? []).map((masterQuartz) => masterQuartz.id))
+    const validMasterQuartzIds = new Set(
+      buildMasterQuartzList(targetBase, customMasterQuartzEntries).map((masterQuartz) => masterQuartz.id),
+    )
     const sanitized = sanitizeExportedSetup(exported, validQuartzIds, targetBase.topology, validMasterQuartzIds)
     const templatesForBase = getCharacterTemplatesForBase(targetBase.id)
     const restoredTemplateId =
@@ -285,6 +465,9 @@ function App() {
       ? (templatesForBase.find((template) => template.id === restoredTemplateId)?.name ?? restoredTemplateId)
       : 'Custom'
 
+    if (targetBase.id !== selectedBaseId) {
+      resetMasterQuartzEditor()
+    }
     setSelectedBaseId(targetBase.id)
     setSelectedTemplateId(restoredTemplateId)
     setOrbmentState(sanitized.orbmentState)
@@ -298,6 +481,9 @@ function App() {
     if (!setupId) {
       setSelectedSavedSetupId('')
       if (draftBeforeSavedLoad) {
+        if (draftBeforeSavedLoad.baseId !== selectedBaseId) {
+          resetMasterQuartzEditor()
+        }
         setSelectedBaseId(draftBeforeSavedLoad.baseId)
         setSelectedTemplateId(draftBeforeSavedLoad.templateId)
         setOrbmentState(cloneOrbmentState(draftBeforeSavedLoad.orbmentState))
@@ -364,12 +550,7 @@ function App() {
                   if (!nextBaseId) {
                     return
                   }
-                  setSelectedBaseId(nextBaseId)
-                  setSelectedTemplateId('')
-                  setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
-                  setSelectedSavedSetupId('')
-                  setDraftBeforeSavedLoad(null)
-                  setSetupNotice('')
+                  changeBase(nextBaseId)
                 }}
               />
             </Label>
@@ -447,7 +628,7 @@ function App() {
         className="min-w-0 gap-4"
         value={activeMainTab}
         onValueChange={(value) => {
-          if (value === 'orbment' || value === 'arts') {
+          if (value === 'orbment' || value === 'arts' || value === 'master-quartz') {
             setActiveMainTab(value)
           }
         }}
@@ -459,6 +640,9 @@ function App() {
           <TabsTrigger className="px-3 py-1.5" value="arts">
             Available Arts ({evaluation.availableArts.length})
           </TabsTrigger>
+          <TabsTrigger className="px-3 py-1.5" value="master-quartz">
+            Create Master Quartz
+          </TabsTrigger>
         </TabsList>
         <TabsContent className="text-base outline-none" value="orbment">
           <OrbmentConfigurator
@@ -467,7 +651,7 @@ function App() {
             lineWarnings={derivedLines.warnings}
             quartzList={base.quartz}
             quartzById={quartzById}
-            masterQuartzList={base.masterQuartz ?? []}
+            masterQuartzList={masterQuartzList}
             masterQuartzById={masterQuartzById}
             onLineCountChange={(lineCount) =>
               setOrbmentState((prev) => updateLineCount(prev, lineCount, base.topology))
@@ -555,6 +739,28 @@ function App() {
             showLineTotals={!isColdSteelRuleSet(base.ruleSet)}
           />
         </TabsContent>
+        <TabsContent className="text-base outline-none" value="master-quartz">
+          <MasterQuartzEditor
+            baseLabel={base.label}
+            schema={masterQuartzSchema}
+            entries={customMasterQuartzForBase}
+            selectedId={selectedCustomMasterQuartzId}
+            draft={masterQuartzDraft}
+            notice={masterQuartzNotice}
+            noticeTone={masterQuartzNoticeTone}
+            onSelect={selectCustomMasterQuartz}
+            onDraftChange={setMasterQuartzDraft}
+            onNew={() => {
+              resetMasterQuartzEditor()
+              setMasterQuartzNotice('Started a new master quartz.')
+            }}
+            onSave={() => saveMasterQuartz(false)}
+            onSaveAs={() => saveMasterQuartz(true)}
+            onDelete={removeCustomMasterQuartz}
+            onExport={exportMasterQuartz}
+            onImportFile={(file) => void importMasterQuartzFromFile(file)}
+          />
+        </TabsContent>
       </Tabs>
     </main>
   )
@@ -576,6 +782,27 @@ function getUniqueSetupName(requestedName: string, savedSetups: Array<{ id: stri
     }
     suffix += 1
   }
+}
+
+function buildMasterQuartzList(base: BaseData, customEntries: CustomMasterQuartzEntry[]): MasterQuartz[] {
+  return [
+    ...(base.masterQuartz ?? []),
+    ...customEntries
+      .filter((entry) => entry.baseGame === base.id)
+      .map((entry) => ({ ...entry.masterQuartz, isCustom: true })),
+  ]
+}
+
+function downloadJson(fileName: string, data: unknown): void {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = fileName
+  document.body.appendChild(link)
+  link.click()
+  link.remove()
+  URL.revokeObjectURL(url)
 }
 
 function toExportFileName(name: string): string {
