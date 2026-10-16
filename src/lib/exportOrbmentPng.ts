@@ -6,11 +6,20 @@ type ExportLine = {
 
 type ExportArt = { name: string; color: string }
 
+type ExportMasterQuartz = {
+  role: string
+  name: string
+  level: number
+  description: string
+  effects: { title: string; detail: string }[]
+}
+
 type ExportOptions = {
   svg: SVGSVGElement
   title: string
   lines: ExportLine[]
   arts: ExportArt[]
+  masterQuartz?: ExportMasterQuartz[]
   fileName: string
 }
 
@@ -34,8 +43,11 @@ const HEADER_FONT_SIZE = 44
 const GROUP_BAR_HEIGHT = 8
 const ROW_FONT_SIZE = 32
 const TOTALS_FONT_SIZE = 28
+const BODY_FONT_SIZE = 26
+const BODY_LINE_HEIGHT = 36
 const ROW_HEIGHT = 50
 const LINE_GROUP_GAP = 28
+const MQ_BLOCK_GAP = 36
 
 const LIGHT_THEME_CSS = `
 .orbmentHexGuide { fill: none; stroke: #d8deea; stroke-width: 1.5; stroke-dasharray: 5 4; }
@@ -117,6 +129,24 @@ function truncateToWidth(ctx: CanvasRenderingContext2D, text: string, maxWidth: 
   return `${truncated}...`
 }
 
+function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
+  const words = text.split(/\s+/).filter(Boolean)
+  if (words.length === 0) return []
+  const lines: string[] = []
+  let current = words[0]
+  for (let index = 1; index < words.length; index += 1) {
+    const candidate = `${current} ${words[index]}`
+    if (ctx.measureText(candidate).width <= maxWidth) {
+      current = candidate
+    } else {
+      lines.push(current)
+      current = words[index]
+    }
+  }
+  lines.push(current)
+  return lines
+}
+
 function measureLinesHeight(lines: ExportLine[]): number {
   return lines.reduce(
     (total, line) =>
@@ -129,6 +159,26 @@ function measureLinesHeight(lines: ExportLine[]): number {
   )
 }
 
+function measureMasterQuartzHeight(
+  ctx: CanvasRenderingContext2D,
+  masterQuartz: ExportMasterQuartz[],
+  maxWidth: number,
+): number {
+  if (masterQuartz.length === 0) return 0
+  let height = HEADER_FONT_SIZE + 32
+  ctx.font = `500 ${BODY_FONT_SIZE}px ${FONT_STACK}`
+  for (const entry of masterQuartz) {
+    height += ROW_HEIGHT
+    height += wrapText(ctx, entry.description, maxWidth).length * BODY_LINE_HEIGHT
+    for (const effect of entry.effects) {
+      const text = effect.detail ? `${effect.title}: ${effect.detail}` : effect.title
+      height += wrapText(ctx, `• ${text}`, maxWidth).length * BODY_LINE_HEIGHT
+    }
+    height += MQ_BLOCK_GAP
+  }
+  return height
+}
+
 function splitIntoColumns<T>(items: T[], columnCount: number): T[][] {
   const perColumn = Math.ceil(items.length / columnCount)
   return Array.from({ length: columnCount }, (_, index) =>
@@ -136,7 +186,32 @@ function splitIntoColumns<T>(items: T[], columnCount: number): T[][] {
   )
 }
 
-export async function exportOrbmentPng({ svg, title, lines, arts, fileName }: ExportOptions): Promise<void> {
+function drawWrappedText(
+  ctx: CanvasRenderingContext2D,
+  text: string,
+  x: number,
+  y: number,
+  maxWidth: number,
+  lineHeight: number,
+  fillStyle: string,
+): number {
+  ctx.fillStyle = fillStyle
+  const wrapped = wrapText(ctx, text, maxWidth)
+  for (const line of wrapped) {
+    ctx.fillText(line, x, y)
+    y += lineHeight
+  }
+  return y
+}
+
+export async function exportOrbmentPng({
+  svg,
+  title,
+  lines,
+  arts,
+  masterQuartz = [],
+  fileName,
+}: ExportOptions): Promise<void> {
   const svgBlob = new Blob([buildStandaloneSvg(svg)], { type: 'image/svg+xml;charset=utf-8' })
   const svgUrl = URL.createObjectURL(svgBlob)
 
@@ -146,6 +221,10 @@ export async function exportOrbmentPng({ svg, title, lines, arts, fileName }: Ex
     const contentTop = PADDING + TITLE_FONT_SIZE + 56
     const headerOffset = HEADER_FONT_SIZE + 32
     const baseContentHeight = BASE_CANVAS_HEIGHT - contentTop - PADDING
+    const mqTextWidth = LEFT_WIDTH - 16
+
+    const measureCtx = document.createElement('canvas').getContext('2d')
+    if (!measureCtx) throw new Error('Canvas 2D context unavailable')
 
     const artColumnCount = Math.min(
       MAX_ART_COLUMNS,
@@ -155,8 +234,10 @@ export async function exportOrbmentPng({ svg, title, lines, arts, fileName }: Ex
     const artsHeight =
       headerOffset + Math.max(0, ...artColumns.map((column) => column.length * ROW_HEIGHT))
     const linesHeight = headerOffset + measureLinesHeight(lines)
+    const masterHeight = measureMasterQuartzHeight(measureCtx, masterQuartz, mqTextWidth)
+    const leftHeight = linesHeight + (masterHeight > 0 ? LINE_GROUP_GAP + masterHeight : 0)
 
-    const contentHeight = Math.max(baseContentHeight, artsHeight, linesHeight)
+    const contentHeight = Math.max(baseContentHeight, artsHeight, leftHeight)
     const canvasHeight = contentTop + contentHeight + PADDING
 
     const canvas = document.createElement('canvas')
@@ -228,6 +309,51 @@ export async function exportOrbmentPng({ svg, title, lines, arts, fileName }: Ex
       }
 
       cursorY += LINE_GROUP_GAP
+    }
+
+    if (masterQuartz.length > 0) {
+      cursorY += LINE_GROUP_GAP
+      ctx.fillStyle = TEXT_COLOR
+      ctx.font = `700 ${HEADER_FONT_SIZE}px ${FONT_STACK}`
+      ctx.fillText('Master Quartz', leftLeft, cursorY)
+      cursorY += headerOffset
+
+      for (const entry of masterQuartz) {
+        ctx.fillStyle = TEXT_COLOR
+        ctx.font = `700 ${ROW_FONT_SIZE}px ${FONT_STACK}`
+        ctx.fillText(
+          truncateToWidth(ctx, `${entry.role}: ${entry.name} (L${entry.level})`, LEFT_WIDTH),
+          leftLeft,
+          cursorY,
+        )
+        cursorY += ROW_HEIGHT
+
+        ctx.font = `500 ${BODY_FONT_SIZE}px ${FONT_STACK}`
+        cursorY = drawWrappedText(
+          ctx,
+          entry.description,
+          leftLeft + 8,
+          cursorY,
+          mqTextWidth,
+          BODY_LINE_HEIGHT,
+          MUTED_TEXT_COLOR,
+        )
+
+        for (const effect of entry.effects) {
+          const text = effect.detail ? `${effect.title}: ${effect.detail}` : effect.title
+          cursorY = drawWrappedText(
+            ctx,
+            `• ${text}`,
+            leftLeft + 8,
+            cursorY,
+            mqTextWidth,
+            BODY_LINE_HEIGHT,
+            TEXT_COLOR,
+          )
+        }
+
+        cursorY += MQ_BLOCK_GAP
+      }
     }
 
     ctx.fillStyle = TEXT_COLOR
