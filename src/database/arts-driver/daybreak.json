@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Placeholder Driver A",
+      "ja": "プレースホルダードライバA"
+    },
+    "description": "Placeholder Arts Driver. Replace with real Daybreak data."
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Placeholder Driver B",
+      "ja": "プレースホルダードライバB"
+    },
+    "description": "Placeholder Arts Driver. Replace with real Daybreak data."
+  }
+]

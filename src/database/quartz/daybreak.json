@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Attack",
+      "ja": "攻撃"
+    },
+    "effect": "STR+5%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "slot_types": ["weapon"],
+    "exclusive_groups": []
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Defense",
+      "ja": "防御"
+    },
+    "effect": "DEF+5%",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "slot_types": ["shield"],
+    "exclusive_groups": []
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Action",
+      "ja": "行動力"
+    },
+    "effect": "SPD+5%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      },
+      {
+        "element": "Time",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "slot_types": ["drive"],
+    "exclusive_groups": []
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Heal",
+      "ja": "回復"
+    },
+    "effect": "Recovers HP at the end of each turn",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "exclusive_groups": []
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Mind",
+      "ja": "精神"
+    },
+    "effect": "ATS+5%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 1
+      },
+      {
+        "element": "Mirage",
+        "value": 1
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "slot_types": ["extra"],
+    "exclusive_groups": []
+  }
+]

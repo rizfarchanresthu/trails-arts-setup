@@ -5,6 +5,8 @@ import { AppSelect } from './components/AppSelect'
 import { ArtsList } from './components/ArtsList'
 import { MasterQuartzEditor, type MasterQuartzNoticeTone } from './components/MasterQuartzEditor'
 import { OrbmentConfigurator } from './components/OrbmentConfigurator'
+import { ShardSkillList } from './components/ShardSkillList'
+import { XiphaConfigurator } from './components/XiphaConfigurator'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -15,12 +17,14 @@ import { useFont } from './hooks/useFont'
 import { useTheme } from './hooks/useTheme'
 import { evaluateAvailableArts } from './domain/artsEvaluator'
 import { BASES, getBaseById } from './domain/baseRegistry'
-import { getCharacterTemplatesForBase } from './domain/characterPresets'
+import { getCharacterTemplatesForBase, getXiphaTemplatesForBase } from './domain/characterPresets'
 import { getMasterQuartzSchema } from './domain/masterQuartzSchemas'
 import { evaluateGrantedArts } from './domain/rules/coldSteelIRules'
 import { deriveLinesFromConfig } from './domain/rules/skyFcRules'
+import { evaluateXipha } from './domain/xiphaEvaluator'
 import {
   isColdSteelRuleSet,
+  isXiphaRuleSet,
   type BaseData,
   type CustomMasterQuartzEntry,
   type ElementName,
@@ -70,7 +74,17 @@ import {
   sanitizeExportedSetup,
   sanitizeForBase,
   updateSavedQuartzSetup,
+  type XiphaValidIds,
 } from './state/savedQuartzSetups'
+import {
+  createInitialXiphaOrbmentState,
+  createXiphaStateFromPreset,
+  setEquippedXiphaQuartz,
+  setXiphaArtsDriver,
+  setXiphaHoloCore,
+  setXiphaLineSlotCount,
+  setXiphaSlotRestriction,
+} from './state/xiphaState'
 
 type MainTab = 'orbment' | 'arts' | 'master-quartz'
 type SetupNoticeTone = 'default' | 'success' | 'error'
@@ -101,6 +115,7 @@ function App() {
   const [masterQuartzNoticeTone, setMasterQuartzNoticeTone] = useState<MasterQuartzNoticeTone>('default')
 
   const base = useMemo(() => getBaseById(selectedBaseId), [selectedBaseId])
+  const isXipha = isXiphaRuleSet(base.ruleSet)
   const masterQuartzSchema = getMasterQuartzSchema(selectedBaseId)
 
   const quartzById = useMemo(() => {
@@ -127,7 +142,18 @@ function App() {
     return getCharacterTemplatesForBase(selectedBaseId)
   }, [selectedBaseId])
 
+  const xiphaTemplates = useMemo(() => {
+    return getXiphaTemplatesForBase(selectedBaseId)
+  }, [selectedBaseId])
+
+  const xiphaEvaluation = useMemo(() => {
+    return evaluateXipha(base.shardSkills ?? [], orbmentState, quartzById)
+  }, [base.shardSkills, orbmentState, quartzById])
+
   const derivedLines = useMemo(() => {
+    if (isXipha) {
+      return { lines: [], warnings: [] }
+    }
     return deriveLinesFromConfig({
       lineCount: orbmentState.lineCount,
       lineConfigs: orbmentState.arcLengths.map((length, index) => ({
@@ -137,7 +163,14 @@ function App() {
       })),
       topology: base.topology,
     })
-  }, [base.topology, orbmentState.arcLengths, orbmentState.lineCount, orbmentState.lineDirections, orbmentState.lineStarts])
+  }, [
+    base.topology,
+    isXipha,
+    orbmentState.arcLengths,
+    orbmentState.lineCount,
+    orbmentState.lineDirections,
+    orbmentState.lineStarts,
+  ])
 
   const evaluation = useMemo(() => {
     const masterQuartzContext = {
@@ -235,7 +268,13 @@ function App() {
     const validMasterQuartzIds = new Set(
       buildMasterQuartzList(targetBase, customMasterQuartzEntries).map((masterQuartz) => masterQuartz.id),
     )
-    const sanitizedSetup = sanitizeForBase(setup, validQuartzIds, targetBase.topology, validMasterQuartzIds)
+    const sanitizedSetup = sanitizeForBase(
+      setup,
+      validQuartzIds,
+      targetBase.topology,
+      validMasterQuartzIds,
+      getXiphaValidIds(targetBase),
+    )
 
     if (targetBase.id !== selectedBaseId) {
       resetMasterQuartzEditor()
@@ -262,7 +301,7 @@ function App() {
 
   function resetCurrentEditor(): void {
     setSelectedTemplateId('')
-    setOrbmentState(createInitialOrbmentState(base.topology))
+    setOrbmentState(createInitialStateForBase(base))
     setSelectedSavedSetupId('')
     setDraftBeforeSavedLoad(null)
     setSetupName('My setup')
@@ -283,7 +322,7 @@ function App() {
   function changeBase(nextBaseId: string): void {
     setSelectedBaseId(nextBaseId)
     setSelectedTemplateId('')
-    setOrbmentState(createInitialOrbmentState(getBaseById(nextBaseId).topology))
+    setOrbmentState(createInitialStateForBase(getBaseById(nextBaseId)))
     setSelectedSavedSetupId('')
     setDraftBeforeSavedLoad(null)
     setSetupNotice('')
@@ -456,8 +495,16 @@ function App() {
     const validMasterQuartzIds = new Set(
       buildMasterQuartzList(targetBase, customMasterQuartzEntries).map((masterQuartz) => masterQuartz.id),
     )
-    const sanitized = sanitizeExportedSetup(exported, validQuartzIds, targetBase.topology, validMasterQuartzIds)
-    const templatesForBase = getCharacterTemplatesForBase(targetBase.id)
+    const sanitized = sanitizeExportedSetup(
+      exported,
+      validQuartzIds,
+      targetBase.topology,
+      validMasterQuartzIds,
+      getXiphaValidIds(targetBase),
+    )
+    const templatesForBase = isXiphaRuleSet(targetBase.ruleSet)
+      ? getXiphaTemplatesForBase(targetBase.id)
+      : getCharacterTemplatesForBase(targetBase.id)
     const restoredTemplateId =
       sanitized.templateId && templatesForBase.some((template) => template.id === sanitized.templateId)
         ? sanitized.templateId
@@ -639,106 +686,153 @@ function App() {
             Orbment
           </TabsTrigger>
           <TabsTrigger className="px-3 py-1.5" value="arts">
-            Available Arts ({evaluation.availableArts.length})
+            {isXipha
+              ? `Shard Skills (${xiphaEvaluation.activeShardSkills.length})`
+              : `Available Arts (${evaluation.availableArts.length})`}
           </TabsTrigger>
           <TabsTrigger className="px-3 py-1.5" value="master-quartz">
             Create Master Quartz
           </TabsTrigger>
         </TabsList>
         <TabsContent className="text-base outline-none" value="orbment">
-          <OrbmentConfigurator
-            state={orbmentState}
-            lines={derivedLines.lines}
-            lineWarnings={derivedLines.warnings}
-            quartzList={base.quartz}
-            quartzById={quartzById}
-            masterQuartzList={masterQuartzList}
-            masterQuartzById={masterQuartzById}
-            onLineCountChange={(lineCount) =>
-              setOrbmentState((prev) => updateLineCount(prev, lineCount, base.topology))
-            }
-            onLineStartChange={(lineIndex, start) =>
-              setOrbmentState((prev) => setLineStart(prev, lineIndex, start, base.topology))
-            }
-            onLineDirectionChange={(lineIndex, direction) =>
-              setOrbmentState((prev) => setLineDirection(prev, lineIndex, direction))
-            }
-            onTransferArcLength={(lineIndex, direction) =>
-              setOrbmentState((prev) => transferArcLength(prev, lineIndex, direction))
-            }
-            onRestrictionChange={(slotId: SlotId, restriction: ElementName | null) =>
-              setOrbmentState((prev) =>
-                setSlotRestriction(prev, slotId, restriction, quartzById, {
-                  masterQuartzSlot: base.topology.masterQuartzSlot,
-                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
-                }),
-              )
-            }
-            onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
-              setOrbmentState((prev) =>
-                setEquippedQuartz(prev, slotId, quartzId, quartzById, {
-                  masterQuartzSlot: base.topology.masterQuartzSlot,
-                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
-                  lines: derivedLines.lines,
-                  ruleSet: base.ruleSet,
-                }),
-              )
-            }
-            onNodeTierChange={(slotId: SlotId, tier: number) =>
-              setOrbmentState((prev) =>
-                setNodeTier(prev, slotId, tier, quartzById, {
-                  masterQuartzSlot: base.topology.masterQuartzSlot,
-                  subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
-                }),
-              )
-            }
-            onMasterQuartzChange={(masterQuartzId) =>
-              setOrbmentState((prev) => setEquippedMasterQuartz(prev, masterQuartzId, masterQuartzById))
-            }
-            onMasterQuartzLevelChange={(level) =>
-              setOrbmentState((prev) => setMasterQuartzLevel(prev, level, masterQuartzById))
-            }
-            onSubMasterQuartzChange={(subMasterQuartzId) =>
-              setOrbmentState((prev) => setEquippedSubMasterQuartz(prev, subMasterQuartzId, masterQuartzById))
-            }
-            onSubMasterQuartzLevelChange={(level) =>
-              setOrbmentState((prev) => setSubMasterQuartzLevel(prev, level, masterQuartzById))
-            }
-            topology={base.topology}
-            orbmentVisual={base.orbmentVisual}
-            ruleSet={base.ruleSet}
-            artsById={artsById}
-            availableArts={evaluation.availableArts}
-            lineTotals={evaluation.lineTotals}
-            selectedBaseId={selectedBaseId}
-            selectedTemplateId={selectedTemplateId}
-            characterTemplates={characterTemplates}
-            onTemplateChange={(templateId) => {
-              setSelectedTemplateId(templateId)
-              setSelectedSavedSetupId('')
-              setDraftBeforeSavedLoad(null)
-              setSetupNotice('')
-              if (!templateId) {
-                setOrbmentState(createInitialOrbmentState(base.topology))
-                return
+          {isXipha ? (
+            <XiphaConfigurator
+              title={base.orbmentVisual?.title ?? 'XIPHA'}
+              state={orbmentState}
+              quartzList={base.quartz}
+              quartzById={quartzById}
+              holoCores={base.holoCores ?? []}
+              artsDrivers={base.artsDrivers ?? []}
+              lineTotals={xiphaEvaluation.lineTotals}
+              activeShardSkills={xiphaEvaluation.activeShardSkills}
+              characterTemplates={xiphaTemplates}
+              selectedTemplateId={selectedTemplateId}
+              onTemplateChange={(templateId) => {
+                setSelectedTemplateId(templateId)
+                setSelectedSavedSetupId('')
+                setDraftBeforeSavedLoad(null)
+                setSetupNotice('')
+                const selectedTemplate = xiphaTemplates.find((template) => template.id === templateId)
+                setOrbmentState(
+                  selectedTemplate
+                    ? createXiphaStateFromPreset(selectedTemplate.presetShape, selectedTemplate.restriction, base.topology)
+                    : createInitialXiphaOrbmentState(base.topology),
+                )
+              }}
+              onLineSlotCountChange={(lineType, count) =>
+                setOrbmentState((prev) => setXiphaLineSlotCount(prev, lineType, count))
               }
-              const selectedTemplate = characterTemplates.find((template) => template.id === templateId)
-              if (!selectedTemplate) {
-                return
+              onRestrictionChange={(slotId, restriction) =>
+                setOrbmentState((prev) => setXiphaSlotRestriction(prev, slotId, restriction, quartzById))
               }
-              const presetState = createOrbmentStateFromPreset(selectedTemplate.presetShape, base.topology)
-              const withRestrictions = applyPresetRestrictions(presetState, selectedTemplate.restriction)
-              setOrbmentState(withRestrictions)
-            }}
-          />
+              onQuartzChange={(slotId, quartzId) =>
+                setOrbmentState((prev) => setEquippedXiphaQuartz(prev, slotId, quartzId, quartzById))
+              }
+              onHoloCoreChange={(holoCoreId) => setOrbmentState((prev) => setXiphaHoloCore(prev, holoCoreId))}
+              onArtsDriverChange={(artsDriverId) => setOrbmentState((prev) => setXiphaArtsDriver(prev, artsDriverId))}
+            />
+          ) : (
+            <OrbmentConfigurator
+              state={orbmentState}
+              lines={derivedLines.lines}
+              lineWarnings={derivedLines.warnings}
+              quartzList={base.quartz}
+              quartzById={quartzById}
+              masterQuartzList={masterQuartzList}
+              masterQuartzById={masterQuartzById}
+              onLineCountChange={(lineCount) =>
+                setOrbmentState((prev) => updateLineCount(prev, lineCount, base.topology))
+              }
+              onLineStartChange={(lineIndex, start) =>
+                setOrbmentState((prev) => setLineStart(prev, lineIndex, start, base.topology))
+              }
+              onLineDirectionChange={(lineIndex, direction) =>
+                setOrbmentState((prev) => setLineDirection(prev, lineIndex, direction))
+              }
+              onTransferArcLength={(lineIndex, direction) =>
+                setOrbmentState((prev) => transferArcLength(prev, lineIndex, direction))
+              }
+              onRestrictionChange={(slotId: SlotId, restriction: ElementName | null) =>
+                setOrbmentState((prev) =>
+                  setSlotRestriction(prev, slotId, restriction, quartzById, {
+                    masterQuartzSlot: base.topology.masterQuartzSlot,
+                    subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                  }),
+                )
+              }
+              onQuartzChange={(slotId: SlotId, quartzId: number | null) =>
+                setOrbmentState((prev) =>
+                  setEquippedQuartz(prev, slotId, quartzId, quartzById, {
+                    masterQuartzSlot: base.topology.masterQuartzSlot,
+                    subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                    lines: derivedLines.lines,
+                    ruleSet: base.ruleSet,
+                  }),
+                )
+              }
+              onNodeTierChange={(slotId: SlotId, tier: number) =>
+                setOrbmentState((prev) =>
+                  setNodeTier(prev, slotId, tier, quartzById, {
+                    masterQuartzSlot: base.topology.masterQuartzSlot,
+                    subMasterQuartzSlot: base.topology.subMasterQuartzSlot,
+                  }),
+                )
+              }
+              onMasterQuartzChange={(masterQuartzId) =>
+                setOrbmentState((prev) => setEquippedMasterQuartz(prev, masterQuartzId, masterQuartzById))
+              }
+              onMasterQuartzLevelChange={(level) =>
+                setOrbmentState((prev) => setMasterQuartzLevel(prev, level, masterQuartzById))
+              }
+              onSubMasterQuartzChange={(subMasterQuartzId) =>
+                setOrbmentState((prev) => setEquippedSubMasterQuartz(prev, subMasterQuartzId, masterQuartzById))
+              }
+              onSubMasterQuartzLevelChange={(level) =>
+                setOrbmentState((prev) => setSubMasterQuartzLevel(prev, level, masterQuartzById))
+              }
+              topology={base.topology}
+              orbmentVisual={base.orbmentVisual}
+              ruleSet={base.ruleSet}
+              artsById={artsById}
+              availableArts={evaluation.availableArts}
+              lineTotals={evaluation.lineTotals}
+              selectedBaseId={selectedBaseId}
+              selectedTemplateId={selectedTemplateId}
+              characterTemplates={characterTemplates}
+              onTemplateChange={(templateId) => {
+                setSelectedTemplateId(templateId)
+                setSelectedSavedSetupId('')
+                setDraftBeforeSavedLoad(null)
+                setSetupNotice('')
+                if (!templateId) {
+                  setOrbmentState(createInitialOrbmentState(base.topology))
+                  return
+                }
+                const selectedTemplate = characterTemplates.find((template) => template.id === templateId)
+                if (!selectedTemplate) {
+                  return
+                }
+                const presetState = createOrbmentStateFromPreset(selectedTemplate.presetShape, base.topology)
+                const withRestrictions = applyPresetRestrictions(presetState, selectedTemplate.restriction)
+                setOrbmentState(withRestrictions)
+              }}
+            />
+          )}
         </TabsContent>
         <TabsContent className="text-base outline-none" value="arts">
-          <ArtsList
-            arts={evaluation.availableArts}
-            lineTotals={evaluation.lineTotals}
-            elementOrderSource={base.arts}
-            showLineTotals={!isColdSteelRuleSet(base.ruleSet)}
-          />
+          {isXipha ? (
+            <ShardSkillList
+              shardSkills={xiphaEvaluation.activeShardSkills}
+              lineTotals={xiphaEvaluation.lineTotals}
+            />
+          ) : (
+            <ArtsList
+              arts={evaluation.availableArts}
+              lineTotals={evaluation.lineTotals}
+              elementOrderSource={base.arts}
+              showLineTotals={!isColdSteelRuleSet(base.ruleSet)}
+            />
+          )}
         </TabsContent>
         <TabsContent className="text-base outline-none" value="master-quartz">
           <MasterQuartzEditor
@@ -828,5 +922,24 @@ function cloneOrbmentState(state: OrbmentState): OrbmentState {
     masterQuartzLevel: state.masterQuartzLevel,
     equippedSubMasterQuartzId: state.equippedSubMasterQuartzId,
     subMasterQuartzLevel: state.subMasterQuartzLevel,
+    ...(state.xipha
+      ? { xipha: { ...state.xipha, lineSlotCounts: { ...state.xipha.lineSlotCounts } } }
+      : {}),
+  }
+}
+
+function createInitialStateForBase(base: BaseData): OrbmentState {
+  return isXiphaRuleSet(base.ruleSet)
+    ? createInitialXiphaOrbmentState(base.topology)
+    : createInitialOrbmentState(base.topology)
+}
+
+function getXiphaValidIds(base: BaseData): XiphaValidIds | undefined {
+  if (!isXiphaRuleSet(base.ruleSet)) {
+    return undefined
+  }
+  return {
+    holoCoreIds: new Set((base.holoCores ?? []).map((entry) => entry.id)),
+    artsDriverIds: new Set((base.artsDrivers ?? []).map((entry) => entry.id)),
   }
 }

@@ -11,6 +11,7 @@ type ExportOptions = {
   title: string
   lines: ExportLine[]
   arts: ExportArt[]
+  artsHeading?: string
   fileName: string
 }
 
@@ -136,7 +137,14 @@ function splitIntoColumns<T>(items: T[], columnCount: number): T[][] {
   )
 }
 
-export async function exportOrbmentPng({ svg, title, lines, arts, fileName }: ExportOptions): Promise<void> {
+export async function exportOrbmentPng({
+  svg,
+  title,
+  lines,
+  arts,
+  artsHeading = 'Available Arts',
+  fileName,
+}: ExportOptions): Promise<void> {
   const svgBlob = new Blob([buildStandaloneSvg(svg)], { type: 'image/svg+xml;charset=utf-8' })
   const svgUrl = URL.createObjectURL(svgBlob)
 
@@ -232,7 +240,7 @@ export async function exportOrbmentPng({ svg, title, lines, arts, fileName }: Ex
 
     ctx.fillStyle = TEXT_COLOR
     ctx.font = `700 ${HEADER_FONT_SIZE}px ${FONT_STACK}`
-    ctx.fillText(`Available Arts (${arts.length})`, rightLeft, contentTop + HEADER_FONT_SIZE / 2)
+    ctx.fillText(`${artsHeading} (${arts.length})`, rightLeft, contentTop + HEADER_FONT_SIZE / 2)
 
     const artColumnWidth = (RIGHT_WIDTH - GUTTER * (artColumnCount - 1)) / artColumnCount
     ctx.font = `600 ${ROW_FONT_SIZE}px ${FONT_STACK}`

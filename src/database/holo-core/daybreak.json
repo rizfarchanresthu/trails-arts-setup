@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Placeholder Core A",
+      "ja": "プレースホルダーコアA"
+    },
+    "description": "Placeholder Holo Core. Replace with real Daybreak data.",
+    "effects": [
+      {
+        "title": "Raises STR",
+        "detail": "STR+10%"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Placeholder Core B",
+      "ja": "プレースホルダーコアB"
+    },
+    "description": "Placeholder Holo Core. Replace with real Daybreak data.",
+    "effects": [
+      {
+        "title": "Raises ATS",
+        "detail": "ATS+10%"
+      }
+    ]
+  }
+]

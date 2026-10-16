@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Blaze Edge",
+      "ja": "ブレイズエッジ"
+    },
+    "line_type": "weapon",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      }
+    ],
+    "effect": "Chance to inflict Burn on normal attacks",
+    "description": "Placeholder shard skill."
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Iron Wall",
+      "ja": "アイアンウォール"
+    },
+    "line_type": "shield",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      }
+    ],
+    "effect": "Chance to reduce damage taken",
+    "description": "Placeholder shard skill."
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Swift Drive",
+      "ja": "スウィフトドライブ"
+    },
+    "line_type": "drive",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "effect": "Chance to delay enemy turns when attacking",
+    "description": "Placeholder shard skill."
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Arcane Echo",
+      "ja": "アルケインエコー"
+    },
+    "line_type": "extra",
+    "element": ["Space", "Mirage"],
+    "elemental_value": [
+      {
+        "elements": ["Space", "Mirage"],
+        "value": 3
+      }
+    ],
+    "effect": "Chance to recover EP when casting arts",
+    "description": "Placeholder shard skill."
+  }
+]

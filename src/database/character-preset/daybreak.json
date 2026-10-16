@@ -1,0 +1,34 @@
+[
+  {
+    "id": "van-arkride",
+    "name": "Van Arkride",
+    "slots": {
+      "weapon": 4,
+      "shield": 3,
+      "drive": 4,
+      "extra": 3
+    },
+    "restriction": [
+      {
+        "slots": ["W2"],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "agnes-claudel",
+    "name": "Agnès Claudel",
+    "slots": {
+      "weapon": 3,
+      "shield": 3,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["E3"],
+        "element": "Space"
+      }
+    ]
+  }
+]
