@@ -4,14 +4,18 @@
     "name": "Van Arkride",
     "slots": {
       "weapon": 4,
-      "shield": 3,
-      "drive": 4,
-      "extra": 3
+      "shield": 4,
+      "drive": 3,
+      "extra": 4
     },
     "restriction": [
       {
-        "slots": ["W2"],
-        "element": "Fire"
+        "slots": ["W2", "S3"],
+        "element": "Time"
+      },
+      {
+        "slots": ["E3"],
+        "element": "Earth"
       }
     ]
   },
@@ -20,14 +24,238 @@
     "name": "Agnès Claudel",
     "slots": {
       "weapon": 3,
+      "shield": 4,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["S3", "E3"],
+        "element": "Space"
+      },
+      {
+        "slots": ["D2"],
+        "element": "Water"
+      }
+    ]
+  },
+  {
+    "id": "ferida-al-fayed",
+    "name": "Ferida Al-Fayed",
+    "slots": {
+      "weapon": 4,
       "shield": 3,
       "drive": 4,
       "extra": 4
     },
     "restriction": [
       {
-        "slots": ["E3"],
+        "slots": ["W2", "E3"],
+        "element": "Fire"
+      },
+      {
+        "slots": ["D2"],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "aaron-wei",
+    "name": "Aaron Wei",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 3,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["W2", "E3"],
+        "element": "Wind"
+      },
+      {
+        "slots": ["S3"],
+        "element": "Fire"
+      }
+    ]
+  },
+  {
+    "id": "risette-twinings",
+    "name": "Risette Twinings",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["S2", "E2"],
+        "element": "Water"
+      },
+      {
+        "slots": ["D3"],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "quatre-salision",
+    "name": "Quatre Salision",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 4,
+      "extra": 3
+    },
+    "restriction": [
+      {
+        "slots": ["W3", "S2"],
+        "element": "Earth"
+      },
+      {
+        "slots": ["D3"],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "judith-lanster",
+    "name": "Judith Lanster",
+    "slots": {
+      "weapon": 4,
+      "shield": 3,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["W3"],
+        "element": "Time"
+      },
+      {
+        "slots": ["D3", "E2"],
+        "element": "Mirage"
+      }
+    ]
+  },
+  {
+    "id": "bergard-zeman",
+    "name": "Bergard Zeman",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 4,
+      "extra": 3
+    },
+    "restriction": [
+      {
+        "slots": ["W2", "D3"],
         "element": "Space"
+      },
+      {
+        "slots": ["S2"],
+        "element": "Earth"
+      }
+    ]
+  },
+  {
+    "id": "elaine-auclair",
+    "name": "Elaine Auclair",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["W2", "D3"],
+        "element": "Mirage"
+      },
+      {
+        "slots": ["S3"],
+        "element": "Wind"
+      }
+    ]
+  },
+  {
+    "id": "fie-clausell",
+    "name": "Fie Clausell",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 3,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["W2", "S3"],
+        "element": "Wind"
+      },
+      {
+        "slots": ["E3"],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "rene-kincaid",
+    "name": "René Kincaid",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["S3"],
+        "element": "Fire"
+      },
+      {
+        "slots": ["D3", "E2"],
+        "element": "Space"
+      }
+    ]
+  },
+  {
+    "id": "shizuna-rem-misurugi",
+    "name": "Shizuna Rem Misurugi",
+    "slots": {
+      "weapon": 4,
+      "shield": 4,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["W3", "E2"],
+        "element": "Water"
+      },
+      {
+        "slots": ["S3"],
+        "element": "Time"
+      }
+    ]
+  },
+  {
+    "id": "rixia-mao",
+    "name": "Rixia Mao",
+    "slots": {
+      "weapon": 4,
+      "shield": 3,
+      "drive": 4,
+      "extra": 4
+    },
+    "restriction": [
+      {
+        "slots": ["W2", "E3"],
+        "element": "Mirage"
+      },
+      {
+        "slots": ["D3"],
+        "element": "Fire"
       }
     ]
   }

@@ -81,7 +81,10 @@ import {
   createXiphaStateFromPreset,
   setEquippedXiphaQuartz,
   setXiphaArtsDriver,
+  setXiphaArtsDriverLevel,
+  setXiphaArtsPlugin,
   setXiphaHoloCore,
+  setXiphaHoloCoreLevel,
   setXiphaLineSlotCount,
   setXiphaSlotRestriction,
 } from './state/xiphaState'
@@ -137,6 +140,18 @@ function App() {
   const artsById = useMemo(() => {
     return new Map(base.arts.map((art) => [art.id, art]))
   }, [base.arts])
+
+  const holoCoresById = useMemo(() => {
+    return new Map((base.holoCores ?? []).map((holoCore) => [holoCore.id, holoCore]))
+  }, [base.holoCores])
+
+  const artsDriversById = useMemo(() => {
+    return new Map((base.artsDrivers ?? []).map((artsDriver) => [artsDriver.id, artsDriver]))
+  }, [base.artsDrivers])
+
+  const artsPluginsById = useMemo(() => {
+    return new Map((base.artsPlugins ?? []).map((artsPlugin) => [artsPlugin.id, artsPlugin]))
+  }, [base.artsPlugins])
 
   const characterTemplates = useMemo(() => {
     return getCharacterTemplatesForBase(selectedBaseId)
@@ -703,6 +718,7 @@ function App() {
               quartzById={quartzById}
               holoCores={base.holoCores ?? []}
               artsDrivers={base.artsDrivers ?? []}
+              artsPlugins={base.artsPlugins ?? []}
               lineTotals={xiphaEvaluation.lineTotals}
               activeShardSkills={xiphaEvaluation.activeShardSkills}
               characterTemplates={xiphaTemplates}
@@ -728,8 +744,21 @@ function App() {
               onQuartzChange={(slotId, quartzId) =>
                 setOrbmentState((prev) => setEquippedXiphaQuartz(prev, slotId, quartzId, quartzById))
               }
-              onHoloCoreChange={(holoCoreId) => setOrbmentState((prev) => setXiphaHoloCore(prev, holoCoreId))}
-              onArtsDriverChange={(artsDriverId) => setOrbmentState((prev) => setXiphaArtsDriver(prev, artsDriverId))}
+              onHoloCoreChange={(holoCoreId) =>
+                setOrbmentState((prev) => setXiphaHoloCore(prev, holoCoreId, holoCoresById))
+              }
+              onHoloCoreLevelChange={(level) =>
+                setOrbmentState((prev) => setXiphaHoloCoreLevel(prev, level, holoCoresById))
+              }
+              onArtsDriverChange={(artsDriverId) =>
+                setOrbmentState((prev) => setXiphaArtsDriver(prev, artsDriverId, artsDriversById))
+              }
+              onArtsDriverLevelChange={(level) =>
+                setOrbmentState((prev) => setXiphaArtsDriverLevel(prev, level, artsDriversById))
+              }
+              onArtsPluginChange={(slotIndex, pluginId) =>
+                setOrbmentState((prev) => setXiphaArtsPlugin(prev, slotIndex, pluginId, artsPluginsById))
+              }
             />
           ) : (
             <OrbmentConfigurator
@@ -923,7 +952,13 @@ function cloneOrbmentState(state: OrbmentState): OrbmentState {
     equippedSubMasterQuartzId: state.equippedSubMasterQuartzId,
     subMasterQuartzLevel: state.subMasterQuartzLevel,
     ...(state.xipha
-      ? { xipha: { ...state.xipha, lineSlotCounts: { ...state.xipha.lineSlotCounts } } }
+      ? {
+          xipha: {
+            ...state.xipha,
+            lineSlotCounts: { ...state.xipha.lineSlotCounts },
+            artsPluginIds: [...state.xipha.artsPluginIds],
+          },
+        }
       : {}),
   }
 }
@@ -941,5 +976,7 @@ function getXiphaValidIds(base: BaseData): XiphaValidIds | undefined {
   return {
     holoCoreIds: new Set((base.holoCores ?? []).map((entry) => entry.id)),
     artsDriverIds: new Set((base.artsDrivers ?? []).map((entry) => entry.id)),
+    artsPluginIds: new Set((base.artsPlugins ?? []).map((entry) => entry.id)),
+    artsDriversById: new Map((base.artsDrivers ?? []).map((entry) => [entry.id, entry])),
   }
 }

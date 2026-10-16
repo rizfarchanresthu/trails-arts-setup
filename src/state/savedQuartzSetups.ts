@@ -7,6 +7,7 @@ import {
 import {
   EXPORTED_SETUP_KIND,
   EXPORTED_SETUP_VERSION,
+  type ArtsDriver,
   type ExportedQuartzSetup,
   type OrbmentTopology,
   type SavedQuartzSetup,
@@ -19,6 +20,8 @@ import { clearInactiveSlots, sanitizeXiphaState } from './xiphaState'
 export type XiphaValidIds = {
   holoCoreIds: Set<number>
   artsDriverIds: Set<number>
+  artsPluginIds: Set<number>
+  artsDriversById: Map<number, ArtsDriver>
 }
 
 const STORAGE_KEY = 'trails-arts-gallery:saved-quartz-setups'
@@ -235,7 +238,13 @@ export function sanitizeForBase(
     ...setup,
     orbmentState: clearInactiveSlots({
       ...orbmentState,
-      xipha: sanitizeXiphaState(orbmentState.xipha, xiphaValidIds.holoCoreIds, xiphaValidIds.artsDriverIds),
+      xipha: sanitizeXiphaState(
+        orbmentState.xipha,
+        xiphaValidIds.holoCoreIds,
+        xiphaValidIds.artsDriverIds,
+        xiphaValidIds.artsPluginIds,
+        xiphaValidIds.artsDriversById,
+      ),
     }),
   }
 }

@@ -85,6 +85,7 @@ export type Quartz = {
   arts_learnt?: number[]
   elemental_value: ElementRequirement[] | 'No value' | null
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
+  image_url?: string | null
   slot_types?: XiphaLineType[]
 }
 
@@ -119,6 +120,7 @@ export type ShardSkill = {
   elemental_value: ElementRequirement[]
   effect: string
   description: string
+  image_url?: string | null
 }
 
 export type HoloCoreEffect = {
@@ -126,17 +128,45 @@ export type HoloCoreEffect = {
   detail: string
 }
 
+export type HoloCoreLevel = {
+  level: number
+  effects: HoloCoreEffect[]
+  boost_effects: HoloCoreEffect[]
+}
+
 export type HoloCore = {
   id: number
   name: LocalizedName
   description: string
+  image_url?: string | null
+  obtain?: string
+  s_boost_ability?: string | null
+  levels: HoloCoreLevel[]
+  /** Summary effects for UI (typically max-level passive + boost values). */
   effects: HoloCoreEffect[]
+}
+
+export type ArtsDriverLevel = {
+  level: number
+  arts: string[]
 }
 
 export type ArtsDriver = {
   id: number
   name: LocalizedName
+  element: ElementName | 'Mix'
   description: string
+  plugin_slots: number
+  levels: ArtsDriverLevel[]
+  image_url?: string | null
+}
+
+export type ArtsPlugin = {
+  id: number
+  name: LocalizedName
+  element: ElementName
+  image_url?: string | null
+  obtain: string
 }
 
 export type MasterQuartzEffect = {
@@ -174,6 +204,8 @@ export type Art = {
     delay: number
   }
   power: number | string | null
+  stun?: string | null
+  hits?: string | null
   target: string
   effect: string | null
   description: string
@@ -214,6 +246,7 @@ export type BaseData = {
   shardSkills?: ShardSkill[]
   holoCores?: HoloCore[]
   artsDrivers?: ArtsDriver[]
+  artsPlugins?: ArtsPlugin[]
 }
 
 export function isXiphaRuleSet(ruleSet?: OrbmentRuleSetId): boolean {

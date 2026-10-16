@@ -8,6 +8,7 @@ import artsSky3rd from '../database/arts/sky-3rd.json'
 import artsSkyFc from '../database/arts/sky-fc.json'
 import artsSkySc from '../database/arts/sky-sc.json'
 import artsZero from '../database/arts/zero.json'
+import artsDaybreak from '../database/arts/daybreak.json'
 import masterQuartzAzure from '../database/master-quartz/azure.json'
 import masterQuartzColdSteelI from '../database/master-quartz/cold-steel-i.json'
 import masterQuartzColdSteelII from '../database/master-quartz/cold-steel-ii.json'
@@ -28,16 +29,20 @@ import quartzDaybreak from '../database/quartz/daybreak.json'
 import shardSkillsDaybreak from '../database/shard-skill/daybreak.json'
 import holoCoresDaybreak from '../database/holo-core/daybreak.json'
 import artsDriversDaybreak from '../database/arts-driver/daybreak.json'
+import artsPluginsDaybreak from '../database/arts-plugin/daybreak.json'
 import {
   ELEMENTS,
   XIPHA_LINE_TYPES,
   XIPHA_MAX_LINE_SLOTS,
   type Art,
   type ArtsDriver,
+  type ArtsPlugin,
   type BaseData,
   type ElementName,
   type ElementRequirement,
   type HoloCore,
+  type HoloCoreEffect,
+  type HoloCoreLevel,
   type MasterQuartz,
   type MasterQuartzEffect,
   type MasterQuartzLevel,
@@ -314,7 +319,7 @@ const DAYBREAK_BASE: BaseData = {
   id: 'daybreak',
   label: 'Daybreak',
   quartz: quartzDaybreak.map((entry) => normalizeQuartz(entry)),
-  arts: [],
+  arts: artsDaybreak.map((entry) => normalizeArt(entry)),
   topology: XIPHA_TOPOLOGY,
   orbmentVisual: {
     title: 'XIPHA',
@@ -325,6 +330,7 @@ const DAYBREAK_BASE: BaseData = {
   shardSkills: shardSkillsDaybreak.map((entry) => normalizeShardSkill(entry)),
   holoCores: holoCoresDaybreak.map((entry) => normalizeHoloCore(entry)),
   artsDrivers: artsDriversDaybreak.map((entry) => normalizeArtsDriver(entry)),
+  artsPlugins: artsPluginsDaybreak.map((entry) => normalizeArtsPlugin(entry)),
 }
 
 export const BASES: BaseData[] = [
@@ -360,6 +366,7 @@ function normalizeQuartz(input: unknown): Quartz {
     arts_learnt: normalizeArtIds(record.arts_learnt),
     elemental_value: normalizeElementalValue(record.elemental_value),
     synthesis_cost: normalizeSynthesisCost(record.synthesis_cost),
+    image_url: typeof record.image_url === 'string' ? record.image_url : null,
     ...(Array.isArray(record.slot_types) ? { slot_types: normalizeXiphaLineTypes(record.slot_types) } : {}),
   }
 }
@@ -378,25 +385,95 @@ function normalizeShardSkill(input: unknown): ShardSkill {
     elemental_value: normalizeRequirementArray(record.elemental_value),
     effect: String(record.effect ?? ''),
     description: String(record.description ?? ''),
+    image_url: typeof record.image_url === 'string' ? record.image_url : null,
   }
 }
 
 function normalizeHoloCore(input: unknown): HoloCore {
   const record = input as Record<string, unknown>
+  const levels = normalizeHoloCoreLevels(record.levels)
+  const effects =
+    Array.isArray(record.effects) && record.effects.length > 0
+      ? normalizeMasterQuartzEffects(record.effects)
+      : summarizeHoloCoreEffects(levels, typeof record.s_boost_ability === 'string' ? record.s_boost_ability : null)
   return {
     id: Number(record.id),
     name: record.name as HoloCore['name'],
     description: String(record.description ?? ''),
-    effects: normalizeMasterQuartzEffects(record.effects),
+    image_url: typeof record.image_url === 'string' ? record.image_url : null,
+    obtain: typeof record.obtain === 'string' ? record.obtain : undefined,
+    s_boost_ability: typeof record.s_boost_ability === 'string' ? record.s_boost_ability : null,
+    levels,
+    effects,
   }
+}
+
+function normalizeHoloCoreLevels(input: unknown): HoloCoreLevel[] {
+  if (!Array.isArray(input)) {
+    return []
+  }
+
+  return input
+    .map((entry) => {
+      const record = entry as Record<string, unknown>
+      return {
+        level: Number(record.level),
+        effects: normalizeMasterQuartzEffects(record.effects),
+        boost_effects: normalizeMasterQuartzEffects(record.boost_effects),
+      }
+    })
+    .filter((entry) => Number.isInteger(entry.level) && entry.level >= 1)
+    .sort((left, right) => left.level - right.level)
+}
+
+function summarizeHoloCoreEffects(levels: HoloCoreLevel[], sBoostAbility: string | null): HoloCoreEffect[] {
+  if (levels.length === 0) {
+    return []
+  }
+
+  const maxLevel = levels[levels.length - 1]
+  const summary: HoloCoreEffect[] = [...maxLevel.effects]
+  if (sBoostAbility) {
+    summary.push({ title: 'S-Boost Ability', detail: sBoostAbility })
+  }
+  summary.push(...maxLevel.boost_effects)
+  return summary
 }
 
 function normalizeArtsDriver(input: unknown): ArtsDriver {
   const record = input as Record<string, unknown>
+  const element =
+    record.element === 'Mix' ? 'Mix' : toElementName(record.element)
+  const levels = Array.isArray(record.levels)
+    ? record.levels
+        .filter((entry): entry is Record<string, unknown> => !!entry && typeof entry === 'object')
+        .map((entry) => ({
+          level: Number(entry.level),
+          arts: Array.isArray(entry.arts)
+            ? entry.arts.filter((art): art is string => typeof art === 'string')
+            : [],
+        }))
+        .filter((entry) => Number.isInteger(entry.level) && entry.level >= 1)
+    : []
   return {
     id: Number(record.id),
     name: record.name as ArtsDriver['name'],
+    element,
     description: String(record.description ?? ''),
+    plugin_slots: Number(record.plugin_slots ?? 0),
+    levels,
+    image_url: typeof record.image_url === 'string' ? record.image_url : null,
+  }
+}
+
+function normalizeArtsPlugin(input: unknown): ArtsPlugin {
+  const record = input as Record<string, unknown>
+  return {
+    id: Number(record.id),
+    name: record.name as ArtsPlugin['name'],
+    element: toElementName(record.element),
+    image_url: typeof record.image_url === 'string' ? record.image_url : null,
+    obtain: String(record.obtain ?? ''),
   }
 }
 
@@ -465,6 +542,8 @@ function normalizeArt(input: unknown): Art {
     cost: String(record.cost),
     time: record.time as Art['time'],
     power: record.power as Art['power'],
+    ...(typeof record.stun === 'string' || record.stun === null ? { stun: record.stun as string | null } : {}),
+    ...(typeof record.hits === 'string' || record.hits === null ? { hits: record.hits as string | null } : {}),
     target: String(record.target),
     effect: (record.effect as string | null) ?? null,
     description: String(record.description),

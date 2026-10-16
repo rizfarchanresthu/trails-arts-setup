@@ -11,6 +11,7 @@ import {
   getArtElements,
   getXiphaLineSlotIds,
   type ArtsDriver,
+  type ArtsPlugin,
   type ElementName,
   type HoloCore,
   type Quartz,
@@ -20,7 +21,12 @@ import {
 } from '../domain/types'
 import { type XiphaLineTotals } from '../domain/xiphaEvaluator'
 import { type OrbmentState } from '../state/orbmentState'
-import { getXiphaState, isXiphaSlotActive } from '../state/xiphaState'
+import {
+  getCumulativeArtsDriverArts,
+  getHoloCoreLevelData,
+  getXiphaState,
+  isXiphaSlotActive,
+} from '../state/xiphaState'
 
 type Point = { x: number; y: number }
 
@@ -30,9 +36,12 @@ type XiphaGraphProps = {
   quartzById: Map<number, Quartz>
   holoCore: HoloCore | null
   artsDriver: ArtsDriver | null
+  artsPlugins: ArtsPlugin[]
   lineTotals: XiphaLineTotals
   activeShardSkills: ShardSkill[]
 }
+
+const EXPORT_MUTED_COLOR = '#5b6474'
 
 const HOLO_CORE_CENTER: Point = { x: 70, y: 170 }
 const HOLO_CORE_RADIUS = 26
@@ -57,6 +66,7 @@ export function XiphaGraph({
   quartzById,
   holoCore,
   artsDriver,
+  artsPlugins,
   lineTotals,
   activeShardSkills,
 }: XiphaGraphProps) {
@@ -89,11 +99,71 @@ export function XiphaGraph({
     lines.push({
       color: DEVICE_LINK_COLOR,
       slots: [
-        { label: 'Holo Core', quartz: holoCore?.name.en ?? null, accent: null },
-        { label: 'Arts Driver', quartz: artsDriver?.name.en ?? null, accent: null },
+        {
+          label: holoCore ? `Holo Core (L${xipha.holoCoreLevel})` : 'Holo Core',
+          quartz: holoCore?.name.en ?? null,
+          accent: null,
+        },
+        {
+          label: artsDriver ? `Arts Driver (L${xipha.artsDriverLevel})` : 'Arts Driver',
+          quartz: artsDriver?.name.en ?? null,
+          accent: null,
+        },
       ],
       totals: [],
     })
+
+    const equippedPlugins = xipha.artsPluginIds
+      .map((pluginId) => (pluginId == null ? null : (artsPlugins.find((entry) => entry.id === pluginId) ?? null)))
+      .filter((plugin): plugin is ArtsPlugin => plugin != null)
+    const pluginByArtName = new Map(artsPlugins.map((plugin) => [plugin.name.en, plugin]))
+    const availableArts = artsDriver
+      ? getCumulativeArtsDriverArts(artsDriver, xipha.artsDriverLevel, equippedPlugins)
+      : []
+    const additionalLists: Array<{ heading: string; items: Array<{ name: string; color: string }> }> = []
+    if (availableArts.length > 0) {
+      additionalLists.push({
+        heading: 'Available Arts',
+        items: availableArts.map((art) => {
+          const plugin = pluginByArtName.get(art)
+          return {
+            name: art,
+            color: plugin ? ELEMENT_COLORS[plugin.element] : EXPORT_MUTED_COLOR,
+          }
+        }),
+      })
+    }
+
+    const holoCoreLevelData = getHoloCoreLevelData(holoCore, xipha.holoCoreLevel)
+    if (holoCore && holoCoreLevelData) {
+      const holoItems: Array<{ name: string; color: string }> = []
+      for (const effect of holoCoreLevelData.effects) {
+        holoItems.push({
+          name: effect.detail ? `${effect.title}: ${effect.detail}` : effect.title,
+          color: EXPORT_MUTED_COLOR,
+        })
+      }
+      const hasBoost =
+        Boolean(holoCore.s_boost_ability) || holoCoreLevelData.boost_effects.length > 0
+      if (hasBoost) {
+        holoItems.push({ name: 'When Boosted', color: EXPORT_MUTED_COLOR })
+        if (holoCore.s_boost_ability) {
+          holoItems.push({
+            name: `S-Boost Ability: ${holoCore.s_boost_ability}`,
+            color: EXPORT_MUTED_COLOR,
+          })
+        }
+        for (const effect of holoCoreLevelData.boost_effects) {
+          holoItems.push({
+            name: effect.detail ? `${effect.title}: ${effect.detail}` : effect.title,
+            color: EXPORT_MUTED_COLOR,
+          })
+        }
+      }
+      if (holoItems.length > 0) {
+        additionalLists.push({ heading: 'Holo Core', items: holoItems })
+      }
+    }
 
     void exportOrbmentPng({
       svg: svgRef.current,
@@ -104,6 +174,7 @@ export function XiphaGraph({
         color: ELEMENT_COLORS[getArtElements(skill)[0]],
       })),
       artsHeading: 'Shard Skills',
+      additionalLists,
       fileName: `orbment-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`,
     })
   }
@@ -236,7 +307,7 @@ export function XiphaGraph({
           strokeWidth={1}
         />
         <text x={HOLO_CORE_CENTER.x} y={HOLO_CORE_CENTER.y - 6} className="orbmentNodeRectText">
-          Holo Core
+          {holoCore ? `Holo L${xipha.holoCoreLevel}` : 'Holo Core'}
         </text>
         <text x={HOLO_CORE_CENTER.x} y={HOLO_CORE_CENTER.y + 7} className="orbmentNodeRectText" style={{ fontSize: 7 }}>
           {shortName(holoCore?.name.en)}
@@ -251,7 +322,7 @@ export function XiphaGraph({
           strokeWidth={3}
         />
         <text x={ARTS_DRIVER_CENTER.x} y={ARTS_DRIVER_CENTER.y - 6} className="orbmentNodeRectText">
-          Driver
+          {artsDriver ? `Driver L${xipha.artsDriverLevel}` : 'Driver'}
         </text>
         <text
           x={ARTS_DRIVER_CENTER.x}

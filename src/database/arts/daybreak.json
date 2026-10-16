@@ -1,0 +1,950 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Earth Breaker",
+      "ja": "ストーンクラック"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "15 EP",
+    "time": {
+      "cast": 45,
+      "delay": 45
+    },
+    "power": "100%",
+    "target": "Set cone (8 radius, 45 degrees)",
+    "effect": null,
+    "description": "Summons forth sharp stalagmites.",
+    "stun": "15%",
+    "hits": "3×E"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Acid Cloud",
+      "ja": "アシッドクラウド"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 50,
+      "delay": 50
+    },
+    "power": "120%",
+    "target": "Set circle (3 radius)",
+    "effect": "Rot S (40% chance, 2t)",
+    "description": "Using the power of earth, calls forth a corrosive miasma.",
+    "stun": "15%",
+    "hits": "4×E"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Umbra Cracker",
+      "ja": "アンバークラック"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "135 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "180%",
+    "target": "Set cone (10 radius, 45 degrees)",
+    "effect": null,
+    "description": "Impales foes on a sharp blade of amber.",
+    "stun": "15%",
+    "hits": "4×E"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Thanatos Jail",
+      "ja": "タナトスジェイル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "375 EP",
+    "time": {
+      "cast": 65,
+      "delay": 65
+    },
+    "power": "240%",
+    "target": "Set circle (6 radius)",
+    "effect": "Rot S (60% chance, 2t)",
+    "description": "Traps foes in a prison of earth.",
+    "stun": "15%",
+    "hits": "2×E"
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Hydro Cannon",
+      "ja": "ハイドロカノン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "15 EP",
+    "time": {
+      "cast": 45,
+      "delay": 45
+    },
+    "power": "100%",
+    "target": "Set line (2 width)",
+    "effect": null,
+    "description": "Strikes with a high-pressure water current.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Icicle Hammer",
+      "ja": "アイシクルハンマー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 50,
+      "delay": 50
+    },
+    "power": "120%",
+    "target": "Circle around target (2.5 radius)",
+    "effect": "Freeze S (40% chance, 2t)",
+    "description": "Sends sharp icicles crashing down upon foes.",
+    "stun": "15%",
+    "hits": "4×E"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Cataract Wave",
+      "ja": "カタラクトウェイヴ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "135 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "180%",
+    "target": "Set cone (15 degrees)",
+    "effect": null,
+    "description": "Slams enemies with a swirling torrent of water.",
+    "stun": "15%",
+    "hits": "11×E"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Crystal Eden",
+      "ja": "クリスタルエデン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "360 EP",
+    "time": {
+      "cast": 65,
+      "delay": 65
+    },
+    "power": "210%",
+    "target": "Set circle (7.5 radius)",
+    "effect": "Freeze S (80% chance, 2t)",
+    "description": "Freezes enemies in a tower of ice, then shatters it.",
+    "stun": "15%",
+    "hits": "3×E"
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Fire Bolt",
+      "ja": "ファイアボルト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "15 EP",
+    "time": {
+      "cast": 45,
+      "delay": 45
+    },
+    "power": "100%",
+    "target": "Circle around target (1.5 radius)",
+    "effect": "Burn S (30% chance, 2t)",
+    "description": "Shoots a blazing orb of fire at an enemy.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Abyssal Flame",
+      "ja": "アビスフレイム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 50,
+      "delay": 50
+    },
+    "power": "120%",
+    "target": "Set cone (9 radius, 45 degrees)",
+    "effect": "Burn S (40% chance, 2t) Blind (40% chance, 2t)",
+    "description": "Roats a foe with dark flames of annihilation.",
+    "stun": "15%",
+    "hits": "2×E"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Flare Squall",
+      "ja": "フレアスコール"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "135 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "160%",
+    "target": "Set circle (4 radius)",
+    "effect": "Burn S (60% chance, 2t)",
+    "description": "Summons forth fireballs to rain down upon foes.",
+    "stun": "15%",
+    "hits": "5×E"
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Regulus Caliber",
+      "ja": "レグルスキャリバー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "element": "Fire",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "300 EP",
+    "time": {
+      "cast": 60,
+      "delay": 60
+    },
+    "power": "240%",
+    "target": "Circle around target (3 radius)",
+    "effect": "Burn S (100% chance, 2t)",
+    "description": "Summons a flaming sword capable of setting foes ablaze.",
+    "stun": "15%",
+    "hits": "12×E"
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Spark Edge",
+      "ja": "スパークエッジ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "15 EP",
+    "time": {
+      "cast": 45,
+      "delay": 45
+    },
+    "power": "100%",
+    "target": "Circle around target (1.5 radius)",
+    "effect": "Seal S (30% chance, 2t)",
+    "description": "Strikes foes with a shockwave blade wreathed in lightning.",
+    "stun": "15%",
+    "hits": "3×E"
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Aerial Dust",
+      "ja": "エアリアルダスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 50,
+      "delay": 50
+    },
+    "power": "140%",
+    "target": "Set circle (3 radius)",
+    "effect": null,
+    "description": "Batters foes with a localized tornado.",
+    "stun": "15%",
+    "hits": "10×E"
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Plasma Sphere",
+      "ja": "プラズマスフィア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "135 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "160%",
+    "target": "Circle around target (3.5 radius)",
+    "effect": "Seal S (60% chance, 2t)",
+    "description": "Summons lightning orbs which shock foes.",
+    "stun": "15%",
+    "hits": "6×E"
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Tyrant Storm",
+      "ja": "タイラントストーム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "360 EP",
+    "time": {
+      "cast": 65,
+      "delay": 65
+    },
+    "power": "210%",
+    "target": "Set circle (5 radius)",
+    "effect": "Seal S (100% chance, 2t)",
+    "description": "Summons lightning-charged tornadoes, which swallow foes whole.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Shadow Spear",
+      "ja": "シャドウスピア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100 EP",
+    "time": {
+      "cast": 50,
+      "delay": 50
+    },
+    "power": "140%",
+    "target": "Set cone (8 radius, 45 degrees)",
+    "effect": "Deathblow (100% chance)",
+    "description": "Pierces foes with ominous black spears.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Obsidia Ray",
+      "ja": "オブシディアレイ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "180 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "180%",
+    "target": "Set line (4 width)",
+    "effect": "Blind (60% chance, 2t) AT Delay (12 AT)",
+    "description": "Summons forth rays of darkness that eviscerate foes.",
+    "stun": "15%",
+    "hits": "6×E"
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Pluto's Nova",
+      "ja": "プルートゥスノヴァ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "element": "Time",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "380 EP",
+    "time": {
+      "cast": 65,
+      "delay": 65
+    },
+    "power": "280%",
+    "target": "All",
+    "effect": "Blind (100% chance, 2t) Deathblow (100% chance)",
+    "description": "Crushes foes with a phantom planet summoned from beyond.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Saint Arrow",
+      "ja": "セイントアロー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "100 EP",
+    "time": {
+      "cast": 50,
+      "delay": 50
+    },
+    "power": "140%",
+    "target": "Set line (2 width)",
+    "effect": "Mute S (100% chance, 2t)",
+    "description": "Pierces foes with a holy arrow of light.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Lost Mobius",
+      "ja": "ロストメビウス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "180 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "180%",
+    "target": "Set circle (4 radius)",
+    "effect": "Moves targets to set point",
+    "description": "Crushes enemies by compressing the space around them.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Ark of El Dorado",
+      "ja": "エルドラドアーク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "element": "Space",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "380 EP",
+    "time": {
+      "cast": 65,
+      "delay": 65
+    },
+    "power": "280%",
+    "target": "Set circle (6 radius)",
+    "effect": "DMG/RES-10% (3t)",
+    "description": "Opens the golden gates and bathes foes in destructive light.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Argent Thorn",
+      "ja": "アルジェントソーン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "140 EP",
+    "time": {
+      "cast": 55,
+      "delay": 55
+    },
+    "power": "160%",
+    "target": "Set circle (3 radius)",
+    "effect": "ADMG-10% (3t)",
+    "description": "Traps foes within a magic circle of silver swords.",
+    "stun": "15%",
+    "hits": "E"
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Jabberwock Arm",
+      "ja": "ジャバウォックアーム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "element": "Mirage",
+    "category": "offensive",
+    "elemental_value": [],
+    "cost": "380 EP",
+    "time": {
+      "cast": 65,
+      "delay": 65
+    },
+    "power": "280%",
+    "target": "Circle around target (3.5 radius)",
+    "effect": "Fear (100% chance, 2t) ARES-10% (3t)",
+    "description": "Summons the arm of an evil beast to stop foes in their tracks.",
+    "stun": "15%",
+    "hits": "2×E"
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Crest",
+      "ja": "クレスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "10 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": null,
+    "target": "Circle around target (2.5 radius)",
+    "effect": "RES+10% (3t)",
+    "description": "Grants the protection of earth, slightly raising defense."
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "La Crest",
+      "ja": "ラ・クレスト"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "80 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "RES+20% (3t)",
+    "description": "Grants the protection of earth, raising defense."
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Earth Guard",
+      "ja": "アースガード"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Circle around target (2.5 radius)",
+    "effect": "Shield (1000 HP)",
+    "description": "A shield that slightly reduces damage taken by allies in range."
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Aegis Shield",
+      "ja": "アイギスシールド"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "element": "Earth",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "240 EP",
+    "time": {
+      "cast": 24,
+      "delay": 96
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "Shield (3000 HP)",
+    "description": "A shield that reduces damage taken by allies in range."
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Tear",
+      "ja": "ティア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": "500",
+    "target": "Single target",
+    "effect": null,
+    "description": "Heals a small amount of HP with the power of water."
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Teara",
+      "ja": "ティアラ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": "1500",
+    "target": "Single target",
+    "effect": null,
+    "description": "Heals a medium amount of HP with the power of water."
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Tearal",
+      "ja": "ティアラル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "180 EP",
+    "time": {
+      "cast": 22,
+      "delay": 88
+    },
+    "power": "4500",
+    "target": "Single target",
+    "effect": null,
+    "description": "Heals a large amount of HP with the power of water."
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "S-Curia",
+      "ja": "Ｓキュリア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "element": "Water",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "40 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": "200",
+    "target": "Single target",
+    "effect": "Cures status effects and stat down Ailment vulnerability×0.5 (3t)",
+    "description": "Heals ailments and boosts ailment res. with the power of water."
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Forte",
+      "ja": "フォルテ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "10 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": null,
+    "target": "Circle around target (2.5 radius)",
+    "effect": "DMG+10% (3t)",
+    "description": "Grants a blessing of fire slightly raising attack."
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "La Forte",
+      "ja": "ラ・フォルテ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "element": "Fire",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "80 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "DMG+20% (3t)",
+    "description": "Grants a blessing of fire raising attack."
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Breath",
+      "ja": "ブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "50 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": "400",
+    "target": "Set circle (3.5 radius)",
+    "effect": null,
+    "description": "Slightly heals allies in range with a purifying breath."
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Aura Breath",
+      "ja": "オーラブレス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "200 EP",
+    "time": {
+      "cast": 22,
+      "delay": 88
+    },
+    "power": "1200",
+    "target": "Set circle (4 radius)",
+    "effect": null,
+    "description": "Heals allies in range with a purifying breath."
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Refreshing Veil",
+      "ja": "ヴェール"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "element": "Wind",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "80 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Set circle (3.5 radius)",
+    "effect": "Cures status effects and stat down Ailment vulnerability×0.5 (3t)",
+    "description": "Cleanses the status ailments of all allies in range."
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Chrono Drive",
+      "ja": "クロノドライブ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": null,
+    "target": "Circle around target (4 radius)",
+    "effect": "Quick L (3t)",
+    "description": "Accelerates the flow of time for all allies in range."
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Chrono Break",
+      "ja": "クロノブレイク"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "element": "Time",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "20 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": null,
+    "target": "Circle around target (4 radius)",
+    "effect": "Slow L (3t)",
+    "description": "Decelerates the flow of time for all foes in range."
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Thelas",
+      "ja": "セラス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "40 EP",
+    "time": {
+      "cast": 18,
+      "delay": 72
+    },
+    "power": "800",
+    "target": "Single target",
+    "effect": "Cures K.O.",
+    "description": "Revives one ally and restores a small amount of their HP."
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Athelas",
+      "ja": "アセラス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "120 EP",
+    "time": {
+      "cast": 22,
+      "delay": 88
+    },
+    "power": "2400",
+    "target": "Single target",
+    "effect": "Cures K.O.",
+    "description": "Revives one ally and restores a moderate amount of their HP."
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Celestial",
+      "ja": "セレスティアル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "element": "Space",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "600 EP",
+    "time": {
+      "cast": 30,
+      "delay": 120
+    },
+    "power": null,
+    "target": "All targets",
+    "effect": "100% Max HP healed Cures K.O.",
+    "description": "Revives all allies and restores their HP to full."
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Crescent Eye",
+      "ja": "クレセントアイ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Circle around target (3.5 radius)",
+    "effect": "Insight (3t)",
+    "description": "Calls down sacred moonlight to grant Insight to allies."
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Ideal Force",
+      "ja": "イデアルフォース"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "60 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Circle around target (6 radius)",
+    "effect": "ADMG/ARES+30% (3t)",
+    "description": "Increases magic attack and defense of allies."
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Zodiac Sign",
+      "ja": "ゾディアックサイン"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "element": "Mirage",
+    "category": "support",
+    "elemental_value": [],
+    "cost": "80 EP",
+    "time": {
+      "cast": 20,
+      "delay": 80
+    },
+    "power": null,
+    "target": "Circle around target (3.5 radius)",
+    "effect": "Critical Rate+30% (3t)",
+    "description": "Grants a blessing from the stars, raising allies' critical rates."
+  }
+]

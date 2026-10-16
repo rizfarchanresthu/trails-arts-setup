@@ -44,7 +44,10 @@ export type OrbmentState = {
 export type XiphaState = {
   lineSlotCounts: Record<XiphaLineType, XiphaLineSlotCount>
   holoCoreId: number | null
+  holoCoreLevel: number
   artsDriverId: number | null
+  artsDriverLevel: number
+  artsPluginIds: Array<number | null>
 }
 
 export type OrbmentPresetShape = {

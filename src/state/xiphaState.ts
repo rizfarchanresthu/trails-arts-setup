@@ -6,7 +6,10 @@ import {
   getXiphaSlotIndex,
   quartzFitsSlotRestriction,
   quartzFitsXiphaSlot,
+  type ArtsDriver,
+  type ArtsPlugin,
   type ElementName,
+  type HoloCore,
   type OrbmentTopology,
   type Quartz,
   type SlotId,
@@ -29,7 +32,10 @@ export function createInitialXiphaState(): XiphaState {
   return {
     lineSlotCounts: createLineSlotCounts(XIPHA_MAX_LINE_SLOTS),
     holoCoreId: null,
+    holoCoreLevel: 1,
     artsDriverId: null,
+    artsDriverLevel: 1,
+    artsPluginIds: [],
   }
 }
 
@@ -67,12 +73,142 @@ export function setXiphaLineSlotCount(
   return clearInactiveSlots({ ...state, xipha: nextXipha })
 }
 
-export function setXiphaHoloCore(state: OrbmentState, holoCoreId: number | null): OrbmentState {
-  return { ...state, xipha: { ...getXiphaState(state), holoCoreId } }
+export function setXiphaHoloCore(
+  state: OrbmentState,
+  holoCoreId: number | null,
+  holoCoresById: Map<number, HoloCore> = new Map(),
+): OrbmentState {
+  const xipha = getXiphaState(state)
+  if (!holoCoreId) {
+    return { ...state, xipha: { ...xipha, holoCoreId: null } }
+  }
+  const holoCore = holoCoresById.get(holoCoreId)
+  if (!holoCore) {
+    return state
+  }
+  return {
+    ...state,
+    xipha: {
+      ...xipha,
+      holoCoreId,
+      holoCoreLevel: clampLeveledEntry(holoCore.levels, xipha.holoCoreLevel),
+    },
+  }
 }
 
-export function setXiphaArtsDriver(state: OrbmentState, artsDriverId: number | null): OrbmentState {
-  return { ...state, xipha: { ...getXiphaState(state), artsDriverId } }
+export function setXiphaHoloCoreLevel(
+  state: OrbmentState,
+  level: number,
+  holoCoresById: Map<number, HoloCore>,
+): OrbmentState {
+  const xipha = getXiphaState(state)
+  const holoCore = xipha.holoCoreId ? holoCoresById.get(xipha.holoCoreId) : null
+  if (!holoCore || !holoCore.levels.some((entry) => entry.level === level)) {
+    return state
+  }
+  return { ...state, xipha: { ...xipha, holoCoreLevel: level } }
+}
+
+export function setXiphaArtsDriver(
+  state: OrbmentState,
+  artsDriverId: number | null,
+  artsDriversById: Map<number, ArtsDriver> = new Map(),
+): OrbmentState {
+  const xipha = getXiphaState(state)
+  if (!artsDriverId) {
+    return { ...state, xipha: { ...xipha, artsDriverId: null, artsPluginIds: [] } }
+  }
+  const artsDriver = artsDriversById.get(artsDriverId)
+  if (!artsDriver) {
+    return state
+  }
+  return {
+    ...state,
+    xipha: {
+      ...xipha,
+      artsDriverId,
+      artsDriverLevel: clampLeveledEntry(artsDriver.levels, xipha.artsDriverLevel),
+      artsPluginIds: createEmptyPluginSlots(artsDriver.plugin_slots),
+    },
+  }
+}
+
+export function setXiphaArtsDriverLevel(
+  state: OrbmentState,
+  level: number,
+  artsDriversById: Map<number, ArtsDriver>,
+): OrbmentState {
+  const xipha = getXiphaState(state)
+  const artsDriver = xipha.artsDriverId ? artsDriversById.get(xipha.artsDriverId) : null
+  if (!artsDriver || !artsDriver.levels.some((entry) => entry.level === level)) {
+    return state
+  }
+  return { ...state, xipha: { ...xipha, artsDriverLevel: level } }
+}
+
+export function setXiphaArtsPlugin(
+  state: OrbmentState,
+  slotIndex: number,
+  pluginId: number | null,
+  artsPluginsById: Map<number, ArtsPlugin>,
+): OrbmentState {
+  const xipha = getXiphaState(state)
+  if (slotIndex < 0 || slotIndex >= xipha.artsPluginIds.length) {
+    return state
+  }
+  if (pluginId !== null) {
+    if (!artsPluginsById.has(pluginId)) {
+      return state
+    }
+    const duplicate = xipha.artsPluginIds.some(
+      (equippedId, index) => index !== slotIndex && equippedId === pluginId,
+    )
+    if (duplicate) {
+      return state
+    }
+  }
+  const artsPluginIds = [...xipha.artsPluginIds]
+  artsPluginIds[slotIndex] = pluginId
+  return { ...state, xipha: { ...xipha, artsPluginIds } }
+}
+
+export function getHoloCoreLevelData(holoCore: HoloCore | null | undefined, level: number) {
+  return holoCore?.levels.find((entry) => entry.level === level) ?? null
+}
+
+export function getArtsDriverLevelData(artsDriver: ArtsDriver | null | undefined, level: number) {
+  return artsDriver?.levels.find((entry) => entry.level === level) ?? null
+}
+
+/** Cumulative art names: driver unlocks at/below level, then equipped plugin arts (deduped). */
+export function getCumulativeArtsDriverArts(
+  artsDriver: ArtsDriver,
+  level: number,
+  plugins: ArtsPlugin[] = [],
+): string[] {
+  const seen = new Set<string>()
+  const arts: string[] = []
+  for (const entry of artsDriver.levels) {
+    if (entry.level > level) {
+      continue
+    }
+    for (const art of entry.arts) {
+      if (seen.has(art)) {
+        continue
+      }
+      seen.add(art)
+      arts.push(art)
+    }
+  }
+  for (const plugin of plugins) {
+    const art = plugin.name.en
+    if (seen.has(art)) {
+      continue
+    }
+    seen.add(art)
+    arts.push(art)
+  }
+  return arts
 }
 
 export function setXiphaSlotRestriction(
@@ -113,6 +249,15 @@ export function canEquipXiphaQuartz(
   }
   if (state.equippedQuartz[slotId] === quartz.id) {
     return true
+  }
+  for (const [slotKey, equippedId] of Object.entries(state.equippedQuartz)) {
+    const equippedSlotId = Number(slotKey) as SlotId
+    if (!equippedId || equippedSlotId === slotId) {
+      continue
+    }
+    if (equippedId === quartz.id) {
+      return false
+    }
   }
   if (quartz.exclusive_groups.length === 0) {
     return true
@@ -178,6 +323,8 @@ export function sanitizeXiphaState(
   value: unknown,
   validHoloCoreIds?: Set<number>,
   validArtsDriverIds?: Set<number>,
+  validArtsPluginIds?: Set<number>,
+  artsDriversById?: Map<number, ArtsDriver>,
 ): XiphaState {
   const fallback = createInitialXiphaState()
   if (typeof value !== 'object' || value === null) {
@@ -197,10 +344,22 @@ export function sanitizeXiphaState(
     }
   }
 
+  const artsDriverId = sanitizeOptionalId(record.artsDriverId, validArtsDriverIds)
+  const savedPluginCount =
+    Array.isArray(record.artsPluginIds) && record.artsPluginIds.length > 0
+      ? record.artsPluginIds.length
+      : 0
+  const pluginSlotCount = artsDriverId
+    ? (artsDriversById?.get(artsDriverId)?.plugin_slots ?? savedPluginCount)
+    : 0
+
   return {
     lineSlotCounts,
     holoCoreId: sanitizeOptionalId(record.holoCoreId, validHoloCoreIds),
-    artsDriverId: sanitizeOptionalId(record.artsDriverId, validArtsDriverIds),
+    holoCoreLevel: sanitizePositiveInt(record.holoCoreLevel) ?? 1,
+    artsDriverId,
+    artsDriverLevel: sanitizePositiveInt(record.artsDriverLevel) ?? 1,
+    artsPluginIds: sanitizeArtsPluginIds(record.artsPluginIds, pluginSlotCount, validArtsPluginIds),
   }
 }
 
@@ -237,4 +396,43 @@ function sanitizeOptionalId(value: unknown, validIds?: Set<number>): number | nu
     return null
   }
   return value
+}
+
+function sanitizePositiveInt(value: unknown): number | null {
+  if (typeof value === 'number' && Number.isInteger(value) && value >= 1) {
+    return value
+  }
+  return null
+}
+
+function clampLeveledEntry(levels: Array<{ level: number }>, level: number): number {
+  if (levels.some((entry) => entry.level === level)) {
+    return level
+  }
+  return levels[0]?.level ?? 1
+}
+
+function createEmptyPluginSlots(count: number): Array<number | null> {
+  const safeCount = Number.isInteger(count) && count > 0 ? count : 0
+  return new Array<number | null>(safeCount).fill(null)
+}
+
+function sanitizeArtsPluginIds(
+  value: unknown,
+  slotCount: number,
+  validIds?: Set<number>,
+): Array<number | null> {
+  const slots = createEmptyPluginSlots(slotCount)
+  if (!Array.isArray(value) || slotCount <= 0) {
+    return slots
+  }
+  const seen = new Set<number>()
+  for (let index = 0; index < slotCount; index += 1) {
+    const id = sanitizeOptionalId(value[index], validIds)
+    if (id !== null && !seen.has(id)) {
+      slots[index] = id
+      seen.add(id)
+    }
+  }
+  return slots
 }

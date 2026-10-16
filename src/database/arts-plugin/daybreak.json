@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Earth Breaker",
+      "ja": "ストーンクラック"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Automatically obtained during Chapter 1."
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Acid Cloud",
+      "ja": "アシッドクラウド"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Umbra Cracker",
+      "ja": "アンバークラック"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 - Tharbad onwards: Orbal Factories"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Thanatos Jail",
+      "ja": "タナトスジェイル"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "300 Enemies Felled on the Field Achievement reward."
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Crest",
+      "ja": "クレスト"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Orbal Factories"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "La Crest",
+      "ja": "ラ・クレスト"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Earth Guard",
+      "ja": "アースガード"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Aegis Shield",
+      "ja": "アイギスシールド"
+    },
+    "element": "Earth",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/62/Earth_%28Kuro_Element%29.png",
+    "obtain": "Bounty in the Waterworks 3 reward."
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Hydro Cannon",
+      "ja": "ハイドロカノン"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Orbal Factories"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Icicle Hammer",
+      "ja": "アイシクルハンマー"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Cataract Wave",
+      "ja": "カタラクトウェイヴ"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 - Tharbad onwards: Orbal Factories"
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Crystal Eden",
+      "ja": "クリスタルエデン"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "1,000,000 Mira Earned Achievement reward."
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Tear",
+      "ja": "ティア"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Automatically obtained during Chapter 1."
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Teara",
+      "ja": "ティアラ"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Tearal",
+      "ja": "ティアラル"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Chapter 4 onwards: Orbal Factories"
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "S-Curia",
+      "ja": "Ｓキュリア"
+    },
+    "element": "Water",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Water_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Fire Bolt",
+      "ja": "ファイアボルト"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "obtain": "Automatically obtained during Chapter 1."
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Abyssal Flame",
+      "ja": "アビスフレイム"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Flare Squall",
+      "ja": "フレアスコール"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 - Tharbad onwards: Orbal Factories"
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Regulus Caliber",
+      "ja": "レグルスキャリバー"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "obtain": "EX: 100,000 Damage Dealt Achievement reward."
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Forte",
+      "ja": "フォルテ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "obtain": "Orbal Factories"
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "La Forte",
+      "ja": "ラ・フォルテ"
+    },
+    "element": "Fire",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/89/Fire_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Spark Edge",
+      "ja": "スパークエッジ"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "Automatically obtained during Chapter 1."
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Aerial Dust",
+      "ja": "エアリアルダスト"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Plasma Sphere",
+      "ja": "プラズマスフィア"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 - Tharbad onwards: Orbal Factories"
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Tyrant Storm",
+      "ja": "タイラントストーム"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "EX: 2,000 Shard Skills Activated Achievement reward."
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Breath",
+      "ja": "ブレス"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Aura Breath",
+      "ja": "オーラブレス"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 onwards: Orbal Factories"
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Refreshing Veil",
+      "ja": "ヴェール"
+    },
+    "element": "Wind",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/56/Wind_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Shadow Spear",
+      "ja": "シャドウスピア"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "obtain": "Orbal Factories"
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Obsidia Ray",
+      "ja": "オブシディアレイ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Pluto's Nova",
+      "ja": "プルートゥスノヴァ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "obtain": "Upper Zone Extermination reward."
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Chrono Drive",
+      "ja": "クロノドライブ"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Chrono Break",
+      "ja": "クロノブレイク"
+    },
+    "element": "Time",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/31/Time_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 onwards: Orbal Factories"
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Saint Arrow",
+      "ja": "セイントアロー"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "obtain": "Orbal Factories"
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Lost Mobius",
+      "ja": "ロストメビウス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Ark of El Dorado",
+      "ja": "エルドラドアーク"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "obtain": "Middle Zone Extermination reward."
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Thelas",
+      "ja": "セラス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "obtain": "Orbal Factories"
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Athelas",
+      "ja": "アセラス"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "obtain": "Chapter 3 onwards: Orbal Factories"
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Celestial",
+      "ja": "セレスティアル"
+    },
+    "element": "Space",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/ba/Space_%28Kuro_Element%29.png",
+    "obtain": "Octuple Kill Achievement reward."
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Argent Thorn",
+      "ja": "アルジェントソーン"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "obtain": "Chapter 1 - Creil onwards: Orbal Factories"
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Jabberwock Arm",
+      "ja": "ジャバウォックアーム"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "obtain": "Lower Zone Extermination reward."
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Crescent Eye",
+      "ja": "クレセントアイ"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "obtain": "Chapter 2 - Langport onwards: Orbal Factories"
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Ideal Force",
+      "ja": "イデアルフォース"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "obtain": "Chapter 4 onwards: Orbal Factories"
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Zodiac Sign",
+      "ja": "ゾディアックサイン"
+    },
+    "element": "Mirage",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1e/Mirage_%28Kuro_Element%29.png",
+    "obtain": "150 Ambushes Landed Achievement reward."
+  }
+]

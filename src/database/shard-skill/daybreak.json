@@ -2,27 +2,1352 @@
   {
     "id": 1,
     "name": {
-      "en": "Blaze Edge",
-      "ja": "ブレイズエッジ"
+      "en": "Earth Impact",
+      "ja": "アースインパクト"
+    },
+    "line_type": "weapon",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Earth damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Earth damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Earth_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Earth Impact II",
+      "ja": "アースインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Earth damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Earth damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/68/Earth_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Aqua Impact",
+      "ja": "アクアインパクト"
+    },
+    "line_type": "weapon",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Water damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Water damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/61/Aqua_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Aqua Impact II",
+      "ja": "アクアインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Water damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Water damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/61/Aqua_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Flare Impact",
+      "ja": "フレアインパクト"
     },
     "line_type": "weapon",
     "element": "Fire",
     "elemental_value": [
       {
         "element": "Fire",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Fire damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Fire damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/59/Flare_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Flare Impact II",
+      "ja": "フレアインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Fire damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Fire damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/59/Flare_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Gale Impact",
+      "ja": "ゲイルインパクト"
+    },
+    "line_type": "weapon",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Wind damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Wind damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b7/Gale_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Gale Impact II",
+      "ja": "ゲイルインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Wind damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Wind damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b7/Gale_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Chrono Impact",
+      "ja": "クロノインパクト"
+    },
+    "line_type": "weapon",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Time damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Time damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Chrono_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Chrono Impact II",
+      "ja": "クロノインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Time damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Time damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Chrono_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Cosmic Impact",
+      "ja": "ゴルトインパクト"
+    },
+    "line_type": "weapon",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Space damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Space damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d5/Gold_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Cosmic Impact II",
+      "ja": "ゴルトインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Space damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Space damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/d5/Gold_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Chaos Impact",
+      "ja": "カオスインパクト"
+    },
+    "line_type": "weapon",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "effect": "Adds Mirage damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Mirage damage with 20% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Chaos_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Chaos Impact II",
+      "ja": "カオスインパクトII"
+    },
+    "line_type": "weapon",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 8
+      }
+    ],
+    "effect": "Adds Mirage damage to normal attacks and crafts.",
+    "description": "Adds a second instance of Mirage damage with 50% of the attack/craft's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c9/Chaos_Impact_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Sword Breaker",
+      "ja": "ソードブレイカー"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Fire",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
         "value": 4
       }
     ],
-    "effect": "Chance to inflict Burn on normal attacks",
-    "description": "Placeholder shard skill."
+    "effect": "Normal attacks and crafts inflict STR Down.",
+    "description": "Inflicts STR Down S for 2 turns. Chance: 20% (Base) / 40% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b8/Sword_Breaker_icon_%28Kuro%29.png"
   },
   {
-    "id": 2,
+    "id": 16,
     "name": {
-      "en": "Iron Wall",
-      "ja": "アイアンウォール"
+      "en": "Shield Breaker",
+      "ja": "シールドブレイカー"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Earth",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "effect": "Normal attacks and crafts inflict DEF Down.",
+    "description": "Inflicts DEF Down S for 2 turns. Chance: 20% (Base) / 40% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/05/Shield_Breaker_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Sword Breaker Barrage",
+      "ja": "破剣の強襲"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Fire",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "effect": "Inflicts STR Down on all enemies when performing a shard attack.",
+    "description": "Inflicts STR Down S for 2 turns. Chance: 50% (Base) / 100% (Stunned enemy)",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/f2/Sword_Assault_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Shield Breaker Barrage",
+      "ja": "破盾の強襲"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Earth",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "effect": "Inflicts DEF Down on all enemies when performing a shard attack.",
+    "description": "Inflicts DEF Down S for 2 turns. Chance: 50% (Base) / 100% (Stunned enemy)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Shield_Assault_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Fatal Lance",
+      "ja": "フェイタルランサー"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Earth",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "element": "Time",
+        "value": 8
+      }
+    ],
+    "effect": "Performs a follow-up attack on the area around enemies who are low on HP after an attack.",
+    "description": "Triggers if the enemy has less than 15% HP and less HP than 80% of a normal attack's damage. Deals an attack with 80% Power in an area of 5 radius around the target. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a9/Fatal_Lancer_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Deadly Lance",
+      "ja": "フェイタルランサー改"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Earth",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 12
+      }
+    ],
+    "effect": "Performs a follow-up attack on the area around enemies who are low on HP after an attack.",
+    "description": "Triggers if the enemy has less than 15% HP and less HP than a normal attack's damage. Deals an attack with 100% Power in an area of 5 radius around the target. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a9/Fatal_Lancer_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Burst Gain",
+      "ja": "バーストゲイン"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Water",
+      "Fire"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      },
+      {
+        "element": "Fire",
+        "value": 12
+      }
+    ],
+    "effect": "Recovers HP/CP based on damage from normal attacks and crafts.",
+    "description": "Recovers 10% of damage done as HP and 10 CP. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/df/Burst_Gain_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Executioner",
+      "ja": "エクスキューショナー"
+    },
+    "line_type": "weapon",
+    "element": [
+      "Fire",
+      "Wind"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      },
+      {
+        "element": "Wind",
+        "value": 12
+      }
+    ],
+    "effect": "Performs a follow-up attack on enemies that are already stunned or that were stunned by your attack.",
+    "description": "Deals an attack with 150% Power to the target. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a2/Executioner_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Resist Rot",
+      "ja": "アースレジスト"
     },
     "line_type": "shield",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Rot effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c5/Earth_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Resist Rot II",
+      "ja": "アースレジストII"
+    },
+    "line_type": "shield",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Rot effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c5/Earth_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Resist Freeze",
+      "ja": "アクアレジスト"
+    },
+    "line_type": "shield",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Freeze effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Aqua_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Resist Freeze II",
+      "ja": "アクアレジストII"
+    },
+    "line_type": "shield",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Freeze effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3c/Aqua_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Resist Burn",
+      "ja": "フレアレジスト"
+    },
+    "line_type": "shield",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Burn effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/64/Flare_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Resist Burn II",
+      "ja": "フレアレジストII"
+    },
+    "line_type": "shield",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Burn effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/64/Flare_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Resist Seal",
+      "ja": "ゲイルレジスト"
+    },
+    "line_type": "shield",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Seal effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5d/Gale_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Resist Seal II",
+      "ja": "ゲイルレジストII"
+    },
+    "line_type": "shield",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Seal effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5d/Gale_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Resist Blind",
+      "ja": "ダークレジスト"
+    },
+    "line_type": "shield",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Blind effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/66/Chrono_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Resist Blind II",
+      "ja": "ダークレジストII"
+    },
+    "line_type": "shield",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Blind effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/66/Chrono_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Resist Mute",
+      "ja": "ゴルトレジスト"
+    },
+    "line_type": "shield",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Mute effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/85/Gold_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Resist Mute II",
+      "ja": "ゴルトレジストII"
+    },
+    "line_type": "shield",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Mute effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/85/Gold_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Resist Fear",
+      "ja": "カオスレジスト"
+    },
+    "line_type": "shield",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "effect": "Nullify Fear effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cf/Chaos_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Resist Fear II",
+      "ja": "カオスレジストII"
+    },
+    "line_type": "shield",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 7
+      }
+    ],
+    "effect": "Nullify Fear effect from enemies and resist KO with 1 HP.",
+    "description": "Chance: 75% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/cf/Chaos_Resist_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Regen Guard",
+      "ja": "リカバーガード"
+    },
+    "line_type": "shield",
+    "element": [
+      "Water",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "effect": "Small recovery of HP when the Defend command is used.",
+    "description": "Casts Tear on self and makes Defend reduce damage to 1/3. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/dd/Recover_Guard_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Impassion Guard",
+      "ja": "ライズガード"
+    },
+    "line_type": "shield",
+    "element": [
+      "Fire",
+      "Wind"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      },
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "effect": "CP regen on each turn when the Defend command is used.",
+    "description": "Grants CP Regen 10 CP/t for 3 turns and makes Defend reduce damage to 1/3. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/f/f8/Rise_Guard_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Forte Guard",
+      "ja": "フォルテガード"
+    },
+    "line_type": "shield",
+    "element": [
+      "Earth",
+      "Fire"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      },
+      {
+        "element": "Fire",
+        "value": 6
+      }
+    ],
+    "effect": "Attack power increases when the Defend command is used.",
+    "description": "Grants DMG Up S for 3 turns and makes Defend reduce damage to 1/3. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/85/Forte_Guard_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Crest Guard",
+      "ja": "クレストガード"
+    },
+    "line_type": "shield",
+    "element": [
+      "Earth",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 6
+      }
+    ],
+    "effect": "Defensive power increases when the Defend command is used.",
+    "description": "Grants RES Up S for 3 turns and makes Defend reduce damage to 1/3. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/48/Crest_Guard_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Guardian",
+      "ja": "カバーシールド"
+    },
+    "line_type": "shield",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "effect": "Deploys a shield to lower damage when an ally is attacked.",
+    "description": "Reduces damage ally takes by half and makes them resist K.O. with 1 HP. Chance: 10% (Base) / 20% (SCLM or S-Boost) / 40% (SCLM and S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Cover_Shield_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Guardian II",
+      "ja": "カバーシールドII"
+    },
+    "line_type": "shield",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 8
+      }
+    ],
+    "effect": "Deploys a shield to lower damage when an ally is attacked.",
+    "description": "Reduces damage ally takes to 1/4 and makes them resist K.O. with 1 HP. Chance: 20% (Base) / 40% (SCLM or S-Boost) / 80% (SCLM and S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/40/Cover_Shield_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Avenging Arrow",
+      "ja": "リベンジアロー"
+    },
+    "line_type": "shield",
+    "element": [
+      "Wind",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      },
+      {
+        "element": "Time",
+        "value": 12
+      }
+    ],
+    "effect": "Use shards to counter when an ally is attacked.",
+    "description": "Deals a normal attack with 100% Power at any distance. Chance: 20% (Base) / 40% (SCLM or S-Boost) / 80% (SCLM and S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/ad/Revenge_Arrow_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Seraphic Force",
+      "ja": "セラフィムフォース"
+    },
+    "line_type": "shield",
+    "element": [
+      "Water",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 12
+      }
+    ],
+    "effect": "Resist KO with 1 HP and then receive medium HP/EP/CP recovery.",
+    "description": "Recovers 50% HP, 50% EP and 50 CP once per battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b4/Seraphim_Force_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Earth Boost",
+      "ja": "アースブースト"
+    },
+    "line_type": "drive",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Earth arts.",
+    "description": "Adds a second instance of Earth damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a6/Earth_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Earth Boost II",
+      "ja": "アースブーストII"
+    },
+    "line_type": "drive",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Earth arts.",
+    "description": "Adds a second instance of Earth damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a6/Earth_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "Aqua Boost",
+      "ja": "アクアブースト"
+    },
+    "line_type": "drive",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Water arts.",
+    "description": "Adds a second instance of Water damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/46/Aqua_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "Aqua Boost II",
+      "ja": "アクアブーストII"
+    },
+    "line_type": "drive",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Water arts.",
+    "description": "Adds a second instance of Water damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/46/Aqua_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "Flare Boost",
+      "ja": "フレアブースト"
+    },
+    "line_type": "drive",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Fire arts.",
+    "description": "Adds a second instance of Fire damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/67/Flare_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "Flare Boost II",
+      "ja": "フレアブーストII"
+    },
+    "line_type": "drive",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Fire arts.",
+    "description": "Adds a second instance of Fire damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/67/Flare_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Gale Boost",
+      "ja": "ゲイルブースト"
+    },
+    "line_type": "drive",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Wind arts.",
+    "description": "Adds a second instance of Wind damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Gale_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "Gale Boost II",
+      "ja": "ゲイルブーストII"
+    },
+    "line_type": "drive",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Wind arts.",
+    "description": "Adds a second instance of Wind damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/65/Gale_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Chrono Boost",
+      "ja": "クロノブースト"
+    },
+    "line_type": "drive",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Time arts.",
+    "description": "Adds a second instance of Time damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9e/Chrono_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Chrono Boost II",
+      "ja": "クロノブーストII"
+    },
+    "line_type": "drive",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Time arts.",
+    "description": "Adds a second instance of Time damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9e/Chrono_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Cosmic Boost",
+      "ja": "ゴルトブースト"
+    },
+    "line_type": "drive",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Space arts.",
+    "description": "Adds a second instance of Space damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/66/Gold_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "Cosmic Boost II",
+      "ja": "ゴルトブーストII"
+    },
+    "line_type": "drive",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Space arts.",
+    "description": "Adds a second instance of Space damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/66/Gold_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 57,
+    "name": {
+      "en": "Chaos Boost",
+      "ja": "カオスブースト"
+    },
+    "line_type": "drive",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Mirage arts.",
+    "description": "Adds a second instance of Mirage damage with 50% of the art's base damage. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8d/Chaos_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 58,
+    "name": {
+      "en": "Chaos Boost II",
+      "ja": "カオスブーストII"
+    },
+    "line_type": "drive",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 8
+      }
+    ],
+    "effect": "Adds additional damage of the same element when attacking with Mirage arts.",
+    "description": "Adds a second instance of Mirage damage with 100% of the art's base damage. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/8d/Chaos_Boost_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 59,
+    "name": {
+      "en": "Mind Breaker",
+      "ja": "マインドクラッカー"
+    },
+    "line_type": "drive",
+    "element": [
+      "Wind",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "effect": "Inflict ATS Down on target when using attack arts.",
+    "description": "Inflicts ATS Down S for 2 turns. Chance: 20% (Base) / 40% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3e/Mind_Cracker_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 60,
+    "name": {
+      "en": "Spirit Breaker",
+      "ja": "スピリットクラッカー"
+    },
+    "line_type": "drive",
+    "element": [
+      "Water",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "effect": "Inficts ADF Down on target when using attack arts.",
+    "description": "Inflicts ADF Down S for 2 turns. Chance: 20% (Base) / 40% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1f/Spirit_Cracker_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 61,
+    "name": {
+      "en": "Mind Breaker Barrage",
+      "ja": "破言の強襲"
+    },
+    "line_type": "drive",
+    "element": [
+      "Wind",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 6
+      }
+    ],
+    "effect": "Inflicts ATS Down on all enemies when performing a shard attack.",
+    "description": "Inflicts ATS Down S for 2 turns. Chance: 50% (Base) / 100% (Stunned enemy)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Mind_Break_Assault_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 62,
+    "name": {
+      "en": "Spirit Breaker Barrage",
+      "ja": "破霊の強襲"
+    },
+    "line_type": "drive",
+    "element": [
+      "Water",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 6
+      }
+    ],
+    "effect": "Inflicts ADF Down on all enemies when performing a shard attack.",
+    "description": "Inflicts ADF Down S for 2 turns. Chance: 50% (Base) / 100% (Stunned enemy)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/00/Spirit_Break_Assault_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 63,
+    "name": {
+      "en": "Ark Feather",
+      "ja": "アークフェザー"
+    },
+    "line_type": "drive",
+    "element": [
+      "Wind",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Mirage",
+        "value": 8
+      }
+    ],
+    "effect": "Performs a delaying follow-up attack using shards after using attacks arts.",
+    "description": "Deals a magic attack with 125% Power and 6 hits that inflicts 5 AT Delay. Chance: 40% (Base) / 80% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/30/Arc_Feather_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 64,
+    "name": {
+      "en": "Judgment Feather",
+      "ja": "アークフェザー改"
+    },
+    "line_type": "drive",
+    "element": [
+      "Wind",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "element": "Mirage",
+        "value": 12
+      }
+    ],
+    "effect": "Performs a medium-damage delaying follow-up attack using shards after using attack arts.",
+    "description": "Deals a magic attack with 150% Power and 6 hits that inflicts 5 AT Delay. Chance: 50% (Base) / 90% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/30/Arc_Feather_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 65,
+    "name": {
+      "en": "Absorbing Arts",
+      "ja": "カタラクトゲイン"
+    },
+    "line_type": "drive",
+    "element": [
+      "Earth",
+      "Water"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 12
+      },
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "effect": "Absorb EP based on damage when using attack arts.",
+    "description": "Recovers 2% of damage dealt as EP. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a6/Cataract_Gain_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 66,
+    "name": {
+      "en": "Avenging Arts",
+      "ja": "アヴェンジャースペル"
+    },
+    "line_type": "drive",
+    "element": [
+      "Fire",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 12
+      }
+    ],
+    "effect": "Counter with possessed arts after successfully evading an attack art (no EP usage).",
+    "description": "Uses the first available attack art against the triggering enemy with no delay or EP use. Chance: 50% (Base) / 75% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5d/Avenger_Spell_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 67,
+    "name": {
+      "en": "Guarded Start",
+      "ja": "ガードスターター"
+    },
+    "line_type": "extra",
     "element": "Earth",
     "elemental_value": [
       {
@@ -30,41 +1355,628 @@
         "value": 4
       }
     ],
-    "effect": "Chance to reduce damage taken",
-    "description": "Placeholder shard skill."
+    "effect": "DEF/ADF Up on self when deploying shards. (2 turns)",
+    "description": "Grants DEF/ADF Up S for 2 turns. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b1/Guard_Starter_icon_%28Kuro%29.png"
   },
   {
-    "id": 3,
+    "id": 68,
     "name": {
-      "en": "Swift Drive",
-      "ja": "スウィフトドライブ"
+      "en": "Guarded Start II",
+      "ja": "ガードスターターII"
     },
-    "line_type": "drive",
+    "line_type": "extra",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 8
+      }
+    ],
+    "effect": "DEF/ADF Up (M) on self when deploying shards. (2 turns)",
+    "description": "Grants DEF/ADF Up M for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b1/Guard_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 69,
+    "name": {
+      "en": "Healing Start",
+      "ja": "エナジースターター"
+    },
+    "line_type": "extra",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      }
+    ],
+    "effect": "HP regen each turn on self when deploying shards. (2 turns)",
+    "description": "Grants HP Regen 10%/t for 2 turns. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0c/Energy_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 70,
+    "name": {
+      "en": "Healing Start II",
+      "ja": "エナジースターターII"
+    },
+    "line_type": "extra",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 8
+      }
+    ],
+    "effect": "HP regen (M) on each turn on self when deploying shards. (2 turns)",
+    "description": "Grants HP Regen 20%/t for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0c/Energy_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 71,
+    "name": {
+      "en": "Powerful Start",
+      "ja": "パワースターター"
+    },
+    "line_type": "extra",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      }
+    ],
+    "effect": "STR Up on self when deploying shards. (2 turns)",
+    "description": "Grants STR Up S for 2 turns. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0c/Power_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 72,
+    "name": {
+      "en": "Powerful Start II",
+      "ja": "パワースターターII"
+    },
+    "line_type": "extra",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 8
+      }
+    ],
+    "effect": "STR Up (M) on each turn on self when deploying shards. (2 turns)",
+    "description": "Grants STR Up M for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0c/Power_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 73,
+    "name": {
+      "en": "Gifted Start",
+      "ja": "ギフトスターター"
+    },
+    "line_type": "extra",
     "element": "Wind",
     "elemental_value": [
       {
         "element": "Wind",
-        "value": 3
+        "value": 4
       }
     ],
-    "effect": "Chance to delay enemy turns when attacking",
-    "description": "Placeholder shard skill."
+    "effect": "Insight on self when deploying shards. (1 turn)",
+    "description": "Grants Insight for 1 turn. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a0/Gift_Starter_icon_%28Kuro%29.png"
   },
   {
-    "id": 4,
+    "id": 74,
     "name": {
-      "en": "Arcane Echo",
-      "ja": "アルケインエコー"
+      "en": "Gifted Start II",
+      "ja": "ギフトスターターII"
     },
     "line_type": "extra",
-    "element": ["Space", "Mirage"],
+    "element": "Wind",
     "elemental_value": [
       {
-        "elements": ["Space", "Mirage"],
-        "value": 3
+        "element": "Wind",
+        "value": 8
       }
     ],
-    "effect": "Chance to recover EP when casting arts",
-    "description": "Placeholder shard skill."
+    "effect": "Insight on self when deploying shards. (2 turns)",
+    "description": "Grants Insight for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a0/Gift_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 75,
+    "name": {
+      "en": "Quick Start",
+      "ja": "クイックスターター"
+    },
+    "line_type": "extra",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "effect": "Quick on self when deploying shards. (2 turns)",
+    "description": "Grants Quick S for 2 turns. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/49/Quick_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 76,
+    "name": {
+      "en": "Quick Start II",
+      "ja": "クイックスターターII"
+    },
+    "line_type": "extra",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 8
+      }
+    ],
+    "effect": "Quick (M) on self when deploying shards. (2 turns)",
+    "description": "Grants Quick M for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/49/Quick_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 77,
+    "name": {
+      "en": "Mystical Start",
+      "ja": "アーツスターター"
+    },
+    "line_type": "extra",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "effect": "ATS Up when deploying shards. (2 turns)",
+    "description": "Grants ATS Up S for 2 turns. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Arts_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 78,
+    "name": {
+      "en": "Mystical Start II",
+      "ja": "アーツスターターII"
+    },
+    "line_type": "extra",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 8
+      }
+    ],
+    "effect": "ATS Up (M) on self when deploying shards. (2 turns)",
+    "description": "Grants ATS Up M for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Arts_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 79,
+    "name": {
+      "en": "Phantom Start",
+      "ja": "ファントムスターター"
+    },
+    "line_type": "extra",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "effect": "Stealth on self when deploying shards. (1 turn)",
+    "description": "Grants Stealth for 1 turn. Chance: 25% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Phantom_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 80,
+    "name": {
+      "en": "Phantom Start II",
+      "ja": "ファントムスターターII"
+    },
+    "line_type": "extra",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 8
+      }
+    ],
+    "effect": "Stealth on self when deploying shards. (2 turns)",
+    "description": "Grants Stealth for 2 turns. Chance: 50% (Base) / 100% (Preemptive)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/82/Phantom_Starter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 81,
+    "name": {
+      "en": "Treasure Hunter",
+      "ja": "トレジャーハンター"
+    },
+    "line_type": "extra",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "effect": "Shows all treasure chests in the current field on the minimap.",
+    "description": "Chance: Passive",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/97/Treasure_Hunter_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 82,
+    "name": {
+      "en": "Hawkeye",
+      "ja": "ホークアイ"
+    },
+    "line_type": "extra",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "effect": "Shows all enemies in the current field on the minimap.",
+    "description": "Chance: Passive",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4c/Hawk_Eye_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 83,
+    "name": {
+      "en": "Leg Breaker",
+      "ja": "レッグブレイカー"
+    },
+    "line_type": "extra",
+    "element": [
+      "Wind",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "effect": "Inflicts Slow on target when using normal attacks or crafts.",
+    "description": "Inflicts Slow S for 2 turns. Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/2/21/Leg_Breaker_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 84,
+    "name": {
+      "en": "Leg Breaker Barrage",
+      "ja": "破迅の強襲"
+    },
+    "line_type": "extra",
+    "element": [
+      "Water",
+      "Wind"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      },
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "effect": "Inflicts Slow on all enemies when using a shard attack.",
+    "description": "Inflicts Slow S for 2 turns. Chance: 50% (Base) / 100% (Stunned enemy)",
+    "image_url": "https://static.wikitide.net/falcomwiki/8/88/Speed_Break_Assault_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 85,
+    "name": {
+      "en": "Auto Forte",
+      "ja": "オートフォルテ"
+    },
+    "line_type": "extra",
+    "element": [
+      "Fire",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 7
+      },
+      {
+        "element": "Mirage",
+        "value": 7
+      }
+    ],
+    "effect": "Attack power up when taking an action during a Command Battle.",
+    "description": "Before taking an action, grants STR Up S for 1 turn. Chance: 10% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/3a/Auto_Forte_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 86,
+    "name": {
+      "en": "Auto Crest",
+      "ja": "オートクレスト"
+    },
+    "line_type": "extra",
+    "element": [
+      "Earth",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 7
+      },
+      {
+        "element": "Space",
+        "value": 7
+      }
+    ],
+    "effect": "Defensive power up when taking an action during a Command Battle.",
+    "description": "Before taking an action, grants DEF Up S for 1 turn. Chance: 10% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b6/Auto_Crest_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 87,
+    "name": {
+      "en": "Auto Quick",
+      "ja": "オートクイック"
+    },
+    "line_type": "extra",
+    "element": [
+      "Wind",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 7
+      },
+      {
+        "element": "Time",
+        "value": 7
+      }
+    ],
+    "effect": "Gain Quick when taking an action during a Command Battle.",
+    "description": "Before taking an action, grants Quick S for 1 turn. Chance: 10% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Auto_Quick_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 88,
+    "name": {
+      "en": "HP Charger",
+      "ja": "HPチャージャー"
+    },
+    "line_type": "extra",
+    "element": [
+      "Water",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      },
+      {
+        "element": "Space",
+        "value": 5
+      }
+    ],
+    "effect": "Regenerate a small amount of HP after a Command Battle.",
+    "description": "Recovers 5% HP after winning a command battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/97/HP_Charger_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 89,
+    "name": {
+      "en": "HP Charger II",
+      "ja": "HPチャージャーII"
+    },
+    "line_type": "extra",
+    "element": [
+      "Water",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 9
+      },
+      {
+        "element": "Space",
+        "value": 9
+      }
+    ],
+    "effect": "Regenerate a medium amount of HP after a Command Battle.",
+    "description": "Recovers 10% HP after winning a command battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/9/97/HP_Charger_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 90,
+    "name": {
+      "en": "EP Charger",
+      "ja": "EPチャージャー"
+    },
+    "line_type": "extra",
+    "element": [
+      "Earth",
+      "Water"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      },
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "effect": "Regenerate a small amount of EP after a Command Battle.",
+    "description": "Recovers 5% EP after winning a command battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c5/EP_Charger_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 91,
+    "name": {
+      "en": "EP Charger II",
+      "ja": "EPチャージャーII"
+    },
+    "line_type": "extra",
+    "element": [
+      "Earth",
+      "Water"
+    ],
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 9
+      },
+      {
+        "element": "Water",
+        "value": 9
+      }
+    ],
+    "effect": "Regenerate a medium amount of EP after a Command Battle.",
+    "description": "Recovers 10% EP after winning a command battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c5/EP_Charger_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 92,
+    "name": {
+      "en": "CP Charger",
+      "ja": "CPチャージャー"
+    },
+    "line_type": "extra",
+    "element": [
+      "Fire",
+      "Wind"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      },
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "effect": "Regenerate a small amount of CP after a Command Battle.",
+    "description": "Recovers 25 CP after winning a command battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/CP_Charger_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 93,
+    "name": {
+      "en": "CP Charger II",
+      "ja": "CPチャージャーII"
+    },
+    "line_type": "extra",
+    "element": [
+      "Fire",
+      "Wind"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 9
+      },
+      {
+        "element": "Wind",
+        "value": 9
+      }
+    ],
+    "effect": "Regenerate a medium amount of CP after a Command Battle.",
+    "description": "Recovers 50 CP after winning a command battle. Chance: 100%",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/60/CP_Charger_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 94,
+    "name": {
+      "en": "SCLM Boost",
+      "ja": "スクラムアップ"
+    },
+    "line_type": "extra",
+    "element": [
+      "Water",
+      "Time"
+    ],
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 12
+      },
+      {
+        "element": "Time",
+        "value": 6
+      }
+    ],
+    "effect": "SCLM radius is larger during Command Battles.",
+    "description": "Increases radius by 100% (additive with Full Boost's +50%). Chance: Passive",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6e/SCLM_Up_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 95,
+    "name": {
+      "en": "Crisis Force",
+      "ja": "クライシスフォース"
+    },
+    "line_type": "extra",
+    "element": [
+      "Fire",
+      "Space"
+    ],
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 12
+      }
+    ],
+    "effect": "All parameters up when Command Battle is started while low on HP.",
+    "description": "Grants STR/ATS/DEF/ADF/SPD/MOV Up S for 1 turn when starting a command battle below 30% HP. Chance: 50%",
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Crisis_Force_icon_%28Kuro%29.png"
+  },
+  {
+    "id": 96,
+    "name": {
+      "en": "Mighty Thievery",
+      "ja": "ギフトスティール"
+    },
+    "line_type": "extra",
+    "element": [
+      "Wind",
+      "Mirage"
+    ],
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "element": "Mirage",
+        "value": 12
+      }
+    ],
+    "effect": "Steal target AT bonus when using a normal attack or craft.",
+    "description": "Chance: 25% (Base) / 50% (S-Boost) / 100% (Full Boost)",
+    "image_url": "https://static.wikitide.net/falcomwiki/1/10/Gift_Steal_icon_%28Kuro%29.png"
   }
 ]
