@@ -483,6 +483,21 @@ export function getMasterQuartzLevelData(
   return masterQuartz.levels.find((entry) => entry.level === level) ?? null
 }
 
+export function reconcileEquippedMasterQuartz(
+  state: OrbmentState,
+  masterQuartzById: Map<number, MasterQuartz>,
+): OrbmentState {
+  const master = state.equippedMasterQuartzId ? masterQuartzById.get(state.equippedMasterQuartzId) : null
+  const subMaster = state.equippedSubMasterQuartzId ? masterQuartzById.get(state.equippedSubMasterQuartzId) : null
+  return {
+    ...state,
+    equippedMasterQuartzId: master ? state.equippedMasterQuartzId : null,
+    masterQuartzLevel: master ? clampMasterQuartzLevel(master, state.masterQuartzLevel) : 1,
+    equippedSubMasterQuartzId: subMaster ? state.equippedSubMasterQuartzId : null,
+    subMasterQuartzLevel: subMaster ? clampMasterQuartzLevel(subMaster, state.subMasterQuartzLevel) : 1,
+  }
+}
+
 export function clampMasterQuartzLevel(masterQuartz: MasterQuartz, level: number): number {
   if (masterQuartz.levels.some((entry) => entry.level === level)) {
     return level

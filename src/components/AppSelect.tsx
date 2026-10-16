@@ -14,6 +14,7 @@ export type SelectOption = {
   element?: ElementName
   swatchColor?: string
   tier?: number
+  isCustom?: boolean
 }
 
 export type SelectGroup = {

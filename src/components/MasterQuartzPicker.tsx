@@ -1,4 +1,5 @@
 import type { FilterOptionOption, GroupBase } from 'react-select'
+import { Badge } from '@/components/ui/badge'
 import { ELEMENT_COLORS, ELEMENTS, type ElementName, type MasterQuartz } from '../domain/types'
 import { AppSelect, type SelectGroup, type SelectOption } from './AppSelect'
 
@@ -41,6 +42,11 @@ function formatMasterQuartzOptionLabel(option: SelectOption) {
     <span className="quartzOptionLabel">
       <span className="quartzElementSwatch" style={{ backgroundColor: ELEMENT_COLORS[option.element] }} />
       {option.label}
+      {option.isCustom ? (
+        <Badge variant="outline" className="ml-1">
+          Custom
+        </Badge>
+      ) : null}
     </span>
   )
 }
@@ -56,7 +62,10 @@ export function MasterQuartzPicker({ masterQuartzList, value, onChange, excludeI
           value: String(masterQuartz.id),
           label: masterQuartz.name.en,
           element: masterQuartz.element,
-          searchText: `${masterQuartz.name.en} ${masterQuartz.element} ${masterQuartz.description}`,
+          isCustom: masterQuartz.isCustom,
+          searchText: `${masterQuartz.name.en} ${masterQuartz.element} ${masterQuartz.description}${
+            masterQuartz.isCustom ? ' custom' : ''
+          }`,
         }))
 
       if (options.length === 0) {

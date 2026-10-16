@@ -318,12 +318,13 @@ function normalizeQuartz(input: unknown): Quartz {
   }
 }
 
-function normalizeMasterQuartz(input: unknown): MasterQuartz {
+export function normalizeMasterQuartz(input: unknown): MasterQuartz {
   const record = input as Record<string, unknown>
   return {
     id: Number(record.id),
     name: record.name as MasterQuartz['name'],
     element: toElementName(record.element),
+    image_url: typeof record.image_url === 'string' ? record.image_url : null,
     description: String(record.description),
     levels: normalizeMasterQuartzLevels(record.levels),
   }
