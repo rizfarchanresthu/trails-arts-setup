@@ -313,7 +313,8 @@ function App() {
       return null
     }
     const candidate = masterQuartzFromDraft(masterQuartzDraft, selectedCustomMasterQuartzId ?? 0, masterQuartzSchema)
-    const error = validateMasterQuartz(candidate, masterQuartzSchema)
+    const validArtIds = new Set(base.arts.map((art) => art.id))
+    const error = validateMasterQuartz(candidate, masterQuartzSchema, validArtIds)
     if (error) {
       setMasterQuartzNotice(error, 'error')
       return null
@@ -743,6 +744,7 @@ function App() {
           <MasterQuartzEditor
             baseLabel={base.label}
             schema={masterQuartzSchema}
+            artsList={base.arts}
             entries={customMasterQuartzForBase}
             selectedId={selectedCustomMasterQuartzId}
             draft={masterQuartzDraft}

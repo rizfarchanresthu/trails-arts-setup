@@ -13,6 +13,7 @@ export type EffectDraft = {
 
 export type MasterQuartzLevelDraft = {
   elementalValues: ElementalValueDraft[]
+  artsLearnt: number[]
   effects: EffectDraft[]
 }
 
@@ -28,6 +29,7 @@ export type MasterQuartzDraft = {
 export function createEmptyLevelDraft(element: ElementName = 'Earth'): MasterQuartzLevelDraft {
   return {
     elementalValues: [{ element, value: '' }],
+    artsLearnt: [],
     effects: [{ title: '', detail: '' }],
   }
 }
@@ -57,6 +59,7 @@ export function draftFromMasterQuartz(masterQuartz: MasterQuartz): MasterQuartzD
           element: requirement.element as ElementName,
           value: String(requirement.value),
         })),
+      artsLearnt: [...(level.arts_learnt ?? [])],
       effects: level.effects.map((effect) => ({ ...effect })),
     })),
   }
@@ -79,6 +82,9 @@ export function masterQuartzFromDraft(draft: MasterQuartzDraft, id: number, sche
           element: requirement.element,
           value: requirement.value.trim() === '' ? Number.NaN : Number(requirement.value),
         }))
+      }
+      if (schema.levelFields.includes('arts_learnt')) {
+        output.arts_learnt = [...level.artsLearnt]
       }
       return output
     }),

@@ -103,7 +103,11 @@ export function parseExportedMasterQuartz(value: unknown): ExportedMasterQuartz 
   }
 }
 
-export function validateMasterQuartz(masterQuartz: MasterQuartz, schema: MasterQuartzSchema): string | null {
+export function validateMasterQuartz(
+  masterQuartz: MasterQuartz,
+  schema: MasterQuartzSchema,
+  validArtIds: Set<number> = new Set(),
+): string | null {
   if (!masterQuartz.name.en.trim()) {
     return 'English name is required.'
   }
@@ -124,6 +128,16 @@ export function validateMasterQuartz(masterQuartz: MasterQuartz, schema: MasterQ
         }
         if (!Number.isInteger(requirement.value) || requirement.value <= 0) {
           return `Level ${level.level}: elemental values must be whole numbers greater than 0.`
+        }
+      }
+    }
+    if (schema.levelFields.includes('arts_learnt')) {
+      for (const artId of level.arts_learnt ?? []) {
+        if (!Number.isInteger(artId) || artId < 1) {
+          return `Level ${level.level}: every arts learnt entry must be a valid art.`
+        }
+        if (validArtIds.size > 0 && !validArtIds.has(artId)) {
+          return `Level ${level.level}: art id ${artId} is not in this base's arts list.`
         }
       }
     }

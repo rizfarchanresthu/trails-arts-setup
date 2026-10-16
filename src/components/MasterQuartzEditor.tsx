@@ -6,7 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import type { MasterQuartzSchema } from '../domain/masterQuartzSchemas'
-import { ELEMENTS, ELEMENT_COLORS, type CustomMasterQuartzEntry, type ElementName } from '../domain/types'
+import {
+  ELEMENTS,
+  ELEMENT_COLORS,
+  type Art,
+  type CustomMasterQuartzEntry,
+  type ElementName,
+} from '../domain/types'
 import {
   createEmptyLevelDraft,
   type MasterQuartzDraft,
@@ -19,6 +25,7 @@ export type MasterQuartzNoticeTone = 'default' | 'success' | 'error'
 type MasterQuartzEditorProps = {
   baseLabel: string
   schema: MasterQuartzSchema | null
+  artsList?: Art[]
   entries: CustomMasterQuartzEntry[]
   selectedId: number | null
   draft: MasterQuartzDraft
@@ -51,6 +58,7 @@ function formatElementOptionLabel(option: SelectOption) {
 export function MasterQuartzEditor({
   baseLabel,
   schema,
+  artsList = [],
   entries,
   selectedId,
   draft,
@@ -87,7 +95,14 @@ export function MasterQuartzEditor({
   }
 
   const showElementalValues = schema?.levelFields.includes('elemental_value') ?? false
+  const showArtsLearnt = schema?.levelFields.includes('arts_learnt') ?? false
   const showEffects = schema?.levelFields.includes('effects') ?? false
+  const artOptions: SelectOption[] = artsList.map((art) => ({
+    value: String(art.id),
+    label: art.name.en,
+    searchText: `${art.name.en} ${art.name.ja} ${art.id}`,
+  }))
+  const firstAvailableArtId = artsList[0]?.id ?? null
 
   return (
     <div className="grid gap-4">
@@ -296,6 +311,62 @@ export function MasterQuartzEditor({
                       >
                         <Plus />
                         Add element
+                      </Button>
+                    </div>
+                  ) : null}
+                  {showArtsLearnt ? (
+                    <div className="grid gap-2">
+                      <span className="text-sm font-medium">Arts learnt</span>
+                      {level.artsLearnt.map((artId, artIndex) => (
+                        <div key={`art-${artIndex}`} className="flex items-center gap-2">
+                          <AppSelect
+                            className="min-w-36 flex-1"
+                            value={String(artId)}
+                            options={artOptions}
+                            isSearchable
+                            onChange={(nextValue) => {
+                              if (!nextValue) {
+                                return
+                              }
+                              updateLevel(levelIndex, {
+                                artsLearnt: level.artsLearnt.map((entry, index) =>
+                                  index === artIndex ? Number(nextValue) : entry,
+                                ),
+                              })
+                            }}
+                          />
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="icon"
+                            aria-label="Remove art"
+                            onClick={() =>
+                              updateLevel(levelIndex, {
+                                artsLearnt: level.artsLearnt.filter((_, index) => index !== artIndex),
+                              })
+                            }
+                          >
+                            <Trash2 />
+                          </Button>
+                        </div>
+                      ))}
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        className="w-fit"
+                        disabled={firstAvailableArtId == null}
+                        onClick={() => {
+                          if (firstAvailableArtId == null) {
+                            return
+                          }
+                          updateLevel(levelIndex, {
+                            artsLearnt: [...level.artsLearnt, firstAvailableArtId],
+                          })
+                        }}
+                      >
+                        <Plus />
+                        Add art
                       </Button>
                     </div>
                   ) : null}

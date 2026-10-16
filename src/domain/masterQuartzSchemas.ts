@@ -7,6 +7,8 @@ export type MasterQuartzSchema = {
 
 export const MASTER_QUARTZ_SCHEMAS: Record<string, MasterQuartzSchema> = {
   azure: { maxLevels: 5, levelFields: ['elemental_value', 'effects'] },
+  'cold-steel-i': { maxLevels: 5, levelFields: ['arts_learnt', 'effects'] },
+  'cold-steel-ii': { maxLevels: 5, levelFields: ['arts_learnt', 'effects'] },
 }
 
 export function getMasterQuartzSchema(baseId: string): MasterQuartzSchema | null {
