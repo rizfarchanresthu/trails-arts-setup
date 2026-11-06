@@ -1,0 +1,639 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Amber",
+      "ja": "アンバー"
+    },
+    "element": "Earth",
+    "description": "An arts driver with basic earth arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Earth Breaker",
+          "Crest",
+          "Acid Cloud",
+          "Shadow Spear"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Umbra Cracker"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/61/Arts_Driver_Earth_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Wall",
+      "ja": "ウォール"
+    },
+    "element": "Earth",
+    "description": "An arts driver with defensive earth arts.",
+    "plugin_slots": 1,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "La Crest"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Umbra Cracker"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Aegis Shield"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/61/Arts_Driver_Earth_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Explode",
+      "ja": "エクスプロード"
+    },
+    "element": "Earth",
+    "description": "An arts driver with advanced earth arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Abyssal Flame",
+          "Umbra Cracker",
+          "La Forte",
+          "La Crest"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Flare Squall"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Thanatos Jail"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/61/Arts_Driver_Earth_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Aqua",
+      "ja": "アクア"
+    },
+    "element": "Water",
+    "description": "An arts driver with basic water arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Hydro Cannon",
+          "Tear",
+          "Icicle Hammer",
+          "Saint Arrow"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Cataract Wave"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/67/Arts_Driver_Water_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Cloud",
+      "ja": "クラウド"
+    },
+    "element": "Water",
+    "description": "An arts driver with intermediate water arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Earth Breaker",
+          "Icicle Hammer",
+          "Teara",
+          "Acid Cloud"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Cataract Wave"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/67/Arts_Driver_Water_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Azure",
+      "ja": "アズール"
+    },
+    "element": "Water",
+    "description": "An arts driver with advanced water arts.",
+    "plugin_slots": 3,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Athelas",
+          "Cataract Wave",
+          "Lost Mobius"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Tearal"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Crystal Eden"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/67/Arts_Driver_Water_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Flare",
+      "ja": "フレア"
+    },
+    "element": "Fire",
+    "description": "An arts driver with basic fire arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Fire Bolt",
+          "Forte",
+          "Abyssal Flame",
+          "Argent Thorn"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Flare Squall"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/27/Arts_Driver_Fire_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Melt",
+      "ja": "メルト"
+    },
+    "element": "Fire",
+    "description": "An arts driver with intermediate fire arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Hydro Cannon",
+          "Abyssal Flame",
+          "Icicle Hammer",
+          "La Forte"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Flare Squall"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/27/Arts_Driver_Fire_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Crimson",
+      "ja": "クリムゾン"
+    },
+    "element": "Fire",
+    "description": "An arts driver with advanced fire arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Shadow Spear",
+          "Flare Squall",
+          "Obsidian Ray"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "La Forte"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Chrono Drive"
+        ]
+      },
+      {
+        "level": 4,
+        "arts": [
+          "Regulus Caliber"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/27/Arts_Driver_Fire_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Storm",
+      "ja": "ストーム"
+    },
+    "element": "Wind",
+    "description": "An arts driver with basic wind arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Spark Edge",
+          "Aerial Dust",
+          "Shadow Spear",
+          "Chrono Drive"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Plasma Sphere"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Arts_Driver_Wind_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Blast",
+      "ja": "ブラスト"
+    },
+    "element": "Wind",
+    "description": "An arts driver with intermediate wind arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Fire Bolt",
+          "Aerial Dust",
+          "Abyssal Flame",
+          "Refreshing Veil"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Plasma Sphere"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Arts_Driver_Wind_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Strom",
+      "ja": "シュトローム"
+    },
+    "element": "Wind",
+    "description": "An arts driver with advanced wind arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Cataract Wave",
+          "Plasma Sphere",
+          "Tearal",
+          "Aura Breath"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Crystal Eden"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Tyrant Storm"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/5/5a/Arts_Driver_Wind_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Shade",
+      "ja": "シェイド"
+    },
+    "element": "Time",
+    "description": "An arts driver with basic time arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Chrono Drive",
+          "Acid Cloud",
+          "Shadow Spear",
+          "Chrono Break"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Obsidian Ray"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/76/Arts_Driver_Time_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Nebulous",
+      "ja": "ネビュラス"
+    },
+    "element": "Time",
+    "description": "An arts driver with advanced time arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Spark Edge",
+          "Chrono Drive",
+          "Aerial Dust"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Obsidian Ray"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Plasma Sphere"
+        ]
+      },
+      {
+        "level": 4,
+        "arts": [
+          "Pluto's Nova"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/76/Arts_Driver_Time_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Celebrate",
+      "ja": "セレブレイト"
+    },
+    "element": "Space",
+    "description": "An arts driver with basic space arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Thelas",
+          "Spark Edge",
+          "Saint Arrow",
+          "Breath"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Lost Mobius"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/13/Arts_Driver_Space_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Divine",
+      "ja": "ディバイン"
+    },
+    "element": "Space",
+    "description": "An arts driver with advanced space arts.",
+    "plugin_slots": 3,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Umbra Cracker",
+          "Lost Mobius",
+          "Aegis Shield"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "Athelas"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Ark of El Dorado"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/1/13/Arts_Driver_Space_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Crescent",
+      "ja": "クレセント"
+    },
+    "element": "Mirage",
+    "description": "An arts driver with basic mirage arts.",
+    "plugin_slots": 3,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Argent Thorn",
+          "Crescent Eye",
+          "S-Curia",
+          "Ideal Force"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/eb/Arts_Driver_Mirage_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Albion",
+      "ja": "アルビオン"
+    },
+    "element": "Mirage",
+    "description": "An arts driver with advanced mirage arts.",
+    "plugin_slots": 5,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Ideal Force",
+          "Zodiac Sign",
+          "Jabberwock Arm"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/eb/Arts_Driver_Mirage_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Quartet",
+      "ja": "カルテット"
+    },
+    "element": "Mix",
+    "description": "An arts driver with earth, water, fire, and wind arts.",
+    "plugin_slots": 4,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Umbra Cracker",
+          "Cataract Wave",
+          "Flare Squall",
+          "Plasma Sphere"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/75/Arts_Driver_Mix_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Parade",
+      "ja": "パレード"
+    },
+    "element": "Mix",
+    "description": "An arts driver with time, space, and mirage arts.",
+    "plugin_slots": 2,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Argent Thorn",
+          "Lost Mobius",
+          "Obsidian Ray"
+        ]
+      },
+      {
+        "level": 2,
+        "arts": [
+          "La Forte"
+        ]
+      },
+      {
+        "level": 3,
+        "arts": [
+          "Chrono Drive"
+        ]
+      },
+      {
+        "level": 4,
+        "arts": [
+          "Ideal Force"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/75/Arts_Driver_Mix_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Rebirth",
+      "ja": "リヴァース"
+    },
+    "element": "Mix",
+    "description": "An arts driver with the most potent healing arts.",
+    "plugin_slots": 5,
+    "levels": [
+      {
+        "level": 1,
+        "arts": [
+          "Refreshing Veil",
+          "Teara",
+          "Celestial"
+        ]
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/75/Arts_Driver_Mix_%28Kuro_Item%29.png"
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Innocence",
+      "ja": "イノセンス"
+    },
+    "element": "Mix",
+    "description": "A customizable arts driver with no shortage of free slots.",
+    "plugin_slots": 5,
+    "levels": [
+      {
+        "level": 1,
+        "arts": []
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/7/75/Arts_Driver_Mix_%28Kuro_Item%29.png"
+  }
+]

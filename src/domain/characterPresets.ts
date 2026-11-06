@@ -8,10 +8,21 @@ import sky3rdPresets from '../database/character-preset/sky-3rd.json'
 import skyFcPresets from '../database/character-preset/sky-fc.json'
 import skyScPresets from '../database/character-preset/sky-sc.json'
 import zeroPresets from '../database/character-preset/zero.json'
+import daybreakPresets from '../database/character-preset/daybreak.json'
 import { getBaseById } from './baseRegistry'
 import { type LineDirection } from './rules/skyFcRules'
-import { type ElementName, type OrbmentTopology, type SlotId } from './types'
+import {
+  XIPHA_LINE_CODES,
+  XIPHA_LINE_TYPES,
+  getXiphaLineSlotIds,
+  type ElementName,
+  type OrbmentTopology,
+  type SlotId,
+  type XiphaLineSlotCount,
+  type XiphaLineType,
+} from './types'
 import { type OrbmentPresetShape, type SlotElementRestrictionShape } from '../state/orbmentState'
+import { clampLineSlotCount, type XiphaPresetShape } from '../state/xiphaState'
 
 type RawLineSlot = number | string
 
@@ -81,6 +92,60 @@ export function getCharacterTemplatesForBase(baseId: string): CharacterTemplate[
       ...(raw.route ? { route: raw.route } : {}),
     }
   })
+}
+
+type RawXiphaPreset = {
+  id: string
+  name: string
+  slots: Partial<Record<XiphaLineType, number>>
+  restriction: Array<{ slots: string[]; element: ElementName }> | null
+}
+
+export type XiphaCharacterTemplate = {
+  id: string
+  name: string
+  presetShape: XiphaPresetShape
+  restriction: SlotElementRestrictionShape
+}
+
+const XIPHA_PRESETS_BY_BASE: Record<string, RawXiphaPreset[]> = {
+  daybreak: daybreakPresets as RawXiphaPreset[],
+}
+
+export function getXiphaTemplatesForBase(baseId: string): XiphaCharacterTemplate[] {
+  const presets = XIPHA_PRESETS_BY_BASE[baseId]
+  if (!presets) {
+    return []
+  }
+
+  return presets.map((raw) => ({
+    id: raw.id,
+    name: raw.name,
+    presetShape: {
+      lineSlotCounts: Object.fromEntries(
+        XIPHA_LINE_TYPES.map((lineType) => [lineType, clampLineSlotCount(raw.slots[lineType] ?? 4)]),
+      ) as Record<XiphaLineType, XiphaLineSlotCount>,
+    },
+    restriction: (raw.restriction ?? []).map((group) => ({
+      slots: group.slots
+        .map((code) => resolveXiphaSlotCode(code))
+        .filter((slotId): slotId is SlotId => slotId !== null),
+      element: group.element,
+    })),
+  }))
+}
+
+/** Resolves codes like "W2" (Weapon line, second slot from the Holo Core) to a slot ID. */
+function resolveXiphaSlotCode(code: string): SlotId | null {
+  const match = /^([A-Za-z])(\d)$/.exec(code.trim())
+  if (!match) {
+    return null
+  }
+  const lineType = XIPHA_LINE_TYPES.find((type) => XIPHA_LINE_CODES[type] === match[1].toUpperCase())
+  if (!lineType) {
+    return null
+  }
+  return getXiphaLineSlotIds(lineType)[Number(match[2]) - 1] ?? null
 }
 
 function resolvePresetRestrictions(

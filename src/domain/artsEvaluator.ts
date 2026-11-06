@@ -72,7 +72,7 @@ export function calculateLineTotals(
   return totals
 }
 
-export function isArtSatisfied(art: Art, totals: ElementTotals): boolean {
+export function isArtSatisfied(art: Pick<Art, 'elemental_value'>, totals: ElementTotals): boolean {
   return art.elemental_value.every((requirement) => {
     if (requirement.element) {
       return totals[requirement.element] >= requirement.value

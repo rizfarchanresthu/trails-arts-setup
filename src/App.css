@@ -51,6 +51,13 @@
   align-content: start;
 }
 
+.xiphaLineColumns {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  align-items: start;
+}
+
 .artCard,
 button.artCard,
 [data-slot='button'].artCard {

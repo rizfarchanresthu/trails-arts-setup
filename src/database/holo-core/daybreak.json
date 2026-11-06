@@ -1,0 +1,3388 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Mare",
+      "ja": "メア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/69/Mare_%28Kuro_HC%29.png",
+    "description": "A custom holo core given to Van by Marduk for testing. Increases the user's combat parameters when Boosted.",
+    "obtain": "Van Arkride's default Holo Core.",
+    "s_boost_ability": "Multi-Works",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+20"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+80"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "STR/ATS",
+            "detail": "+10%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+15%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+10%"
+          },
+          {
+            "title": "Evasion & Critical Rate",
+            "detail": "+20%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+15%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+35"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+110"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "STR/ATS",
+            "detail": "+12%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+17%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+12%"
+          },
+          {
+            "title": "Evasion & Critical Rate",
+            "detail": "+22%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+17%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+17%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "STR/ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+14%"
+          },
+          {
+            "title": "Evasion & Critical Rate",
+            "detail": "+24%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "HP regen each turn",
+            "detail": "11%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "7%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "STR/ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+22%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+16%"
+          },
+          {
+            "title": "Evasion & Critical Rate",
+            "detail": "+26%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "HP regen each turn",
+            "detail": "13%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "8%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "STR/ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+25%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+20%"
+          },
+          {
+            "title": "Evasion & Critical Rate",
+            "detail": "+30%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "HP regen each turn",
+            "detail": "15%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "9%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Multi-Works"
+      },
+      {
+        "title": "STR/ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "DEF/ADF",
+        "detail": "+25%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+20%"
+      },
+      {
+        "title": "Evasion & Critical Rate",
+        "detail": "+30%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "HP regen each turn",
+        "detail": "15%"
+      },
+      {
+        "title": "EP regen each turn",
+        "detail": "9%"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Mare (Law)",
+      "ja": "メア (ロウ)"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/69/Mare_%28Kuro_HC%29.png",
+    "description": "A new version of Mare born from syncing with Van. Converts convictions into power when Boosted.",
+    "obtain": "Law Level 3 reward.",
+    "s_boost_ability": "Lawkeeper",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP/EP regen each turn",
+            "detail": "8%"
+          },
+          {
+            "title": "CP gain each turn",
+            "detail": "5"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+54%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+14%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+2"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP/EP regen each turn",
+            "detail": "9%"
+          },
+          {
+            "title": "CP gain each turn",
+            "detail": "6"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+56%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+16%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+2"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP/EP regen each turn",
+            "detail": "10%"
+          },
+          {
+            "title": "CP gain each turn",
+            "detail": "7"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+60%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+20%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+3"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Lawkeeper"
+      },
+      {
+        "title": "HP/EP regen each turn",
+        "detail": "10%"
+      },
+      {
+        "title": "CP gain each turn",
+        "detail": "7"
+      },
+      {
+        "title": "DEF/ADF",
+        "detail": "+60%"
+      },
+      {
+        "title": "STR/ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+20%"
+      },
+      {
+        "title": "MOV",
+        "detail": "+3"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Mare (Gray)",
+      "ja": "メア (グレイ)"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/69/Mare_%28Kuro_HC%29.png",
+    "description": "A new version of Mare born from syncing with Van. Increases mobility when Boosted.",
+    "obtain": "Gray Level 3 reward.",
+    "s_boost_ability": "Trickster",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion",
+            "detail": "+64%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+25%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+5"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion",
+            "detail": "+66%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+22%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+27%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+6"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion",
+            "detail": "+70%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+25%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+30%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+7"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Trickster"
+      },
+      {
+        "title": "Evasion",
+        "detail": "+70%"
+      },
+      {
+        "title": "STR/ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "DEF/ADF",
+        "detail": "+25%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+30%"
+      },
+      {
+        "title": "MOV",
+        "detail": "+7"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Mare (Chaos)",
+      "ja": "メア (カオス)"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/69/Mare_%28Kuro_HC%29.png",
+    "description": "A new version of Mare born from syncing with Van. Converts destructive urges into power when Boosted.",
+    "obtain": "Chaos Level 3 reward.",
+    "s_boost_ability": "Calamity Temper",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Critical Rate",
+            "detail": "+44%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+44%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+14%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+2"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Critical Rate",
+            "detail": "+46%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+46%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+22%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+16%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+2"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Critical Rate",
+            "detail": "+50%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+50%"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+25%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+20%"
+          },
+          {
+            "title": "MOV",
+            "detail": "+3"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Calamity Temper"
+      },
+      {
+        "title": "Critical Rate",
+        "detail": "+50%"
+      },
+      {
+        "title": "STR/ATS",
+        "detail": "+50%"
+      },
+      {
+        "title": "DEF/ADF",
+        "detail": "+25%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+20%"
+      },
+      {
+        "title": "MOV",
+        "detail": "+3"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Aim",
+      "ja": "アイム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/0/00/Aim_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a coolheaded female AI. Increases healing and arts power/range when Boosted.",
+    "obtain": "Agnès Claudel's default Holo Core.",
+    "s_boost_ability": "Pure Blessing",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+22"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+75"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Healing Arts/Crafts HP Recovery",
+            "detail": "+20%"
+          },
+          {
+            "title": "ATS",
+            "detail": "+10%"
+          },
+          {
+            "title": "ADF",
+            "detail": "+15%"
+          },
+          {
+            "title": "Arts Range",
+            "detail": "+1"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+38"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+100"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Healing Arts/Crafts HP Recovery",
+            "detail": "+22%"
+          },
+          {
+            "title": "ATS",
+            "detail": "+12%"
+          },
+          {
+            "title": "ADF",
+            "detail": "+17%"
+          },
+          {
+            "title": "Arts Range",
+            "detail": "+1"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+60"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+125"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Healing Arts/Crafts HP Recovery",
+            "detail": "+24%"
+          },
+          {
+            "title": "ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "ADF",
+            "detail": "+20%"
+          },
+          {
+            "title": "Arts Range",
+            "detail": "+1"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+88"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Healing Arts/Crafts HP Recovery",
+            "detail": "+26%"
+          },
+          {
+            "title": "ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "ADF",
+            "detail": "+22%"
+          },
+          {
+            "title": "Arts Range",
+            "detail": "+1"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+122"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+175"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Healing Arts/Crafts HP Recovery",
+            "detail": "+30%"
+          },
+          {
+            "title": "ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "ADF",
+            "detail": "+25%"
+          },
+          {
+            "title": "Arts Range",
+            "detail": "+1"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+122"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+175"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Pure Blessing"
+      },
+      {
+        "title": "Healing Arts/Crafts HP Recovery",
+        "detail": "+30%"
+      },
+      {
+        "title": "ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "ADF",
+        "detail": "+25%"
+      },
+      {
+        "title": "Arts Range",
+        "detail": "+1"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Vine",
+      "ja": "ヴィネ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/f/f0/Vine_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a kindly older sister AI. Increases movement, attack, and speed when Boosted.",
+    "obtain": "Feri Al-Fayed's default Holo Core.",
+    "s_boost_ability": "High Mobility",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+18"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+75"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "MOV",
+            "detail": "+10"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+10%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+10%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+15%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+32"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+100"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "MOV",
+            "detail": "+10"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+12%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+12%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+17%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+50"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+125"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "MOV",
+            "detail": "+10"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+14%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+72"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "MOV",
+            "detail": "+10"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+16%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+98"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+175"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "MOV",
+            "detail": "+10"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+20%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+98"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+175"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "High Mobility"
+      },
+      {
+        "title": "MOV",
+        "detail": "+10"
+      },
+      {
+        "title": "STR/ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+20%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Sallos",
+      "ja": "サロス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/b/bb/Sallos_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a polite butler AI. Regenerates HP and increases attack when Boosted.",
+    "obtain": "Obtained automatically during 4SPG Details (Chapter 2).",
+    "s_boost_ability": "Kind Escort",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+20"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+75"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP Regen After Acting",
+            "detail": "7%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+15%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+15%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+60%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+35"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+100"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP Regen After Acting",
+            "detail": "9%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+17%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+17%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+70%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+125"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP Regen After Acting",
+            "detail": "11%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+80%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP Regen After Acting",
+            "detail": "13%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+90%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+175"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP Regen After Acting",
+            "detail": "15%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+100%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+175"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Kind Escort"
+      },
+      {
+        "title": "HP Regen After Acting",
+        "detail": "15%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Accuracy",
+        "detail": "+100%"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Camio",
+      "ja": "カミオ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fd/Camio_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a reliable older brother AI. Increases evasion and counter rate when Boosted.",
+    "obtain": "Aaron Wei's default Holo Core.",
+    "s_boost_ability": "Whirlwind",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+35"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+90"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion Counter Rate",
+            "detail": "+100%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+42%"
+          },
+          {
+            "title": "Evasion Counter Damage",
+            "detail": "+32%"
+          },
+          {
+            "title": "STR",
+            "detail": "+17%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+17%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+110"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion Counter Rate",
+            "detail": "+100%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+44%"
+          },
+          {
+            "title": "Evasion Counter Damage",
+            "detail": "+34%"
+          },
+          {
+            "title": "STR",
+            "detail": "+20%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+130"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion Counter Rate",
+            "detail": "+100%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+46%"
+          },
+          {
+            "title": "Evasion Counter Damage",
+            "detail": "+36%"
+          },
+          {
+            "title": "STR",
+            "detail": "+22%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Evasion Counter Rate",
+            "detail": "+100%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+50%"
+          },
+          {
+            "title": "Evasion Counter Damage",
+            "detail": "+40%"
+          },
+          {
+            "title": "STR",
+            "detail": "+25%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+150"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Whirlwind"
+      },
+      {
+        "title": "Evasion Counter Rate",
+        "detail": "+100%"
+      },
+      {
+        "title": "Evasion",
+        "detail": "+50%"
+      },
+      {
+        "title": "Evasion Counter Damage",
+        "detail": "+40%"
+      },
+      {
+        "title": "STR",
+        "detail": "+25%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Carabia",
+      "ja": "カラビア"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/97/Carabia_%28Kuro_HC%29.png",
+    "description": "An illegally modified holo core powered by a male AI. Decreases defense and increases attack when Boosted.",
+    "obtain": "Obtained automatically during Assisting Aaron .",
+    "s_boost_ability": "Berserker Blade",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+18"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+70"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Physical Damage",
+            "detail": "+30%"
+          },
+          {
+            "title": "STR",
+            "detail": "+40%"
+          },
+          {
+            "title": "DEF/ADF DOWN",
+            "detail": "25%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+32"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+90"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Physical Damage",
+            "detail": "+32%"
+          },
+          {
+            "title": "STR",
+            "detail": "+42%"
+          },
+          {
+            "title": "DEF/ADF DOWN",
+            "detail": "25%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+50"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+110"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Physical Damage",
+            "detail": "+34%"
+          },
+          {
+            "title": "STR",
+            "detail": "+44%"
+          },
+          {
+            "title": "DEF/ADF DOWN",
+            "detail": "25%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+72"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+130"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Physical Damage",
+            "detail": "+36%"
+          },
+          {
+            "title": "STR",
+            "detail": "+46%"
+          },
+          {
+            "title": "DEF/ADF DOWN",
+            "detail": "25%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+98"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Physical Damage",
+            "detail": "+40%"
+          },
+          {
+            "title": "STR",
+            "detail": "+50%"
+          },
+          {
+            "title": "DEF/ADF DOWN",
+            "detail": "25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+98"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+150"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Berserker Blade"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+40%"
+      },
+      {
+        "title": "STR",
+        "detail": "+50%"
+      },
+      {
+        "title": "DEF/ADF DOWN",
+        "detail": "25%"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Sitri",
+      "ja": "シトリー"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/6/63/Sitri_%28Kuro_HC%29.png",
+    "description": "An holo core powered by a friendly big sister AI. Lengthens S-Boost effect by 1 turn when Boosted.",
+    "obtain": "Risette Twinings ' default Holo Core.",
+    "s_boost_ability": "Extended Boost",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Boost Turn Duration",
+            "detail": "+1"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+20%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Boost Turn Duration",
+            "detail": "+1"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+22%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Boost Turn Duration",
+            "detail": "+1"
+          },
+          {
+            "title": "DEF/ADF",
+            "detail": "+25%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Extended Boost"
+      },
+      {
+        "title": "S-Boost Turn Duration",
+        "detail": "+1"
+      },
+      {
+        "title": "DEF/ADF",
+        "detail": "+25%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Otis",
+      "ja": "オティス"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/1/1a/Otis_%28Kuro_HC%29.png",
+    "description": "An holo core powered by a terse yet efficient female AI. Decreases cast time & increases arts power when Boosted.",
+    "obtain": "Obtained automatically during Business Trip to Tharbad .",
+    "s_boost_ability": "Swift Cast",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+22"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+80"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Arts Cast Time",
+            "detail": "80%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+30%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+38"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+110"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Arts Cast Time",
+            "detail": "75%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+32%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+60"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Arts Cast Time",
+            "detail": "70%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+34%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+88"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Arts Cast Time",
+            "detail": "65%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+36%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+122"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Arts Cast Time",
+            "detail": "60%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+40%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+122"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Swift Cast"
+      },
+      {
+        "title": "Arts Cast Time",
+        "detail": "60%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+40%"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Raym",
+      "ja": "ライム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/f/fe/Raym_%28Kuro_HC%29.png",
+    "description": "A holo core powered by an energetic young female AI. Lower EP usage when Boosted.",
+    "obtain": "Quatre Salision's default Holo Core.",
+    "s_boost_ability": "Thrifty Arts",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+60"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+155"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Usage",
+            "detail": "70%"
+          },
+          {
+            "title": "EP Regen After Acting",
+            "detail": "7%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+88"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+190"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Usage",
+            "detail": "65%"
+          },
+          {
+            "title": "EP Regen After Acting",
+            "detail": "8%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+122"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+225"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Usage",
+            "detail": "60%"
+          },
+          {
+            "title": "EP Regen After Acting",
+            "detail": "9%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+122"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+225"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Thrifty Arts"
+      },
+      {
+        "title": "EP Usage",
+        "detail": "60%"
+      },
+      {
+        "title": "EP Regen After Acting",
+        "detail": "9%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Pocel",
+      "ja": "ポケル"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e7/Pocel_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a naïve young female AI. Raise one's base stats when Boosted.",
+    "obtain": "A New Holo Core reward.",
+    "s_boost_ability": "Seventh Glow",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+22"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+80"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP regen each turn",
+            "detail": "7%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "5%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+10%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+10%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+15%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+15%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+60%"
+          },
+          {
+            "title": "Critical Rate",
+            "detail": "+25%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+40%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+38"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+110"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP regen each turn",
+            "detail": "9%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "6%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+12%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+12%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+17%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+17%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+70%"
+          },
+          {
+            "title": "Critical Rate",
+            "detail": "+27%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+42%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+60"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP regen each turn",
+            "detail": "11%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "7%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+14%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+80%"
+          },
+          {
+            "title": "Critical Rate",
+            "detail": "+30%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+44%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+88"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP regen each turn",
+            "detail": "13%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "8%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+16%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+90%"
+          },
+          {
+            "title": "Critical Rate",
+            "detail": "+32%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+46%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+122"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "HP regen each turn",
+            "detail": "15%"
+          },
+          {
+            "title": "EP regen each turn",
+            "detail": "9%"
+          },
+          {
+            "title": "STR/ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+20%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Accuracy",
+            "detail": "+100%"
+          },
+          {
+            "title": "Critical Rate",
+            "detail": "+35%"
+          },
+          {
+            "title": "Evasion",
+            "detail": "+50%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+122"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Seventh Glow"
+      },
+      {
+        "title": "HP regen each turn",
+        "detail": "15%"
+      },
+      {
+        "title": "EP regen each turn",
+        "detail": "9%"
+      },
+      {
+        "title": "STR/ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+20%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Accuracy",
+        "detail": "+100%"
+      },
+      {
+        "title": "Critical Rate",
+        "detail": "+35%"
+      },
+      {
+        "title": "Evasion",
+        "detail": "+50%"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Gaap",
+      "ja": "ガープ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Gaap_%28Kuro_HC%29.png",
+    "description": "A holo core that forgoes speech to boost its combat potency. Increases S-Craft power and lower its cooldown when Boosted.",
+    "obtain": "Obtained automatically during Business Trip to Basel .",
+    "s_boost_ability": "Big Guns",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+20"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+75"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Craft Power",
+            "detail": "+60"
+          },
+          {
+            "title": "S-Craft Recovery Time",
+            "detail": "80%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+35"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+100"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Craft Power",
+            "detail": "+70"
+          },
+          {
+            "title": "S-Craft Recovery Time",
+            "detail": "75%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+125"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Craft Power",
+            "detail": "+80"
+          },
+          {
+            "title": "S-Craft Recovery Time",
+            "detail": "70%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Craft Power",
+            "detail": "+90"
+          },
+          {
+            "title": "S-Craft Recovery Time",
+            "detail": "65%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+175"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "S-Craft Power",
+            "detail": "+100"
+          },
+          {
+            "title": "S-Craft Recovery Time",
+            "detail": "60%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+175"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Big Guns"
+      },
+      {
+        "title": "S-Craft Power",
+        "detail": "+100"
+      },
+      {
+        "title": "S-Craft Recovery Time",
+        "detail": "60%"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Oze",
+      "ja": "オズ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e1/Oze_%28Kuro_HC%29.png",
+    "description": "A holo core powered by an intelligent young male AI. Chance of absorbing arts when Boosted.",
+    "obtain": "Judith Lanster's default Holo Core.",
+    "s_boost_ability": "Art Devourer",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+88"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Chance to Absorb Magic",
+            "detail": "90%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+122"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Chance to Absorb Magic",
+            "detail": "90%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+122"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Art Devourer"
+      },
+      {
+        "title": "Chance to Absorb Magic",
+        "detail": "90%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "Loray",
+      "ja": "ロレイ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e5/Loray_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a shy, young female AI. Increases arts power, but also raises EP cost when Boosted.",
+    "obtain": "Evaluation B Rank reward.",
+    "s_boost_ability": "Arcana Force",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+24"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+80"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Cost",
+            "detail": "150%"
+          },
+          {
+            "title": "Arts Power",
+            "detail": "+60"
+          },
+          {
+            "title": "ATS",
+            "detail": "+10%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+10%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+15%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+41"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+110"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Cost",
+            "detail": "150%"
+          },
+          {
+            "title": "Arts Power",
+            "detail": "+70"
+          },
+          {
+            "title": "ATS",
+            "detail": "+12%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+12%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+17%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+65"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+140"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Cost",
+            "detail": "150%"
+          },
+          {
+            "title": "Arts Power",
+            "detail": "+80"
+          },
+          {
+            "title": "ATS",
+            "detail": "+14%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+14%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+96"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+170"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Cost",
+            "detail": "150%"
+          },
+          {
+            "title": "Arts Power",
+            "detail": "+90"
+          },
+          {
+            "title": "ATS",
+            "detail": "+16%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+16%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+134"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+200"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "EP Cost",
+            "detail": "150%"
+          },
+          {
+            "title": "Arts Power",
+            "detail": "+100"
+          },
+          {
+            "title": "ATS",
+            "detail": "+20%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+20%"
+          },
+          {
+            "title": "Magical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+134"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+200"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Arcana Force"
+      },
+      {
+        "title": "EP Cost",
+        "detail": "150%"
+      },
+      {
+        "title": "Arts Power",
+        "detail": "+100"
+      },
+      {
+        "title": "ATS",
+        "detail": "+20%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+20%"
+      },
+      {
+        "title": "Magical Damage",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "Nagi",
+      "ja": "ナギ"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/a/a7/Nagi_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a proud, brave Eastern female AI. Increases critical hit rate, speed, and attack when Boosted.",
+    "obtain": "Bergard Zeman's default Holo Core.",
+    "s_boost_ability": "Gale Blade",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 2,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 3,
+        "effects": [],
+        "boost_effects": []
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+130"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Critical Rate",
+            "detail": "+46%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+21%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Critical Rate",
+            "detail": "+50%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          },
+          {
+            "title": "SPD",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+150"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Gale Blade"
+      },
+      {
+        "title": "Critical Rate",
+        "detail": "+50%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      },
+      {
+        "title": "SPD",
+        "detail": "+25%"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "Bathym",
+      "ja": "バティム"
+    },
+    "image_url": "https://static.wikitide.net/falcomwiki/0/03/Bathym_%28Kuro_HC%29.png",
+    "description": "A holo core powered by a gallant old soldier AI. Allows one to stun an already-stunned enemy when Boosted.",
+    "obtain": "Obtained automatically during Business Trip to Oración .",
+    "s_boost_ability": "Dread Soldier",
+    "levels": [
+      {
+        "level": 1,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+20"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+75"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Stun Extension to Stunned Enemies",
+            "detail": ""
+          },
+          {
+            "title": "Damage to Stunned Enemies",
+            "detail": "+30%"
+          },
+          {
+            "title": "STR",
+            "detail": "+10%"
+          },
+          {
+            "title": "DEF",
+            "detail": "+15%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+15%"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+35"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+100"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Stun Extension to Stunned Enemies",
+            "detail": ""
+          },
+          {
+            "title": "Damage to Stunned Enemies",
+            "detail": "+32%"
+          },
+          {
+            "title": "STR",
+            "detail": "+12%"
+          },
+          {
+            "title": "DEF",
+            "detail": "+17%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+17%"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+55"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+125"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Stun Extension to Stunned Enemies",
+            "detail": ""
+          },
+          {
+            "title": "Damage to Stunned Enemies",
+            "detail": "+34%"
+          },
+          {
+            "title": "STR",
+            "detail": "+14%"
+          },
+          {
+            "title": "DEF",
+            "detail": "+20%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+20%"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+80"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+150"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Stun Extension to Stunned Enemies",
+            "detail": ""
+          },
+          {
+            "title": "Damage to Stunned Enemies",
+            "detail": "+36%"
+          },
+          {
+            "title": "STR",
+            "detail": "+16%"
+          },
+          {
+            "title": "DEF",
+            "detail": "+22%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+22%"
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "effects": [
+          {
+            "title": "Arts Damage",
+            "detail": "+110"
+          },
+          {
+            "title": "Max EP",
+            "detail": "+175"
+          }
+        ],
+        "boost_effects": [
+          {
+            "title": "Stun Extension to Stunned Enemies",
+            "detail": ""
+          },
+          {
+            "title": "Damage to Stunned Enemies",
+            "detail": "+40%"
+          },
+          {
+            "title": "STR",
+            "detail": "+20%"
+          },
+          {
+            "title": "DEF",
+            "detail": "+25%"
+          },
+          {
+            "title": "Physical Damage",
+            "detail": "+25%"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "title": "Arts Damage",
+        "detail": "+110"
+      },
+      {
+        "title": "Max EP",
+        "detail": "+175"
+      },
+      {
+        "title": "S-Boost Ability",
+        "detail": "Dread Soldier"
+      },
+      {
+        "title": "Stun Extension to Stunned Enemies",
+        "detail": ""
+      },
+      {
+        "title": "Damage to Stunned Enemies",
+        "detail": "+40%"
+      },
+      {
+        "title": "STR",
+        "detail": "+20%"
+      },
+      {
+        "title": "DEF",
+        "detail": "+25%"
+      },
+      {
+        "title": "Physical Damage",
+        "detail": "+25%"
+      }
+    ]
+  }
+]

@@ -6,6 +6,11 @@ type ExportLine = {
 
 type ExportArt = { name: string; color: string }
 
+type ExportListSection = {
+  heading: string
+  items: ExportArt[]
+}
+
 type ExportMasterQuartz = {
   role: string
   name: string
@@ -19,6 +24,8 @@ type ExportOptions = {
   title: string
   lines: ExportLine[]
   arts: ExportArt[]
+  artsHeading?: string
+  additionalLists?: ExportListSection[]
   masterQuartz?: ExportMasterQuartz[]
   fileName: string
 }
@@ -186,6 +193,50 @@ function splitIntoColumns<T>(items: T[], columnCount: number): T[][] {
   )
 }
 
+function measureListSectionHeight(itemCount: number, availableHeight: number, headerOffset: number): {
+  columnCount: number
+  height: number
+} {
+  const columnCount = Math.min(
+    MAX_ART_COLUMNS,
+    Math.max(1, Math.ceil((itemCount * ROW_HEIGHT) / Math.max(1, availableHeight - headerOffset))),
+  )
+  const rowsPerColumn = itemCount > 0 ? Math.ceil(itemCount / columnCount) : 0
+  return {
+    columnCount,
+    height: headerOffset + rowsPerColumn * ROW_HEIGHT,
+  }
+}
+
+function drawListSection(
+  ctx: CanvasRenderingContext2D,
+  section: ExportListSection,
+  left: number,
+  top: number,
+  headerOffset: number,
+  columnCount: number,
+): number {
+  ctx.fillStyle = TEXT_COLOR
+  ctx.font = `700 ${HEADER_FONT_SIZE}px ${FONT_STACK}`
+  ctx.fillText(`${section.heading} (${section.items.length})`, left, top + HEADER_FONT_SIZE / 2)
+
+  const columnWidth = (RIGHT_WIDTH - GUTTER * (columnCount - 1)) / columnCount
+  const columns = section.items.length > 0 ? splitIntoColumns(section.items, columnCount) : []
+  ctx.font = `600 ${ROW_FONT_SIZE}px ${FONT_STACK}`
+  let maxColumnBottom = top + headerOffset
+  columns.forEach((column, columnIndex) => {
+    const columnLeft = left + columnIndex * (columnWidth + GUTTER)
+    let itemY = top + headerOffset + ROW_HEIGHT / 2
+    for (const item of column) {
+      ctx.fillStyle = readableOnWhite(item.color)
+      ctx.fillText(truncateToWidth(ctx, item.name, columnWidth), columnLeft, itemY)
+      itemY += ROW_HEIGHT
+    }
+    maxColumnBottom = Math.max(maxColumnBottom, itemY - ROW_HEIGHT / 2)
+  })
+  return maxColumnBottom
+}
+
 function drawWrappedText(
   ctx: CanvasRenderingContext2D,
   text: string,
@@ -209,6 +260,8 @@ export async function exportOrbmentPng({
   title,
   lines,
   arts,
+  artsHeading = 'Available Arts',
+  additionalLists = [],
   masterQuartz = [],
   fileName,
 }: ExportOptions): Promise<void> {
@@ -220,24 +273,26 @@ export async function exportOrbmentPng({
 
     const contentTop = PADDING + TITLE_FONT_SIZE + 56
     const headerOffset = HEADER_FONT_SIZE + 32
+    const sectionGap = LINE_GROUP_GAP
     const baseContentHeight = BASE_CANVAS_HEIGHT - contentTop - PADDING
     const mqTextWidth = LEFT_WIDTH - 16
 
     const measureCtx = document.createElement('canvas').getContext('2d')
     if (!measureCtx) throw new Error('Canvas 2D context unavailable')
 
-    const artColumnCount = Math.min(
-      MAX_ART_COLUMNS,
-      Math.max(1, Math.ceil((arts.length * ROW_HEIGHT) / Math.max(1, baseContentHeight - headerOffset))),
+    const rightSections: ExportListSection[] = [{ heading: artsHeading, items: arts }, ...additionalLists]
+    const sectionLayouts = rightSections.map((section) =>
+      measureListSectionHeight(section.items.length, baseContentHeight, headerOffset),
     )
-    const artColumns = arts.length > 0 ? splitIntoColumns(arts, artColumnCount) : []
-    const artsHeight =
-      headerOffset + Math.max(0, ...artColumns.map((column) => column.length * ROW_HEIGHT))
+    const rightHeight = sectionLayouts.reduce(
+      (total, layout, index) => total + layout.height + (index > 0 ? sectionGap : 0),
+      0,
+    )
     const linesHeight = headerOffset + measureLinesHeight(lines)
     const masterHeight = measureMasterQuartzHeight(measureCtx, masterQuartz, mqTextWidth)
     const leftHeight = linesHeight + (masterHeight > 0 ? LINE_GROUP_GAP + masterHeight : 0)
 
-    const contentHeight = Math.max(baseContentHeight, artsHeight, leftHeight)
+    const contentHeight = Math.max(baseContentHeight, rightHeight, leftHeight)
     const canvasHeight = contentTop + contentHeight + PADDING
 
     const canvas = document.createElement('canvas')
@@ -356,20 +411,11 @@ export async function exportOrbmentPng({
       }
     }
 
-    ctx.fillStyle = TEXT_COLOR
-    ctx.font = `700 ${HEADER_FONT_SIZE}px ${FONT_STACK}`
-    ctx.fillText(`Available Arts (${arts.length})`, rightLeft, contentTop + HEADER_FONT_SIZE / 2)
-
-    const artColumnWidth = (RIGHT_WIDTH - GUTTER * (artColumnCount - 1)) / artColumnCount
-    ctx.font = `600 ${ROW_FONT_SIZE}px ${FONT_STACK}`
-    artColumns.forEach((column, columnIndex) => {
-      const columnLeft = rightLeft + columnIndex * (artColumnWidth + GUTTER)
-      let artY = contentTop + headerOffset + ROW_HEIGHT / 2
-      for (const art of column) {
-        ctx.fillStyle = readableOnWhite(art.color)
-        ctx.fillText(truncateToWidth(ctx, art.name, artColumnWidth), columnLeft, artY)
-        artY += ROW_HEIGHT
-      }
+    let rightTop = contentTop
+    rightSections.forEach((section, index) => {
+      const layout = sectionLayouts[index]
+      drawListSection(ctx, section, rightLeft, rightTop, headerOffset, layout.columnCount)
+      rightTop += layout.height + sectionGap
     })
 
     const pngBlob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))

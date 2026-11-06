@@ -44,6 +44,7 @@ export type OrbmentRuleSetId =
   | 'cold-steel-iii'
   | 'cold-steel-iv'
   | 'reverie'
+  | 'daybreak'
 
 export function isColdSteelRuleSet(ruleSet?: OrbmentRuleSetId): boolean {
   return (
@@ -84,6 +85,88 @@ export type Quartz = {
   arts_learnt?: number[]
   elemental_value: ElementRequirement[] | 'No value' | null
   synthesis_cost: ElementRequirement[] | 'Not synthesizable'
+  image_url?: string | null
+  slot_types?: XiphaLineType[]
+}
+
+export const XIPHA_LINE_TYPES = ['weapon', 'shield', 'drive', 'extra'] as const
+
+export type XiphaLineType = (typeof XIPHA_LINE_TYPES)[number]
+
+export const XIPHA_LINE_LABELS: Record<XiphaLineType, string> = {
+  weapon: 'Weapon',
+  shield: 'Shield',
+  drive: 'Drive',
+  extra: 'Extra',
+}
+
+export const XIPHA_LINE_CODES: Record<XiphaLineType, string> = {
+  weapon: 'W',
+  shield: 'S',
+  drive: 'D',
+  extra: 'E',
+}
+
+export const XIPHA_MIN_LINE_SLOTS = 3
+export const XIPHA_MAX_LINE_SLOTS = 4
+
+export type XiphaLineSlotCount = 3 | 4
+
+export type ShardSkill = {
+  id: number
+  name: LocalizedName
+  line_type: XiphaLineType
+  element: ElementName | ElementName[]
+  elemental_value: ElementRequirement[]
+  effect: string
+  description: string
+  image_url?: string | null
+}
+
+export type HoloCoreEffect = {
+  title: string
+  detail: string
+}
+
+export type HoloCoreLevel = {
+  level: number
+  effects: HoloCoreEffect[]
+  boost_effects: HoloCoreEffect[]
+}
+
+export type HoloCore = {
+  id: number
+  name: LocalizedName
+  description: string
+  image_url?: string | null
+  obtain?: string
+  s_boost_ability?: string | null
+  levels: HoloCoreLevel[]
+  /** Summary effects for UI (typically max-level passive + boost values). */
+  effects: HoloCoreEffect[]
+}
+
+export type ArtsDriverLevel = {
+  level: number
+  arts: string[]
+}
+
+export type ArtsDriver = {
+  id: number
+  name: LocalizedName
+  element: ElementName | 'Mix'
+  description: string
+  plugin_slots: number
+  levels: ArtsDriverLevel[]
+  image_url?: string | null
+}
+
+export type ArtsPlugin = {
+  id: number
+  name: LocalizedName
+  element: ElementName
+  image_url?: string | null
+  obtain: string
 }
 
 export type MasterQuartzEffect = {
@@ -121,6 +204,8 @@ export type Art = {
     delay: number
   }
   power: number | string | null
+  stun?: string | null
+  hits?: string | null
   target: string
   effect: string | null
   description: string
@@ -158,6 +243,42 @@ export type BaseData = {
   topology: OrbmentTopology
   orbmentVisual?: OrbmentVisual
   ruleSet?: OrbmentRuleSetId
+  shardSkills?: ShardSkill[]
+  holoCores?: HoloCore[]
+  artsDrivers?: ArtsDriver[]
+  artsPlugins?: ArtsPlugin[]
+}
+
+export function isXiphaRuleSet(ruleSet?: OrbmentRuleSetId): boolean {
+  return ruleSet === 'daybreak'
+}
+
+export function getXiphaLineType(slotId: SlotId): XiphaLineType | null {
+  const index = Math.floor((slotId - 1) / XIPHA_MAX_LINE_SLOTS)
+  return slotId >= 1 ? (XIPHA_LINE_TYPES[index] ?? null) : null
+}
+
+/** Position of the slot within its line, 1 being closest to the Holo Core. */
+export function getXiphaSlotIndex(slotId: SlotId): number {
+  return ((slotId - 1) % XIPHA_MAX_LINE_SLOTS) + 1
+}
+
+export function getXiphaLineSlotIds(lineType: XiphaLineType): SlotId[] {
+  const offset = XIPHA_LINE_TYPES.indexOf(lineType) * XIPHA_MAX_LINE_SLOTS
+  return Array.from({ length: XIPHA_MAX_LINE_SLOTS }, (_, index) => offset + index + 1)
+}
+
+export function formatXiphaSlotLabel(slotId: SlotId): string {
+  const lineType = getXiphaLineType(slotId)
+  return lineType ? `${XIPHA_LINE_CODES[lineType]}${getXiphaSlotIndex(slotId)}` : String(slotId)
+}
+
+export function quartzFitsXiphaSlot(quartz: Quartz, slotId: SlotId): boolean {
+  const lineType = getXiphaLineType(slotId)
+  if (!lineType) {
+    return false
+  }
+  return !quartz.slot_types || quartz.slot_types.length === 0 || quartz.slot_types.includes(lineType)
 }
 
 export function formatSlotLabel(slotId: SlotId, topology: OrbmentTopology): string {

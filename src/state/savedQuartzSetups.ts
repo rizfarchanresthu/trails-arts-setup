@@ -7,6 +7,7 @@ import {
 import {
   EXPORTED_SETUP_KIND,
   EXPORTED_SETUP_VERSION,
+  type ArtsDriver,
   type ExportedQuartzSetup,
   type OrbmentTopology,
   type SavedQuartzSetup,
@@ -14,6 +15,14 @@ import {
   type SlotId,
 } from '../domain/types'
 import { createInitialOrbmentState, type OrbmentState } from './orbmentState'
+import { clearInactiveSlots, sanitizeXiphaState } from './xiphaState'
+
+export type XiphaValidIds = {
+  holoCoreIds: Set<number>
+  artsDriverIds: Set<number>
+  artsPluginIds: Set<number>
+  artsDriversById: Map<number, ArtsDriver>
+}
 
 const STORAGE_KEY = 'trails-arts-gallery:saved-quartz-setups'
 const STORAGE_VERSION = 1
@@ -143,6 +152,7 @@ export function sanitizeExportedSetup(
   validQuartzIds: Set<number>,
   topology: OrbmentTopology,
   validMasterQuartzIds: Set<number> = new Set(),
+  xiphaValidIds?: XiphaValidIds,
 ): ExportedQuartzSetup {
   const sanitizedState = sanitizeOrbmentState(setup.orbmentState, topology)
   const sanitized = sanitizeForBase(
@@ -157,6 +167,7 @@ export function sanitizeExportedSetup(
     validQuartzIds,
     topology,
     validMasterQuartzIds,
+    xiphaValidIds,
   )
 
   return {
@@ -170,6 +181,7 @@ export function sanitizeForBase(
   validQuartzIds: Set<number>,
   topology: OrbmentTopology,
   validMasterQuartzIds: Set<number> = new Set(),
+  xiphaValidIds?: XiphaValidIds,
 ): SavedQuartzSetup {
   const equippedQuartz: OrbmentState['equippedQuartz'] = { ...setup.orbmentState.equippedQuartz }
   for (const slotId of topology.slotIds) {
@@ -208,16 +220,32 @@ export function sanitizeForBase(
     sanitizedSubMasterQuartzId = null
   }
 
+  const orbmentState: OrbmentState = {
+    ...setup.orbmentState,
+    equippedQuartz,
+    equippedMasterQuartzId: sanitizedMasterQuartzId,
+    masterQuartzLevel: sanitizedMasterQuartzId ? setup.orbmentState.masterQuartzLevel : 1,
+    equippedSubMasterQuartzId: sanitizedSubMasterQuartzId,
+    subMasterQuartzLevel: sanitizedSubMasterQuartzId ? setup.orbmentState.subMasterQuartzLevel : 1,
+  }
+
+  if (!xiphaValidIds) {
+    delete orbmentState.xipha
+    return { ...setup, orbmentState }
+  }
+
   return {
     ...setup,
-    orbmentState: {
-      ...setup.orbmentState,
-      equippedQuartz,
-      equippedMasterQuartzId: sanitizedMasterQuartzId,
-      masterQuartzLevel: sanitizedMasterQuartzId ? setup.orbmentState.masterQuartzLevel : 1,
-      equippedSubMasterQuartzId: sanitizedSubMasterQuartzId,
-      subMasterQuartzLevel: sanitizedSubMasterQuartzId ? setup.orbmentState.subMasterQuartzLevel : 1,
-    },
+    orbmentState: clearInactiveSlots({
+      ...orbmentState,
+      xipha: sanitizeXiphaState(
+        orbmentState.xipha,
+        xiphaValidIds.holoCoreIds,
+        xiphaValidIds.artsDriverIds,
+        xiphaValidIds.artsPluginIds,
+        xiphaValidIds.artsDriversById,
+      ),
+    }),
   }
 }
 
@@ -333,6 +361,7 @@ function normalizeOrbmentState(value: unknown): OrbmentState | null {
     masterQuartzLevel: normalizePositiveInt(value.masterQuartzLevel) ?? 1,
     equippedSubMasterQuartzId: normalizeOptionalId(value.equippedSubMasterQuartzId),
     subMasterQuartzLevel: normalizePositiveInt(value.subMasterQuartzLevel) ?? 1,
+    ...(isRecord(value.xipha) ? { xipha: sanitizeXiphaState(value.xipha) } : {}),
   }
 }
 
@@ -371,6 +400,7 @@ function sanitizeOrbmentState(state: OrbmentState, topology: OrbmentTopology): O
     subMasterQuartzLevel: Number.isInteger(state.subMasterQuartzLevel) && state.subMasterQuartzLevel >= 1
       ? state.subMasterQuartzLevel
       : 1,
+    ...(state.xipha ? { xipha: sanitizeXiphaState(state.xipha) } : {}),
   }
 
   if (topology.masterQuartzSlot !== undefined) {

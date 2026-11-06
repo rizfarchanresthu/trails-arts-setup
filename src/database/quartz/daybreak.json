@@ -1,0 +1,2795 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Defense 1",
+      "ja": "防御１"
+    },
+    "effect": "DEF+15",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Defense 2",
+      "ja": "防御２"
+    },
+    "effect": "DEF+30",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Defense 3",
+      "ja": "防御３"
+    },
+    "effect": "DEF+60",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "defense"
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "EP 1",
+      "ja": "EP1"
+    },
+    "effect": "Max EP+60",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "EP 2",
+      "ja": "EP2"
+    },
+    "effect": "Max EP+120",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "EP 3",
+      "ja": "EP3"
+    },
+    "effect": "Max EP+240",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "ep"
+    ]
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Rot",
+      "ja": "腐蝕の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can rot enemies (10% chance).",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "rot"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Rot II",
+      "ja": "腐蝕の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can rot enemies (20% chance).",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "rot"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Earthen Verse",
+      "ja": "地霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast earth arts is cut by 33%.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "earth_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Gaia Verse",
+      "ja": "大地の詩"
+    },
+    "effect": "(ATS+10) Time to cast earth arts is cut by 50%.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "earth_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Topaz Ring",
+      "ja": "黄晶の輪"
+    },
+    "effect": "(HP+150) Grants DEF/ADF (S) when HP is low.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "earth_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 12,
+    "name": {
+      "en": "Corundum Ring",
+      "ja": "鋼玉の輪"
+    },
+    "effect": "(HP+600) Grants DEF/ADF (M) when HP is low.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/e3/Earth_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "earth_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 13,
+    "name": {
+      "en": "Septium Vein",
+      "ja": "耀脈"
+    },
+    "effect": "Enemies drop more sepith (30%).",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 4
+      },
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Earth",
+        "value": 500
+      },
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Earth_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 14,
+    "name": {
+      "en": "Taurus",
+      "ja": "タロス"
+    },
+    "effect": "Increases damage to stunned enemies by 50%.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 5
+      },
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Earth_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 15,
+    "name": {
+      "en": "Lindbaum",
+      "ja": "リンドバウム"
+    },
+    "effect": "Increases arts damage by 50%, but delay afterward is longer.",
+    "element": "Earth",
+    "elemental_value": [
+      {
+        "element": "Earth",
+        "value": 6
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/4/4e/Earth_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 16,
+    "name": {
+      "en": "HP 1",
+      "ja": "HP1"
+    },
+    "effect": "HP+400",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 17,
+    "name": {
+      "en": "HP 2",
+      "ja": "HP2"
+    },
+    "effect": "HP+800",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 18,
+    "name": {
+      "en": "HP 3",
+      "ja": "HP3"
+    },
+    "effect": "HP+1600",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "hp"
+    ]
+  },
+  {
+    "id": 19,
+    "name": {
+      "en": "Shield 1",
+      "ja": "魔防1"
+    },
+    "effect": "ADF+10 - AEV+2%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 20,
+    "name": {
+      "en": "Shield 2",
+      "ja": "魔防2"
+    },
+    "effect": "ADF+20 - AEV+4%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 21,
+    "name": {
+      "en": "Shield 3",
+      "ja": "魔防3"
+    },
+    "effect": "ADF+40 - AEV+8%",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "shield"
+    ]
+  },
+  {
+    "id": 22,
+    "name": {
+      "en": "Freeze",
+      "ja": "凍結の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can freeze enemies (10% chance).",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "freeze"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 23,
+    "name": {
+      "en": "Freeze II",
+      "ja": "凍結の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can freeze enemies (20% chance).",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "freeze"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 24,
+    "name": {
+      "en": "Aqua Verse",
+      "ja": "水霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast water arts is cut by 33%.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "water_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 25,
+    "name": {
+      "en": "Crystal Verse",
+      "ja": "蒼氷の詩"
+    },
+    "effect": "(ATS+10) Time to cast water arts is cut by 50%.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "water_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 26,
+    "name": {
+      "en": "Cobalt Ring",
+      "ja": "青晶の輪"
+    },
+    "effect": "(HP+150) Grants HP Regen (S) when HP is low.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "water_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 27,
+    "name": {
+      "en": "Indigo Ring",
+      "ja": "藍玉の輪"
+    },
+    "effect": "(HP+600) Grants HP Regen (M) when HP is low.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/e/ec/Water_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "water_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 28,
+    "name": {
+      "en": "Mercy",
+      "ja": "慈愛"
+    },
+    "effect": "Increases potency of healing arts by 50%.",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Earth",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      },
+      {
+        "element": "Earth",
+        "value": 500
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/3/30/Water_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 29,
+    "name": {
+      "en": "Lorelei",
+      "ja": "ローレライ"
+    },
+    "effect": "Offensive arts deal critical damage (50% chance).",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 4
+      },
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/30/Water_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 30,
+    "name": {
+      "en": "Volglyph",
+      "ja": "ヴォルフグリフ"
+    },
+    "effect": "Arts damage increases when HP is higher (Max: 50%).",
+    "element": "Water",
+    "elemental_value": [
+      {
+        "element": "Water",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/3/30/Water_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 31,
+    "name": {
+      "en": "Attack 1",
+      "ja": "攻撃1"
+    },
+    "effect": "STR+6",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 32,
+    "name": {
+      "en": "Attack 2",
+      "ja": "攻撃2"
+    },
+    "effect": "STR+12",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 33,
+    "name": {
+      "en": "Attack 3",
+      "ja": "攻撃3"
+    },
+    "effect": "STR+24",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "attack"
+    ]
+  },
+  {
+    "id": 34,
+    "name": {
+      "en": "Break 1",
+      "ja": "破壊1"
+    },
+    "effect": "Stun+20%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "break"
+    ]
+  },
+  {
+    "id": 35,
+    "name": {
+      "en": "Break 2",
+      "ja": "破壊2"
+    },
+    "effect": "Stun+40%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "break"
+    ]
+  },
+  {
+    "id": 36,
+    "name": {
+      "en": "Break 3",
+      "ja": "破壊3"
+    },
+    "effect": "Stun+60%",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "break"
+    ]
+  },
+  {
+    "id": 37,
+    "name": {
+      "en": "Burn",
+      "ja": "炎傷の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can burn enemies (10% chance).",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "burn"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 38,
+    "name": {
+      "en": "Burn II",
+      "ja": "炎傷の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can burn enemies (20% chance).",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "burn"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 39,
+    "name": {
+      "en": "Burning Verse",
+      "ja": "火霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast fire arts is cut by 33%.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "fire_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 40,
+    "name": {
+      "en": "Hellfire Verse",
+      "ja": "業火の詩"
+    },
+    "effect": "(ATS+10) Time to cast first arts is cut by 50%.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "fire_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 41,
+    "name": {
+      "en": "Ruby Ring",
+      "ja": "赤晶の輪"
+    },
+    "effect": "(HP+150) Grants STR (S) when HP is low.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "fire_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 42,
+    "name": {
+      "en": "Crimson Ring",
+      "ja": "紅玉の輪"
+    },
+    "effect": "(HP+600) Grants STR (M) when HP is low.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/2/20/Fire_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "fire_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 43,
+    "name": {
+      "en": "Assault",
+      "ja": "猛襲"
+    },
+    "effect": "Increases preemptive shard attack damage by 20%.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 4
+      },
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 500
+      },
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/03/Fire_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 44,
+    "name": {
+      "en": "Red Hare",
+      "ja": "セキトバ"
+    },
+    "effect": "CP gained when receiving damage multiplied by 5.",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 5
+      },
+      {
+        "element": "Water",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/03/Fire_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 45,
+    "name": {
+      "en": "Agnagarn",
+      "ja": "アグナガルン"
+    },
+    "effect": "Physical damage increases when HP is higher (Max: 50%).",
+    "element": "Fire",
+    "elemental_value": [
+      {
+        "element": "Fire",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/03/Fire_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 46,
+    "name": {
+      "en": "Evade 1",
+      "ja": "回避1"
+    },
+    "effect": "EVA+4%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 47,
+    "name": {
+      "en": "Evade 2",
+      "ja": "回避2"
+    },
+    "effect": "EVA+8%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 48,
+    "name": {
+      "en": "Evade 3",
+      "ja": "回避3"
+    },
+    "effect": "EVA+16%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "evade"
+    ]
+  },
+  {
+    "id": 49,
+    "name": {
+      "en": "Strike 1",
+      "ja": "必殺1"
+    },
+    "effect": "Crit+6%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "strike"
+    ]
+  },
+  {
+    "id": 50,
+    "name": {
+      "en": "Strike 2",
+      "ja": "必殺2"
+    },
+    "effect": "Crit+12%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "strike"
+    ]
+  },
+  {
+    "id": 51,
+    "name": {
+      "en": "Strike 3",
+      "ja": "必殺3"
+    },
+    "effect": "Crit+24%",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "strike"
+    ]
+  },
+  {
+    "id": 52,
+    "name": {
+      "en": "Seal",
+      "ja": "封技の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can seal enemies (10% chance).",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "seal"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 53,
+    "name": {
+      "en": "Seal II",
+      "ja": "封技の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can seal enemies (20% chance).",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "seal"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 54,
+    "name": {
+      "en": "Airy Verse",
+      "ja": "風霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast wind arts is cut by 33%.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "wind_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 55,
+    "name": {
+      "en": "Tempest Verse",
+      "ja": "威風の詩"
+    },
+    "effect": "(ATS+10) Time to cast wind arts is cut by 50%.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "wind_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 56,
+    "name": {
+      "en": "Emerald Ring",
+      "ja": "緑晶の輪"
+    },
+    "effect": "(HP+150) Grants insight status for 1 turn when HP is low.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "wind_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 57,
+    "name": {
+      "en": "Jade Ring",
+      "ja": "翠玉の輪"
+    },
+    "effect": "(HP+600) Grants insight status for 1 turn when HP is low.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Wind_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "wind_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 58,
+    "name": {
+      "en": "Scent",
+      "ja": "美臭"
+    },
+    "effect": "Draws hate during command battles (90%).",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 4
+      },
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      },
+      {
+        "element": "Wind",
+        "value": 500
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6b/Wind_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 59,
+    "name": {
+      "en": "Sprite",
+      "ja": "スプライト"
+    },
+    "effect": "Increases healing item range by 10.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 5
+      },
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6b/Wind_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 60,
+    "name": {
+      "en": "Heidrun",
+      "ja": "ヘイズルーン"
+    },
+    "effect": "Increases critical damage from attacks/crafts by 100%.",
+    "element": "Wind",
+    "elemental_value": [
+      {
+        "element": "Wind",
+        "value": 6
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/6/6b/Wind_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 61,
+    "name": {
+      "en": "Action 1",
+      "ja": "行動力1"
+    },
+    "effect": "SPD+4",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 62,
+    "name": {
+      "en": "Action 2",
+      "ja": "行動力2"
+    },
+    "effect": "SPD+8",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 63,
+    "name": {
+      "en": "Action 3",
+      "ja": "行動力3"
+    },
+    "effect": "SPD+16",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "action"
+    ]
+  },
+  {
+    "id": 64,
+    "name": {
+      "en": "Cast 1",
+      "ja": "駆動1"
+    },
+    "effect": "Time to cast arts is cut by 10%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
+  },
+  {
+    "id": 65,
+    "name": {
+      "en": "Cast 2",
+      "ja": "駆動2"
+    },
+    "effect": "Time to cast arts is cut by 20%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
+  },
+  {
+    "id": 66,
+    "name": {
+      "en": "Cast 3",
+      "ja": "駆動3"
+    },
+    "effect": "Time to cast arts is cut by 40%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "cast"
+    ]
+  },
+  {
+    "id": 67,
+    "name": {
+      "en": "Blind",
+      "ja": "冥暗の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can blind enemies (10% chance).",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "blind"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 68,
+    "name": {
+      "en": "Blind II",
+      "ja": "冥暗の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can blind enemies (20% chance).",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "blind"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 69,
+    "name": {
+      "en": "Stellar Verse",
+      "ja": "星霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast time arts is cut by 33%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "time_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 70,
+    "name": {
+      "en": "Dawnstar Verse",
+      "ja": "暁星の詩"
+    },
+    "effect": "(ATS+10) Time to cast time arts is cut by 50%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "time_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 71,
+    "name": {
+      "en": "Amethyst Ring",
+      "ja": "紫晶の輪"
+    },
+    "effect": "(HP+150) Grants Quick (S) when HP is low.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "time_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 72,
+    "name": {
+      "en": "Onyx Ring",
+      "ja": "黒銀の輪"
+    },
+    "effect": "(HP+600) Grants Quick (M) when HP is low.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Time",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/0f/Time_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "time_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 73,
+    "name": {
+      "en": "Fortune",
+      "ja": "幸運"
+    },
+    "effect": "Enemies drop more items (30%).",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 4
+      },
+      {
+        "element": "Wind",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Wind",
+        "value": 200
+      },
+      {
+        "element": "Time",
+        "value": 500
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/d/df/Time_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 74,
+    "name": {
+      "en": "Rusalka",
+      "ja": "ルサルカ"
+    },
+    "effect": "Reduces delay after using an S-Craft by 50%.",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 5
+      },
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/df/Time_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 75,
+    "name": {
+      "en": "Yatagarasu",
+      "ja": "ヤタガラス"
+    },
+    "effect": "Physical damage increases when HP is lower (Max: 100%).",
+    "element": "Time",
+    "elemental_value": [
+      {
+        "element": "Time",
+        "value": 6
+      },
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/d/df/Time_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 76,
+    "name": {
+      "en": "EP Cut 1",
+      "ja": "省EP1"
+    },
+    "effect": "Arts EP cost -10%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 77,
+    "name": {
+      "en": "EP Cut 2",
+      "ja": "省EP2"
+    },
+    "effect": "Arts EP cost -20%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 78,
+    "name": {
+      "en": "EP Cut 3",
+      "ja": "省EP3"
+    },
+    "effect": "Arts EP cost -40%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "ep_cut"
+    ]
+  },
+  {
+    "id": 79,
+    "name": {
+      "en": "Hit 1",
+      "ja": "命中1"
+    },
+    "effect": "ACC+25% - Crit+2%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 80,
+    "name": {
+      "en": "Hit 2",
+      "ja": "命中2"
+    },
+    "effect": "ACC+50% - Crit+4%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 81,
+    "name": {
+      "en": "Hit 3",
+      "ja": "命中3"
+    },
+    "effect": "ACC+100% - Crit+8%",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "hit"
+    ]
+  },
+  {
+    "id": 82,
+    "name": {
+      "en": "Mute",
+      "ja": "封魔の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can mute enemies (10% chance).",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mute"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 83,
+    "name": {
+      "en": "Mute II",
+      "ja": "封魔の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can mute enemies (20% chance).",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mute"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 84,
+    "name": {
+      "en": "Solar Verse",
+      "ja": "陽霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast space arts is cut by 33%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "space_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 85,
+    "name": {
+      "en": "Aurora Verse",
+      "ja": "極光の詩"
+    },
+    "effect": "(ATS+10) Time to cast space arts is cut by 50%.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "space_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 86,
+    "name": {
+      "en": "Citrine Ring",
+      "ja": "金晶の輪"
+    },
+    "effect": "(HP+150) Grants ATS (S) when HP is low.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "space_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 87,
+    "name": {
+      "en": "Golden Ring",
+      "ja": "黄金の輪"
+    },
+    "effect": "(HP+600) Grants ATS (M) when HP is low.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Space",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/b/b3/Space_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "space_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 88,
+    "name": {
+      "en": "Revelation",
+      "ja": "天啓"
+    },
+    "effect": "Increases arts range by 1.",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 4
+      },
+      {
+        "element": "Fire",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Fire",
+        "value": 200
+      },
+      {
+        "element": "Space",
+        "value": 500
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c6/Space_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 89,
+    "name": {
+      "en": "Ratatoskr",
+      "ja": "ラタトスク"
+    },
+    "effect": "Absorbs physical attacks (20% chance).",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 5
+      },
+      {
+        "element": "Earth",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c6/Space_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 90,
+    "name": {
+      "en": "Amalthea",
+      "ja": "アマルテア"
+    },
+    "effect": "Arts damage increases when HP is lower (Max: 100%).",
+    "element": "Space",
+    "elemental_value": [
+      {
+        "element": "Space",
+        "value": 6
+      },
+      {
+        "element": "Time",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/c/c6/Space_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 91,
+    "name": {
+      "en": "Mind 1",
+      "ja": "精神1"
+    },
+    "effect": "ATS+6",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 92,
+    "name": {
+      "en": "Mind 2",
+      "ja": "精神2"
+    },
+    "effect": "ATS+12",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 93,
+    "name": {
+      "en": "Mind 3",
+      "ja": "精神3"
+    },
+    "effect": "ATS+24",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mind"
+    ]
+  },
+  {
+    "id": 94,
+    "name": {
+      "en": "Impede 1",
+      "ja": "妨害1"
+    },
+    "effect": "Attacks/crafts can cancel arts (15% chance). Delay+3.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 50
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
+  },
+  {
+    "id": 95,
+    "name": {
+      "en": "Impede 2",
+      "ja": "妨害2"
+    },
+    "effect": "Attacks/crafts can cancel arts (30% chance). Delay+3.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 150
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
+  },
+  {
+    "id": 96,
+    "name": {
+      "en": "Impede 3",
+      "ja": "妨害3"
+    },
+    "effect": "Attacks/crafts can cancel arts (45% chance). Delay+3.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 6
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 450
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "impede"
+    ]
+  },
+  {
+    "id": 97,
+    "name": {
+      "en": "Fear",
+      "ja": "恐怖の刃"
+    },
+    "effect": "(STR+3) Attacks/crafts can fear enemies (10% chance).",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "fear"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 98,
+    "name": {
+      "en": "Fear II",
+      "ja": "恐怖の刃II"
+    },
+    "effect": "(STR+6) Attacks/crafts can fear enemies (20% chance).",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "fear"
+    ],
+    "slot_types": [
+      "weapon",
+      "extra"
+    ]
+  },
+  {
+    "id": 99,
+    "name": {
+      "en": "Lunar Verse",
+      "ja": "月霊の詩"
+    },
+    "effect": "(ATS+5) Time to cast mirage arts is cut by 33%.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mirage_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 100,
+    "name": {
+      "en": "Misty Verse",
+      "ja": "朧月の詩"
+    },
+    "effect": "(ATS+10) Time to cast mirage arts is cut by 50%.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mirage_verse"
+    ],
+    "slot_types": [
+      "drive",
+      "extra"
+    ]
+  },
+  {
+    "id": 101,
+    "name": {
+      "en": "Diamond Ring",
+      "ja": "銀晶の輪"
+    },
+    "effect": "(HP+150) Grants stealth effect for 1 turn when HP is low.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 200
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mirage_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 102,
+    "name": {
+      "en": "Silver Ring",
+      "ja": "白銀の輪"
+    },
+    "effect": "(HP+600) Grants stealth effect for 2 turns when HP is low.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Mirage",
+        "value": 600
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/9/9c/Mirage_%28Kuro_Quartz%29.png",
+    "exclusive_groups": [
+      "mirage_ring"
+    ],
+    "slot_types": [
+      "shield",
+      "extra"
+    ]
+  },
+  {
+    "id": 103,
+    "name": {
+      "en": "Decoy",
+      "ja": "空蝉"
+    },
+    "effect": "Deflects hate during command battles (90%).",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 4
+      },
+      {
+        "element": "Water",
+        "value": 2
+      }
+    ],
+    "synthesis_cost": [
+      {
+        "element": "Water",
+        "value": 200
+      },
+      {
+        "element": "Mirage",
+        "value": 500
+      }
+    ],
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Mirage_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 104,
+    "name": {
+      "en": "Carbuncle",
+      "ja": "カーバンクル"
+    },
+    "effect": "Absorbs magic attacks (20% chance).",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 5
+      },
+      {
+        "element": "Fire",
+        "value": 3
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Mirage_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  },
+  {
+    "id": 105,
+    "name": {
+      "en": "Bai Ze",
+      "ja": "ハクタク"
+    },
+    "effect": "Increases appearance rate of AT Bonus by 90%.",
+    "element": "Mirage",
+    "elemental_value": [
+      {
+        "element": "Mirage",
+        "value": 6
+      },
+      {
+        "element": "Space",
+        "value": 4
+      }
+    ],
+    "synthesis_cost": "Not synthesizable",
+    "image_url": "https://static.wikitide.net/falcomwiki/0/08/Mirage_R_%28Kuro_Quartz%29.png",
+    "exclusive_groups": []
+  }
+]

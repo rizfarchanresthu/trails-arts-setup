@@ -11,6 +11,8 @@ import {
   type OrbmentTopology,
   type Quartz,
   type SlotId,
+  type XiphaLineSlotCount,
+  type XiphaLineType,
 } from '../domain/types'
 import {
   clampLineCount,
@@ -36,6 +38,16 @@ export type OrbmentState = {
   masterQuartzLevel: number
   equippedSubMasterQuartzId: number | null
   subMasterQuartzLevel: number
+  xipha?: XiphaState
+}
+
+export type XiphaState = {
+  lineSlotCounts: Record<XiphaLineType, XiphaLineSlotCount>
+  holoCoreId: number | null
+  holoCoreLevel: number
+  artsDriverId: number | null
+  artsDriverLevel: number
+  artsPluginIds: Array<number | null>
 }
 
 export type OrbmentPresetShape = {
