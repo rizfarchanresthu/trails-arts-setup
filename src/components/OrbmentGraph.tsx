@@ -17,7 +17,12 @@ import {
   type Quartz,
   type SlotId,
 } from '../domain/types'
-import { type EquippedQuartzMap, type NodeTierMap, type SlotRestrictionMap } from '../state/orbmentState'
+import {
+  getMasterQuartzLevelData,
+  type EquippedQuartzMap,
+  type NodeTierMap,
+  type SlotRestrictionMap,
+} from '../state/orbmentState'
 
 type Point = { x: number; y: number }
 
@@ -163,6 +168,36 @@ export function OrbmentGraph({
       })
     }
 
+    const buildMasterInfo = (
+      role: string,
+      masterQuartzId: number | null,
+      level: number,
+      firstEffectOnly = false,
+    ) => {
+      if (masterQuartzId == null) return null
+      const masterQuartz = masterQuartzById.get(masterQuartzId)
+      if (!masterQuartz) return null
+      const levelData = getMasterQuartzLevelData(masterQuartz, level)
+      const effects = firstEffectOnly
+        ? (levelData?.effects.slice(0, 1) ?? [])
+        : (levelData?.effects ?? [])
+      return {
+        role,
+        name: masterQuartz.name.en,
+        level,
+        description: masterQuartz.description,
+        effects: effects.map((effect) => ({
+          title: effect.title,
+          detail: effect.detail,
+        })),
+      }
+    }
+
+    const masterQuartzInfo = [
+      buildMasterInfo('Master', equippedMasterQuartzId, masterQuartzLevel),
+      buildMasterInfo('Sub-Master', equippedSubMasterQuartzId, subMasterQuartzLevel, true),
+    ].filter((entry): entry is NonNullable<typeof entry> => entry != null)
+
     void exportOrbmentPng({
       svg: svgRef.current,
       title,
@@ -171,6 +206,7 @@ export function OrbmentGraph({
         name: art.name.en,
         color: ELEMENT_COLORS[getArtElements(art)[0]],
       })),
+      masterQuartz: masterQuartzInfo,
       fileName: `orbment-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.png`,
     })
   }
